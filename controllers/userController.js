@@ -203,4 +203,4 @@ const logout = (req, res, next) => {
 	})
 };
 
-export default {getUser, getUserDetails, updateBucket, addItem, updateItem, markDone, markUndone, deleteItem, login, signup, logout};
+export default {getUser, getUserDetails, login, signup, logout};
