@@ -5,6 +5,7 @@ import {connect} from 'react-redux';
 import Navbar from './Navbar';
 import Modal from './Modal';
 import Home from './Home';
+import Simulation from './Simulation';
 import Login from './Login';
 import Signup from './Signup';
 
@@ -21,6 +22,9 @@ const App = ({ loggedIn, email }) => {
 				<Route path="/" exact>
 					<Home />
 				</Route>
+				<Route path="/simulation" exact>
+					<Simulation />
+				</Route>
 				<Redirect to="/" />
 			</Switch>
 		)
@@ -29,6 +33,9 @@ const App = ({ loggedIn, email }) => {
 			<Switch>
 				<Route path="/" exact>
 					<Home />
+				</Route>
+				<Route path="/simulation" exact>
+					<Simulation />
 				</Route>
 				<Route path="/login" exact>
 					<Login />

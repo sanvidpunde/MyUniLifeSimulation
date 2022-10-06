@@ -1,12 +1,8 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 
 import {login} from '../redux/util/controller';
-
-// const mapStateToProps = ({ apiError }) => ({
-//   apiError
-// });
 
 const mapDispatchToProps = dispatch => {
   return {
@@ -15,9 +11,6 @@ const mapDispatchToProps = dispatch => {
 };
 
 const Login = ({ login }) => {
-	// ref to avoid error on first render
-	const firstRenderEmail = useRef(true);
-	const firstRenderPassword = useRef(true);
 
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
@@ -26,36 +19,12 @@ const Login = ({ login }) => {
 
 	const emailHandler = (event) => {
 		setEmail(event.target.value.toLowerCase().trim());
+		setEmailError('');
 	}
 	const passwordHandler = (event) => {
 		setPassword(event.target.value.trim());
+		setPasswordError('');
 	}
-
-	// Email Validation
-	useEffect(() => {
-		if (firstRenderEmail.current) {
-			firstRenderEmail.current = false;
-			return;
-		}
-		if (/^[a-zA-Z0-9.]+@[a-zA-Z0-9.]+\.[A-Za-z]+$/.test(email)) {
-			setEmailError('');
-		} else {
-			setEmailError('Enter a valid email');
-		}
-	}, [email]);
-
-	// Password Validation
-	useEffect(() => {
-		if (firstRenderPassword.current) {
-			firstRenderPassword.current = false;
-			return;
-		}
-		if (password === "") {
-			setPasswordError('Enter your password');
-		} else {
-			setPasswordError('');
-		}
-	}, [password]);
 
 	// Validation
 	const validate = () => {
@@ -66,6 +35,8 @@ const Login = ({ login }) => {
 		}
 		if (password === "") {
 			setPasswordError('Enter your password');
+		} if (password.length < 6) {
+			setPasswordError('Password needs to be 6 or more characters')
 		} else {
 			setPasswordError('');
 		}
@@ -126,8 +97,8 @@ const Login = ({ login }) => {
 					</div>
 					
 					<div className="signUpArea">
-						<p className="new_to_bootweb"><span>New to ToDo?</span></p>
-						<Link to="/signup" className="signUpBtnLink"><button className="signUpBtn">Create your ToDo account</button></Link>
+						<p className="new_to_bootweb"><span>New to UniSimulation?</span></p>
+						<Link to="/signup" className="signUpBtnLink"><button className="signUpBtn">Create your UniSimulation account</button></Link>
 					</div>
 				</div>
 			</div>

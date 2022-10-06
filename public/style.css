@@ -474,6 +474,15 @@ li.user:hover ul {
 	}
 }
 
+/* Simulation */
+.content-area {
+	background: #fff;
+	padding: 20px 30px;
+	margin: 20px auto;
+	width: 100%;
+	border-radius: 10px;
+}
+
 /* Login */
 .top_space {
 	padding: 10px;
@@ -524,7 +533,23 @@ li.user:hover ul {
 	color: #333;
 	text-align: left;
 }
+.login-form label.label-radio {
+	font-size: 14px;
+	font-weight: 400;
+	color: #333;
+	text-align: left;
+	display: block;
+}
+.login-form input[type=radio] {
+	font-size: 14px;
+	color: #555;
+	padding: 6px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	text-align: left;
+}
 .login-form input[type=text],
+.login-form input[type=number],
 .login-form input[type=password] {
 	font-size: 14px;
 	color: #555;
@@ -536,6 +561,7 @@ li.user:hover ul {
 	border-radius: 3px;
 }
 .login-form input[type=text]:focus,
+.login-form input[type=number]:focus,
 .login-form input[type=password]:focus {
 	border: 1px solid #34a8f5;
 	outline: 1px solid #34a8f5;
