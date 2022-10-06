@@ -1,5 +1,4 @@
 import express from 'express';
-import session from 'express-session';
 import {check} from 'express-validator';
 
 import userController from '../controllers/userController';
@@ -25,24 +24,6 @@ router.post('/signup', [
 
 // Get user details
 router.get('/getUserDetails', userController.getUserDetails);
-
-// Update Bucket
-router.patch('/updateBucket', userController.updateBucket);
-
-// Add ToDo Item
-router.patch('/addItem', userController.addItem);
-
-// Update Item
-router.patch('/updateItem', userController.updateItem);
-
-// Mark Todo Done
-router.patch('/markDone', userController.markDone);
-
-// Mark Todo Undone
-router.patch('/markUndone', userController.markUndone);
-
-// Delete Item
-router.patch('/deleteItem', userController.deleteItem);
 
 // Logout handle
 router.delete('/logout', userController.logout);
