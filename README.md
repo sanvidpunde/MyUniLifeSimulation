@@ -1,3 +1,11 @@
+# Current status of our project is 
+1.Sentiment Analysis in progress
+2.UI Development in progress
+3.Data Collection in Progress
+4.Interactive game building elements in progress
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
