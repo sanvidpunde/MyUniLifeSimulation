@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+body {
+  margin: 0;
+  line-height: normal;
+}
+:root {
+  /* fonts */
+  --paragraph-para04: Roboto;
+  --font-inherit: inherit;
+  --cta-large: Montserrat;
+  --font-outfit: Outfit;
+  --font-poppins: Poppins;
+  --font-inter: Inter;
+
+  /* font sizes */
+  --font-size-3xs: 11px;
+  --paragraph-para04-size: 12px;
+  --cta-large-size: 15px;
+  --font-size-sm: 16px;
+  --paragraph-para01-size: 18px;
+  --heading-head-04-size: 20px;
+  --heading-head-03-size: 24px;
+  --font-size-2xl: 25px;
+  --h5-size: 28px;
+  --heading-head-02-size: 30px;
+  --font-size-5xl: 32px;
+  --font-size-6xl: 36px;
+  --heading-head-01-size: 38px;
+  --main-heading-03-size: 40px;
+  --font-size-9xl: 50px;
+  --h1-size: 72px;
+
+  /* Colors */
+  --white1: #fff;
+  --black: #000;
+  --primary-color-01: #0984e3;
+  --color-gray-100: #e5fff8;
+  --paragraph-para03: #d5e0ea;
+  --shape-shape01: #d3dee8;
+  --color-gray-400: #7b7b7b;
+  --shape-shape03: #33628d;
+  --background-bg03: #25517a;
+  --multiply-bg1: #33485c;
+  --text: #3e3e3e;
+  --paragraph-para01: #333;
+  --heading-head01: #263048;
+  --heading-head02: #2a2c30;
+  --color-gray-1200: #222;
+  --primary-color04: #10ac84;
+  --eko-violet: #6424fb;
+  --color-teal: #2a6f85;
+  --primary-color03: #a3cb38;
+
+  /* Gaps */
+  --gap-2xs: 16px;
+  --gap-xs: 24px;
+  --gap-sm: 32px;
+  --gap-md: 40px;
+  --gap-lg: 48px;
+  --gap-xl: 286px;
+
+  /* Paddings */
+  --padding-2xs: 10px;
+  --padding-xs: 16px;
+  --padding-sm: 24px;
+  --padding-md: 32px;
+  --padding-lg: 33px;
+  --padding-xl: 40px;
+
+  /* border radiuses */
+  --br-xs: 2px;
+  --br-sm: 4px;
+  --br-md: 20px;
+  --br-lg: 24px;
+  --br-xl: 30px;
+}
