@@ -1,0 +1,605 @@
+.bGDiv,
+.shapeDiv {
+  position: absolute;
+  top: 864px;
+  left: calc(50% - 957.5px);
+  background-color: var(--white1);
+  width: 1920px;
+  height: 1021px;
+}
+.shapeDiv {
+  top: 1365px;
+  left: calc(50% - 507.5px);
+  background-color: var(--shape-shape01);
+  width: 1110px;
+  height: 1px;
+}
+.vectorFormControlLabel {
+  position: absolute;
+  top: 707px;
+  left: calc(50% - 930.5px);
+}
+.bGDiv1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--background-bg03);
+  width: 1920px;
+  height: 553px;
+}
+.allRightReserveByForkThe {
+  position: absolute;
+  top: 502px;
+  left: 811px;
+  line-height: 30px;
+  display: inline-block;
+}
+.rectangleDiv {
+  position: absolute;
+  top: 471px;
+  left: 410px;
+  background-color: var(--shape-shape03);
+  width: 1110px;
+  height: 1px;
+}
+.span {
+  font-family: var(--paragraph-para04);
+}
+.ourServicesP {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+.helpDesk {
+  margin: 0;
+}
+.ourServicesPrivacyConta,
+.ourServicesPrivacyConta1 {
+  position: absolute;
+  top: 62px;
+  left: 0;
+  line-height: 40px;
+  white-space: pre-wrap;
+  display: inline-block;
+}
+.ourServicesPrivacyConta1 {
+  left: 190px;
+}
+.importantLinksDiv1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: var(--heading-head-03-size);
+  line-height: 32px;
+  font-weight: 500;
+  color: var(--white1);
+  display: inline-block;
+}
+.importantLinksDiv {
+  position: absolute;
+  top: 109px;
+  left: 1520px;
+  width: 333px;
+  height: 262px;
+}
+.timeButton {
+  position: absolute;
+  top: 186px;
+  left: 0;
+}
+.thisIsASampleDemoPlease {
+  position: absolute;
+  top: 72px;
+  left: 0;
+  line-height: 30px;
+  display: inline-block;
+  width: 350px;
+  height: 90px;
+}
+.uniLifeSimulationDiv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 40px;
+  font-weight: 500;
+  display: inline-block;
+}
+.logoDiv1 {
+  position: absolute;
+  top: 0;
+  left: 30px;
+  width: 223px;
+  height: 40px;
+  font-size: var(--h5-size);
+  color: var(--white1);
+}
+.aboutUsDiv1,
+.logoDiv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 350px;
+  height: 162px;
+}
+.logoDiv {
+  top: 109px;
+  left: 135px;
+  height: 254px;
+}
+.footerDiv,
+.image22Icon {
+  position: absolute;
+  top: 1291px;
+  left: 0;
+  width: 1920px;
+  height: 553px;
+}
+.image22Icon {
+  top: 0;
+  left: 7px;
+  width: 1913px;
+  height: 735px;
+  object-fit: cover;
+}
+.aboutUsDiv {
+  position: absolute;
+  top: 183px;
+  left: calc(50% - 960px);
+  width: 1925px;
+  height: 1885px;
+  color: var(--paragraph-para03);
+}
+.bGIcon,
+.prefereedJobDomain {
+  position: absolute;
+  top: calc(50% - 238.57px);
+  left: 0;
+  width: 1269px;
+  height: 477.14px;
+}
+.prefereedJobDomain {
+  top: calc(50% - 39.89px);
+  line-height: 28px;
+  display: inline-block;
+  width: 174.81px;
+  height: 27.92px;
+}
+.rectangleDiv1 {
+  position: absolute;
+  top: calc(50% - 7.98px);
+  left: 0;
+  border-radius: var(--br-xs);
+  background-color: var(--white1);
+  border: 1px solid var(--shape-shape01);
+  box-sizing: border-box;
+  width: 375.76px;
+  height: 47.86px;
+}
+.jobDomainDiv {
+  position: absolute;
+  top: calc(50% + 1.99px);
+  left: 16.34px;
+  line-height: 28px;
+  color: var(--color-gray-400);
+  display: inline-block;
+  width: 161.74px;
+  height: 27.92px;
+}
+.vectorIcon {
+  position: absolute;
+  top: calc(50% + 12.96px);
+  left: 333.29px;
+  width: 26.14px;
+  height: 7.98px;
+}
+.hobbiesDiv,
+.lookingForDiv {
+  position: absolute;
+  top: calc(50% - 20.19px);
+  left: 52.85px;
+  width: 375.76px;
+  height: 79.77px;
+}
+.hobbiesDiv {
+  top: calc(50% - 39.89px);
+  left: 9.72px;
+  line-height: 28px;
+  display: inline-block;
+  width: 174.81px;
+  height: 27.92px;
+}
+.rectangleTextField {
+  border: 0;
+  background-color: transparent;
+  position: absolute;
+  top: calc(50% - 8.59px);
+  left: 0;
+}
+.div,
+.gamingDiv {
+  position: absolute;
+  top: calc(50% + 2.04px);
+  left: 26.44px;
+  line-height: 28px;
+  color: var(--color-gray-400);
+  display: inline-block;
+  width: 218.67px;
+  height: 27.45px;
+}
+.div {
+  left: 16.6px;
+}
+.lookingForDiv1,
+.lookingForDiv2 {
+  position: absolute;
+  top: calc(50% - 39.89px);
+  left: 403.45px;
+  width: 375.76px;
+  height: 79.77px;
+}
+.lookingForDiv1 {
+  top: calc(50% - 20.19px);
+  left: 431.97px;
+  width: 779.22px;
+}
+.btnButton,
+.cAOPointsDiv {
+  position: absolute;
+  top: calc(50% + 106.57px);
+  left: 522px;
+}
+.cAOPointsDiv {
+  top: calc(50% - 39.89px);
+  left: 0;
+  line-height: 28px;
+  display: inline-block;
+  width: 138.87px;
+  height: 27.92px;
+}
+.lookingForDiv3 {
+  position: absolute;
+  top: calc(50% - 137.86px);
+  left: 52.85px;
+  width: 375.76px;
+  height: 79.77px;
+}
+.fieldOfInterests {
+  position: absolute;
+  top: calc(50% - 40px);
+  left: 0;
+  line-height: 28px;
+  display: inline-block;
+  width: 196.05px;
+  height: 27.92px;
+}
+.rectangleDiv4 {
+  position: absolute;
+  top: calc(50% - 8.09px);
+  left: 0;
+  border-radius: var(--br-xs);
+  background-color: var(--white1);
+  border: 1px solid var(--shape-shape01);
+  box-sizing: border-box;
+  width: 375.76px;
+  height: 47.86px;
+}
+.managementDiv {
+  position: absolute;
+  top: calc(50% + 1.89px);
+  left: 14.7px;
+  line-height: 28px;
+  display: inline-block;
+  width: 163.38px;
+  height: 27.92px;
+}
+.frameDiv,
+.vectorIcon3 {
+  position: absolute;
+  top: calc(50% + 12.86px);
+  left: 333.29px;
+  width: 26.14px;
+  height: 7.98px;
+}
+.frameDiv {
+  top: calc(50% - 52.9px);
+  left: 257.69px;
+  width: 158.23px;
+  height: 105.8px;
+  overflow: hidden;
+}
+.cityDiv,
+.groupDiv,
+.propertySizeDiv {
+  position: absolute;
+  width: 415.92px;
+  height: 105.8px;
+}
+.groupDiv {
+  top: calc(50% - 52.9px);
+  left: 0;
+  color: var(--color-gray-400);
+}
+.cityDiv,
+.propertySizeDiv {
+  top: calc(50% - 150.76px);
+  left: 441.69px;
+}
+.cityDiv {
+  top: calc(50% - 39.89px);
+  left: 0;
+  line-height: 28px;
+  display: inline-block;
+  width: 101.29px;
+  height: 27.92px;
+}
+.groupFormControl {
+  position: absolute;
+  top: calc(50% - 7.98px);
+  left: 0;
+}
+.propertyLocationDiv {
+  position: absolute;
+  top: calc(50% - 137.86px);
+  left: 830.52px;
+  width: 375.76px;
+  height: 79.77px;
+}
+.completeTheDetailsBelow {
+  position: absolute;
+  top: calc(50% - 195.69px);
+  left: 52.85px;
+  font-size: var(--heading-head-04-size);
+  line-height: 30px;
+  font-weight: 500;
+  color: var(--heading-head02);
+  display: inline-block;
+  width: 307.15px;
+  height: 29.92px;
+}
+.searchDiv {
+  position: absolute;
+  top: calc(50% - 238.57px);
+  left: 113.47px;
+  width: 1269px;
+  height: 477.14px;
+}
+.textTextField {
+  border: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 19px;
+  left: calc(50% - 691.23px);
+}
+.rectangleDiv5,
+.rectangleDiv6 {
+  position: absolute;
+  left: 0;
+  height: 1.06px;
+}
+.rectangleDiv5 {
+  top: 74.06px;
+  background-color: #d8d8d8;
+  width: 1756.35px;
+  opacity: 0.2;
+}
+.rectangleDiv6 {
+  top: 68.77px;
+  background-color: var(--primary-color-01);
+  width: 85.44px;
+}
+.aboutUsDiv2,
+.agentsDiv,
+.contactUsDiv,
+.homeDiv,
+.pagesDiv,
+.propertyDiv {
+  position: absolute;
+  top: 0;
+  left: 731.02px;
+  line-height: 30px;
+  display: inline-block;
+  width: 140.82px;
+  height: 31.74px;
+}
+.aboutUsDiv2,
+.agentsDiv,
+.homeDiv,
+.pagesDiv,
+.propertyDiv {
+  left: 601.27px;
+  width: 79.11px;
+}
+.aboutUsDiv2,
+.agentsDiv,
+.homeDiv,
+.propertyDiv {
+  left: 460.45px;
+  width: 90.19px;
+}
+.aboutUsDiv2,
+.homeDiv,
+.propertyDiv {
+  left: 300.64px;
+  width: 109.18px;
+}
+.aboutUsDiv2,
+.homeDiv {
+  left: 132.91px;
+  width: 117.09px;
+}
+.homeDiv {
+  left: 4.75px;
+  width: 77.53px;
+}
+.menuDiv {
+  position: absolute;
+  top: 5.29px;
+  left: 770.58px;
+  width: 871.84px;
+  height: 69.83px;
+}
+.ghorBariTextField {
+  border: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 47.47px;
+}
+.frameIcon,
+.groupDiv1,
+.loginIcon,
+.logoDiv2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 42.32px;
+}
+.frameIcon {
+  width: 34.81px;
+  overflow: hidden;
+}
+.groupDiv1,
+.loginIcon,
+.logoDiv2 {
+  width: 234.18px;
+}
+.groupDiv1,
+.loginIcon {
+  left: 1693.05px;
+  width: 63.29px;
+}
+.groupDiv1 {
+  top: -212.7px;
+  left: -446.21px;
+  width: 1756.35px;
+  height: 75.12px;
+  display: none;
+  font-size: var(--paragraph-para01-size);
+  color: var(--white1);
+}
+.heroDiv {
+  position: absolute;
+  top: calc(50% - 56px);
+  left: 223px;
+  width: 1382.47px;
+  height: 477.14px;
+  font-size: var(--font-size-sm);
+}
+.bGDiv2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--white1);
+  width: 1920px;
+  height: 90px;
+}
+.offCanvasIcon {
+  position: absolute;
+  top: 0;
+  left: 464px;
+  width: 42px;
+  height: 42px;
+}
+.aboutUsDiv3,
+.accomodationsDiv,
+.contactUsDiv1,
+.homeDiv1 {
+  position: absolute;
+  top: 6px;
+  left: 343px;
+  line-height: 30px;
+  display: inline-block;
+}
+.aboutUsDiv3,
+.accomodationsDiv,
+.homeDiv1 {
+  left: 180px;
+}
+.aboutUsDiv3,
+.homeDiv1 {
+  left: 81px;
+}
+.homeDiv1 {
+  left: 0;
+  color: var(--primary-color-01);
+}
+.menuDiv1 {
+  position: absolute;
+  top: 24px;
+  left: 1382px;
+  width: 506px;
+  height: 42px;
+}
+.bGDiv3,
+.logoMenuDiv {
+  position: absolute;
+  top: 62px;
+  left: 0;
+  width: 1920px;
+  height: 90px;
+}
+.bGDiv3 {
+  top: 0;
+  background-color: var(--primary-color-01);
+  height: 62px;
+}
+.callButton,
+.emailButton,
+.loginSignupButton {
+  position: absolute;
+  top: 16px;
+  left: 1382px;
+}
+.callButton,
+.emailButton {
+  left: 601px;
+}
+.callButton {
+  left: 329px;
+}
+.image1Icon,
+.infoLoginDiv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1920px;
+  height: 76px;
+}
+.image1Icon {
+  top: 86px;
+  left: 329px;
+  width: 256px;
+  height: 42px;
+  object-fit: cover;
+}
+.navDiv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1920px;
+  height: 152px;
+}
+.nowThatWeHaveACareerMatc {
+  position: absolute;
+  top: 305px;
+  left: 507px;
+  font-size: var(--font-size-6xl);
+  line-height: 60px;
+  font-weight: 800;
+  color: var(--black);
+  text-align: center;
+  display: inline-block;
+  width: 1023px;
+  height: 289px;
+  mix-blend-mode: multiply;
+}
+.courseFinderDiv {
+  position: relative;
+  background-color: var(--white1);
+  width: 100%;
+  height: 2106px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--paragraph-para01-size);
+  color: var(--paragraph-para01);
+  font-family: var(--paragraph-para04);
+}
