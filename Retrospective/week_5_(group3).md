@@ -15,3 +15,4 @@
 - Start updating the readme.md file for features and working of the application
 - Meet the deadline for PR's (everyone)
 - Continue updating the jira board & generate the report out of it on friday.
+- Approach the college more aggressively to get at least the non sensitive data for clubs and societies
