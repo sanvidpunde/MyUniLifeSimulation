@@ -1,0 +1,766 @@
+.iconBg {
+  position: relative;
+  width: 104px;
+  height: 104px;
+  flex-shrink: 0;
+}
+.loremIpsumDolorSitAmetEt,
+.webDesign {
+  align-self: stretch;
+  position: relative;
+  display: inline-block;
+}
+.webDesign {
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.loremIpsumDolorSitAmetEt {
+  font-size: var(--font-size-sm);
+  line-height: 18px;
+  color: var(--text);
+  height: 72px;
+  flex-shrink: 0;
+}
+.servicesDiv,
+.textDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.textDiv {
+  align-self: stretch;
+  justify-content: center;
+  gap: var(--gap-2xs);
+}
+.servicesDiv {
+  position: absolute;
+  top: 641px;
+  left: 1520px;
+  border-radius: var(--br-lg);
+  background-color: var(--white1);
+  width: 368px;
+  overflow: hidden;
+  padding: var(--padding-sm);
+  box-sizing: border-box;
+  justify-content: flex-start;
+  gap: var(--gap-sm);
+}
+.bGDiv,
+.offCanvasIcon {
+  position: absolute;
+  top: 0;
+}
+.bGDiv {
+  left: 0;
+  background-color: var(--white1);
+  width: 1920px;
+  height: 90px;
+}
+.offCanvasIcon {
+  left: 464px;
+  width: 42px;
+  height: 42px;
+}
+.aboutUsDiv,
+.accomodationsDiv,
+.contactUsDiv,
+.homeDiv {
+  position: absolute;
+  top: 6px;
+  left: 343px;
+  line-height: 30px;
+  display: inline-block;
+}
+.aboutUsDiv,
+.accomodationsDiv,
+.homeDiv {
+  left: 180px;
+}
+.aboutUsDiv,
+.homeDiv {
+  left: 81px;
+}
+.homeDiv {
+  left: 0;
+  color: var(--primary-color-01);
+}
+.menuDiv {
+  position: absolute;
+  top: 24px;
+  left: 1383px;
+  width: 506px;
+  height: 42px;
+}
+.bGDiv1,
+.logoMenuDiv {
+  position: absolute;
+  top: 62px;
+  left: 0;
+  width: 1920px;
+  height: 90px;
+}
+.bGDiv1 {
+  top: 0;
+  background-color: var(--primary-color-01);
+  height: 62px;
+}
+.loginIcon,
+.user41 {
+  position: absolute;
+  height: 18px;
+}
+.loginIcon {
+  top: 22px;
+  left: 1384px;
+  width: 16px;
+  display: none;
+}
+.user41 {
+  top: 6px;
+  left: 0;
+  width: 18px;
+  overflow: hidden;
+}
+.loginSignupDiv1 {
+  position: absolute;
+  top: 0;
+  left: 26px;
+  line-height: 30px;
+  display: inline-block;
+}
+.loginSignupDiv {
+  top: 16px;
+  left: 1382px;
+  width: 133px;
+  height: 30px;
+}
+.call1Icon,
+.div,
+.loginSignupDiv {
+  position: absolute;
+}
+.div {
+  top: 0;
+  left: 30px;
+  line-height: 30px;
+  display: inline-block;
+}
+.call1Icon {
+  top: 3px;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  overflow: hidden;
+}
+.emailDiv {
+  position: absolute;
+  top: 19px;
+  left: 383px;
+  width: 142px;
+  height: 30px;
+}
+.unisimulationmytudublinieP {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+.unisimulationmytudublinieDiv {
+  position: absolute;
+  top: 0;
+  left: 29px;
+  line-height: 30px;
+  display: inline-block;
+}
+.paperPlane11 {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+}
+.callDiv,
+.infoLoginDiv {
+  position: absolute;
+  top: 19px;
+  left: 47px;
+  width: 262px;
+  height: 60px;
+}
+.infoLoginDiv {
+  top: 0;
+  left: 0;
+  width: 1920px;
+  height: 79px;
+  color: var(--white1);
+}
+.image1Icon {
+  position: absolute;
+  top: 86px;
+  left: 47px;
+  width: 256px;
+  height: 42px;
+  object-fit: cover;
+}
+.navDiv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1920px;
+  height: 152px;
+  font-size: var(--paragraph-para01-size);
+  color: var(--paragraph-para01);
+  font-family: var(--paragraph-para04);
+}
+.drivingEngagementWithEntert {
+  position: relative;
+  letter-spacing: 1.32px;
+  line-height: 20px;
+  text-transform: uppercase;
+  display: none;
+  width: 1091px;
+}
+.titleDiv {
+  position: relative;
+  font-size: var(--h1-size);
+  line-height: 108%;
+  font-weight: 800;
+  color: var(--color-teal);
+  display: inline-block;
+  width: 1243px;
+}
+.landingPageHeader {
+  position: absolute;
+  top: 189px;
+  left: 227px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-xs);
+  text-align: center;
+  font-size: var(--cta-large-size);
+  color: var(--eko-violet);
+}
+.span {
+  font-size: var(--main-heading-03-size);
+}
+.p {
+  margin: 0;
+  font-size: 64px;
+}
+.titleDiv1 {
+  position: absolute;
+  top: 446px;
+  left: 1479px;
+  line-height: 110%;
+  font-weight: 800;
+  font-family: var(--font-outfit);
+  color: var(--color-teal);
+  text-align: center;
+  display: inline-block;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: var(--main-heading-03-size);
+}
+.ellipseIcon {
+  position: absolute;
+  top: 662px;
+  left: 1711px;
+  width: 125px;
+  height: 99px;
+}
+.questionDiv {
+  flex: 1;
+  position: relative;
+  font-weight: 800;
+  display: inline-block;
+}
+.plusIcon {
+  position: relative;
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.triggerDiv {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-md);
+}
+.theCourseCovers {
+  margin: 0;
+}
+.descriptionDiv {
+  position: relative;
+  font-size: var(--font-size-2xl);
+  line-height: 108%;
+  font-weight: 500;
+  color: var(--black);
+  display: none;
+  width: 790px;
+}
+.contentDiv {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-xs);
+}
+.lineIcon {
+  align-self: stretch;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  height: 2px;
+  flex-shrink: 0;
+}
+.fAQItemDiv {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-lg);
+}
+.descriptionDiv1 {
+  align-self: stretch;
+  font-size: var(--heading-head-03-size);
+  line-height: 150%;
+  color: var(--color-gray-1200);
+}
+.descriptionDiv1,
+.descriptionDiv10,
+.descriptionDiv3 {
+  position: relative;
+  font-weight: 500;
+  display: none;
+}
+.descriptionDiv3 {
+  font-size: var(--heading-head-03-size);
+  line-height: 150%;
+  color: var(--color-gray-1200);
+  width: 790px;
+}
+.descriptionDiv10 {
+  align-self: stretch;
+  flex: 1;
+  font-size: var(--font-size-2xl);
+  line-height: 108%;
+  color: var(--black);
+}
+.contentDiv10,
+.fAQItemDiv10 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.contentDiv10 {
+  height: 34px;
+  flex-shrink: 0;
+  gap: var(--gap-xs);
+}
+.fAQItemDiv10 {
+  flex: 1;
+  gap: var(--gap-lg);
+}
+.fAQPanelDiv,
+.frameDiv,
+.frameDiv1 {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: flex-start;
+}
+.fAQPanelDiv {
+  flex: 1;
+  border-radius: var(--br-lg);
+  background-color: var(--white1);
+  box-shadow: 2px 4px 22px rgba(0, 0, 0, 0.25);
+  height: 1503px;
+  flex-direction: column;
+  padding: var(--padding-xl) 0 289px var(--padding-xl);
+  align-items: center;
+  gap: 52px;
+}
+.frameDiv,
+.frameDiv1 {
+  flex-direction: row;
+  padding: var(--padding-2xs);
+  align-items: flex-start;
+}
+.frameDiv1 {
+  width: 1417px;
+  flex-shrink: 0;
+}
+.frameDiv {
+  position: absolute;
+  top: 476px;
+  left: 11px;
+  font-size: var(--h5-size);
+  color: var(--eko-violet);
+}
+.ellipseIcon1,
+.myProject1 {
+  position: absolute;
+  top: 703px;
+  left: 1687px;
+  width: 125px;
+  height: 99px;
+}
+.myProject1 {
+  top: 670px;
+  left: 1553px;
+  width: 83px;
+  height: 89px;
+  object-fit: cover;
+}
+.belowIsEverythingThatMight {
+  position: absolute;
+  top: 430px;
+  left: 49px;
+  display: inline-block;
+}
+.frameDiv2,
+.frameDiv3 {
+  position: absolute;
+  top: 2219px;
+  left: 799px;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+.frameDiv3 {
+  top: 2387px;
+  left: 592px;
+}
+.loremIpsumDolorSitAmetEt1 {
+  align-self: stretch;
+  position: relative;
+  font-size: var(--font-size-sm);
+  line-height: 18px;
+  color: var(--text);
+  display: inline-block;
+}
+.servicesDiv1 {
+  position: absolute;
+  top: 1007px;
+  left: 1519px;
+  border-radius: var(--br-lg);
+  background-color: var(--white1);
+  width: 375px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding-sm);
+  box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-sm);
+  font-size: 22px;
+}
+.clipart10078321Icon {
+  position: absolute;
+  top: 1047px;
+  left: 1565px;
+  width: 69px;
+  height: 72px;
+  object-fit: cover;
+}
+.servicesDiv2 {
+  position: absolute;
+  top: 1344px;
+  left: 1502px;
+  border-radius: var(--br-lg);
+  background-color: var(--white1);
+  width: 368px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding-sm);
+  box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-sm);
+}
+.clipart12893261Icon {
+  position: absolute;
+  top: 1386px;
+  left: 1546px;
+  width: 64px;
+  height: 70px;
+  object-fit: cover;
+}
+.loremIpsumDolorSitAmetEt3 {
+  align-self: stretch;
+  position: relative;
+  font-size: var(--font-size-sm);
+  line-height: 24px;
+  color: var(--text);
+  display: inline-block;
+}
+.servicesDiv3 {
+  position: absolute;
+  top: 1737px;
+  left: 1502px;
+  border-radius: var(--br-lg);
+  background-color: var(--white1);
+  width: 368px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding-sm);
+  box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-sm);
+}
+.c7820e7237235e63cHousingGuidIcon {
+  position: absolute;
+  top: 1781px;
+  left: 1544px;
+  width: 68px;
+  height: 67px;
+  object-fit: cover;
+}
+.bGDiv2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-sm);
+  background-color: var(--white1);
+  box-shadow: 0 10px 30px rgba(0, 115, 225, 0.06);
+  border: 1px solid var(--shape-shape01);
+  box-sizing: border-box;
+  width: 420px;
+  height: 426px;
+}
+.learnLotOfStuffOnBrightsp {
+  position: absolute;
+  top: 310px;
+  left: 38.4px;
+  line-height: 28px;
+  display: inline-block;
+  width: 343.2px;
+  height: 84px;
+}
+.brightspace {
+  position: absolute;
+  top: 264px;
+  left: 96px;
+  font-size: var(--heading-head-04-size);
+  text-decoration: underline;
+  line-height: 30px;
+  font-weight: 500;
+  color: inherit;
+  display: inline-block;
+  width: 228px;
+}
+.logoIcon {
+  position: absolute;
+  top: 32px;
+  left: 38px;
+  width: 344px;
+  height: 200px;
+}
+.div1,
+.logoIcon1 {
+  position: relative;
+  width: 420px;
+  height: 426px;
+  flex-shrink: 0;
+}
+.logoIcon1 {
+  width: 299px;
+  height: 200px;
+}
+.exploreOurCampus1 {
+  text-decoration: underline;
+}
+.exploreOurCampus {
+  color: inherit;
+}
+.exploreOurCampuses {
+  position: relative;
+  line-height: 30px;
+  font-weight: 500;
+  display: inline-block;
+}
+.tUDublinHasFiveCampusesAc {
+  position: relative;
+  font-size: var(--font-size-sm);
+  line-height: 28px;
+  color: var(--paragraph-para01);
+  display: inline-block;
+  width: 286px;
+  height: 84px;
+  flex-shrink: 0;
+}
+.bGDiv3,
+.div2 {
+  border-radius: var(--br-sm);
+  background-color: var(--white1);
+  box-shadow: 0 10px 30px rgba(0, 115, 225, 0.06);
+  border: 1px solid var(--shape-shape01);
+  box-sizing: border-box;
+}
+.div2 {
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding-md);
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-xs);
+  font-size: var(--heading-head-04-size);
+  color: var(--font-inherit);
+}
+.bGDiv3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 350px;
+  height: 426px;
+}
+.thisWillHelpYouToLearnHo {
+  position: absolute;
+  top: 310px;
+  left: 32px;
+  line-height: 28px;
+  display: inline-block;
+  width: 286px;
+  height: 84px;
+}
+.howToApply {
+  position: absolute;
+  top: 264px;
+  left: 112px;
+  font-size: var(--heading-head-04-size);
+  text-decoration: underline;
+  line-height: 30px;
+  font-weight: 500;
+  color: inherit;
+  display: inline-block;
+}
+.image11Icon {
+  position: absolute;
+  top: 19px;
+  left: 62px;
+  width: 225px;
+  height: 225px;
+  object-fit: cover;
+}
+.div3 {
+  position: relative;
+  width: 350px;
+  height: 426px;
+  flex-shrink: 0;
+}
+.frameDiv4 {
+  position: absolute;
+  top: 2388px;
+  left: 79px;
+  width: 1692px;
+  height: 426px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: var(--gap-xl);
+  text-align: center;
+  font-size: var(--font-size-sm);
+  color: var(--paragraph-para01);
+  font-family: var(--paragraph-para04);
+}
+.contactTheStudentsUnion {
+  position: absolute;
+  top: 264px;
+  left: 96px;
+  font-size: var(--heading-head-04-size);
+  text-decoration: underline;
+  line-height: 30px;
+  font-weight: 500;
+  color: inherit;
+  display: inline-block;
+  width: 253px;
+}
+.logoIcon2 {
+  position: absolute;
+  top: 21px;
+  left: 97px;
+  width: 225px;
+  height: 224px;
+}
+.ourPrivacyPolicy {
+  position: absolute;
+  top: 264px;
+  left: 94px;
+  font-size: var(--heading-head-04-size);
+  text-decoration: underline;
+  line-height: 30px;
+  font-weight: 500;
+  color: inherit;
+  display: inline-block;
+}
+.image13Icon {
+  position: absolute;
+  top: 42px;
+  left: 28px;
+  width: 294px;
+  height: 171px;
+  object-fit: cover;
+}
+.ourLibraries {
+  position: absolute;
+  top: 264px;
+  left: 118px;
+  font-size: var(--heading-head-04-size);
+  text-decoration: underline;
+  line-height: 30px;
+  font-weight: 500;
+  color: inherit;
+  display: inline-block;
+}
+.logoIcon3 {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+  width: 286px;
+  height: 200px;
+}
+.additionalFunctionalitiesYou,
+.frameDiv5 {
+  position: absolute;
+  left: 79px;
+  font-family: var(--paragraph-para04);
+}
+.frameDiv5 {
+  top: 2832px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: var(--gap-xl);
+  text-align: center;
+  font-size: var(--font-size-sm);
+  color: var(--paragraph-para01);
+}
+.additionalFunctionalitiesYou {
+  top: 2265px;
+  font-size: var(--heading-head-01-size);
+  line-height: 54px;
+  display: inline-block;
+  color: var(--heading-head01);
+}
+.preferenceOutputDiv {
+  position: relative;
+  background-color: var(--white1);
+  width: 100%;
+  height: 3385px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--heading-head-03-size);
+  color: var(--black);
+  font-family: var(--cta-large);
+}
