@@ -1,0 +1,524 @@
+.shapeDiv {
+  position: absolute;
+  top: 103.99px;
+  left: calc(50% - 933px);
+  background-color: var(--shape-shape01);
+  width: 1873px;
+  height: 1.05px;
+}
+.bGDiv,
+.vectorIcon {
+  position: absolute;
+  top: 0;
+}
+.vectorIcon {
+  left: calc(50% - 933px);
+  width: 40px;
+  height: 29.41px;
+}
+.bGDiv {
+  left: 0;
+  background-color: var(--background-bg03);
+  width: 1920px;
+  height: 580.88px;
+}
+.allRightReserveByForkThe {
+  position: absolute;
+  top: 526.26px;
+  left: 806px;
+  line-height: 30px;
+  display: inline-block;
+  width: 282px;
+  height: 31.51px;
+}
+.rectangleDiv {
+  position: absolute;
+  top: 493.7px;
+  left: 405px;
+  background-color: var(--shape-shape03);
+  width: 1110px;
+  height: 1.05px;
+}
+.span {
+  font-family: var(--paragraph-para04);
+}
+.ourServicesP {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+.helpDesk {
+  margin: 0;
+}
+.ourServicesPrivacyConta,
+.ourServicesPrivacyConta1 {
+  position: absolute;
+  top: 65.13px;
+  left: 0;
+  line-height: 40px;
+  white-space: pre-wrap;
+  display: inline-block;
+  width: 143px;
+  height: 210.08px;
+}
+.ourServicesPrivacyConta1 {
+  left: 190px;
+}
+.importantLinksB {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: var(--heading-head-03-size);
+  line-height: 32px;
+  display: inline-block;
+  color: var(--white1);
+  width: 171px;
+  height: 33.61px;
+}
+.importantLinksDiv {
+  position: absolute;
+  top: 113.44px;
+  left: 1515px;
+  width: 333px;
+  height: 275.21px;
+}
+.businessHour,
+.mondayFriday1000am060 {
+  position: absolute;
+  top: 39.92px;
+  left: 0;
+  line-height: 30px;
+  display: inline-block;
+  width: 295px;
+  height: 31.51px;
+}
+.businessHour {
+  top: 0;
+  font-size: var(--heading-head-04-size);
+  width: 132px;
+}
+.thisIsASampleDemoPlease,
+.timeDiv {
+  position: absolute;
+  top: 195.38px;
+  left: 1px;
+  width: 295px;
+  height: 71.43px;
+}
+.thisIsASampleDemoPlease {
+  top: 75.63px;
+  line-height: 30px;
+  display: inline-block;
+  width: 350px;
+  height: 94.54px;
+}
+.logoDiv1,
+.uniLifeSimulationB {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 225px;
+  height: 42.02px;
+}
+.uniLifeSimulationB {
+  line-height: 40px;
+  display: inline-block;
+}
+.logoDiv1 {
+  font-size: var(--h5-size);
+  color: var(--white1);
+}
+.aboutUsDiv1,
+.footerDiv,
+.logoDiv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 351px;
+  height: 170.17px;
+}
+.footerDiv,
+.logoDiv {
+  top: 113.44px;
+  left: 129px;
+  height: 266.81px;
+}
+.footerDiv {
+  top: 1419.12px;
+  left: 0;
+  width: 1920px;
+  height: 580.88px;
+}
+.playButton1Icon,
+.rectangleIcon {
+  position: absolute;
+  overflow: hidden;
+}
+.rectangleIcon {
+  height: 100%;
+  width: 50%;
+  top: 0;
+  right: 50%;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+.playButton1Icon {
+  top: 264px;
+  left: 434px;
+  width: 92px;
+  height: 92px;
+}
+.rectangleIcon1,
+.rectangleIcon2,
+.rectangleIcon3,
+.rectangleIcon4 {
+  position: absolute;
+  height: 100%;
+  width: 12.5%;
+  top: 0;
+  right: 37.5%;
+  bottom: 0;
+  left: 50%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.rectangleIcon2,
+.rectangleIcon3,
+.rectangleIcon4 {
+  right: 12.5%;
+  left: 75%;
+}
+.rectangleIcon3,
+.rectangleIcon4 {
+  right: 0;
+  left: 87.5%;
+}
+.rectangleIcon4 {
+  right: 25%;
+  left: 62.5%;
+}
+.damianGordonB {
+  position: absolute;
+  height: 43.65%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  line-height: 54px;
+  display: inline-block;
+}
+.rectangleDiv1 {
+  position: absolute;
+  height: 40.48%;
+  width: 64.8%;
+  top: 59.52%;
+  right: 35.2%;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--br-xl);
+  background: linear-gradient(270deg, #321ac5, rgba(57, 36, 181, 0.3));
+}
+.clickHereB {
+  position: absolute;
+  top: 68.25%;
+  left: 8.67%;
+  font-size: var(--paragraph-para01-size);
+  line-height: 30px;
+  display: inline-block;
+}
+.groupDiv {
+  position: absolute;
+  height: 20.32%;
+  width: 20.42%;
+  top: 59.03%;
+  right: 76.3%;
+  bottom: 20.65%;
+  left: 3.28%;
+}
+.component3Div {
+  top: 580px;
+  left: 0;
+  height: 620px;
+  font-size: var(--font-size-5xl);
+  color: var(--white1);
+  font-family: var(--font-poppins);
+}
+.aboutUsDiv,
+.bGDiv1,
+.component3Div {
+  position: absolute;
+  width: 1920px;
+}
+.aboutUsDiv {
+  top: 158px;
+  left: calc(50% - 960px);
+  height: 2000px;
+}
+.bGDiv1 {
+  top: 0;
+  left: 0;
+  background-color: var(--white1);
+  height: 90px;
+}
+.offCanvasIcon {
+  position: absolute;
+  top: 0;
+  left: 464px;
+  width: 42px;
+  height: 42px;
+}
+.aboutUsDiv2,
+.accomodationsDiv,
+.contactUsDiv,
+.homeDiv {
+  position: absolute;
+  top: 6px;
+  left: 343px;
+  line-height: 30px;
+  display: inline-block;
+}
+.aboutUsDiv2,
+.accomodationsDiv,
+.homeDiv {
+  left: 180px;
+}
+.aboutUsDiv2,
+.homeDiv {
+  left: 81px;
+}
+.homeDiv {
+  left: 0;
+  color: var(--primary-color-01);
+}
+.menuDiv {
+  position: absolute;
+  top: 24px;
+  left: 1383px;
+  width: 506px;
+  height: 42px;
+}
+.bGDiv2,
+.logoMenuDiv {
+  position: absolute;
+  top: 62px;
+  left: 0;
+  width: 1920px;
+  height: 90px;
+}
+.bGDiv2 {
+  top: 0;
+  background-color: var(--primary-color-01);
+  height: 62px;
+}
+.loginIcon,
+.user41 {
+  position: absolute;
+  height: 18px;
+}
+.loginIcon {
+  top: 22px;
+  left: 1384px;
+  width: 16px;
+  display: none;
+}
+.user41 {
+  top: 6px;
+  left: 0;
+  width: 18px;
+  overflow: hidden;
+}
+.loginSignupDiv1 {
+  position: absolute;
+  top: 0;
+  left: 26px;
+  line-height: 30px;
+  display: inline-block;
+}
+.loginSignupDiv {
+  top: 16px;
+  left: 1382px;
+  width: 133px;
+  height: 30px;
+}
+.call1Icon,
+.div,
+.loginSignupDiv {
+  position: absolute;
+}
+.div {
+  top: 0;
+  left: 30px;
+  line-height: 30px;
+  display: inline-block;
+}
+.call1Icon {
+  top: 3px;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  overflow: hidden;
+}
+.emailDiv {
+  position: absolute;
+  top: 19px;
+  left: 383px;
+  width: 142px;
+  height: 30px;
+}
+.unisimulationmytudublinieDiv {
+  position: absolute;
+  top: 0;
+  left: 29px;
+  line-height: 30px;
+  display: inline-block;
+}
+.paperPlane11 {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+}
+.callDiv,
+.infoLoginDiv {
+  position: absolute;
+  top: 19px;
+  left: 47px;
+  width: 262px;
+  height: 60px;
+}
+.infoLoginDiv {
+  top: 0;
+  left: 0;
+  width: 1920px;
+  height: 79px;
+  color: var(--white1);
+}
+.image1Icon {
+  position: absolute;
+  top: 86px;
+  left: 47px;
+  width: 256px;
+  height: 42px;
+  object-fit: cover;
+}
+.navDiv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1920px;
+  height: 152px;
+  color: var(--paragraph-para01);
+}
+.ellipseIcon {
+  position: absolute;
+  top: 555px;
+  left: 1690px;
+  width: 125px;
+  height: 99px;
+}
+.bGDiv3,
+.maskGroupIcon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1920px;
+  height: 207px;
+}
+.bGDiv3 {
+  background-color: var(--multiply-bg1);
+}
+.maskGroupIcon {
+  object-fit: cover;
+  mix-blend-mode: multiply;
+}
+.mscDataScience {
+  position: absolute;
+  top: 0;
+  left: 85px;
+  line-height: 30px;
+  display: inline-block;
+  width: 144px;
+  height: 17.74px;
+}
+.rectangleDiv2 {
+  position: absolute;
+  top: 4.73px;
+  left: 67px;
+  background-color: var(--white1);
+  width: 2px;
+  height: 8.28px;
+  opacity: 0.6;
+}
+.breadcrumbDiv,
+.tU059Div {
+  position: absolute;
+  height: 17.74px;
+}
+.tU059Div {
+  top: 0;
+  left: 0;
+  line-height: 30px;
+  color: var(--white1);
+  text-align: center;
+  display: inline-block;
+  width: 53px;
+}
+.breadcrumbDiv {
+  top: 115.92px;
+  left: 845px;
+  width: 229px;
+}
+.videoLecturesByOurProfesso {
+  position: absolute;
+  top: 54px;
+  left: 586px;
+  font-size: var(--main-heading-03-size);
+  line-height: 50px;
+  display: inline-block;
+  color: var(--white1);
+  text-align: center;
+  width: 748px;
+  height: 30px;
+}
+.bannerDiv {
+  position: absolute;
+  top: 178px;
+  left: 0;
+  width: 1920px;
+  height: 207px;
+  color: var(--primary-color-01);
+}
+.image15Div {
+  position: absolute;
+  top: 738px;
+  left: 69px;
+  width: 68px;
+  height: 52px;
+}
+.rectangleIcon5,
+.rectangleIcon6 {
+  position: absolute;
+  top: 1477px;
+  left: 0;
+  width: 1920px;
+  height: 51px;
+}
+.rectangleIcon6 {
+  top: 530px;
+}
+.videoLecturesByProfessors {
+  position: relative;
+  background-color: var(--white1);
+  width: 100%;
+  height: 2246px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--paragraph-para01-size);
+  color: var(--paragraph-para03);
+  font-family: var(--paragraph-para04);
+}
