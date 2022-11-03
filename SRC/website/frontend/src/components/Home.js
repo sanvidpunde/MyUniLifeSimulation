@@ -19,9 +19,13 @@ const mapDispatchToProps = dispatch => {
 
 const Home = ({ loggedIn, email, name }) => {
 
-	console.log({email});
-	console.log({name});
-	console.log({loggedIn});
+	// console.log({email});
+	// console.log({name});
+	// console.log({loggedIn});
+
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
 
 	// const [users_name, setUsers_name] = useState('');
 	// // Get stored details from db
@@ -40,15 +44,25 @@ const Home = ({ loggedIn, email, name }) => {
 	return (
 		<React.Fragment>
 			<div className="header">
-				<div className="header-text">University Simulation</div>
+				<div className="header-text">Welcome to UniLifeSimulation</div>
 				{(loggedIn) ?
-					<p>Logged In user will see this text</p>
+					<p>We aim to provide a one-stop portal for you to explore your dream course using our State-of-the-art AI Recommender System.</p>
 				:
-					<p>Non Logged In user will see this text</p>
+					<p>We aim to provide a one-stop portal for you to explore your dream course using our State-of-the-art AI Recommender System.</p>
 				}
 			</div>
-			<div className="container">
-				{loggedIn && <p>Hello, {name}</p>}
+			<div className="p-60">
+				<div className="container">
+					{/* {loggedIn && <p>Hello, {name}</p>} */}
+					<div className="mb-60">
+						<img src="/images/home.jpg" alt="Home Image" className="responsive-image" />
+					</div>
+					<div className="take-test-cta">
+						<div className="title text-left">Let's start with Interest Profiler Test</div>
+						<p>Our Interest Profiler test is designed for students who are unsure of what career they want to pursue and guide them in making informed decision.</p><br/>
+						<Link className="take-test-button" to="/interest_profiler">TAKE TEST</Link>
+					</div>
+				</div>
 			</div>
 		</React.Fragment>
 	)

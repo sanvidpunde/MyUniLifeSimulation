@@ -31,6 +31,11 @@ const Login = ({ login }) => {
 		setPassword(event.target.value.trim());
 	}
 
+	// Scroll to top of page
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
+
 	// Email Validation
 	useEffect(() => {
 		if (firstRenderEmail.current) {
@@ -95,42 +100,45 @@ const Login = ({ login }) => {
 				<div className="header-text">University Simulation</div>
 				<p>Lorem Ipsum Dolor Sit Amet</p>
 			</div>
-			<div className="container login-form">
-				<div className="p-lr">
-					<div className="card">
-						<div className="title">Login</div>
-						<form>						
-							<label htmlFor="email">Email</label>
-							<input 
-								type="text"
-								id="email"
-								value={email}
-								onChange={emailHandler}
-								className={`${(emailError !== "") && "red-input"}`}
-							/>
-							{emailError !== "" && <p className="error_text"><i>!</i> &nbsp;{emailError}</p>}
+			<div className="gray-bg">
+				<div className="container login-form p-60">
+					<div className="p-lr">
+						<div className="card">
+							<div className="title">Login</div>
+							<form>						
+								<label htmlFor="email">Email</label>
+								<input 
+									type="text"
+									id="email"
+									value={email}
+									onChange={emailHandler}
+									className={`${(emailError !== "") && "red-input"}`}
+								/>
+								{emailError !== "" && <p className="error_text"><i>!</i> &nbsp;{emailError}</p>}
 
-							<label htmlFor="password">Password</label>
-							<input
-								type="password"
-								id="password"
-								value={password}
-								onChange={passwordHandler}
-								className={`${(passwordError !== "") && "red-input"}`}
-							/>
-							{passwordError !== "" && <p className="error_text"><i>!</i> &nbsp;{passwordError}</p>}
+								<label htmlFor="password">Password</label>
+								<input
+									type="password"
+									id="password"
+									value={password}
+									onChange={passwordHandler}
+									className={`${(passwordError !== "") && "red-input"}`}
+								/>
+								{passwordError !== "" && <p className="error_text"><i>!</i> &nbsp;{passwordError}</p>}
 
-							<button type="submit" onClick={handleLogin}>Continue</button>
+								<button type="submit" onClick={handleLogin}>Continue</button>
+							
+							</form>
+						</div>
 						
-						</form>
-					</div>
-					
-					<div className="signUpArea">
-						<p className="new_to_bootweb"><span>New to ToDo?</span></p>
-						<Link to="/signup" className="signUpBtnLink"><button className="signUpBtn">Create your ToDo account</button></Link>
+						<div className="signUpArea">
+							<p className="new_to_bootweb"><span>New to ToDo?</span></p>
+							<Link to="/signup" className="signUpBtnLink"><button className="signUpBtn">Create your ToDo account</button></Link>
+						</div>
 					</div>
 				</div>
 			</div>
+			
 		</React.Fragment>
 	)
 }

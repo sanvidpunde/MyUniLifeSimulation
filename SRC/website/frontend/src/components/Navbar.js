@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {Link, NavLink} from 'react-router-dom'; /*<NavLink exact> attribute for active link */
 import {connect} from 'react-redux';
 
@@ -17,13 +17,6 @@ const mapDispatchToProps = dispatch => {
 
 const Navbar = ({ loggedIn, username, logout }) => {
 	const [toggleBtn, setToggleBtn] = useState(false);
-
-	const closeHamburger = () => {
-		setToggleBtn(false);
-	}
-	const openHamburger = () => {
-		setToggleBtn(true);
-	}
 	
 	return (
 		<React.Fragment>
@@ -38,7 +31,7 @@ const Navbar = ({ loggedIn, username, logout }) => {
 						<li className="item first-element" onClick={() => setToggleBtn(false)}>
 							<NavLink to="/" exact>Home</NavLink>
 							<NavLink to="/simulation" exact>Simulation</NavLink>
-							<NavLink to="/psychometric" exact>Psychometric</NavLink>
+							<NavLink to="/interest_profiler" exact>Psychometric</NavLink>
 						</li>
 						{(loggedIn) ?
 							<React.Fragment>

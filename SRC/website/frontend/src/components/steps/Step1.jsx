@@ -1,6 +1,25 @@
 import React, { useState, useEffect } from "react";
+import {connect} from 'react-redux';
 
-const Step1 = props => {
+import {changeStep} from '../../redux/util/controller';
+
+import {receiveCurrentStep, updateCurrentStep} from '../../redux/util/controller';
+
+const mapStateToProps = ({ step, session }) => ({
+	step: step,
+    loggedIn: Boolean(session.email),
+});
+
+const mapDispatchToProps = dispatch => {
+  return {
+  	// changeStep: step => dispatch(updateCurrentStep(step))
+  }
+};
+
+const Step1 = (props, step, session, loggedIn) => {
+    console.log('step redux is', step);
+    console.log('session redux is', session);
+    console.log('loggedIn', loggedIn);
     const { setPercent, nextStep, setProgressText } = props;
 
     const [selectedInputStep1, setSelectedInputStep1] = useState("");
@@ -16,6 +35,10 @@ const Step1 = props => {
     useEffect(() => {
         if (selectedInputStep1 !== "") {
             const timer = setTimeout(() => {
+                console.log("insidee timeout func");
+                changeStep({step1: selectedInputStep1, step2: null, step3: null, step4: null, step5: null, step6: null, step7: null, step8: null, step9: null, step10: null});
+                console.log({step1: selectedInputStep1, step2: null, step3: null, step4: null, step5: null, step6: null, step7: null, step8: null, step9: null, step10: null});
+                console.log("after dispatch");
                 handleContinueStep1();
             }, 600);
             return () => clearTimeout(timer);
@@ -68,4 +91,4 @@ const Step1 = props => {
     );
 };
 
-export default Step1;
+export default connect(mapStateToProps, mapDispatchToProps)(Step1);
