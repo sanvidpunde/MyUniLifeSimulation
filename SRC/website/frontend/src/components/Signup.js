@@ -161,8 +161,10 @@ const Signup = ({ signup }) => {
 	return (
 		<React.Fragment>
 			<div className="header">
-				<div className="header-text">University Simulation</div>
-				<p>Lorem Ipsum Dolor Sit Amet</p>
+				<div className="container">
+					<div className="header-text">University Simulation</div>
+					<p>Lorem Ipsum Dolor Sit Amet</p>
+				</div>
 			</div>
 			<div className="gray-bg">
 				<div className="container login-form p-60">

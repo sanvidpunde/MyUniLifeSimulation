@@ -159,6 +159,9 @@ button:focus {
 .mb-20 {
 	margin-bottom: 20px;
 }
+.mb-30 {
+	margin-bottom: 30px;
+}
 .mb-60 {
 	margin-bottom: 60px;
 }
@@ -554,6 +557,114 @@ li.user:hover ul {
 	display: block;
 	width: 100%;
 	height: 40px;
+}
+
+/* Recommended Course */
+.recommended_course img {
+	max-width: 500px;
+	max-height: 100%;
+}
+.recommended_course {
+	display: flex;
+	justify-content: left;
+	align-items: center;
+	flex-direction: row;
+	gap: 30px;
+}
+.recommended_course_description h2 {
+	color: #333;
+}
+.recommended_course_description h2 a:link,
+.recommended_course_description h2 a:visited {
+	color: #333;
+	text-decoration: none;
+}
+.recommended_course_description h2 a:hover {
+	color: #007FC0;
+}
+.recommended_course_description p {
+	line-height: 1.6;
+}
+.recommended_course_description a:link,
+.recommended_course_description a:visited {
+	color: #007FC0;
+	text-decoration: none;
+}
+.recommended_course_description a:hover {
+	text-decoration: underline;
+}
+.recommended_course_description .location {
+	font-size: 18px;
+	margin-top: 10px;
+}
+.recommended_course_description .fa {
+	color: #007FC0;
+}
+.grey-border {
+	width: 100%;
+	height: 1px;
+	background: #dbdbdb;
+	margin-bottom: 30px;
+}
+.other_universities {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+/* Course Details */
+.course_details_parent {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+.course_details_acc {
+	flex: 3;
+	background-color: #E7EBF0;
+	padding: 20px;
+	border-radius: 8px;
+	height: fit-content;
+	margin-bottom: 30px;
+}
+.acc-title {
+	font-size: 20px;
+	font-weight: 700;
+}
+.course_details_helpful_resources {
+	flex: 1;
+	background-color: #E7EBF0;
+	padding: 20px;
+	border-radius: 8px;
+	height: fit-content;
+}
+.highlight-border {
+	width: 40px;
+	height: 3px;
+	background-color: #007FC0;
+	margin: 10px 0;
+}
+.single_resource {
+	margin-bottom: 30px;
+}
+.course_details_helpful_resources h3 {
+	color: #333;
+	margin: 10px 0;
+}
+.course_details_helpful_resources h3 a:link, 
+.course_details_helpful_resources h3 a:visited {
+	color: #333;
+	text-decoration: none;
+}
+.course_details_helpful_resources h3 a:hover {
+	color: #007FC0;
+}
+.single_resource img {
+	border-radius: 50%;
+}
+.course_details_helpful_resources p {
+	line-height: 1.6;;
 }
 
 /* Login */
@@ -1310,6 +1421,9 @@ a.signUpBtnLink {
 	.margin-top {
 		margin-top: 70px;
 	}
+	.course_details_parent {
+		flex-direction: column;
+	}
 }
 @media (max-width: 900px) {
 	.panelImageMainImage {
@@ -1323,6 +1437,11 @@ a.signUpBtnLink {
 @media (max-width: 780px) {
 	.edit_flexbox {
 		display: block;
+	}
+	.recommended_course {
+		flex-direction: column;
+		gap: 0;
+		align-items: flex-start;
 	}
 	.footer-columns {
 		flex-direction: column;

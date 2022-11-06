@@ -81,9 +81,11 @@ const Simulation = ({ loggedIn }) => {
 	return (
 		<React.Fragment>
 			<div className="header">
-				<div className="header-text">University Simulation</div>
-				<p>Now that we have a career match for you, let's start looking for a specific course using our state-of-the-art Recommender System</p>
-			</div>
+                <div className="container">
+                    <div className="header-text">University Simulation</div>
+                    <p>Now that we have a career match for you, let's start looking for a specific course using our state-of-the-art Recommender System</p>
+                </div>
+            </div>
             <div className="p-60">
                 <div className="container">
                     <img src="/images/simulation.jpg" alt="Simulation" className="responsive-image mb-60" />
@@ -146,7 +148,7 @@ const Simulation = ({ loggedIn }) => {
                         {/* <Select options={cao_options} value={cao} onChange={e => setCao(e)} /> */}
                     </div>
                     <div className="mt-20">
-                        <button type="button" className="take-test-button" >Submit</button>
+                        <Link to="/recommended_courses"><button type="button" className="take-test-button" >Submit</button></Link>
                     </div>
                     
                 </div>

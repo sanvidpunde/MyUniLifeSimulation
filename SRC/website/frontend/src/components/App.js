@@ -7,6 +7,8 @@ import Navbar from './Navbar';
 import Modal from './Modal';
 import Home from './Home';
 import Simulation from './Simulation';
+import RecommendedCourses from './RecommendedCourses';
+import CourseDetails from './CourseDetails';
 import Psychometric from './Psychometric';
 import Login from './Login';
 import Signup from './Signup';
@@ -49,6 +51,12 @@ const App = ({ loggedIn, email }) => {
 				</Route>
 				<Route path="/simulation" exact>
 					<Simulation />
+				</Route>
+				<Route path="/recommended_courses" exact>
+					<RecommendedCourses />
+				</Route>
+				<Route path="/course_details" exact>
+					<CourseDetails />
 				</Route>
 				<Route path="/interest_profiler" exact>
 					<Psychometric />

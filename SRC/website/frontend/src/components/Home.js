@@ -44,12 +44,14 @@ const Home = ({ loggedIn, email, name }) => {
 	return (
 		<React.Fragment>
 			<div className="header">
-				<div className="header-text">Welcome to UniLifeSimulation</div>
-				{(loggedIn) ?
-					<p>We aim to provide a one-stop portal for you to explore your dream course using our State-of-the-art AI Recommender System.</p>
-				:
-					<p>We aim to provide a one-stop portal for you to explore your dream course using our State-of-the-art AI Recommender System.</p>
-				}
+				<div className="container">
+					<div className="header-text">Welcome to UniLifeSimulation</div>
+					{(loggedIn) ?
+						<p>We aim to provide a one-stop portal for you to explore your dream course using our State-of-the-art AI Recommender System.</p>
+					:
+						<p>We aim to provide a one-stop portal for you to explore your dream course using our State-of-the-art AI Recommender System.</p>
+					}
+				</div>
 			</div>
 			<div className="p-60">
 				<div className="container">
@@ -58,9 +60,9 @@ const Home = ({ loggedIn, email, name }) => {
 						<img src="/images/home.jpg" alt="Home Image" className="responsive-image" />
 					</div>
 					<div className="take-test-cta">
-						<div className="title text-left">Let's start with Interest Profiler Test</div>
+						<div className="title text-left">Interest Profiler Test</div>
 						<p>Our Interest Profiler test is designed for students who are unsure of what career they want to pursue and guide them in making informed decision.</p><br/>
-						<Link className="take-test-button" to="/interest_profiler">TAKE TEST</Link>
+						<Link className="take-test-button" to="/interest_profiler">Take Test Now</Link>
 					</div>
 				</div>
 			</div>

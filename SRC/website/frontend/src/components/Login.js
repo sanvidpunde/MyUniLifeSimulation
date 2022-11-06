@@ -97,8 +97,10 @@ const Login = ({ login }) => {
 	return (
 		<React.Fragment>
 			<div className="header">
-				<div className="header-text">University Simulation</div>
-				<p>Lorem Ipsum Dolor Sit Amet</p>
+				<div className="container">
+					<div className="header-text">University Simulation</div>
+					<p>Lorem Ipsum Dolor Sit Amet</p>
+				</div>
 			</div>
 			<div className="gray-bg">
 				<div className="container login-form p-60">
@@ -132,8 +134,8 @@ const Login = ({ login }) => {
 						</div>
 						
 						<div className="signUpArea">
-							<p className="new_to_bootweb"><span>New to ToDo?</span></p>
-							<Link to="/signup" className="signUpBtnLink"><button className="signUpBtn">Create your ToDo account</button></Link>
+							<p className="new_to_bootweb"><span>New to UniSimulation?</span></p>
+							<Link to="/signup" className="signUpBtnLink"><button className="signUpBtn">Create your UniSimulation account</button></Link>
 						</div>
 					</div>
 				</div>

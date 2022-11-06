@@ -52,9 +52,11 @@ const Psychometric = () => {
 	return (
 		<React.Fragment>
 			<div className="header">
-				<div className="header-text">UniLifeHunt!</div>
-				<p>The test to determine your future</p>
-			</div>
+                <div className="container">
+                    <div className="header-text">Interest Profiler</div>
+                    <p>Our Interest Profiler test is designed for students who are unsure of what career they want to pursue and guide them in making informed decision</p>
+                </div>
+            </div>
             <div className="container p-60">
 
             {/* {!takeTestClicked &&
