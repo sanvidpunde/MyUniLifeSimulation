@@ -1,25 +1,13 @@
 import React, { useState, useEffect } from "react";
-import {connect} from 'react-redux';
+import {useSelector, useDispatch} from 'react-redux';
 
 import {changeStep} from '../../redux/util/controller';
-
 import {receiveCurrentStep, updateCurrentStep} from '../../redux/util/controller';
 
-const mapStateToProps = ({ step, session }) => ({
-	step: step,
-    loggedIn: Boolean(session.email),
-});
-
-const mapDispatchToProps = dispatch => {
-  return {
-  	// changeStep: step => dispatch(updateCurrentStep(step))
-  }
-};
-
-const Step1 = (props, step, session, loggedIn) => {
+const Step1 = (props) => {
+    const dispatch = useDispatch();
+    const step = useSelector(state => state.step);
     console.log('step redux is', step);
-    console.log('session redux is', session);
-    console.log('loggedIn', loggedIn);
     const { setPercent, nextStep, setProgressText } = props;
 
     const [selectedInputStep1, setSelectedInputStep1] = useState("");
@@ -36,7 +24,7 @@ const Step1 = (props, step, session, loggedIn) => {
         if (selectedInputStep1 !== "") {
             const timer = setTimeout(() => {
                 console.log("insidee timeout func");
-                changeStep({step1: selectedInputStep1, step2: null, step3: null, step4: null, step5: null, step6: null, step7: null, step8: null, step9: null, step10: null});
+                dispatch(changeStep({step1: selectedInputStep1, step2: null, step3: null, step4: null, step5: null, step6: null, step7: null, step8: null, step9: null, step10: null}));
                 console.log({step1: selectedInputStep1, step2: null, step3: null, step4: null, step5: null, step6: null, step7: null, step8: null, step9: null, step10: null});
                 console.log("after dispatch");
                 handleContinueStep1();
@@ -46,6 +34,7 @@ const Step1 = (props, step, session, loggedIn) => {
     }, [selectedInputStep1]);
 
     const handleContinueStep1 = () => {
+        console.log("this has run ==================")
         if (selectedInputStep1 == "") {
             setError(true);
             return;
@@ -91,4 +80,4 @@ const Step1 = (props, step, session, loggedIn) => {
     );
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Step1);
+export default Step1;

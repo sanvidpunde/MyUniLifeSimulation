@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
+import Select from 'react-select';
 import axios from 'axios';
 
 import {receiveSuccessMessage} from '../redux/util/controller';
@@ -19,7 +20,12 @@ const mapDispatchToProps = dispatch => {
 
 const Simulation = ({ loggedIn }) => {
 
-    const [cao, setCao] = useState("");
+    const [cao, setCao] = useState(null);
+    const [fieldOfInterest, setFieldOfInterest] = useState(null);
+    const [city, setCity] = useState(null);
+    const [jobDomain, setJobDomain] = useState(null);
+    const [hobbies, setHobbies] = useState(null);
+    const [spendingLimit, setSpendingLimit] = useState(null);
     // const [caoError, setCaoError] = useState('');
     // const [interest, setInterest] = useState('');
     // const [interestError, setInterestError] = useState('');
@@ -27,11 +33,24 @@ const Simulation = ({ loggedIn }) => {
     // const [locationError, setLocationError] = useState('');
     // const [budget, setBudget] = useState('$10,000 and below per year');
 
-    const cao_options = [{value: '60-100', label: '60-100'}, {value: '101-140', label: '101-140'}, {value: '141-180', label: '141-180'}];
+    const caoOptions = [{value: '60-100', label: '60-100'}, {value: '101-140', label: '101-140'}, {value: '141-180', label: '141-180'}];
+    const fieldOfInterestOptions = [{value: "Computer & IT", label: "Computer & IT"}, {value: "Management", label: "Management"}, {value: "Business", label: "Business"}, {value: "Art", label: "Art"}, {value: "Finance", label: "Finance"}, {value: "Law", label: "Law"}];
+    const cityOptions = [{value: "Dublin", label: "Dublin"}, {value: "Cork", label: "Cork"}, {value: "Galway", label: "Galway"}, {value: "Limerick", label: "Limerick"}, {value: "Athlone", label: "Athlone"}, {value: "Carlow", label: "Carlow"}];
+    const jobDomainOptions = [{value: "IT", label: "IT"}, {value: "HR", label: "HR"}, {value: "Management", label: "Management"}, {value: "Support", label: "Support"}, {value: "Finance", label: "Finance"}];
+    const hobbiesOptions = [{value: "Cricket", label: "Cricket"}, {value: "Football", label: "Football"}, {value: "Chess", label: "Chess"}, {value: "Athletics", label: "Athletics"}, {value: "Automation", label: "Automation"}, {value: "Singing", label: "Singing"}];
+    const spendingLimitOptions = [{value: "€2000 - €4000", label: "€2000 - €4000"}, {value: "€4000 - €6000", label: "€4000 - €6000"}, {value: "€6000 - €8000", label: "€6000 - €8000"}, {value: "€8000 - above", label: "€8000 - above"}];
 
+    // scroll to top of page
     useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
+
+    const handleNumberValidation = (e) => {
+        const min = 0;
+        const max = 625;
+        const value = Math.max(min, Math.min(max, Number(e.target.value)));
+        setCao(value);
+    };
     
     // const caoHandler = (event) => {
 	// 	setCao(event.target.value);
@@ -92,60 +111,67 @@ const Simulation = ({ loggedIn }) => {
                     <h3 className="mb-20">Complete following details:</h3>
                     <div className="simulation-form-area">
                         <div className="single-simulation-form">
-                            <label>CAO Points
-                                <select value={cao} onChange={e => setCao(e.target.value)}>
-                                    <option value="10-100">60-100</option>
-                                    <option value="101-140">101-140</option>
-                                    <option value="141-200">141-200</option>
-                                </select>
+                            <label>CAO Point
+                                <input
+                                    type="number"
+                                    value={cao}
+                                    onChange={handleNumberValidation}
+                                    placeholder="Enter your CAO Point"
+                                />
                             </label>
                         </div>
                         <div className="single-simulation-form">
                             <label>Field of Interest
-                                <select value={cao} onChange={e => setCao(e.target.value)}>
-                                    <option value="10-100">60-100</option>
-                                    <option value="101-140">101-140</option>
-                                    <option value="141-200">141-200</option>
-                                </select>
+                                <Select 
+                                    defaultValue={fieldOfInterest}
+                                    onChange={setFieldOfInterest}
+                                    options={fieldOfInterestOptions}
+                                    className="mt-6"
+                                />
                             </label>
                         </div>
                         <div className="single-simulation-form">
                             <label>City
-                                <select value={cao} onChange={e => setCao(e.target.value)}>
-                                    <option value="10-100">60-100</option>
-                                    <option value="101-140">101-140</option>
-                                    <option value="141-200">141-200</option>
-                                </select>
+                                <Select
+                                    defaultValue={city}
+                                    onChange={setCity}
+                                    options={cityOptions}
+                                    isMulti
+                                    className="mt-6"
+                                />
                             </label>
                         </div>
                         <div className="single-simulation-form">
                             <label>Preferred Job Domain
-                                <select value={cao} onChange={e => setCao(e.target.value)}>
-                                    <option value="10-100">60-100</option>
-                                    <option value="101-140">101-140</option>
-                                    <option value="141-200">141-200</option>
-                                </select>
+                                <Select
+                                    defaultValue={jobDomain}
+                                    onChange={setJobDomain}
+                                    options={jobDomainOptions}
+                                    className="mt-6"
+                                />
                             </label>
                         </div>
                         <div className="single-simulation-form">
                             <label>Hobbies
-                                <select value={cao} onChange={e => setCao(e.target.value)}>
-                                    <option value="10-100">60-100</option>
-                                    <option value="101-140">101-140</option>
-                                    <option value="141-200">141-200</option>
-                                </select>
+                                <Select
+                                    defaultValue={hobbies}
+                                    onChange={setHobbies}
+                                    options={hobbiesOptions}
+                                    isMulti
+                                    className="mt-6"
+                                />
                             </label>
                         </div>
                         <div className="single-simulation-form">
                             <label>Spending Limit
-                                <select value={cao} onChange={e => setCao(e.target.value)}>
-                                    <option value="10-100">60-100</option>
-                                    <option value="101-140">101-140</option>
-                                    <option value="141-200">141-200</option>
-                                </select>
+                                <Select
+                                    defaultValue={spendingLimit}
+                                    onChange={setSpendingLimit}
+                                    options={spendingLimitOptions}
+                                    className="mt-6"
+                                />
                             </label>
                         </div>
-                        {/* <Select options={cao_options} value={cao} onChange={e => setCao(e)} /> */}
                     </div>
                     <div className="mt-20">
                         <Link to="/recommended_courses"><button type="button" className="take-test-button" >Submit</button></Link>

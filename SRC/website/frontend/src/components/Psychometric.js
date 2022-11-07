@@ -56,7 +56,7 @@ const Psychometric = () => {
                     <div className="header-text">Interest Profiler</div>
                     <p>Our Interest Profiler test is designed for students who are unsure of what career they want to pursue and guide them in making informed decision</p>
                 </div>
-            </div>
+            </div>q
             <div className="container p-60">
 
             {/* {!takeTestClicked &&
@@ -67,7 +67,6 @@ const Psychometric = () => {
                 </div>
             } */}
 
-            {/* {takeTestClicked && */}
                 <React.Fragment>
                     <div className="progressbar">
                         <p className="text-center progress-text">{progressText}</p>
@@ -86,7 +85,6 @@ const Psychometric = () => {
                         <Step10 setPercent={percentSetter} setProgressText={progressTextSetter} />
                     </StepWizard>
                 </React.Fragment>
-            {/* } */}
 
             </div>
             
