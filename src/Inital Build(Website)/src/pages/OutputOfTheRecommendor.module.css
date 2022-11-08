@@ -1,0 +1,1010 @@
+.shapeDiv {
+  position: absolute;
+  top: 99px;
+  left: calc(50% - 933px);
+  background-color: var(--shape-shape01);
+  width: 1873px;
+  height: 1px;
+}
+.bGDiv,
+.vectorIcon {
+  position: absolute;
+  top: 0;
+}
+.vectorIcon {
+  left: calc(50% - 933px);
+  width: 40px;
+  height: 28px;
+}
+.bGDiv {
+  left: 0;
+  background-color: var(--background-bg03);
+  width: 1920px;
+  height: 553px;
+}
+.allRightReserveByForkThe {
+  position: absolute;
+  top: 501px;
+  left: 806px;
+  line-height: 30px;
+  display: inline-block;
+}
+.rectangleDiv {
+  position: absolute;
+  top: 470px;
+  left: 405px;
+  background-color: var(--shape-shape03);
+  width: 1110px;
+  height: 1px;
+}
+.span {
+  font-family: var(--paragraph-para04);
+}
+.ourServicesP {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+.helpDesk {
+  margin: 0;
+}
+.ourServicesPrivacyConta,
+.ourServicesPrivacyConta1 {
+  position: absolute;
+  top: 62px;
+  left: 0;
+  line-height: 40px;
+  white-space: pre-wrap;
+  display: inline-block;
+}
+.ourServicesPrivacyConta1 {
+  left: 190px;
+}
+.importantLinksB {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: var(--heading-head-03-size);
+  line-height: 32px;
+  display: inline-block;
+  color: var(--white1);
+}
+.importantLinksDiv {
+  position: absolute;
+  top: 108px;
+  left: 1515px;
+  width: 333px;
+  height: 262px;
+}
+.businessHour,
+.mondayFriday1000am060 {
+  position: absolute;
+  top: 38px;
+  left: 0;
+  line-height: 30px;
+  display: inline-block;
+}
+.businessHour {
+  top: 0;
+  font-size: var(--heading-head-04-size);
+}
+.thisIsASampleDemoPlease,
+.timeDiv {
+  position: absolute;
+  top: 186px;
+  left: 1px;
+  width: 295px;
+  height: 68px;
+}
+.thisIsASampleDemoPlease {
+  top: 72px;
+  line-height: 30px;
+  display: inline-block;
+  width: 350px;
+  height: 90px;
+}
+.uniLifeSimulationB {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 40px;
+  display: inline-block;
+}
+.logoDiv1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 225px;
+  height: 40px;
+  font-size: var(--h5-size);
+  color: var(--white1);
+}
+.aboutUsDiv1,
+.logoDiv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 351px;
+  height: 162px;
+}
+.logoDiv {
+  top: 108px;
+  left: 129px;
+  height: 254px;
+}
+.footerDiv {
+  top: 1351px;
+  left: 0;
+  height: 553px;
+}
+.aboutUsDiv,
+.bGDiv1,
+.footerDiv {
+  position: absolute;
+  width: 1920px;
+}
+.aboutUsDiv {
+  top: 1367px;
+  left: calc(50% - 960px);
+  height: 1904px;
+}
+.bGDiv1 {
+  top: 0;
+  left: 0;
+  background-color: var(--white1);
+  height: 90px;
+}
+.offCanvasIcon {
+  position: absolute;
+  top: 0;
+  left: 464px;
+  width: 42px;
+  height: 42px;
+}
+.aboutUsDiv2,
+.accomodationsDiv,
+.contactUsDiv,
+.homeDiv {
+  position: absolute;
+  top: 6px;
+  left: 343px;
+  line-height: 30px;
+  display: inline-block;
+}
+.aboutUsDiv2,
+.accomodationsDiv,
+.homeDiv {
+  left: 180px;
+}
+.aboutUsDiv2,
+.homeDiv {
+  left: 81px;
+}
+.homeDiv {
+  left: 0;
+  color: var(--primary-color-01);
+}
+.menuDiv {
+  position: absolute;
+  top: 24px;
+  left: 1383px;
+  width: 506px;
+  height: 42px;
+}
+.bGDiv2,
+.logoMenuDiv {
+  position: absolute;
+  top: 62px;
+  left: 0;
+  width: 1920px;
+  height: 90px;
+}
+.bGDiv2 {
+  top: 0;
+  background-color: var(--primary-color-01);
+  height: 62px;
+}
+.loginIcon,
+.user41 {
+  position: absolute;
+  height: 18px;
+}
+.loginIcon {
+  top: 22px;
+  left: 1384px;
+  width: 16px;
+  display: none;
+}
+.user41 {
+  top: 6px;
+  left: 0;
+  width: 18px;
+  overflow: hidden;
+}
+.loginSignupDiv1 {
+  position: absolute;
+  top: 0;
+  left: 26px;
+  line-height: 30px;
+  display: inline-block;
+}
+.loginSignupDiv {
+  top: 16px;
+  left: 1382px;
+  width: 133px;
+  height: 30px;
+}
+.call1Icon,
+.div,
+.loginSignupDiv {
+  position: absolute;
+}
+.div {
+  top: 0;
+  left: 30px;
+  line-height: 30px;
+  display: inline-block;
+}
+.call1Icon {
+  top: 3px;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  overflow: hidden;
+}
+.emailDiv {
+  position: absolute;
+  top: 19px;
+  left: 383px;
+  width: 142px;
+  height: 30px;
+}
+.unisimulationmytudublinieDiv {
+  position: absolute;
+  top: 0;
+  left: 29px;
+  line-height: 30px;
+  display: inline-block;
+}
+.paperPlane11 {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+}
+.callDiv,
+.infoLoginDiv {
+  position: absolute;
+  top: 19px;
+  left: 47px;
+  width: 262px;
+  height: 60px;
+}
+.infoLoginDiv {
+  top: 0;
+  left: 0;
+  width: 1920px;
+  height: 79px;
+  color: var(--white1);
+}
+.image1Icon {
+  position: absolute;
+  top: 86px;
+  left: 47px;
+  width: 256px;
+  height: 42px;
+  object-fit: cover;
+}
+.navDiv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1920px;
+  height: 152px;
+  color: var(--paragraph-para01);
+}
+.ellipseIcon {
+  position: absolute;
+  top: 555px;
+  left: 1690px;
+  width: 125px;
+  height: 99px;
+}
+.bGDiv3,
+.rectangleDiv1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--white1);
+  width: 1920px;
+  height: 1010px;
+}
+.rectangleDiv1 {
+  top: 310px;
+  background-color: var(--background-bg03);
+  width: 1135px;
+  height: 700px;
+}
+.livingRoom1Icon {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+}
+.wwwtudublinieDiv {
+  position: absolute;
+  top: 0;
+  left: 28px;
+  line-height: 30px;
+  display: inline-block;
+}
+.groupDiv1,
+.rectangleDiv2 {
+  position: absolute;
+  top: 0;
+  left: 122px;
+  width: 156px;
+  height: 30px;
+}
+.rectangleDiv2 {
+  top: 5px;
+  left: 111px;
+  background-color: var(--black);
+  width: 1px;
+  height: 20px;
+}
+.campusesDiv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 30px;
+  display: inline-block;
+}
+.bed1Div {
+  position: absolute;
+  top: 8px;
+  left: 45px;
+  background-color: var(--black);
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+}
+.groupDiv,
+.groupDiv2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 101px;
+  height: 30px;
+}
+.groupDiv {
+  top: 1839px;
+  left: 44px;
+  width: 278px;
+  color: var(--black);
+}
+.bed1Div1,
+.rectangleDiv3 {
+  position: absolute;
+  height: 20px;
+}
+.rectangleDiv3 {
+  top: 5px;
+  left: 111px;
+  background-color: var(--shape-shape01);
+  width: 1px;
+}
+.bed1Div1 {
+  top: 8px;
+  left: 45px;
+  width: 20px;
+  overflow: hidden;
+}
+.groupDiv3,
+.vectorIcon1 {
+  position: absolute;
+  top: 720px;
+  left: 422px;
+  width: 278px;
+  height: 30px;
+}
+.vectorIcon1 {
+  top: 3.2px;
+  left: 0;
+  width: 17px;
+  height: 22px;
+}
+.grangegormanDublin7 {
+  position: absolute;
+  top: 0;
+  left: 31px;
+  line-height: 30px;
+  display: inline-block;
+}
+.addressDiv,
+.maskGroupIcon {
+  position: absolute;
+  top: 670px;
+  left: 405px;
+  width: 224px;
+  height: 30px;
+}
+.maskGroupIcon {
+  top: 370px;
+  left: 923px;
+  width: 592px;
+  height: 450px;
+  object-fit: cover;
+}
+.courseIDTU059CourseName {
+  position: absolute;
+  top: 560px;
+  left: 405px;
+  line-height: 30px;
+  display: inline-block;
+  width: 445px;
+  height: 90px;
+}
+.div1,
+.technologicalUniversityDubli {
+  position: absolute;
+  top: 498px;
+  left: 405px;
+  font-size: var(--heading-head-02-size);
+  line-height: 42px;
+  font-weight: 500;
+  display: inline-block;
+}
+.technologicalUniversityDubli {
+  top: 444px;
+}
+.onTheBasisOfYourChoices,
+.recomendedForYou {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 54px;
+  display: inline-block;
+}
+.onTheBasisOfYourChoices {
+  top: 70px;
+  font-size: var(--paragraph-para01-size);
+  line-height: 30px;
+  color: var(--paragraph-para01);
+  width: 635px;
+  height: 60px;
+}
+.sectionHeadingDiv {
+  position: absolute;
+  top: 120px;
+  left: 405px;
+  width: 635px;
+  height: 130px;
+  font-size: var(--heading-head-01-size);
+  color: var(--heading-head01);
+}
+.recomandedForYou {
+  position: absolute;
+  top: 152px;
+  left: 0;
+  width: 1920px;
+  height: 1869px;
+  color: var(--white1);
+}
+.sectionHeadingDiv1 {
+  position: absolute;
+  top: 1237px;
+  left: 413px;
+  width: 824px;
+  height: 130px;
+  font-size: var(--heading-head-01-size);
+  color: var(--heading-head01);
+}
+.bGDiv4 {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 467.03px);
+  border-radius: var(--br-sm);
+  background-color: var(--white1);
+  box-shadow: 0 10px 30px rgba(0, 115, 225, 0.06);
+  width: 934.05px;
+  height: 606.15px;
+}
+.shapeDiv1 {
+  position: absolute;
+  top: 512.01px;
+  left: calc(50% - 425.51px);
+  background-color: var(--shape-shape01);
+  width: 851.03px;
+  height: 1.29px;
+}
+.courseIDTU059CourseName1,
+.universityOfLimeric {
+  position: absolute;
+  left: calc(50% - 425.51px);
+  display: inline-block;
+}
+.courseIDTU059CourseName1 {
+  top: 51.59px;
+  line-height: 30px;
+  background: linear-gradient(#555, #555), #fff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: 851.03px;
+  height: 72.22px;
+}
+.universityOfLimeric {
+  top: 0;
+  font-size: var(--heading-head-03-size);
+  line-height: 32px;
+  font-weight: 500;
+  width: 465.3px;
+  height: 41.27px;
+}
+.vectorIcon2 {
+  position: absolute;
+  top: 3.87px;
+  left: calc(50% - 230.92px);
+  width: 29.41px;
+  height: 28.37px;
+}
+.limericIrelandDiv {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 187.68px);
+  line-height: 28px;
+  display: inline-block;
+  width: 418.59px;
+  height: 36.11px;
+}
+.detailsDiv,
+.groupDiv6,
+.imageIcon {
+  position: absolute;
+  left: calc(50% - 425.51px);
+}
+.groupDiv6 {
+  top: 148.13px;
+  width: 461.84px;
+  height: 36.11px;
+  font-size: var(--font-size-sm);
+  color: var(--paragraph-para01);
+}
+.detailsDiv,
+.imageIcon {
+  top: 321.13px;
+  width: 851.03px;
+  height: 184.24px;
+}
+.imageIcon {
+  top: 0;
+  left: calc(50% - 467.03px);
+  width: 934.05px;
+  height: 290.18px;
+  object-fit: cover;
+}
+.rectangleDiv4 {
+  top: 0;
+  left: calc(50% - 98.59px);
+  background-color: var(--primary-color-01);
+  width: 197.19px;
+  height: 61.91px;
+}
+.div3,
+.priceDiv,
+.rectangleDiv4 {
+  position: absolute;
+}
+.div3 {
+  top: 10.32px;
+  left: calc(50% - 70.92px);
+  line-height: 42px;
+  font-weight: 500;
+  display: inline-block;
+  width: 141.84px;
+  height: 41.27px;
+}
+.priceDiv {
+  top: 197.32px;
+  left: calc(50% - 425.51px);
+  width: 197.19px;
+  height: 61.91px;
+  font-size: var(--font-size-2xl);
+  color: var(--white1);
+}
+.bath1Icon,
+.div2,
+.loveIcon {
+  position: absolute;
+  top: 30.95px;
+  left: calc(50% + 363.24px);
+  width: 62.27px;
+  height: 46.43px;
+}
+.bath1Icon,
+.div2 {
+  top: 644.85px;
+  left: calc(50% + 25.95px);
+  width: 934.05px;
+  height: 606.15px;
+}
+.bath1Icon {
+  top: 7.74px;
+  left: calc(50% - 60.54px);
+  width: 27.68px;
+  height: 20.64px;
+  overflow: hidden;
+}
+.bathDiv,
+.groupDiv7 {
+  position: absolute;
+  top: 0;
+  height: 36.11px;
+}
+.bathDiv {
+  left: calc(50% - 19.03px);
+  line-height: 28px;
+  display: inline-block;
+  width: 79.57px;
+}
+.groupDiv7 {
+  left: calc(50% - 205.84px);
+  width: 121.08px;
+}
+.livingRoom1Icon2 {
+  position: absolute;
+  top: 7.74px;
+  left: calc(50% - 76.11px);
+  width: 27.68px;
+  height: 20.64px;
+  overflow: hidden;
+}
+.groupDiv8,
+.roomsDiv,
+.sqDiv {
+  position: absolute;
+  top: 0;
+  height: 36.11px;
+}
+.roomsDiv {
+  left: calc(50% - 34.59px);
+  line-height: 28px;
+  display: inline-block;
+  width: 110.7px;
+}
+.groupDiv8,
+.sqDiv {
+  left: calc(50% + 22.49px);
+  width: 152.22px;
+}
+.sqDiv {
+  left: calc(50% - 29.41px);
+  line-height: 28px;
+  display: inline-block;
+  width: 100.32px;
+}
+.fitScreen1Icon {
+  position: absolute;
+  top: 7.74px;
+  left: calc(50% - 70.92px);
+  width: 27.68px;
+  height: 20.64px;
+  overflow: hidden;
+}
+.groupDiv9 {
+  position: absolute;
+  top: 0;
+  left: calc(50% + 283.68px);
+  width: 141.84px;
+  height: 36.11px;
+}
+.rectangleDiv5,
+.rectangleDiv6,
+.rectangleDiv7 {
+  position: absolute;
+  top: 1.29px;
+  left: calc(50% + 228.32px);
+  background-color: var(--shape-shape01);
+  width: 1.73px;
+  height: 33.53px;
+}
+.rectangleDiv6,
+.rectangleDiv7 {
+  left: calc(50% - 261.19px);
+}
+.rectangleDiv7 {
+  left: calc(50% - 31.14px);
+}
+.bedDiv {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 14.7px);
+  line-height: 28px;
+  display: inline-block;
+  width: 70.92px;
+  height: 36.11px;
+}
+.bed1Icon {
+  position: absolute;
+  top: 7.74px;
+  left: calc(50% - 56.22px);
+  width: 27.68px;
+  height: 20.64px;
+  overflow: hidden;
+}
+.groupDiv10,
+.infoDiv {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 425.51px);
+  width: 112.43px;
+  height: 36.11px;
+}
+.infoDiv {
+  top: 533.93px;
+  width: 851.03px;
+}
+.courseIDTU059CourseName2,
+.nationalUniversityIrelandGa {
+  position: absolute;
+  left: calc(50% - 423.76px);
+  display: inline-block;
+}
+.courseIDTU059CourseName2 {
+  top: 51.59px;
+  line-height: 30px;
+  background: linear-gradient(#555, #555), #fff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: 851.03px;
+  height: 72.22px;
+}
+.nationalUniversityIrelandGa {
+  top: 0;
+  font-size: var(--heading-head-03-size);
+  line-height: 32px;
+  font-weight: 500;
+  width: 465.3px;
+  height: 41.27px;
+}
+.vectorIcon3 {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 73px);
+  width: 29.41px;
+  height: 28.37px;
+}
+.galwayIrelandDiv {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 34px);
+  line-height: 28px;
+  display: inline-block;
+}
+.groupDiv11 {
+  position: absolute;
+  top: 148.02px;
+  left: calc(50% - 427.27px);
+  width: 146px;
+  height: 28.37px;
+  font-size: var(--font-size-sm);
+  color: var(--paragraph-para01);
+}
+.detailsDiv1 {
+  top: 321.13px;
+  left: calc(50% - 429.03px);
+  width: 854.54px;
+  height: 176.39px;
+  font-size: var(--paragraph-para01-size);
+  color: var(--heading-head02);
+}
+.bGDiv5,
+.detailsDiv1,
+.div4 {
+  position: absolute;
+}
+.div4 {
+  top: 644.85px;
+  left: calc(50% - 960px);
+  width: 934.05px;
+  height: 570.04px;
+  font-size: var(--font-size-sm);
+  color: var(--paragraph-para01);
+}
+.bGDiv5 {
+  top: 0;
+  left: calc(50% - 467px);
+  border-radius: var(--br-sm);
+  background-color: var(--white1);
+  box-shadow: 0 10px 30px rgba(0, 115, 225, 0.06);
+  width: 934px;
+  height: 606px;
+}
+.shapeDiv3 {
+  position: absolute;
+  top: 511.88px;
+  left: calc(50% - 425.49px);
+  background-color: var(--shape-shape01);
+  width: 850.98px;
+  height: 1.29px;
+}
+.courseIDTU059CourseName3,
+.trinityCollegeDublin {
+  position: absolute;
+  left: calc(50% - 421.73px);
+  display: inline-block;
+}
+.courseIDTU059CourseName3 {
+  top: 51.57px;
+  line-height: 30px;
+  background: linear-gradient(#555, #555), #fff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: 850.98px;
+  height: 72.2px;
+}
+.trinityCollegeDublin {
+  top: 0;
+  font-size: var(--heading-head-03-size);
+  line-height: 32px;
+  font-weight: 500;
+  width: 465.27px;
+  height: 41.26px;
+}
+.vectorIcon4 {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 75px);
+  width: 29.4px;
+  height: 28.37px;
+}
+.dublinIrelandDiv {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 26px);
+  line-height: 28px;
+  display: inline-block;
+}
+.groupDiv12 {
+  position: absolute;
+  top: 146.95px;
+  left: calc(50% - 429.24px);
+  width: 150px;
+  height: 28.37px;
+  font-size: var(--font-size-sm);
+  color: var(--paragraph-para01);
+}
+.detailsDiv2,
+.imageIcon2 {
+  position: absolute;
+  top: 321.05px;
+  left: calc(50% - 433px);
+  width: 858.49px;
+  height: 175.32px;
+}
+.imageIcon2 {
+  top: 0;
+  left: calc(50% - 467px);
+  width: 934px;
+  height: 290.11px;
+  object-fit: cover;
+}
+.loveIcon2,
+.rectangleDiv9 {
+  position: absolute;
+  top: 30.94px;
+  left: calc(50% + 363.22px);
+  width: 62.27px;
+  height: 46.42px;
+}
+.rectangleDiv9 {
+  top: 0;
+  left: calc(50% - 98.59px);
+  background-color: var(--primary-color-01);
+  width: 197.18px;
+  height: 61.89px;
+}
+.div7 {
+  position: absolute;
+  top: 10.31px;
+  left: calc(50% - 70.91px);
+  line-height: 42px;
+  font-weight: 500;
+  display: inline-block;
+  width: 141.83px;
+  height: 41.26px;
+}
+.priceDiv2 {
+  position: absolute;
+  top: 197.27px;
+  left: calc(50% - 425.49px);
+  width: 197.18px;
+  height: 61.89px;
+  font-size: var(--font-size-2xl);
+  color: var(--white1);
+}
+.div6 {
+  position: absolute;
+  top: 0;
+  left: calc(50% + 26px);
+  width: 934px;
+  height: 606px;
+}
+.courseIDTU059CourseName4,
+.universityCollegeDublin {
+  position: absolute;
+  left: calc(50% - 419.26px);
+  display: inline-block;
+}
+.courseIDTU059CourseName4 {
+  top: 51.59px;
+  line-height: 30px;
+  background: linear-gradient(#555, #555), #fff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: 851.03px;
+  height: 72.22px;
+}
+.universityCollegeDublin {
+  top: 0;
+  font-size: var(--heading-head-03-size);
+  text-decoration: underline;
+  line-height: 32px;
+  font-weight: 500;
+  color: inherit;
+  width: 465.3px;
+  height: 41.27px;
+}
+.groupDiv13 {
+  position: absolute;
+  top: 150.87px;
+  left: calc(50% - 431.77px);
+  width: 461.84px;
+  height: 36.11px;
+  font-size: var(--font-size-sm);
+  color: var(--paragraph-para01);
+}
+.detailsDiv3,
+.div8 {
+  position: absolute;
+  top: 321.13px;
+  left: calc(50% - 438.03px);
+  width: 863.54px;
+  height: 186.98px;
+}
+.div8 {
+  top: 0;
+  left: calc(50% - 960px);
+  width: 934.05px;
+  height: 606.15px;
+}
+.groupDiv14 {
+  position: absolute;
+  top: 720px;
+  left: 422px;
+  width: 278px;
+  height: 30px;
+  color: var(--white1);
+}
+.cardsDiv {
+  position: absolute;
+  top: 1467px;
+  left: calc(50% - 960px);
+  width: 1920px;
+  height: 1251px;
+  color: var(--heading-head02);
+}
+.outputOfTheRecommendor {
+  position: relative;
+  background-color: var(--white1);
+  width: 100%;
+  height: 3385px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--paragraph-para01-size);
+  color: var(--paragraph-para03);
+  font-family: var(--paragraph-para04);
+}

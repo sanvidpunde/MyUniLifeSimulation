@@ -1,0 +1,705 @@
+.shapeDiv {
+  position: absolute;
+  top: 658px;
+  left: calc(50% - 510px);
+  background-color: var(--shape-shape01);
+  width: 1110px;
+  height: 1px;
+}
+.bGDiv,
+.vectorIcon {
+  position: absolute;
+  top: 0;
+}
+.vectorIcon {
+  left: calc(50% - 933px);
+  width: 40px;
+  height: 28px;
+}
+.bGDiv {
+  left: 0;
+  background-color: var(--background-bg03);
+  width: 1920px;
+  height: 553px;
+}
+.allRightReserveByForkThe {
+  position: absolute;
+  top: 501px;
+  left: 806px;
+  line-height: 30px;
+  display: inline-block;
+}
+.rectangleDiv {
+  position: absolute;
+  top: 470px;
+  left: 405px;
+  background-color: var(--shape-shape03);
+  width: 1110px;
+  height: 1px;
+}
+.span {
+  font-family: var(--paragraph-para04);
+}
+.ourServicesP {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+.helpDesk {
+  margin: 0;
+}
+.ourServicesPrivacyConta,
+.ourServicesPrivacyConta1 {
+  position: absolute;
+  top: 62px;
+  left: 0;
+  line-height: 40px;
+  white-space: pre-wrap;
+  display: inline-block;
+}
+.ourServicesPrivacyConta1 {
+  left: 190px;
+}
+.importantLinksB {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: var(--heading-head-03-size);
+  line-height: 32px;
+  display: inline-block;
+  color: var(--white1);
+}
+.importantLinksDiv {
+  position: absolute;
+  top: 108px;
+  left: 1515px;
+  width: 333px;
+  height: 262px;
+}
+.businessHour,
+.mondayFriday1000am060 {
+  position: absolute;
+  top: 38px;
+  left: 0;
+  line-height: 30px;
+  display: inline-block;
+}
+.businessHour {
+  top: 0;
+  font-size: var(--heading-head-04-size);
+}
+.thisIsASampleDemoPlease,
+.timeDiv {
+  position: absolute;
+  top: 186px;
+  left: 1px;
+  width: 295px;
+  height: 68px;
+}
+.thisIsASampleDemoPlease {
+  top: 72px;
+  line-height: 30px;
+  display: inline-block;
+  width: 350px;
+  height: 90px;
+}
+.uniLifeSimulationB {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 40px;
+  display: inline-block;
+}
+.logoDiv1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 225px;
+  height: 40px;
+  font-size: var(--h5-size);
+  color: var(--white1);
+}
+.aboutUsDiv1,
+.logoDiv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 351px;
+  height: 162px;
+}
+.logoDiv {
+  top: 108px;
+  left: 129px;
+  height: 254px;
+}
+.footerDiv {
+  top: 1351px;
+  left: 0;
+  height: 553px;
+}
+.aboutUsDiv,
+.bGDiv1,
+.footerDiv {
+  position: absolute;
+  width: 1920px;
+}
+.aboutUsDiv {
+  top: 1367px;
+  left: calc(50% - 960px);
+  height: 1904px;
+  color: var(--paragraph-para03);
+}
+.bGDiv1 {
+  top: 0;
+  left: 0;
+  background-color: var(--white1);
+  height: 90px;
+}
+.offCanvasIcon {
+  position: absolute;
+  top: 0;
+  left: 464px;
+  width: 42px;
+  height: 42px;
+}
+.aboutUsDiv2,
+.accomodationsDiv,
+.contactUsDiv,
+.homeDiv {
+  position: absolute;
+  top: 6px;
+  left: 343px;
+  line-height: 30px;
+  display: inline-block;
+}
+.aboutUsDiv2,
+.accomodationsDiv,
+.homeDiv {
+  left: 180px;
+}
+.aboutUsDiv2,
+.homeDiv {
+  left: 81px;
+}
+.homeDiv {
+  left: 0;
+  color: var(--primary-color-01);
+}
+.menuDiv {
+  position: absolute;
+  top: 24px;
+  left: 1383px;
+  width: 506px;
+  height: 42px;
+}
+.bGDiv2,
+.logoMenuDiv {
+  position: absolute;
+  top: 62px;
+  left: 0;
+  width: 1920px;
+  height: 90px;
+}
+.bGDiv2 {
+  top: 0;
+  background-color: var(--primary-color-01);
+  height: 62px;
+}
+.loginIcon,
+.user41 {
+  position: absolute;
+  height: 18px;
+}
+.loginIcon {
+  top: 22px;
+  left: 1384px;
+  width: 16px;
+  display: none;
+}
+.user41 {
+  top: 6px;
+  left: 0;
+  width: 18px;
+  overflow: hidden;
+}
+.loginSignupDiv1 {
+  position: absolute;
+  top: 0;
+  left: 26px;
+  line-height: 30px;
+  display: inline-block;
+}
+.loginSignupDiv {
+  top: 16px;
+  left: 1382px;
+  width: 133px;
+  height: 30px;
+}
+.call1Icon,
+.div,
+.loginSignupDiv {
+  position: absolute;
+}
+.div {
+  top: 0;
+  left: 30px;
+  line-height: 30px;
+  display: inline-block;
+}
+.call1Icon {
+  top: 3px;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  overflow: hidden;
+}
+.emailDiv {
+  position: absolute;
+  top: 16px;
+  left: 601px;
+  width: 142px;
+  height: 30px;
+}
+.unisimulationmytudublinieDiv {
+  position: absolute;
+  top: 0;
+  left: 29px;
+  line-height: 30px;
+  display: inline-block;
+}
+.paperPlane11 {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+}
+.callDiv,
+.infoLoginDiv {
+  position: absolute;
+  top: 16px;
+  left: 329px;
+  width: 262px;
+  height: 60px;
+}
+.infoLoginDiv {
+  top: 0;
+  left: 0;
+  width: 1920px;
+  height: 76px;
+  color: var(--white1);
+}
+.image1Icon {
+  position: absolute;
+  top: 86px;
+  left: 329px;
+  width: 256px;
+  height: 42px;
+  object-fit: cover;
+}
+.image2Icon,
+.navDiv {
+  position: absolute;
+  left: 0;
+  width: 1920px;
+}
+.navDiv {
+  top: 0;
+  height: 152px;
+  color: var(--paragraph-para01);
+}
+.image2Icon {
+  top: calc(50% - 1540.5px);
+  height: 182px;
+  object-fit: cover;
+}
+.careerProfile,
+.dutiesB,
+.jobDescription,
+.skillsRequired,
+.typicalEmployers {
+  position: absolute;
+  top: 350px;
+  left: 5px;
+  font-size: var(--heading-head-01-size);
+  line-height: 54px;
+  display: inline-block;
+  width: 540px;
+  height: 48px;
+  opacity: 0.5;
+}
+.dutiesB,
+.jobDescription,
+.skillsRequired,
+.typicalEmployers {
+  top: 1099px;
+}
+.dutiesB,
+.skillsRequired,
+.typicalEmployers {
+  top: 1419px;
+  left: 8px;
+}
+.skillsRequired,
+.typicalEmployers {
+  top: 1978px;
+}
+.skillsRequired {
+  top: 2384px;
+}
+.businessAnalystHR {
+  margin-block-start: 0;
+  margin-block-end: 4px;
+}
+.businessAnalystHRRepCorp,
+.businessManagementIsAProfe {
+  position: absolute;
+  top: 476px;
+  left: 5px;
+  font-size: var(--font-size-2xl);
+  line-height: 54px;
+  display: inline-block;
+  width: 540px;
+  height: 48px;
+  opacity: 0.5;
+}
+.businessManagementIsAProfe {
+  top: 1171px;
+  width: 1848px;
+  height: 224px;
+  opacity: 0.75;
+}
+.designingAndImplementing {
+  margin-bottom: 0;
+}
+.developingBusinessManagement1 {
+  margin: 0;
+  padding-left: var(--padding-lg);
+}
+.developingBusinessManagement,
+.financialConsultingFirmsTec {
+  position: absolute;
+  top: 1491px;
+  left: 8px;
+  font-size: var(--font-inherit);
+  line-height: 54px;
+  display: inline-block;
+  font-family: var(--font-inherit);
+  width: 1848px;
+  height: 437px;
+  opacity: 0.75;
+}
+.financialConsultingFirmsTec {
+  top: 2026px;
+  left: 0;
+  height: 322px;
+}
+.thisCareerIsPerfectForYou {
+  position: absolute;
+  top: 476px;
+  left: 1316px;
+  font-size: var(--font-size-2xl);
+  line-height: 54px;
+  display: inline-block;
+  width: 585px;
+  height: 48px;
+  opacity: 0.5;
+}
+.b,
+.businessManagement {
+  font-size: var(--font-size-9xl);
+  line-height: 80px;
+}
+.businessManagement {
+  position: absolute;
+  top: 408px;
+  left: 5px;
+  display: inline-block;
+  width: 540px;
+  height: 68px;
+}
+.b {
+  top: 350px;
+  left: 1773px;
+  width: 107px;
+  height: 67px;
+}
+.b,
+.careerMotivatorsDiv,
+.matchB {
+  position: absolute;
+  display: inline-block;
+}
+.matchB {
+  top: 390px;
+  left: 1773px;
+  font-size: var(--font-size-2xl);
+  line-height: 80px;
+  width: 107px;
+  height: 67px;
+}
+.careerMotivatorsDiv {
+  top: 23px;
+  left: 86.84px;
+  line-height: 32px;
+  font-weight: 500;
+  width: 232.88px;
+  height: 50.09px;
+}
+.rectangleDiv1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-gray-100);
+  width: 70.15px;
+  height: 78.26px;
+}
+.yourResponsesToCertainQues {
+  position: absolute;
+  top: 75.13px;
+  left: 86.98px;
+  font-size: var(--paragraph-para01-size);
+  line-height: 30px;
+  color: var(--paragraph-para01);
+  display: inline-block;
+  width: 404.04px;
+  height: 140.87px;
+}
+.fasterServicesDiv {
+  position: absolute;
+  top: 0;
+  left: 1205.08px;
+  width: 491.02px;
+  height: 216px;
+}
+.workPersonalityDiv {
+  position: absolute;
+  top: 17px;
+  left: 86.7px;
+  line-height: 32px;
+  font-weight: 500;
+  display: inline-block;
+  width: 249.72px;
+  height: 50.09px;
+}
+.mapsAndFlags1Div {
+  position: absolute;
+  top: 15.65px;
+  left: 14.03px;
+  width: 42.09px;
+  height: 46.96px;
+  overflow: hidden;
+}
+.careerInterestsDiv,
+.perfectLocationDiv {
+  position: absolute;
+  top: 0;
+  left: 558.25px;
+  width: 491.02px;
+  height: 216px;
+}
+.careerInterestsDiv {
+  left: 0;
+  line-height: 32px;
+  font-weight: 500;
+  display: inline-block;
+  height: 50.09px;
+}
+.yourScoreIndicatesAVeryHi {
+  position: absolute;
+  top: 58px;
+  left: 0;
+  font-size: var(--paragraph-para01-size);
+  line-height: 30px;
+  color: var(--paragraph-para01);
+  display: inline-block;
+  width: 438.71px;
+  height: 141px;
+}
+.buySellProperties,
+.featureDiv {
+  position: absolute;
+  top: 17px;
+  left: 0;
+  width: 491.02px;
+  height: 199px;
+}
+.featureDiv {
+  top: 619px;
+  left: 97px;
+  width: 1696.1px;
+  height: 216px;
+  font-size: var(--heading-head-03-size);
+  color: var(--heading-head02);
+}
+.image4Icon,
+.image5Icon {
+  position: absolute;
+  object-fit: cover;
+}
+.image4Icon {
+  height: 2.6%;
+  width: 3.07%;
+  top: 18.52%;
+  right: 62.24%;
+  bottom: 78.88%;
+  left: 34.69%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.image5Icon {
+  top: 632px;
+  left: 32px;
+  width: 51px;
+  height: 53px;
+}
+.verbalReasoningDiv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 32px;
+  font-weight: 500;
+  display: inline-block;
+  width: 232.88px;
+  height: 50.09px;
+}
+.yourAnswersTo810OfTheVe {
+  position: absolute;
+  top: 52.13px;
+  left: 0.15px;
+  font-size: var(--paragraph-para01-size);
+  line-height: 30px;
+  color: var(--paragraph-para01);
+  display: inline-block;
+  width: 404.04px;
+  height: 140.87px;
+}
+.fasterServicesDiv1,
+.featureDiv1 {
+  position: absolute;
+  top: 23px;
+  left: 1291.92px;
+  width: 404.18px;
+  height: 193px;
+}
+.featureDiv1 {
+  top: 859px;
+  left: 97px;
+  width: 1696.1px;
+  height: 216px;
+  font-size: var(--heading-head-03-size);
+  color: var(--heading-head02);
+}
+.image6Icon,
+.image7Icon,
+.image8Icon {
+  position: absolute;
+  top: 876px;
+  left: 28px;
+  width: 60px;
+  height: 57px;
+  object-fit: cover;
+}
+.image7Icon,
+.image8Icon {
+  top: 875px;
+  left: 655px;
+  width: 73px;
+  height: 56px;
+}
+.image8Icon {
+  top: 882px;
+  left: 1305px;
+  width: 71px;
+  height: 57px;
+}
+.excellentInterpersonalSkills {
+  position: relative;
+  line-height: 30px;
+  font-weight: 500;
+  display: inline-block;
+}
+.buttonDiv,
+.buttonDiv1,
+.buttonDiv2,
+.buttonDiv3,
+.buttonDiv4 {
+  position: absolute;
+  top: 2455px;
+  left: 25px;
+  border-radius: var(--br-xs);
+  background-color: var(--primary-color04);
+  width: 368px;
+  display: flex;
+  flex-direction: row;
+  padding: var(--padding-xs) var(--padding-md);
+  box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: var(--white1);
+}
+.buttonDiv1,
+.buttonDiv2,
+.buttonDiv3,
+.buttonDiv4 {
+  top: 2578px;
+  left: 869px;
+  width: 400px;
+}
+.buttonDiv2,
+.buttonDiv3,
+.buttonDiv4 {
+  top: 2584px;
+  left: 450px;
+  width: 362px;
+}
+.buttonDiv3,
+.buttonDiv4 {
+  top: 2578px;
+  left: 25px;
+  width: 368px;
+  padding: var(--padding-xs) var(--padding-md) var(--padding-xs) 13px;
+}
+.buttonDiv4 {
+  top: 2455px;
+  left: 869px;
+  width: 400px;
+  padding: var(--padding-xs) var(--padding-md);
+}
+.problemSolvingDiv {
+  position: relative;
+  line-height: 30px;
+  font-weight: 500;
+  display: inline-block;
+  width: 352px;
+  height: 69px;
+  flex-shrink: 0;
+}
+.buttonDiv5 {
+  position: absolute;
+  top: 2454px;
+  left: 441px;
+  border-radius: var(--br-xs);
+  background-color: var(--primary-color04);
+  width: 362px;
+  height: 63px;
+  display: flex;
+  flex-direction: row;
+  padding: var(--padding-xs) var(--padding-md);
+  box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: var(--white1);
+}
+.psychometricTestOutput {
+  position: relative;
+  background-color: var(--white1);
+  width: 100%;
+  height: 3385px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--paragraph-para01-size);
+  color: var(--heading-head01);
+  font-family: var(--paragraph-para04);
+}
