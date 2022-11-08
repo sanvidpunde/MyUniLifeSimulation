@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {Route, Switch, Redirect} from 'react-router-dom';
 import {connect} from 'react-redux';
+import { CSSTransition } from 'react-transition-group';
 
 import Navbar from './Navbar';
 import Modal from './Modal';
 import Home from './Home';
 import Simulation from './Simulation';
+import RecommendedCourses from './RecommendedCourses';
+import CourseDetails from './CourseDetails';
 import Psychometric from './Psychometric';
 import Login from './Login';
 import Signup from './Signup';
+import Footer from './Footer';
 
 const mapStateToProps = ({ session }) => ({
   	loggedIn: Boolean(session.email),
@@ -17,6 +21,13 @@ const mapStateToProps = ({ session }) => ({
 
 const App = ({ loggedIn, email }) => {
 	let routes;
+	const [showSplash, setShowSplash] = useState(true);
+	useEffect(() => {
+		const timer = setTimeout(() => {
+			setShowSplash(false);
+		}, 2000);
+		return () => clearTimeout(timer);
+	}, [])
 	if (loggedIn) {
 		routes = (
 			<Switch>
@@ -26,7 +37,7 @@ const App = ({ loggedIn, email }) => {
 				<Route path="/simulation" exact>
 					<Simulation />
 				</Route>
-				<Route path="/psychometric" exact>
+				<Route path="/interest_profiler" exact>
 					<Psychometric />
 				</Route>
 				<Redirect to="/" />
@@ -41,7 +52,13 @@ const App = ({ loggedIn, email }) => {
 				<Route path="/simulation" exact>
 					<Simulation />
 				</Route>
-				<Route path="/psychometric" exact>
+				<Route path="/recommended_courses" exact>
+					<RecommendedCourses />
+				</Route>
+				<Route path="/course_details" exact>
+					<CourseDetails />
+				</Route>
+				<Route path="/interest_profiler" exact>
 					<Psychometric />
 				</Route>
 				<Route path="/login" exact>
@@ -57,9 +74,18 @@ const App = ({ loggedIn, email }) => {
 
 	return (
 		<React.Fragment>
-			<Navbar />
-			<Modal />
-			{routes}
+			{showSplash ?
+				<div className="splash_screen">
+					<img src="/images/splash_screen.jpg" alt="Splash Screen" />
+				</div>
+			:
+				<React.Fragment>
+					<Navbar />
+					<Modal />
+					{routes}
+					<Footer />
+				</React.Fragment>
+			}
 		</React.Fragment>
 	)
 };

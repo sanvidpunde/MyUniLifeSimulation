@@ -40,6 +40,11 @@ const Signup = ({ signup }) => {
 		setPassword(event.target.value.trim());
 	}
 
+	// Scroll to top of page
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
+
 	// Name Validation
 	useEffect(() => {
 		if (firstRenderName.current) {
@@ -156,64 +161,69 @@ const Signup = ({ signup }) => {
 	return (
 		<React.Fragment>
 			<div className="header">
-				<div className="header-text">University Simulation</div>
-				<p>Lorem Ipsum Dolor Sit Amet</p>
+				<div className="container">
+					<div className="header-text">University Simulation</div>
+					<p>Lorem Ipsum Dolor Sit Amet</p>
+				</div>
 			</div>
-			<div className="container login-form">
-				<div className="p-lr">
-					<div className="card">
-						<div className="title">Create Account</div>
-						<form>
+			<div className="gray-bg">
+				<div className="container login-form p-60">
+					<div className="p-lr">
+						<div className="card">
+							<div className="title">Create Account</div>
+							<form>
+								
+								<label htmlFor="name">Your full name</label>
+								<input
+									type="text"
+									id="name"
+									value={name}
+									onChange={nameHandler}
+									className={`${(nameError !== "") && "red-input"}`}
+								/>
+								{nameError !== "" && <p className="error_text"><i>!</i> &nbsp;{nameError}</p>}
+
+								<label htmlFor="username">Choose username</label>
+								<input
+									type="text"
+									id="username"
+									placeholder="At least 4 characters"
+									value={username}
+									onChange={usernameHandler}
+									className={`${(usernameError !== "") && "red-input"}`}
+								/>
+								{usernameError !== "" && <p className="error_text"><i>!</i> &nbsp;{usernameError}</p>}
+								
+								<label htmlFor="email">Email</label>
+								<input 
+									type="text"
+									id="email"
+									value={email}
+									onChange={emailHandler}
+									className={`${(emailError !== "") && "red-input"}`}
+								/>
+								{emailError !== "" && <p className="error_text"><i>!</i> &nbsp;{emailError}</p>}
+
+								<label htmlFor="password">Password</label>
+								<input
+									type="password"
+									id="password"
+									placeholder="At least 6 characters"
+									value={password}
+									onChange={passwordHandler}
+									className={`${(passwordError !== "") && "red-input"}`}
+								/>
+								{passwordError !== "" && <p className="error_text"><i>!</i> &nbsp;{passwordError}</p>}
+
+								<button type="submit" onClick={handleSignup}>Continue</button>
 							
-							<label htmlFor="name">Your full name</label>
-							<input
-								type="text"
-								id="name"
-								value={name}
-								onChange={nameHandler}
-								className={`${(nameError !== "") && "red-input"}`}
-							/>
-							{nameError !== "" && <p className="error_text"><i>!</i> &nbsp;{nameError}</p>}
-
-							<label htmlFor="username">Choose username</label>
-							<input
-								type="text"
-								id="username"
-								placeholder="At least 4 characters"
-								value={username}
-								onChange={usernameHandler}
-								className={`${(usernameError !== "") && "red-input"}`}
-							/>
-							{usernameError !== "" && <p className="error_text"><i>!</i> &nbsp;{usernameError}</p>}
-							
-							<label htmlFor="email">Email</label>
-							<input 
-								type="text"
-								id="email"
-								value={email}
-								onChange={emailHandler}
-								className={`${(emailError !== "") && "red-input"}`}
-							/>
-							{emailError !== "" && <p className="error_text"><i>!</i> &nbsp;{emailError}</p>}
-
-							<label htmlFor="password">Password</label>
-							<input
-								type="password"
-								id="password"
-								placeholder="At least 6 characters"
-								value={password}
-								onChange={passwordHandler}
-								className={`${(passwordError !== "") && "red-input"}`}
-							/>
-							{passwordError !== "" && <p className="error_text"><i>!</i> &nbsp;{passwordError}</p>}
-
-							<button type="submit" onClick={handleSignup}>Continue</button>
-						
-						</form>
-						<div className="have_an_acc"><p>Already have an account? <button className="signInBtn"><Link to="/login">Sign In</Link></button></p></div>
+							</form>
+							<div className="have_an_acc"><p>Already have an account? <button className="signInBtn"><Link to="/login">Sign In</Link></button></p></div>
+						</div>
 					</div>
 				</div>
 			</div>
+			
 		</React.Fragment>
 	)
 }

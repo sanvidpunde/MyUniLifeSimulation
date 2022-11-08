@@ -11,6 +11,10 @@ export const RECEIVE_SUCCESS_MESSAGE = "RECEIVE_SUCCESS_MESSAGE";
 export const RECEIVE_FAILURE_MESSAGE = "RECEIVE_FAILURE_MESSAGE";
 export const CLEAR_SERVER_RESPONSE = "CLEAR_SERVER_RESPONSE";
 
+// step
+export const RECEIVE_CURRENT_STEP = "RECEIVE_CURRENT_STEP";
+export const UPDATE_CURRENT_STEP = "UPDATE_CURRENT_STEP";
+
 // Other constants
 // session
 const receiveCurrentUser = user => ({
@@ -38,7 +42,24 @@ export const clearResponse = () => ({
 	type: CLEAR_SERVER_RESPONSE
 });
 
+// step
+export const receiveCurrentStep = (step) => ({
+	type: RECEIVE_CURRENT_STEP,
+	step
+});
+export const updateCurrentStep = (step) => ({
+	type: UPDATE_CURRENT_STEP,
+	step
+});
+
+
+
 // FUNCTIONS
+// CHANGE STEP
+export const changeStep = (step) => {
+	return dispatch => dispatch(updateCurrentStep(step));
+};
+
 export const login = (user) => {
 	return dispatch =>
 		axios.post('/api/login', user)

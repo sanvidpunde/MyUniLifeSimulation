@@ -12,6 +12,14 @@
 }
 body {
 	font-family: 'Open Sans', sans-serif;
+	background: #fff;
+}
+.responsive-image {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+.gray-bg {
 	background: #f5f5f5;
 }
 button:focus {
@@ -147,6 +155,12 @@ button:focus {
 }
 .mt-20 {
 	margin-top: 20px;
+}
+.mb-20 {
+	margin-bottom: 20px;
+}
+.mb-30 {
+	margin-bottom: 30px;
 }
 .mb-60 {
 	margin-bottom: 60px;
@@ -332,6 +346,45 @@ li.item a:hover .fa {
 	top: -10px;
 }
 
+/* Splash Screen */
+.splash_screen {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.splash_screen img {
+	width: 100%;
+	max-width: 1440px;
+	max-height: 100%;
+	z-index: 10;
+	animation-name: shrink;
+	animation-delay: 1500ms;
+	animation-duration: 500ms;
+	animation-timing-function: linear;
+}
+
+@keyframes shrink {
+	0% {
+		width: 100%;
+		max-width: 1440px;
+		max-height: 100%;
+		opacity: 1;
+	  }
+	  50% {
+		width: 100%;
+		max-width: 800px;
+		max-height: 100%;
+		opacity: 0.5;
+	  }
+	  100% {
+		width: 100%;
+		max-width: 200px;
+		max-height: 100%;
+		opacity: 0;
+	  }
+}
+
 /* Desktop menu */
 @media (min-width: 768px) {
 	ul.menu {
@@ -485,6 +538,150 @@ li.user:hover ul {
 	width: 100%;
 	border-radius: 10px;
 }
+.simulation-form-area {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 30px;
+}
+.simulation-form-area .single-simulation-form {
+	max-width: 100%;
+	min-width: 360px;
+}
+.simulation-form-area label {
+	display: block;
+}
+.mt-6 {
+	margin-top: 6px;
+}
+.simulation-form-area input[type=number] {
+	display: block;
+	width: 100%;
+	height: 38px;
+	padding: 10px;
+	margin-top: 6px;
+	font-size: 16px;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+	outline: none;
+}
+.simulation-form-area input[type=number]:focus {
+	border: 3px solid #007FC0;
+}
+.simulation-form-area select {
+	display: block;
+	width: 100%;
+	height: 40px;
+}
+
+/* Recommended Course */
+.recommended_course img {
+	max-width: 500px;
+	max-height: 100%;
+}
+.recommended_course {
+	display: flex;
+	justify-content: left;
+	align-items: center;
+	flex-direction: row;
+	gap: 30px;
+}
+.recommended_course_description h2 {
+	color: #333;
+}
+.recommended_course_description h2 a:link,
+.recommended_course_description h2 a:visited {
+	color: #333;
+	text-decoration: none;
+}
+.recommended_course_description h2 a:hover {
+	color: #007FC0;
+}
+.recommended_course_description p {
+	line-height: 1.6;
+}
+.recommended_course_description a:link,
+.recommended_course_description a:visited {
+	color: #007FC0;
+	text-decoration: none;
+}
+.recommended_course_description a:hover {
+	text-decoration: underline;
+}
+.recommended_course_description .location {
+	font-size: 18px;
+	margin-top: 10px;
+}
+.recommended_course_description .fa {
+	color: #007FC0;
+}
+.grey-border {
+	width: 100%;
+	height: 1px;
+	background: #dbdbdb;
+	margin-bottom: 30px;
+}
+.other_universities {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+/* Course Details */
+.course_details_parent {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+.course_details_acc {
+	flex: 3;
+	background-color: #E7EBF0;
+	padding: 20px;
+	border-radius: 8px;
+	height: fit-content;
+	margin-bottom: 30px;
+}
+.acc-title {
+	font-size: 20px;
+	font-weight: 700;
+}
+.course_details_helpful_resources {
+	flex: 1;
+	background-color: #E7EBF0;
+	padding: 20px;
+	border-radius: 8px;
+	height: fit-content;
+}
+.highlight-border {
+	width: 40px;
+	height: 3px;
+	background-color: #007FC0;
+	margin: 10px 0;
+}
+.single_resource {
+	margin-bottom: 30px;
+}
+.course_details_helpful_resources h3 {
+	color: #333;
+	margin: 10px 0;
+}
+.course_details_helpful_resources h3 a:link, 
+.course_details_helpful_resources h3 a:visited {
+	color: #333;
+	text-decoration: none;
+}
+.course_details_helpful_resources h3 a:hover {
+	color: #007FC0;
+}
+.single_resource img {
+	border-radius: 50%;
+}
+.course_details_helpful_resources p {
+	line-height: 1.6;;
+}
 
 /* Login */
 .top_space {
@@ -524,7 +721,7 @@ li.user:hover ul {
 	margin-top: 0;
 }
 .login-form {
-	margin-bottom: 60px;
+	/* margin-bottom: 60px; */
 }
 .login-form .red-input {
 	border: 1.5px solid #ac4b49 !important;
@@ -694,7 +891,7 @@ a.signUpBtnLink {
 	margin-top: 62px;
 	background: #1C1C33;
 	padding: 60px 20px;
-	margin-bottom: 60px;
+	/* margin-bottom: 60px; */
 }
 .header .header-text {
 	font-size: 36px;
@@ -711,7 +908,64 @@ a.signUpBtnLink {
 	text-align: center;
 	word-spacing: 3px;
 }
+.p-60 {
+	padding: 60px 0;
+}
+.white-bg {
+	background: #fff;
+}
 
+/* Footer */
+.footer {
+	background: #DBDBDB;
+	padding: 60px 0 30px 0;
+}
+.footer-columns {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 30px;
+}
+.single-footer-column {
+	flex: 1;
+	max-width: 450px;
+	margin-bottom: 30px;
+}
+.single-footer-column .fa {
+	color: #007FC0;
+	margin-right: 6px;
+	margin-bottom: 6px;;
+}
+.single-footer-column span {
+	font-weight: 700;
+}
+.single-footer-column .footer-title {
+	font-size: 18px;
+	font-weight: 700;
+	text-align: left;
+	margin-bottom: 7px;
+}
+.single-footer-column .footer-title img {
+	height: 30px;
+}
+.title-attention {
+	width: 30px;
+	height: 2px;
+	background-color: #007FC0;
+	margin-bottom: 10px;
+}
+
+.footer-border {
+	background-color: #cbcbcb;
+	height: 1px;
+	width: 100%;
+}
+.copyright {
+	text-align: center;
+	color: #666;
+	margin: 16px 0;
+}
 
 /* Bucket */
 .bucket {
@@ -1000,7 +1254,7 @@ a.signUpBtnLink {
 .take-test-cta p {
 	margin: 10px 0;
 }
-.take-test-cta .take-test-button {
+.take-test-button {
 	font-weight: bold;
 	padding: 10px 15px;
 	margin: 10px 0;
@@ -1010,14 +1264,14 @@ a.signUpBtnLink {
 	border-radius: 5px;
 	text-decoration: none;
 }
-.take-test-cta .take-test-button:hover {
+.take-test-button:hover {
 	color: #fff;
 	background: #007FC0;
 	border: 1px solid #007FC0;
 	transition: all .25s;
 	cursor: pointer;
 }
-.take-test-cta .take-test-button.active {
+.take-test-button.active {
 	color: #fff;
 	padding: 6px 15px;
 	border: 1px solid #34a8f5;
@@ -1183,6 +1437,9 @@ a.signUpBtnLink {
 	.margin-top {
 		margin-top: 70px;
 	}
+	.course_details_parent {
+		flex-direction: column;
+	}
 }
 @media (max-width: 900px) {
 	.panelImageMainImage {
@@ -1196,6 +1453,14 @@ a.signUpBtnLink {
 @media (max-width: 780px) {
 	.edit_flexbox {
 		display: block;
+	}
+	.recommended_course {
+		flex-direction: column;
+		gap: 0;
+		align-items: flex-start;
+	}
+	.footer-columns {
+		flex-direction: column;
 	}
 	.edit_input {
 		margin: auto;
