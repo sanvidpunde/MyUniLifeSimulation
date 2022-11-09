@@ -1,5 +1,6 @@
 import {validationResult} from 'express-validator';
 import bcryptjs from 'bcryptjs';
+import * as Promise from 'bluebird';
 
 import config from '../config';
 import User from '../models/user';
@@ -203,4 +204,26 @@ const logout = (req, res, next) => {
 	})
 };
 
-export default {getUser, getUserDetails, login, signup, logout};
+// Simulation
+const simulation = (req, res) => {
+	// get input values
+	console.log("req body:", req.body);
+	// validation result
+	const errors = validationResult(req);
+	if(!errors.isEmpty()) {
+		const error = new HttpError("Could not process simulation request, check your data", 422);
+		return next(error);
+	}
+	// const {} = req.body;
+
+	// Make API call to python app and await response
+
+	res.status(201).json({
+		body: req.body,
+		redirect: true,
+		type: 'success',
+		message: 'Simulation request received'
+	});
+}
+
+export default {getUser, getUserDetails, login, signup, logout, simulation};

@@ -15,20 +15,6 @@ import Step8 from "./steps/Step8";
 import Step9 from "./steps/Step9";
 import Step10 from "./steps/Step10";
 
-import {receiveSuccessMessage} from '../redux/util/controller';
-
-const mapStateToProps = ({ session }) => ({
-	loggedIn: Boolean(session.email),
-	email: session.email,
-	name: session.name
-});
-
-const mapDispatchToProps = dispatch => {
-  return {
-  	receiveSuccessMessage: message => dispatch(receiveSuccessMessage(message))
-  }
-};
-
 const Psychometric = () => {
 
     // const [takeTestClicked, setTakeTestClicked] = useState(false);
@@ -93,4 +79,4 @@ const Psychometric = () => {
 	)
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Psychometric);
+export default Psychometric;

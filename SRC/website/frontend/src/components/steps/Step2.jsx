@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from "react";
+import {useSelector, useDispatch} from 'react-redux';
+
+import {changeStep} from '../../redux/util/controller';
 
 const Step2 = props => {
     const { setPercent, nextStep, previousStep, setProgressText } = props;
+    const dispatch = useDispatch();
+    const step = useSelector(state => state.step);
 
     const [selectedInputStep2, setSelectedInputStep2] = useState("");
     const [error, setError] = useState(false);
@@ -17,6 +22,7 @@ const Step2 = props => {
         console.log("selectedInputStep2 is", selectedInputStep2);
         if (selectedInputStep2 !== "") {
             const timer = setTimeout(() => {
+                dispatch(changeStep({...step, step2: selectedInputStep2}));
                 handleContinueStep2();
             }, 600);
             return () => clearTimeout(timer);

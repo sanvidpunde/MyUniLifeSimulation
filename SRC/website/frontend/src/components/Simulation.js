@@ -1,24 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 import Select from 'react-select';
 import axios from 'axios';
+import {useSelector, useDispatch} from 'react-redux';
 
 import {receiveSuccessMessage} from '../redux/util/controller';
 
-const mapStateToProps = ({ session }) => ({
-	loggedIn: Boolean(session.email),
-	email: session.email,
-	name: session.name
-});
+const Simulation = () => {
 
-const mapDispatchToProps = dispatch => {
-  return {
-  	receiveSuccessMessage: message => dispatch(receiveSuccessMessage(message))
-  }
-};
-
-const Simulation = ({ loggedIn }) => {
+    const dispatch = useDispatch();
+    // const step = useSelector(state => state.step);
 
     const [cao, setCao] = useState(null);
     const [fieldOfInterest, setFieldOfInterest] = useState(null);
@@ -26,14 +17,30 @@ const Simulation = ({ loggedIn }) => {
     const [jobDomain, setJobDomain] = useState(null);
     const [hobbies, setHobbies] = useState(null);
     const [spendingLimit, setSpendingLimit] = useState(null);
-    // const [caoError, setCaoError] = useState('');
-    // const [interest, setInterest] = useState('');
-    // const [interestError, setInterestError] = useState('');
-    // const [location, setLocation] = useState('');
-    // const [locationError, setLocationError] = useState('');
-    // const [budget, setBudget] = useState('$10,000 and below per year');
+    const [caoError, setCaoError] = useState('');
+    const [fieldOfInterestError, setFieldOfInterestError] = useState('');
+    const [cityError, setCityError] = useState('');
+    const [jobDomainError, setJobDomainError] = useState('');
+    const [hobbiesError, setHobbiesError] = useState('');
+    const [spendingLimitError, setSpendingLimitError] = useState('');
 
-    const caoOptions = [{value: '60-100', label: '60-100'}, {value: '101-140', label: '101-140'}, {value: '141-180', label: '141-180'}];
+    // Remove errors on change
+    useEffect(() => {
+        setFieldOfInterestError('');
+    }, [fieldOfInterest]);
+    useEffect(() => {
+        setCityError('');
+    }, [city]);
+    useEffect(() => {
+        setJobDomainError('');
+    }, [jobDomain]);
+    useEffect(() => {
+        setHobbiesError('');
+    }, [hobbies]);
+    useEffect(() => {
+        setSpendingLimitError('');
+    }, [spendingLimit]);
+
     const fieldOfInterestOptions = [{value: "Computer & IT", label: "Computer & IT"}, {value: "Management", label: "Management"}, {value: "Business", label: "Business"}, {value: "Art", label: "Art"}, {value: "Finance", label: "Finance"}, {value: "Law", label: "Law"}];
     const cityOptions = [{value: "Dublin", label: "Dublin"}, {value: "Cork", label: "Cork"}, {value: "Galway", label: "Galway"}, {value: "Limerick", label: "Limerick"}, {value: "Athlone", label: "Athlone"}, {value: "Carlow", label: "Carlow"}];
     const jobDomainOptions = [{value: "IT", label: "IT"}, {value: "HR", label: "HR"}, {value: "Management", label: "Management"}, {value: "Support", label: "Support"}, {value: "Finance", label: "Finance"}];
@@ -50,52 +57,62 @@ const Simulation = ({ loggedIn }) => {
         const max = 625;
         const value = Math.max(min, Math.min(max, Number(e.target.value)));
         setCao(value);
+        setCaoError('');
     };
-    
-    // const caoHandler = (event) => {
-	// 	setCao(event.target.value);
-    //     setCaoError('');
-	// }
-    // const interestHandler = (event) => {
-    //     setInterest(event.target.value);
-    //     setInterestError('');
-    // }
-    // const locationHandler = (event) => {
-	// 	setLocation(event.target.value);
-    //     setLocationError('');
-	// }
-    // const budgetHandler = (event) => {
-    //     setBudget(event.target.value);
-    // }
 
     // Validation
 	const validate = () => {
-        // if (!cao) {
-        //     setCaoError('Enter your CAO point');
-        // }
-        // if (cao > 500) {
-        //     setCaoError('CAO point cannot exceed 500')
-        // }
-        // if (interest === "") {
-		// 	setInterestError('Enter your field of interest');
-		// }
-        // if (location === "") {
-		// 	setLocationError('Enter your location');
-		// }
-		// if (!cao || cao > 500 || interest === "" || location === "") {
-		// 	return false;
-		// }
+        if (!cao) {
+            setCaoError('Please enter your CAO point');
+        }
+        if (cao > 625 || cao < 0) {
+            setCaoError('Invalid CAO point entered')
+        }
+        if (!fieldOfInterest) {
+            setFieldOfInterestError("Please select your field of interest");
+        }
+        if (!city) {
+            setCityError("Please select your preferred city");
+        }
+        if (!jobDomain) {
+            setJobDomainError("Please select your preferred job domain");
+        }
+        if (!hobbies) {
+            setHobbiesError("Please select your hobbies");
+        }
+        if (!spendingLimit) {
+            setSpendingLimitError("Please select your preferred spending limit");
+        }
+		if (!cao || 0 < cao > 625 || !fieldOfInterest || !city || !jobDomain || !hobbies || !spendingLimit) {
+			return false;
+		}
 		return true;
-	}
+	};
 
-    // Run SImulation
-    const handleRunSimulation = (e) => {
+    // Run Simulation
+    const submitHandler = (e) => {
         e.preventDefault();
 		const isValid = validate();
 		if (isValid) {
             // call API
+            console.log("No errors");
+            const simulationData = {
+                cao,
+                fieldOfInterest,
+                city,
+                jobDomain,
+                hobbies,
+                spendingLimit
+            }
+            console.log("simulation inputs are", simulationData);
+            // API call
+            axios.post('/api/simulation', simulationData)
+                .then(resp => {
+                    console.log("resp is:", resp);
+                    dispatch(receiveSuccessMessage({success: "Simulation request sent successfully"}));
+                });
         }
-    }
+    };
 	
 	return (
 		<React.Fragment>
@@ -119,6 +136,7 @@ const Simulation = ({ loggedIn }) => {
                                     placeholder="Enter your CAO Point"
                                 />
                             </label>
+                            {caoError !== "" && <p className="error_text"><i>!</i> &nbsp;{caoError}</p>}
                         </div>
                         <div className="single-simulation-form">
                             <label>Field of Interest
@@ -129,6 +147,7 @@ const Simulation = ({ loggedIn }) => {
                                     className="mt-6"
                                 />
                             </label>
+                            {fieldOfInterestError !== "" && <p className="error_text"><i>!</i> &nbsp;{fieldOfInterestError}</p>}
                         </div>
                         <div className="single-simulation-form">
                             <label>City
@@ -140,6 +159,7 @@ const Simulation = ({ loggedIn }) => {
                                     className="mt-6"
                                 />
                             </label>
+                            {cityError !== "" && <p className="error_text"><i>!</i> &nbsp;{cityError}</p>}
                         </div>
                         <div className="single-simulation-form">
                             <label>Preferred Job Domain
@@ -150,6 +170,7 @@ const Simulation = ({ loggedIn }) => {
                                     className="mt-6"
                                 />
                             </label>
+                            {jobDomainError !== "" && <p className="error_text"><i>!</i> &nbsp;{jobDomainError}</p>}
                         </div>
                         <div className="single-simulation-form">
                             <label>Hobbies
@@ -161,6 +182,7 @@ const Simulation = ({ loggedIn }) => {
                                     className="mt-6"
                                 />
                             </label>
+                            {hobbiesError !== "" && <p className="error_text"><i>!</i> &nbsp;{hobbiesError}</p>}
                         </div>
                         <div className="single-simulation-form">
                             <label>Spending Limit
@@ -171,10 +193,12 @@ const Simulation = ({ loggedIn }) => {
                                     className="mt-6"
                                 />
                             </label>
+                            {spendingLimitError !== "" && <p className="error_text"><i>!</i> &nbsp;{spendingLimitError}</p>}
                         </div>
                     </div>
                     <div className="mt-20">
-                        <Link to="/recommended_courses"><button type="button" className="take-test-button" >Submit</button></Link>
+                        <button type="button" className="take-test-button" onClick={submitHandler} >Submit</button>
+                        {/* <Link to="/recommended_courses"><button type="button" className="take-test-button" >Submit</button></Link> */}
                     </div>
                     
                 </div>
@@ -258,4 +282,4 @@ const Simulation = ({ loggedIn }) => {
 	)
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Simulation);
+export default Simulation;

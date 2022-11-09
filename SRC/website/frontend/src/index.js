@@ -8,17 +8,6 @@ import myStore from './redux/store';
 
 import App from './components/App';
 
-// const rootApp = (preloadedState) => {
-// 	const store = myStore(preloadedState);
-// 	ReactDOM.render(
-// 		<Provider store={store}>
-// 			<Router>
-// 				<App />
-// 			</Router>
-// 		</Provider>, document.getElementById('root')
-// 	);
-// }
-
 const rootApp = (preloadedState) => {
 	const store = myStore(preloadedState);
 	const root = ReactDOM.createRoot(document.getElementById('root'));

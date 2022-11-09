@@ -551,6 +551,7 @@ li.user:hover ul {
 }
 .simulation-form-area label {
 	display: block;
+	margin-bottom: 5px;
 }
 .mt-6 {
 	margin-top: 6px;
