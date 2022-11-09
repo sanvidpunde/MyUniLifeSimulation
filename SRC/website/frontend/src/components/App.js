@@ -9,7 +9,7 @@ import Home from './Home';
 import Simulation from './Simulation';
 import RecommendedCourses from './RecommendedCourses';
 import CourseDetails from './CourseDetails';
-import Psychometric from './Psychometric';
+import Profiler from './Profiler';
 import Login from './Login';
 import Signup from './Signup';
 import Footer from './Footer';
@@ -38,7 +38,7 @@ const App = ({ loggedIn, email }) => {
 					<Simulation />
 				</Route>
 				<Route path="/interest_profiler" exact>
-					<Psychometric />
+					<Profiler />
 				</Route>
 				<Redirect to="/" />
 			</Switch>
@@ -59,7 +59,7 @@ const App = ({ loggedIn, email }) => {
 					<CourseDetails />
 				</Route>
 				<Route path="/interest_profiler" exact>
-					<Psychometric />
+					<Profiler />
 				</Route>
 				<Route path="/login" exact>
 					<Login />
