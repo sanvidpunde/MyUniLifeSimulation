@@ -1,5 +1,6 @@
 import {validationResult} from 'express-validator';
 import bcryptjs from 'bcryptjs';
+import * as Promise from 'bluebird';
 
 import config from '../config';
 import User from '../models/user';
