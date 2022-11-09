@@ -22,6 +22,16 @@ router.post('/signup', [
 		check('password').isLength({min: 6})
 	], userController.signup);
 
+// Post request for Simulation request
+router.post('/simulation', [
+	check('cao').isFloat({ min: 0, max: 625 }),
+	check('fieldOfInterest').not().isEmpty(),
+	check('city').not().isEmpty(),
+	check('jobDomain').not().isEmpty(),
+	check('hobbies').not().isEmpty(),
+	check('spendingLimit').not().isEmpty(),
+], userController.simulation);
+
 // Get user details
 router.get('/getUserDetails', userController.getUserDetails);
 

@@ -1,34 +1,40 @@
 import React, { useState, useEffect } from "react";
+import {useSelector, useDispatch} from 'react-redux';
+
+import {changeStep} from '../../redux/util/controller';
 
 const Step4 = props => {
     const { setPercent, nextStep, previousStep, setProgressText } = props;
+    const dispatch = useDispatch();
+    const step = useSelector(state => state.step);
 
-    const [selectedInput, setSelectedInput] = useState("");
+    const [selectedInputStep4, setSelectedInputStep4] = useState("");
     const [error, setError] = useState(false);
 
     const userInput = ["Strongly Disagree", "Disagree", "Slightly Disagree", "Neither Disagree nor Agree", "Slightly Agree", "Agree", "Strongly Agree"]
 
     const inputHandler = (e) => {
-        setSelectedInput(e.target.value);
+        setSelectedInputStep4(e.target.value);
     };
 
     // If user selects any option go to next screen
     useEffect(() => {
-        if (selectedInput !== "") {
+        if (selectedInputStep4 !== "") {
             const timer = setTimeout(() => {
-                handleContinue();
+                dispatch(changeStep({...step, step4: selectedInputStep4}));
+                handleContinueStep4();
             }, 600);
             return () => clearTimeout(timer);
         }
-    }, [selectedInput]);
+    }, [selectedInputStep4]);
 
-    const handleBack = () => {
+    const handleBackStep4 = () => {
         previousStep();
         setPercent((3 / 10) * 100);
     };
 
-    const handleContinue = () => {
-        if (selectedInput == "") {
+    const handleContinueStep4 = () => {
+        if (selectedInputStep4 == "") {
             setError(true);
             return;
         } else {
@@ -52,20 +58,20 @@ const Step4 = props => {
                                 value={input}
                                 name="input"
                                 onChange={inputHandler}
-                                checked={selectedInput === input}
+                                checked={selectedInputStep4 === input}
                                 className="single-option"
                             />
-                            <label htmlFor={input} className={`single-option-label ${selectedInput === input && "single-option-label-active"}`}>{input}</label>
+                            <label htmlFor={input} className={`single-option-label ${selectedInputStep4 === input && "single-option-label-active"}`}>{input}</label>
                         </div>
                     )
                 })}
             </div>
             {error && <p className="text-center error-text">Please select one option</p>}
             <div className="control-buttons">
-                <button type="button" className="control-button-back" onClick={handleBack}>
+                <button type="button" className="control-button-back" onClick={handleBackStep4}>
                     BACK
                 </button>
-                <button type="button" className="control-button-continue" onClick={handleContinue}>
+                <button type="button" className="control-button-continue" onClick={handleContinueStep4}>
                     CONTINUE
                 </button>
             </div>
