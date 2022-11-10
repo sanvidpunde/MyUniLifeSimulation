@@ -8,6 +8,7 @@ const Profiler = () => {
     const [coding, setCoding] = useState(3);
     const [hackathons, setHackathons] = useState(3);
     const [publicSpeaking, setPublicSpeaking] = useState(3);
+
     const [selfLearningCapability, setSelfLearningCapability] = useState(null);
     const [extraCourses, setExtraCourses] = useState(null);
     const [tookAdvice, setTookAdvice] = useState(null);
@@ -24,6 +25,22 @@ const Profiler = () => {
     const [typeOfCompanyYouWantToSettleIn, setTypeOfCompanyYouWantToSettleIn] = useState(null);
     const [interestedCareerArea, setInterestedCareerArea] = useState(null);
 
+    const [selfLearningCapabilityError, setSelfLearningCapabilityError] = useState('');
+    const [extraCoursesError, setExtraCoursesError] = useState('');
+    const [tookAdviceError, setTookAdviceError] = useState('');
+    const [teamCoError, setTeamCoError] = useState('');
+    const [introvertError, setIntrovertError] = useState('');
+    const [readingWritingError, setReadingWritingError] = useState('');
+    const [memoryCapabilityError, setMemoryCapabilityError] = useState('');
+    const [workError, setWorkError] = useState('');
+    const [managementTechnicalError, setManagementTechnicalError] = useState('');
+    const [interestedSubjectsError, setInterestedSubjectsError] = useState('');
+    const [interestedBooksError, setInterestedBooksError] = useState('');
+    const [interestedTypeOfBooksError, setInterestedTypeOfBooksError] = useState('');
+    const [workshopsAttendedError, setWorkshopsAttendedError] = useState('');
+    const [typeOfCompanyYouWantToSettleInError, setTypeOfCompanyYouWantToSettleInError] = useState('');
+    const [interestedCareerAreaError, setInterestedCareerAreaError] = useState('');
+
     const yesNoOptions = [{value: "yes", label: "yes"}, {value: "no", label: "no"}];
     const ordinalOptions = [{value: "poor", label: "poor"}, {value: "medium", label: "medium"}, {value: "excellent", label: "excellent"}];
 
@@ -32,8 +49,114 @@ const Profiler = () => {
 		window.scrollTo(0, 0);
 	}, []);
 
+    // Clear Errors on Change
+    useEffect(() => {
+        setSelfLearningCapabilityError('');
+    }, [selfLearningCapability]);
+    useEffect(() => {
+        setExtraCoursesError('');
+    }, [extraCourses]);
+    useEffect(() => {
+        setTookAdviceError('');
+    }, [tookAdvice]);
+    useEffect(() => {
+        setTeamCoError('');
+    }, [teamCo]);
+    useEffect(() => {
+        setIntrovertError('');
+    }, [introvert]);
+    useEffect(() => {
+        setReadingWritingError('');
+    }, [readingWriting]);
+    useEffect(() => {
+        setMemoryCapabilityError('');
+    }, [memoryCapability]);
+    useEffect(() => {
+        setWorkError('');
+    }, [work]);
+    useEffect(() => {
+        setManagementTechnicalError('');
+    }, [managementTechnical]);
+    useEffect(() => {
+        setInterestedSubjectsError('');
+    }, [interestedSubjects]);
+    useEffect(() => {
+        setInterestedBooksError('');
+    }, [interestedBooks]);
+    useEffect(() => {
+        setInterestedTypeOfBooksError('');
+    }, [interestedTypeOfBooks]);
+    useEffect(() => {
+        setWorkshopsAttendedError('');
+    }, [workshopsAttended]);
+    useEffect(() => {
+        setTypeOfCompanyYouWantToSettleInError('');
+    }, [typeOfCompanyYouWantToSettleIn]);
+    useEffect(() => {
+        setInterestedCareerAreaError('');
+    }, [interestedCareerArea]);
+
+    // Validation
+	const validate = () => {
+        if (!selfLearningCapability) {
+            setSelfLearningCapabilityError('Please select');
+        }
+        if (!extraCourses) {
+            setExtraCoursesError('Please select');
+        }
+        if (!tookAdvice) {
+            setTookAdviceError('Please select');
+        }
+        if (!teamCo) {
+            setTeamCoError('Please select');
+        }
+        if (!introvert) {
+            setIntrovertError('Please select');
+        }
+        if (!readingWriting) {
+            setReadingWritingError('Please select');
+        }
+        if (!memoryCapability) {
+            setMemoryCapabilityError('Please select');
+        }
+        if (!work) {
+            setWorkError('Please select');
+        }
+        if (!managementTechnical) {
+            setManagementTechnicalError('Please select');
+        }
+        if (!interestedSubjects) {
+            setInterestedSubjectsError('Please select');
+        }
+        if (!interestedBooks) {
+            setInterestedBooksError('Please select');
+        }
+        if (!interestedTypeOfBooks) {
+            setInterestedTypeOfBooksError('Please select');
+        }
+        if (!workshopsAttended) {
+            setWorkshopsAttendedError('Please select');
+        }
+        if (!typeOfCompanyYouWantToSettleIn) {
+            setTypeOfCompanyYouWantToSettleInError('Please select');
+        }
+        if (!interestedCareerArea) {
+            setInterestedCareerAreaError('Please select');
+        }
+		if (!selfLearningCapability || !extraCourses || !tookAdvice || !teamCo || !introvert || !readingWriting || !memoryCapability || !work || !managementTechnical || !interestedSubjects || !interestedBooks || !interestedTypeOfBooks || !workshopsAttended || !typeOfCompanyYouWantToSettleIn || !interestedCareerArea) {
+			return false;
+		}
+		return true;
+	};
+
+    // Run Prediction
     const submitHandler = (e) => {
         e.preventDefault();
+        const isValid = validate();
+		if (isValid) {
+            // call API
+
+        }
     }
 	
 	return (
@@ -111,6 +234,7 @@ const Profiler = () => {
                                     className="mt-6"
                                 />
                             </label>
+                            {selfLearningCapabilityError !== "" && <p className="error_text"><i>!</i> &nbsp;{selfLearningCapabilityError}</p>}
                         </div>
                         <div className="single_selection_container">
                             <label>Extra courses
@@ -121,6 +245,7 @@ const Profiler = () => {
                                     className="mt-6"
                                 />
                             </label>
+                            {extraCoursesError !== "" && <p className="error_text"><i>!</i> &nbsp;{extraCoursesError}</p>}
                         </div>
                         <div className="single_selection_container">
                             <label>Took advice from seniors or elders
@@ -131,6 +256,7 @@ const Profiler = () => {
                                     className="mt-6"
                                 />
                             </label>
+                            {tookAdviceError !== "" && <p className="error_text"><i>!</i> &nbsp;{tookAdviceError}</p>}
                         </div>
                         <div className="single_selection_container">
                             <label>Team co-ordination skill
@@ -141,6 +267,7 @@ const Profiler = () => {
                                     className="mt-6"
                                 />
                             </label>
+                            {teamCoError !== "" && <p className="error_text"><i>!</i> &nbsp;{teamCoError}</p>}
                         </div>
                         <div className="single_selection_container">
                             <label>Introvert
@@ -151,6 +278,7 @@ const Profiler = () => {
                                     className="mt-6"
                                 />
                             </label>
+                            {introvertError !== "" && <p className="error_text"><i>!</i> &nbsp;{introvertError}</p>}
                         </div>
                         <div className="single_selection_container">
                             <label>Reading and writing skills
@@ -161,6 +289,7 @@ const Profiler = () => {
                                     className="mt-6"
                                 />
                             </label>
+                            {readingWritingError !== "" && <p className="error_text"><i>!</i> &nbsp;{readingWritingError}</p>}
                         </div>
                         <div className="single_selection_container">
                             <label>Memory capability score
@@ -171,6 +300,7 @@ const Profiler = () => {
                                     className="mt-6"
                                 />
                             </label>
+                            {memoryCapabilityError !== "" && <p className="error_text"><i>!</i> &nbsp;{memoryCapabilityError}</p>}
                         </div>
                         <div className="single_selection_container">
                             <label>Smart or Hard Work
@@ -181,6 +311,7 @@ const Profiler = () => {
                                     className="mt-6"
                                 />
                             </label>
+                            {workError !== "" && <p className="error_text"><i>!</i> &nbsp;{workError}</p>}
                         </div>
                         <div className="single_selection_container">
                             <label>Management or Technical
@@ -191,6 +322,7 @@ const Profiler = () => {
                                     className="mt-6"
                                 />
                             </label>
+                            {managementTechnicalError !== "" && <p className="error_text"><i>!</i> &nbsp;{managementTechnicalError}</p>}
                         </div>
 
                         <div className="single_selection_container">
@@ -202,6 +334,7 @@ const Profiler = () => {
                                     className="mt-6"
                                 />
                             </label>
+                            {interestedSubjectsError !== "" && <p className="error_text"><i>!</i> &nbsp;{interestedSubjectsError}</p>}
                         </div>
                         <div className="single_selection_container">
                             <label>Interested Books Category
@@ -212,6 +345,7 @@ const Profiler = () => {
                                     className="mt-6"
                                 />
                             </label>
+                            {interestedBooksError !== "" && <p className="error_text"><i>!</i> &nbsp;{interestedBooksError}</p>}
                         </div>
                         <div className="single_selection_container">
                             <label>Interested Type Of Books
@@ -222,6 +356,7 @@ const Profiler = () => {
                                     className="mt-6"
                                 />
                             </label>
+                            {interestedTypeOfBooksError !== "" && <p className="error_text"><i>!</i> &nbsp;{interestedTypeOfBooksError}</p>}
                         </div>
                         <div className="single_selection_container">
                             <label>Workshops Attended
@@ -232,6 +367,7 @@ const Profiler = () => {
                                     className="mt-6"
                                 />
                             </label>
+                            {workshopsAttendedError !== "" && <p className="error_text"><i>!</i> &nbsp;{workshopsAttendedError}</p>}
                         </div>
                         <div className="single_selection_container">
                             <label>Type of company you want to settle in
@@ -242,6 +378,7 @@ const Profiler = () => {
                                     className="mt-6"
                                 />
                             </label>
+                            {typeOfCompanyYouWantToSettleInError !== "" && <p className="error_text"><i>!</i> &nbsp;{typeOfCompanyYouWantToSettleInError}</p>}
                         </div>
                         <div className="single_selection_container">
                             <label>Interested Career Area
@@ -252,6 +389,7 @@ const Profiler = () => {
                                     className="mt-6"
                                 />
                             </label>
+                            {interestedCareerAreaError !== "" && <p className="error_text"><i>!</i> &nbsp;{interestedCareerAreaError}</p>}
                         </div>
                     </div>
                     <div className="mt-20">

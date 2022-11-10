@@ -599,6 +599,10 @@ li.user:hover ul {
 	max-width: 360px;
 	width: 100%;
 }
+.single_selection_container label {
+	display: block;
+	margin-bottom: 5px;
+}
 
 /* Recommended Course */
 .recommended_course img {
