@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import {Slider} from "@mui/material";
 import Select from 'react-select';
+import {useSelector, useDispatch} from 'react-redux';
 
 const Profiler = () => {
+
+    const dispatch = useDispatch();
 
     const [logical, setLogical] = useState(3);
     const [coding, setCoding] = useState(3);
@@ -155,7 +158,34 @@ const Profiler = () => {
         const isValid = validate();
 		if (isValid) {
             // call API
-
+            const profilerData = {
+                logical,
+                coding,
+                hackathons,
+                publicSpeaking,
+                selfLearningCapability,
+                extraCourses,
+                tookAdvice,
+                teamCo,
+                introvert,
+                readingWriting,
+                memoryCapability,
+                work,
+                managementTechnical,
+                interestedSubjects,
+                interestedBooks,
+                interestedTypeOfBooks,
+                workshopsAttended,
+                typeOfCompanyYouWantToSettleIn,
+                interestedCareerArea
+            };
+            console.log("Profiler inputs are", profilerData);
+            // API call
+            axios.post('/api/profiler', profilerData)
+                .then(resp => {
+                    console.log("resp is:", resp);
+                    dispatch(receiveSuccessMessage({success: "Profiler request sent successfully"}));
+                });
         }
     }
 	
