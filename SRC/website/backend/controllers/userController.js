@@ -1,6 +1,7 @@
 import {validationResult} from 'express-validator';
 import bcryptjs from 'bcryptjs';
 import * as Promise from 'bluebird';
+import request from 'request';
 
 import config from '../config';
 import User from '../models/user';
@@ -217,6 +218,15 @@ const simulation = (req, res) => {
 	// const {} = req.body;
 
 	// Make API call to python app and await response
+	request('https://jsonplaceholder.typicode.com/todos/1', (error, response, body) => {
+		console.log("body is", body);
+	});
+	// request.post({url: '52.210.222.30:8888/post_json', data: req.body.data.body}, (err, res, body) => {
+	// 	if (err) {
+	// 		return console.error('API req failed:', err);
+	// 	}
+	// 	console.log('Successful!  Server responded with:', body);
+	// });
 
 	res.status(201).json({
 		body: req.body,
@@ -237,7 +247,16 @@ const profiler = (req, res) => {
 	}
 	// const {} = req.body;
 
+	console.log("Profiler ready to make API call to EC2");
 	// Make API call to python app and await response
+	request.post({url: 'http://localhost:8888/foo', data: req.body.data.body}, (err, res, body) => {
+		if (err) {
+			return console.error('API req failed:', err);
+		}
+		console.log('Successful!  Server responded with:', body);
+	});
+	
+
 
 	res.status(201).json({
 		body: req.body,
