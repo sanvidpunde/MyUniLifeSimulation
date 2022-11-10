@@ -32,6 +32,29 @@ router.post('/simulation', [
 	check('spendingLimit').not().isEmpty(),
 ], userController.simulation);
 
+// Post request for Simulation request
+router.post('/profiler', [
+	check('logical').isFloat({ min: 0, max: 10 }),
+	check('coding').isFloat({ min: 0, max: 10 }),
+	check('hackathons').isFloat({ min: 0, max: 10 }),
+	check('publicSpeaking').isFloat({ min: 0, max: 10 }),
+	check('selfLearningCapability').not().isEmpty(),
+	check('extraCourses').not().isEmpty(),
+	check('tookAdvice').not().isEmpty(),
+	check('teamCo').not().isEmpty(),
+	check('introvert').not().isEmpty(),
+	check('readingWriting').not().isEmpty(),
+	check('memoryCapability').not().isEmpty(),
+	check('work').not().isEmpty(),
+	check('managementTechnical').not().isEmpty(),
+	check('interestedSubjects').not().isEmpty(),
+	check('interestedBooks').not().isEmpty(),
+	check('interestedTypeOfBooks').not().isEmpty(),
+	check('workshopsAttended').not().isEmpty(),
+	check('typeOfCompanyYouWantToSettleIn').not().isEmpty(),
+	check('interestedCareerArea').not().isEmpty(),
+], userController.profiler);
+
 // Get user details
 router.get('/getUserDetails', userController.getUserDetails);
 
