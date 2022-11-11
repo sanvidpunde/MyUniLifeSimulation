@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {Link} from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import Select from 'react-select';
 import axios from 'axios';
 import {useSelector, useDispatch} from 'react-redux';
@@ -7,6 +7,8 @@ import {useSelector, useDispatch} from 'react-redux';
 import {receiveSuccessMessage} from '../redux/util/controller';
 
 const Simulation = () => {
+
+    const history = useHistory();
 
     const dispatch = useDispatch();
     // const step = useSelector(state => state.step);
@@ -111,6 +113,7 @@ const Simulation = () => {
                     console.log("resp is:", resp);
                     dispatch(receiveSuccessMessage({success: "Simulation request sent successfully"}));
                 });
+            history.push('/recommended_courses');
         }
     };
 	

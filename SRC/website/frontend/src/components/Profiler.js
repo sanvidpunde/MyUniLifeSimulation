@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 import {Slider} from "@mui/material";
 import Select from 'react-select';
 import axios from 'axios';
@@ -9,6 +10,7 @@ import {receiveSuccessMessage} from '../redux/util/controller';
 const Profiler = () => {
 
     const dispatch = useDispatch();
+    const history = useHistory();
 
     const [logical, setLogical] = useState(3);
     const [coding, setCoding] = useState(3);
@@ -189,6 +191,7 @@ const Profiler = () => {
                     console.log("resp is:", resp);
                     dispatch(receiveSuccessMessage({success: "Profiler request sent successfully"}));
                 });
+            history.push('/interest_profiler_details');
         }
     }
 	

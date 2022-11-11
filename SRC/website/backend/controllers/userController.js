@@ -6,6 +6,7 @@ import request from 'request';
 import config from '../config';
 import User from '../models/user';
 import HttpError from '../models/httpError';
+import Profiler from '../models/profiler';
 
 // Get all values of logged in user
 const getUser = async (req, res, next) => {
@@ -236,34 +237,46 @@ const simulation = (req, res) => {
 	});
 };
 
-const profiler = (req, res) => {
+const profiler = async (req, res) => {
+	
 	// get input values
 	console.log("req body:", req.body);
+	
 	// validation result
 	const errors = validationResult(req);
 	if(!errors.isEmpty()) {
 		const error = new HttpError("Could not process simulation request, check your data", 422);
 		return next(error);
 	}
-	// const {} = req.body;
 
 	console.log("Profiler ready to make API call to EC2");
 	// Make API call to python app and await response
-	request.post({url: 'http://localhost:8888/foo', data: req.body.data.body}, (err, res, body) => {
-		if (err) {
-			return console.error('API req failed:', err);
-		}
-		console.log('Successful!  Server responded with:', body);
-	});
-	
+	// request.post({url: 'http://localhost:8888/foo', data: req.body.data.body}, (err, res, body) => {
+	// 	if (err) {
+	// 		return console.error('API req failed:', err);
+	// 	}
+	// 	console.log('Successful!  Server responded with:', body);
+	// });
 
+	const predictedCareer = "Business Management";
+	console.log("predictedCareer:", predictedCareer);
 
-	res.status(201).json({
-		body: req.body,
-		redirect: true,
-		type: 'success',
-		message: 'Profiler request received'
-	});
+	let identifiedCareer;
+	try {
+		identifiedCareer = await Profiler.findOne({ career: predictedCareer });
+		console.log("identifiedCareer ===============", identifiedCareer);
+	} catch(err) {
+		console.log("err", err);
+		const error = new HttpError('Error in finding email', 500);
+		return next(error);
+	}
+	if (identifiedCareer) {
+		res.status(200).json({
+			career: identifiedCareer.toObject({getters: true}),
+			message: 'Successfully Predicted',
+			success: true
+		});
+	}
 };
 
 export default {getUser, getUserDetails, login, signup, logout, simulation, profiler};
