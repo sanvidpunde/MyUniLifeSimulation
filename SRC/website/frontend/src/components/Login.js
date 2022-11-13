@@ -98,8 +98,8 @@ const Login = ({ login }) => {
 		<React.Fragment>
 			<div className="header">
 				<div className="container">
-					<div className="header-text">University Simulation</div>
-					<p>Lorem Ipsum Dolor Sit Amet</p>
+					<div className="header-text">Welcome to UniLifeSimulation</div>
+                    <p>We aim to provide a one-stop portal for you to explore your dream course using our State-of-the-art AI Recommender System.</p>
 				</div>
 			</div>
 			<div className="gray-bg">
@@ -129,6 +129,8 @@ const Login = ({ login }) => {
 								{passwordError !== "" && <p className="error_text"><i>!</i> &nbsp;{passwordError}</p>}
 
 								<button type="submit" onClick={handleLogin}>Continue</button>
+
+								<p className="forgot_password">Forgot Password? <Link to="/password_reset">Reset now</Link></p>
 							
 							</form>
 						</div>

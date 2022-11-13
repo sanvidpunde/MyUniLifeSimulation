@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 
@@ -11,11 +11,6 @@ const mapDispatchToProps = dispatch => {
 };
 
 const Signup = ({ signup }) => {
-	// ref to avoid error on first render
-	const firstRenderName = useRef(true);
-	const firstRenderUsername = useRef(true);
-	const firstRenderEmail = useRef(true);
-	const firstRenderPassword = useRef(true);
 
 	const [name, setName] = useState('');
 	const [username, setUsername] = useState('');
@@ -29,15 +24,19 @@ const Signup = ({ signup }) => {
 
 	const nameHandler = (event) => {
 		setName(event.target.value);
+		setNameError('');
 	}
 	const usernameHandler = (event) => {
 		setUsername(event.target.value.toLowerCase().trim());
+		setUsernameError('');
 	}
 	const emailHandler = (event) => {
 		setEmail(event.target.value.toLowerCase().trim());
+		setEmailError('');
 	}
 	const passwordHandler = (event) => {
 		setPassword(event.target.value.trim());
+		setPasswordError('');
 	}
 
 	// Scroll to top of page
@@ -45,78 +44,13 @@ const Signup = ({ signup }) => {
 		window.scrollTo(0, 0);
 	}, []);
 
-	// Name Validation
-	useEffect(() => {
-		if (firstRenderName.current) {
-			firstRenderName.current = false;
-			return;
-		}
-		if (name === "") {
-			setNameError('Enter your name');
-		} else {
-			setNameError('');
-		}
-	}, [name]);
-
-	// Username Validation
-	useEffect(() => {
-		if (firstRenderUsername.current) {
-			firstRenderUsername.current = false;
-			return;
-		}
-		if (username === "") {
-			setUsernameError('Choose your username');
-		} else {
-			setUsernameError('');
-		}
-		if (username.length > 0 && username.length < 4) {
-			setUsernameError('Username must have at least 4 characters');
-		}
-		if (username.length > 9) {
-			setUsernameError('Username must have at most 9 characters');
-		}
-	}, [username]);
-
-	// Email Validation
-	useEffect(() => {
-		if (firstRenderEmail.current) {
-			firstRenderEmail.current = false;
-			return;
-		}
-		if (/^[a-zA-Z0-9.]+@[a-zA-Z0-9.]+\.[A-Za-z]+$/.test(email)) {
-			setEmailError('');
-		} else {
-			setEmailError('Enter a valid email');
-		}
-	}, [email]);
-
-	// Password Validation
-	useEffect(() => {
-		if (firstRenderPassword.current) {
-			firstRenderPassword.current = false;
-			return;
-		}
-		if (password === "") {
-			setPasswordError('Enter your password');
-		} else {
-			setPasswordError('');
-		}
-		if (password.length > 0 && password.length < 6) {
-			setPasswordError('Password must be at least 6 characters');
-		}
-	}, [password]);
-
 	// Validation
 	const validate = () => {
-		if (name === "") {
+		if (!name) {
 			setNameError('Enter your name');
-		} else {
-			setNameError('');
 		}
-		if (username === "") {
+		if (!username) {
 			setUsernameError('Choose your username');
-		} else {
-			setUsernameError('');
 		}
 		if (username.length > 0 && username.length < 4) {
 			setUsernameError('Username must be at least 4 characters');
@@ -124,20 +58,21 @@ const Signup = ({ signup }) => {
 		if (username.length > 9) {
 			setUsernameError('Username must have at most 9 characters');
 		}
+		if (!email) {
+			setEmailError('Enter your email');
+		}
 		if (/^[a-zA-Z0-9.]+@[a-zA-Z0-9.]+\.[A-Za-z]+$/.test(email)) {
 			setEmailError('');
 		} else {
 			setEmailError('Enter a valid email');
 		}
-		if (password === "") {
+		if (!password) {
 			setPasswordError('Enter your password');
-		} else {
-			setPasswordError('');
 		}
 		if (password.length > 0 && password.length < 6) {
 			setPasswordError('Password must be at least 6 characters');
 		}
-		if (name === "" || username === "" || !(/^[a-zA-Z0-9.]+@[a-zA-Z0-9.]+\.[A-Za-z]+$/.test(email)) || password === "") {
+		if (!name || !username || !(/^[a-zA-Z0-9.]+@[a-zA-Z0-9.]+\.[A-Za-z]+$/.test(email)) || !password || password.length < 6) {
 			return false;
 		}
 		return true;
@@ -162,8 +97,8 @@ const Signup = ({ signup }) => {
 		<React.Fragment>
 			<div className="header">
 				<div className="container">
-					<div className="header-text">University Simulation</div>
-					<p>Lorem Ipsum Dolor Sit Amet</p>
+					<div className="header-text">Welcome to UniLifeSimulation</div>
+                    <p>We aim to provide a one-stop portal for you to explore your dream course using our State-of-the-art AI Recommender System.</p>
 				</div>
 			</div>
 			<div className="gray-bg">

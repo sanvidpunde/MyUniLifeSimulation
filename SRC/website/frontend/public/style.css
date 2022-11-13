@@ -306,6 +306,23 @@ li.item a:hover .fa {
 	height: auto;
 	margin-right: 5px;
 }
+
+p.forgot_password {
+	font-size: 13px;
+	margin-top: 14px;
+	color: #666;
+}
+p.forgot_password a:link,
+p.forgot_password a:visited {
+	color:#007FC0;
+	text-decoration: none;
+	font-weight: 600;
+}
+p.forgot_password a:hover {
+	color: #007FC0;
+	text-decoration: underline;
+}
+
 @media (max-width: 1000px) {
 	.searchResultArea {
 		position: fixed;
@@ -763,7 +780,7 @@ li.user:hover ul {
 	background: #fff;
 	padding: 20px 30px;
 	margin: 20px auto;
-	max-width: 350px;
+	max-width: 400px;
 	border: 1px solid #ddd;
 	border-radius: 5px;
 }
@@ -832,7 +849,7 @@ li.user:hover ul {
 	cursor: pointer;
 	width: 100%;
 	padding: 7px;
-	margin-top: 10px;
+	margin-top: 16px;
 	background: #34a8f5;
 	border: 1px solid #34a8f5;
 	color: #fff;
@@ -869,7 +886,7 @@ li.user:hover ul {
 	text-decoration: underline;
 }
 .signUpArea {
-	max-width: 350px;
+	max-width: 400px;
 	margin: auto;
 	margin-top: 26px;
 }
@@ -920,9 +937,10 @@ a.signUpBtnLink {
 }
 .signInBtn {
 	font-size: 14px;
+	font-weight: 400;
 	background: #fff;
 	border: none;
-	color: #34a8f5;
+	color: #007FC0;
 }
 .signInBtn:hover {
 	text-decoration: underline;
@@ -931,7 +949,7 @@ a.signUpBtnLink {
 	outline: none;
 }
 .signInBtn a {
-	color: #34a8f5;
+	color: #007FC0;
 	text-decoration: none;
 }
 .signInBtn a:hover {

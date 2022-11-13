@@ -263,7 +263,7 @@ const profiler = async (req, res) => {
 
 	let identifiedCareer;
 	try {
-		identifiedCareer = await Profiler.findOne({ career: predictedCareer });
+		identifiedCareer = await Profiler.findOne({ career: predictedCareer }).exec();
 		console.log("identifiedCareer ===============", identifiedCareer);
 	} catch(err) {
 		console.log("err", err);
