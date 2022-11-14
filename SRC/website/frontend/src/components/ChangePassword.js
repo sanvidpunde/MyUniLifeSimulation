@@ -1,8 +1,9 @@
+import axios from 'axios';
 import React, {useState, useEffect, useMemo} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import { Routes, Route, useLocation, useHistory } from 'react-router-dom';
 
-import {receiveFailureMessage} from '../redux/util/controller';
+import {receiveFailureMessage, receiveSuccessMessage} from '../redux/util/controller';
 
 const ChangePassword = () => {
 
@@ -16,16 +17,20 @@ const ChangePassword = () => {
     };
     let query = useQuery();
 
-    // const email = query.get("email");
-    // const token = query.get("token");
-    // console.log("email and token are:", email, token);
-
     // Validation
     useEffect(() => {
         if (query.get("email") && query.get("token")) {
-            // allow page
+            // check if token is valid otherwise redirect to home page
+			axios.get(`/api/check_token?email=${query.get("email")}&token=${query.get("token")}`)
+				.then(resp => {
+					console.log("resp", resp);
+					if (resp.data.token_exists == false) {
+						// redirect to home page if token does not exist
+						return history.push('/');
+					}
+				});
         } else {
-            // redirect to home page
+            // redirect to home page if email and token not present
             history.push('/');
         }
     }, []);
@@ -80,9 +85,18 @@ const ChangePassword = () => {
 		const isValid = validate();
 		if (isValid) {
 			// Login Mode Form Submit
-			const user = {
-				password
-			}
+			const data = {
+				email: query.get("email"),
+				password				
+			};
+			axios.put('/api/change_password', data)
+				.then(resp => {
+					console.log('resp', resp);
+					if (resp.data.success) {
+						dispatch(receiveSuccessMessage({success: "Password changed successfully"}));
+						return history.push('/login');
+					}
+				});
 		}
 	}
 

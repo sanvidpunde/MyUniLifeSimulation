@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
 
@@ -5,6 +6,8 @@ const PasswordReset = () => {
 
 	const [email, setEmail] = useState('');
 	const [emailError, setEmailError] = useState('');
+	const [passwordReqSent, setPasswordReqSent] = useState(false);
+	const [passwordReqAlreadySent, setPasswordReqAlreadySent] = useState(false);
 
 	const emailHandler = (event) => {
 		setEmail(event.target.value.toLowerCase().trim());
@@ -34,10 +37,21 @@ const PasswordReset = () => {
 		event.preventDefault();
 		const isValid = validate();
 		if (isValid) {
-			// Login Mode Form Submit
-			const user = {
+			// Password req
+			const body = {
 				email
-			}
+			};
+			axios.post('/api/password_reset', body)
+				.then(resp => {
+					console.log("resp", resp);
+					if (resp.data.token === "exists") {
+						setPasswordReqSent(false);
+						return setPasswordReqAlreadySent(true);
+					}
+					if (resp.data.type === "success") {
+						setPasswordReqSent(true);
+					}
+				});
 		}
 	}
 
@@ -52,6 +66,19 @@ const PasswordReset = () => {
 			<div className="gray-bg">
 				<div className="container login-form p-60">
 					<div className="p-lr">
+						{passwordReqSent &&
+							<div className="card">
+								<p><strong>Success</strong></p>
+								<p className="success-text">We have sent you instructions on your registered Email address to reset your password</p>
+							</div>
+						}
+						{passwordReqAlreadySent &&
+							<div className="card">
+								<p><strong>Success</strong></p>
+								<p className="success-text">Please check your email, we have already sent you instructions to reset your password</p>
+							</div>
+						}
+						
 						<div className="card">
 							<div className="title">Password Reset</div>
 							<form>						
@@ -59,7 +86,7 @@ const PasswordReset = () => {
 								<input 
 									type="text"
 									id="email"
-                                    placeholder="Enter your registered Email"
+                                    placeholder="Registered Email"
 									value={email}
 									onChange={emailHandler}
 									className={`${(emailError !== "") && "red-input"}`}
