@@ -2,10 +2,15 @@ import {validationResult} from 'express-validator';
 import bcryptjs from 'bcryptjs';
 import * as Promise from 'bluebird';
 import request from 'request';
+import { v4 as uuidv4 } from 'uuid';
 
 import config from '../config';
 import User from '../models/user';
+import Token from '../models/token';
 import HttpError from '../models/httpError';
+import Profiler from '../models/profiler';
+import transporter from '../models/myNodemailer';
+import { response } from 'express';
 
 // Get all values of logged in user
 const getUser = async (req, res, next) => {
@@ -236,34 +241,199 @@ const simulation = (req, res) => {
 	});
 };
 
-const profiler = (req, res) => {
+const profiler = async (req, res) => {
+	
 	// get input values
 	console.log("req body:", req.body);
+	
 	// validation result
 	const errors = validationResult(req);
 	if(!errors.isEmpty()) {
 		const error = new HttpError("Could not process simulation request, check your data", 422);
 		return next(error);
 	}
-	// const {} = req.body;
 
 	console.log("Profiler ready to make API call to EC2");
 	// Make API call to python app and await response
-	request.post({url: 'http://localhost:8888/foo', data: req.body.data.body}, (err, res, body) => {
-		if (err) {
-			return console.error('API req failed:', err);
+	// request.post({url: 'http://localhost:8888/foo', data: req.body.data.body}, (err, res, body) => {
+	// 	if (err) {
+	// 		return console.error('API req failed:', err);
+	// 	}
+	// 	console.log('Successful!  Server responded with:', body);
+	// });
+
+	const predictedCareer = "Business Management";
+	console.log("predictedCareer:", predictedCareer);
+
+	let identifiedCareer;
+	try {
+		identifiedCareer = await Profiler.findOne({ career: predictedCareer }).exec();
+		console.log("identifiedCareer ===============", identifiedCareer);
+	} catch(err) {
+		console.log("err", err);
+		const error = new HttpError('Error in finding email', 500);
+		return next(error);
+	}
+	if (identifiedCareer) {
+		res.status(200).json({
+			career: identifiedCareer.toObject({getters: true}),
+			message: 'Successfully Predicted',
+			success: true
+		});
+	}
+};
+
+const functionToSendInstructionsViaEmail = (url, email) => {
+	// Mail user instructions to reset password
+	const mailOptions = {
+	    from: '"Bloggit" <no-reply@thebootweb.com>', // sender address
+	    to: email, // list of receivers
+	    subject: "Instructions for changing your UniSimulation password", // Subject line
+	    html: '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="author" content="BootWeb"><meta name="apple-mobile-web-app-capable" content="yes"><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"><style>html, body {font-family: "Open Sans", sans-serif;}</style></head><body style="background: white;"><div style="max-width: 600px;background: #f5f5f5;padding: 20px 10px;margin: auto;"><div style="background: #fff;border: 1px solid #dbdbdb;padding: 20px"><img src="https://bloggit.in/images/bloggit.png" alt="logo" /><div style=""><p style="font-size: 14px;color: #333">Welcome to Uni.</p><p style="font-size: 14px;color: #333">Thank you for creating an account on Bloggit. Now you have free access to create blogs on Bloggit. To access your account click <a href="https://bloggit.in" target="_blank" style="color: #3498db;font-weight: 600;font-size: 13px;">Access Account</a>.</p><p>url - `${url}`</p><p style="font-size: 14px;color: #333;margin-top: 20px;">Sincerely,</p><p style="font-size: 14px;color: #333;margin-bottom: 40px;">BootWeb Team</p><div style="background: #edeeef;width:100%;height: 1px;"></div><p style="font-size: 11px;color: #a9a9a9;margin: 20px 0 10px 0;text-align: center;">Bloggit is a subsidiary of BootWeb Solutions. This message was produced and distributed by BootWeb Solutions, Bhoomi Building, 16th Floor, 1614, B-Wing, St Yadav Marg, Cama Industrial Estate, Goregaon(E), Mumbai - 400063, India.</p></div></div></div></body></html>',
+	};
+	transporter.sendMail(mailOptions, (error, info) => {
+		if (error) {
+			console.log(error);
+		} else {
+			console.log('Email sent ', info.response);
 		}
-		console.log('Successful!  Server responded with:', body);
-	});
-	
-
-
-	res.status(201).json({
-		body: req.body,
-		redirect: true,
-		type: 'success',
-		message: 'Profiler request received'
 	});
 };
 
-export default {getUser, getUserDetails, login, signup, logout, simulation, profiler};
+// Password Reset
+const passwordReset = async (req, res) => {
+	const { email } = req.body;
+
+	// validation result
+	const errors = validationResult(req);
+	if(!errors.isEmpty()) {
+		const error = new HttpError("Could not process simulation request, check your data", 422);
+		return next(error);
+	}
+
+	// Check if token exists
+	let tokenExists;
+	try {
+		tokenExists = await Token.findOne({email});
+	} catch (err) {
+		const error = new HttpError("Signing up failed, please try again");
+		return next(error);
+	}
+	if (tokenExists) {
+		// send email again but with same token
+		const url = `http://localhost:3000/change_password?email=${email}&token=${tokenExists.token}`;
+
+		functionToSendInstructionsViaEmail(url, email);
+
+		return res.json({
+			token: "exists",
+			message: "token already exists, please check your email"
+		});
+	}
+
+	// send email
+	const token = uuidv4();
+
+	const url = `http://localhost:3000/change_password?email=${email}&token=${token}`;
+
+	console.log("token", token);
+	console.log("url", url);
+
+	const time = new Date().getTime();
+
+	// Save token and email in DB
+	const createdToken = new Token({
+		email,
+		token,
+		time
+	});
+	// Create a new token, email doc in DB
+	try {
+		await createdToken.save();
+	} catch (err) {
+		const error = new HttpError("Signing up failed, please try again");
+		return next(error);
+	}
+
+	functionToSendInstructionsViaEmail(url, email);
+
+	res.status(201).json({
+		// user: createdUser.toObject({getters: true}),
+		redirect: true,
+		type: 'success',
+		message: 'Password request received and token generated'
+	});
+
+};
+
+// Check Token
+const checkToken = async (req, res) => {
+	const {email, token} = req.query;
+	let getDocument;
+	try {
+		getDocument = await Token.findOne({email});
+	} catch (err) {
+		const error = new HttpError("Signing up failed, please try again");
+		return next(error);
+	}
+	// console.log('getDocument', getDocument);
+	if (getDocument && getDocument.token === token) {
+		return res.status(201).json({
+			type: 'success',
+			token_exists: true,
+			success: true,
+			message: 'Valid Token exists'
+		});
+	}
+	return res.status(201).json({
+		type: 'success',
+		token_exists: false,
+		message: 'Token does not exist, redirect to home page'
+	});
+};
+
+// Change Password
+const changePassword = async (req, res) => {
+	// console.log('change password put route hit');
+	const { email, password } = req.body;
+
+	// validation result
+	const errors = validationResult(req);
+	if(!errors.isEmpty()) {
+		const error = new HttpError("Could not process simulation request, check your data", 422);
+		return next(error);
+	}
+
+	// Update password with new hashed
+	let hashedPassword;
+	try {
+		hashedPassword = await bcryptjs.hash(password, 12);
+	} catch (err) {
+		const error = new HttpError("Could not hash password", 500);
+		return next(error);
+	}
+	let doc;
+	try {
+		doc = await User.findOneAndUpdate({ email: email }, { password: hashedPassword }, { new: true });
+		// console.log('doc is', doc);
+	} catch (err) {
+		const error = new HttpError("Could not update password, please try again", 500);
+		return next(error);
+	}
+	
+	// Delete token
+	try {
+		let deletedToken = await Token.findOneAndDelete({ email: email });
+		// console.log('token removed');
+	} catch (err) {
+		const error = new HttpError("Could not update password, please try again", 500);
+		return next(error);
+	}
+
+	res.json({
+		success: true,
+		message: 'Password changed successfully'
+	});
+};
+
+export default {getUser, getUserDetails, login, signup, logout, simulation, profiler, passwordReset, checkToken, changePassword};

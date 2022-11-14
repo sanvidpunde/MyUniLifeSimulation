@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {Link} from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import Select from 'react-select';
 import axios from 'axios';
 import {useSelector, useDispatch} from 'react-redux';
@@ -7,6 +7,8 @@ import {useSelector, useDispatch} from 'react-redux';
 import {receiveSuccessMessage} from '../redux/util/controller';
 
 const Simulation = () => {
+
+    const history = useHistory();
 
     const dispatch = useDispatch();
     // const step = useSelector(state => state.step);
@@ -111,6 +113,7 @@ const Simulation = () => {
                     console.log("resp is:", resp);
                     dispatch(receiveSuccessMessage({success: "Simulation request sent successfully"}));
                 });
+            history.push('/recommended_courses');
         }
     };
 	
@@ -118,14 +121,14 @@ const Simulation = () => {
 		<React.Fragment>
 			<div className="header">
                 <div className="container">
-                    <div className="header-text">University Simulation</div>
+                    <div className="header-text">Recommender System</div>
                     <p>Now that we have a career match for you, let's start looking for a specific course using our state-of-the-art Recommender System</p>
                 </div>
             </div>
             <div className="p-60">
                 <div className="container">
                     <img src="/images/simulation.jpg" alt="Simulation" className="responsive-image mb-60" />
-                    <h3 className="mb-20">Complete following details:</h3>
+                    <h3 className="mb-20">Please complete following details:</h3>
                     <div className="simulation-form-area">
                         <div className="single-simulation-form">
                             <label>CAO Point
@@ -197,7 +200,7 @@ const Simulation = () => {
                         </div>
                     </div>
                     <div className="mt-20">
-                        <button type="button" className="take-test-button" onClick={submitHandler} >Run Simulation</button>
+                        <button type="button" className="take-test-button" onClick={submitHandler} >Run Prediction</button>
                     </div>
                     
                 </div>

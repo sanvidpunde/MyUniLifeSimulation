@@ -30,8 +30,8 @@ const Navbar = ({ loggedIn, username, logout }) => {
 						</li>
 						<li className="item first-element" onClick={() => setToggleBtn(false)}>
 							<NavLink to="/" exact>Home</NavLink>
-							<NavLink to="/simulation" exact>Simulation</NavLink>
-							<NavLink to="/interest_profiler" exact>Profiler</NavLink>
+							<NavLink to="/interest_profiler" exact>Interest Profiler</NavLink>
+							<NavLink to="/simulation" exact>Course Recommender</NavLink>
 						</li>
 						{(loggedIn) ?
 							<React.Fragment>

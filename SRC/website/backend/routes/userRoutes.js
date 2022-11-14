@@ -55,6 +55,20 @@ router.post('/profiler', [
 	check('interestedCareerArea').not().isEmpty(),
 ], userController.profiler);
 
+// Password Reset
+router.post('/password_reset', [
+	check('email').isEmail(),
+], userController.passwordReset);
+
+// Check Token
+router.get('/check_token', userController.checkToken);
+
+// Change Password
+router.put('/change_password', [
+	check('email').isEmail(),
+	check('password').isLength({min: 6})
+], userController.changePassword);
+
 // Get user details
 router.get('/getUserDetails', userController.getUserDetails);
 

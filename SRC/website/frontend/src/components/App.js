@@ -13,6 +13,8 @@ import Profiler from './Profiler';
 import ProfilerDetails from './ProfilerDetails';
 import Login from './Login';
 import Signup from './Signup';
+import PasswordReset from './PasswordReset';
+import ChangePassword from './ChangePassword';
 import Footer from './Footer';
 
 const mapStateToProps = ({ session }) => ({
@@ -70,6 +72,12 @@ const App = ({ loggedIn, email }) => {
 				</Route>
 				<Route path="/signup" exact>
 					<Signup />
+				</Route>
+				<Route path="/password_reset" exact>
+					<PasswordReset />
+				</Route>
+				<Route path="/change_password" exact>
+					<ChangePassword />
 				</Route>
 				<Redirect to="/login" />
 			</Switch>
