@@ -8,9 +8,14 @@ const PasswordReset = () => {
 	const [emailError, setEmailError] = useState('');
 	const [passwordReqSent, setPasswordReqSent] = useState(false);
 	const [passwordReqAlreadySent, setPasswordReqAlreadySent] = useState(false);
+	const [emailDoesNotExist, setEmailDoesNotExist] = useState(false);
+	const [disableContinue, setDisableContinue] = useState(true);
+
+	
 
 	const emailHandler = (event) => {
 		setEmail(event.target.value.toLowerCase().trim());
+		setDisableContinue(false);
         setEmailError('');
 	};
 
@@ -43,13 +48,22 @@ const PasswordReset = () => {
 			};
 			axios.post('/api/password_reset', body)
 				.then(resp => {
-					console.log("resp", resp);
+					setDisableContinue(true);
+					// console.log("resp", resp);
+					if (resp.data.emailExists === false) {
+						setPasswordReqSent(false);
+						setPasswordReqAlreadySent(false);
+						return setEmailDoesNotExist(true);
+					}
 					if (resp.data.token === "exists") {
 						setPasswordReqSent(false);
+						setEmailDoesNotExist(false);
 						return setPasswordReqAlreadySent(true);
 					}
 					if (resp.data.type === "success") {
-						setPasswordReqSent(true);
+						setEmailDoesNotExist(false);
+						setPasswordReqAlreadySent(false);
+						return setPasswordReqSent(true);
 					}
 				});
 		}
@@ -78,6 +92,12 @@ const PasswordReset = () => {
 								<p className="success-text">Please check your email, we have already sent you instructions to reset your password</p>
 							</div>
 						}
+						{emailDoesNotExist &&
+							<div className="card">
+								<p><strong>Failure</strong></p>
+								<p className="failure-text">Please check your email, entered email does not exist in our records</p>
+							</div>
+						}
 						
 						<div className="card">
 							<div className="title">Password Reset</div>
@@ -93,7 +113,7 @@ const PasswordReset = () => {
 								/>
 								{emailError !== "" && <p className="error_text"><i>!</i> &nbsp;{emailError}</p>}
 
-								<button type="submit" onClick={handlePasswordReset}>Continue</button>
+								<button type="submit" onClick={handlePasswordReset} disabled={disableContinue}>Continue</button>
 							
 							</form>
 						</div>

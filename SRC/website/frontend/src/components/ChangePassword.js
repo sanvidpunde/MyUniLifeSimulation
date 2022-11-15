@@ -13,7 +13,7 @@ const ChangePassword = () => {
     // Get the email and token param from the URL.
     const useQuery = () => {
         const { search } = useLocation();
-        return React.useMemo(() => new URLSearchParams(search), [search]);
+        return useMemo(() => new URLSearchParams(search), [search]);
     };
     let query = useQuery();
 
@@ -23,7 +23,7 @@ const ChangePassword = () => {
             // check if token is valid otherwise redirect to home page
 			axios.get(`/api/check_token?email=${query.get("email")}&token=${query.get("token")}`)
 				.then(resp => {
-					console.log("resp", resp);
+					// console.log("resp", resp);
 					if (resp.data.token_exists == false) {
 						// redirect to home page if token does not exist
 						return history.push('/');
@@ -35,7 +35,7 @@ const ChangePassword = () => {
         }
     }, []);
     
-
+	const [passwordMismatch, setPasswordMismatch] = useState(false);
 	const [password, setPassword] = useState('');
 	const [passwordError, setPasswordError] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
@@ -44,10 +44,12 @@ const ChangePassword = () => {
 	const passwordHandler = (event) => {
 		setPassword(event.target.value.trim());
         setPasswordError('');
+		setPasswordMismatch(false);
 	}
     const confirmPasswordHandler = (event) => {
 		setConfirmPassword(event.target.value.trim());
         setConfirmPasswordError('');
+		setPasswordMismatch(false);
 	}
 
 	// Scroll to top of page
@@ -74,7 +76,9 @@ const ChangePassword = () => {
 			return false;
 		}
         if (password !== confirmPassword) {
-            return dispatch(receiveFailureMessage({failure: "Password and confirm password do not match"}));
+			setPasswordMismatch(true);
+            dispatch(receiveFailureMessage({failure: "Password and confirm password do not match"}));
+			return false;
         }
 		return true;
 	}
@@ -91,7 +95,7 @@ const ChangePassword = () => {
 			};
 			axios.put('/api/change_password', data)
 				.then(resp => {
-					console.log('resp', resp);
+					// console.log('resp', resp);
 					if (resp.data.success) {
 						dispatch(receiveSuccessMessage({success: "Password changed successfully"}));
 						return history.push('/login');
@@ -111,6 +115,12 @@ const ChangePassword = () => {
 			<div className="gray-bg">
 				<div className="container login-form p-60">
 					<div className="p-lr">
+						{passwordMismatch &&
+							<div className="card">
+								<p><strong>Failure</strong></p>
+								<p className="failure-text">Password and confirm password do not match</p>
+							</div>
+						}
 						<div className="card">
 							<div className="title">Change Password</div>
 							<form>
