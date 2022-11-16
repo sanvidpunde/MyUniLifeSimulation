@@ -311,6 +311,23 @@ const passwordReset = async (req, res) => {
 		return next(error);
 	}
 
+	// Check if email exists in our database
+	let emailExists;
+	try {
+		emailExists = await User.findOne({email});
+	} catch (err) {
+		const error = new HttpError("Signing up failed, please try again");
+		return next(error);
+	}
+	if (emailExists) {
+		// we are good
+	} else {
+		return res.json({
+			emailExists: false,
+			message: "Email is not registered with us, please check your email"
+		});
+	}
+
 	// Check if token exists
 	let tokenExists;
 	try {
