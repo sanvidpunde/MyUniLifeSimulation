@@ -1,106 +1,109 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import {useSelector, useDispatch} from 'react-redux';
 
 const ProfilerDetails = () => {
+
+    const dispatch = useDispatch();
+    const career = useSelector(state => state.career);
 
     // scroll to top of page
     useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
     
-    const career = {
-        "career": "Technical Support",
-        "job_role": "Tech Support Engineer",
-        "career_interests": "",
-        "career_interests": "",
-        "career_motivators": "",
-        "abstract_reasoning": "",
-        "numerical_reasoning": "",
-        "verbal_reasoning": "",
-        "job_description": "Technical support workers manage, maintain, and repair IT systems. Their responsibilities include diagnosing and repairing faults, resolving network issues, and installing and configuring hardware and software.",
-        "duties": [
-            {
-                "duty": "Identifying hardware and software solutions.",
-                "id": 1
-            },
-            {
-                "duty": "Troubleshooting technical issues.",
-                "id": 2
-            },
-            {
-                "duty": "Diagnosing and repairing faults.",
-                "id": 3
-            },
-            {
-                "duty": "Installing and configuring hardware and software.",
-                "id": 4
-            },
-            {
-                "duty": "Replacing or repairing the necessary parts.",
-                "id": 5
-            },
-            {
-                "duty": "Conducting electrical safety checks on equipment.",
-                "id": 6
-            }
-        ],
-        "employers": [
-            {
-                "employer": "Software companies",
-                "id": 1
-            },
-            {
-                "employer": "Hardware companies",
-                "id": 2
-            },
-            {
-                "employer": "Technology consultancies (who offer technology consulting services)",
-                "id": 3
-            },
-            {
-                "employer": "Telecoms companies",
-                "id": 4
-            },
-            {
-                "employer": "Banks and other finance organisations",
-                "id": 5
-            },
-            {
-                "employer": "Engineering companies",
-                "id": 6
-            },
-            {
-                "employer": "The public sector (eg hospitals, central and local government, the secret intelligence service)",
-                "id": 7
-            }
-        ],
-        "skills_required": [
-            {
-                "skill": "Expert knowledge in how operating systems and software works",
-                "id": 1
-            },
-            {
-                "skill": "The capacity to work well within a team.",
-                "id": 2
-            },
-            {
-                "skill": "Attention to detail.",
-                "id": 3
-            },
-            {
-                "skill": "Excellent problem-solving skills.",
-                "id": 4
-            },
-            {
-                "skill": "Interpersonal skills as you will regularly be in contact with colleagues and/or customers.",
-                "id": 5
-            },
-            {
-                "skill": "Logical thinking.",
-                "id": 6
-            }
-        ]
-    };
+    // const career = {
+    //     "career": "Technical Support",
+    //     "job_role": "Tech Support Engineer",
+    //     "career_interests": "",
+    //     "career_interests": "",
+    //     "career_motivators": "",
+    //     "abstract_reasoning": "",
+    //     "numerical_reasoning": "",
+    //     "verbal_reasoning": "",
+    //     "job_description": "Technical support workers manage, maintain, and repair IT systems. Their responsibilities include diagnosing and repairing faults, resolving network issues, and installing and configuring hardware and software.",
+    //     "duties": [
+    //         {
+    //             "duty": "Identifying hardware and software solutions.",
+    //             "id": 1
+    //         },
+    //         {
+    //             "duty": "Troubleshooting technical issues.",
+    //             "id": 2
+    //         },
+    //         {
+    //             "duty": "Diagnosing and repairing faults.",
+    //             "id": 3
+    //         },
+    //         {
+    //             "duty": "Installing and configuring hardware and software.",
+    //             "id": 4
+    //         },
+    //         {
+    //             "duty": "Replacing or repairing the necessary parts.",
+    //             "id": 5
+    //         },
+    //         {
+    //             "duty": "Conducting electrical safety checks on equipment.",
+    //             "id": 6
+    //         }
+    //     ],
+    //     "employers": [
+    //         {
+    //             "employer": "Software companies",
+    //             "id": 1
+    //         },
+    //         {
+    //             "employer": "Hardware companies",
+    //             "id": 2
+    //         },
+    //         {
+    //             "employer": "Technology consultancies (who offer technology consulting services)",
+    //             "id": 3
+    //         },
+    //         {
+    //             "employer": "Telecoms companies",
+    //             "id": 4
+    //         },
+    //         {
+    //             "employer": "Banks and other finance organisations",
+    //             "id": 5
+    //         },
+    //         {
+    //             "employer": "Engineering companies",
+    //             "id": 6
+    //         },
+    //         {
+    //             "employer": "The public sector (eg hospitals, central and local government, the secret intelligence service)",
+    //             "id": 7
+    //         }
+    //     ],
+    //     "skills_required": [
+    //         {
+    //             "skill": "Expert knowledge in how operating systems and software works",
+    //             "id": 1
+    //         },
+    //         {
+    //             "skill": "The capacity to work well within a team.",
+    //             "id": 2
+    //         },
+    //         {
+    //             "skill": "Attention to detail.",
+    //             "id": 3
+    //         },
+    //         {
+    //             "skill": "Excellent problem-solving skills.",
+    //             "id": 4
+    //         },
+    //         {
+    //             "skill": "Interpersonal skills as you will regularly be in contact with colleagues and/or customers.",
+    //             "id": 5
+    //         },
+    //         {
+    //             "skill": "Logical thinking.",
+    //             "id": 6
+    //         }
+    //     ]
+    // };
 
     return (
         <React.Fragment>
@@ -114,14 +117,14 @@ const ProfilerDetails = () => {
                 <div className="container">
                     <div className="profiler_details">
                         <h3 className="">Recommended Career:</h3>
-                        <div className="career_title">Technical Support</div>
-                        <p className="similar_career_titles">(Tech Support Engineer)</p>
+                        <div className="career_title">{career.career}</div>
+                        <p className="similar_career_titles">{career.job_role}</p>
 
                         <div className="mb-60"></div>
 
                         <div className="mb-30">
                             <h3 className="">Job Description:</h3>
-                            <p className="jobDescriptionText">Technical support workers manage, maintain, and repair IT systems. Their responsibilities include diagnosing and repairing faults, resolving network issues, and installing and configuring hardware and software.</p>
+                            <p className="jobDescriptionText">{career.job_description}</p>
                         </div>
                         
                         <div className="mb-30">

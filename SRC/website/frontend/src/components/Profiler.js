@@ -5,7 +5,7 @@ import Select from 'react-select';
 import axios from 'axios';
 import {useSelector, useDispatch} from 'react-redux';
 
-import {receiveSuccessMessage, receiveFailureMessage} from '../redux/util/controller';
+import {receiveSuccessMessage, receiveFailureMessage, receiveCurrentCareer, updateCurrentCareer} from '../redux/util/controller';
 
 const Profiler = () => {
 
@@ -200,7 +200,8 @@ const Profiler = () => {
                         return dispatch(receiveFailureMessage({failure: resp.data.message}));
                     }
                     // update redux with interest profiler details
-                    // history.push('/interest_profiler_details');
+                    dispatch(updateCurrentCareer(resp.data.career));
+                    history.push('/interest_profiler_details');
                 });
         }
     }
