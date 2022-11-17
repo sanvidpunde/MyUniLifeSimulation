@@ -23,7 +23,11 @@ export default class Quiz extends Component {
             13: 'A graphical representation of a data set is referred to as a ______',
             14: 'Which of the following step is performed by data scientist AFTER acquiring the data?',
             15: 'Data that sits outside the trend is referred to as a ______',
-            16: 'Which of the following approach should be used to ask Data Analysis question?'
+            16: 'Which of the following approach should be used to ask Data Analysis question?',
+            17: 'Which of the following is NOT a machine learning algorithm?',
+            18: 'What is Big Data?',
+            19: 'What is R an implementation of?',
+            20: 'The 5 steps required to identify a problem and come up with a solution are referred to as the ________ Cycle'
         },
 
       // options for the quiz     
@@ -123,7 +127,31 @@ export default class Quiz extends Component {
                 2: 'Find only one solution for particular problem',
                 3: 'Find out answer from dataset without asking question',
 				4: 'None of the  above'
-            }
+            },
+            17: {
+                1: 'SVG',
+                2: 'Random Forest',
+                3: 'SVM',
+				4: 'None of the  above'
+            },
+            18: {
+                1: 'Data with the word ‘big’ in it',
+                2: 'Data about people who are big',
+                3: 'Data with a large size',
+				4: 'Data made with a big purpose'
+            },
+            19: {
+                1: 'Logical Scoping',
+                2: 'S Programming Language',
+                3: 'Lexical Scoping',
+				4: 'Q Programming Language'
+            },
+            20: {
+                1: 'Visualization',
+                2: 'Investigative',
+                3: 'Conclusion',
+				4: 'None of the  above'
+            }                                                
         },
 
            // answers for the quiz
@@ -143,7 +171,11 @@ export default class Quiz extends Component {
 			13: '1',
             14: '3',
             15: '4',
-            16: '1'	
+            16: '1',
+			17: '1',
+            18: '3',
+            19: '2',
+            20: '2',            
         },
         correctAnswer: 0,
         clickedAnswer: 0,
