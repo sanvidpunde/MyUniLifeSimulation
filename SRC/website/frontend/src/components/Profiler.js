@@ -5,7 +5,7 @@ import Select from 'react-select';
 import axios from 'axios';
 import {useSelector, useDispatch} from 'react-redux';
 
-import {receiveSuccessMessage} from '../redux/util/controller';
+import {receiveSuccessMessage, receiveFailureMessage} from '../redux/util/controller';
 
 const Profiler = () => {
 
@@ -16,6 +16,10 @@ const Profiler = () => {
     const [coding, setCoding] = useState(3);
     const [hackathons, setHackathons] = useState(3);
     const [publicSpeaking, setPublicSpeaking] = useState(3);
+
+    useEffect(() => {
+        console.log("coding", coding);
+    }, [coding]);
 
     const [selfLearningCapability, setSelfLearningCapability] = useState(null);
     const [extraCourses, setExtraCourses] = useState(null);
@@ -49,8 +53,8 @@ const Profiler = () => {
     const [typeOfCompanyYouWantToSettleInError, setTypeOfCompanyYouWantToSettleInError] = useState('');
     const [interestedCareerAreaError, setInterestedCareerAreaError] = useState('');
 
-    const yesNoOptions = [{value: "yes", label: "yes"}, {value: "no", label: "no"}];
-    const ordinalOptions = [{value: "poor", label: "poor"}, {value: "medium", label: "medium"}, {value: "excellent", label: "excellent"}];
+    const yesNoOptions = [{value: 1, label: "yes"}, {value: 0, label: "no"}];
+    const ordinalOptions = [{value: 0, label: "poor"}, {value: 1, label: "medium"}, {value: 2, label: "excellent"}];
 
     // Scroll Top
     useEffect(() => {
@@ -164,34 +168,40 @@ const Profiler = () => {
 		if (isValid) {
             // call API
             const profilerData = {
-                logical,
-                coding,
-                hackathons,
-                publicSpeaking,
-                selfLearningCapability,
-                extraCourses,
-                tookAdvice,
-                teamCo,
-                introvert,
-                readingWriting,
-                memoryCapability,
-                work,
-                managementTechnical,
-                interestedSubjects,
-                interestedBooks,
-                interestedTypeOfBooks,
-                workshopsAttended,
-                typeOfCompanyYouWantToSettleIn,
-                interestedCareerArea
+                Logical_quotient_rating: logical,
+                coding_skills_rating: coding,
+                hackathons: hackathons,
+                public_speaking_points: publicSpeaking,
+                self_learning_capability: selfLearningCapability.value,
+                Extra_courses_did: extraCourses.value,
+                Taken_inputs_from_seniors_or_elders: tookAdvice.value,
+                worked_in_teams_ever: teamCo.value,
+                Introvert: introvert.value,
+                reading_and_writing_skills: readingWriting.value,
+                memory_capability_score: memoryCapability.value,
+                B_hard_worker: work.value === "Hard worker" ? 1 : 0,
+                B_smart_worker: work.value === "Hard worker" ? 0 : 1,
+                A_Management: managementTechnical.value === "Management" ? 1 : 0,
+                A_Technical: managementTechnical.value === "Technical" ? 1 : 0,
+                Interested_subjects_code: interestedSubjects.value,
+                Interested_Type_of_Books_code: interestedBooks.value,
+                certifications_code: interestedTypeOfBooks.value,
+                workshops_code: workshopsAttended.value,
+                Type_of_company_want_to_settle_in_code: typeOfCompanyYouWantToSettleIn.value,
+                interested_career_area_code: interestedCareerArea.value
             };
             console.log("Profiler inputs are", profilerData);
+            dispatch(receiveSuccessMessage({success: "Profiler request sent successfully"}));
             // API call
             axios.post('http://localhost:8080/api/profiler', profilerData)
                 .then(resp => {
                     console.log("resp is:", resp);
-                    dispatch(receiveSuccessMessage({success: "Profiler request sent successfully"}));
+                    if (resp.data.success === false) {
+                        return dispatch(receiveFailureMessage({failure: resp.data.message}));
+                    }
+                    // update redux with interest profiler details
+                    // history.push('/interest_profiler_details');
                 });
-            history.push('/interest_profiler_details');
         }
     }
 	
@@ -217,7 +227,7 @@ const Profiler = () => {
                                 step={1}
                                 marks
                                 min={0}
-                                max={10}
+                                max={9}
                             />
                         </div>
                         <div className="single_range_selection">
@@ -230,7 +240,7 @@ const Profiler = () => {
                                 step={1}
                                 marks
                                 min={0}
-                                max={10}
+                                max={9}
                             />
                         </div>
                         <div className="single_range_selection">
@@ -243,7 +253,7 @@ const Profiler = () => {
                                 step={1}
                                 marks
                                 min={0}
-                                max={10}
+                                max={9}
                             />
                         </div>
                         <div className="single_range_selection">
@@ -256,7 +266,7 @@ const Profiler = () => {
                                 step={1}
                                 marks
                                 min={0}
-                                max={10}
+                                max={9}
                             />
                         </div>
                     </div>
@@ -366,7 +376,7 @@ const Profiler = () => {
                                 <Select 
                                     defaultValue={interestedSubjects}
                                     onChange={setInterestedSubjects}
-                                    options={[{value: "Programming", label: "Programming"}, {value: "Management", label: "Management"}, {value: "Data Engineering", label: "Data Engineering"}, {value: "Networks", label: "Networks"}, {value: "Software Engineering", label: "Software Engineering"}, {value: "Cloud Computing", label: "Cloud Computing"}, {value: "Parallel Computing", label: "Parallel Computing"}, {value: "IOT", label: "IOT"}, {value: "Computer Architecture", label: "Computer Architecture"}, {value: "Hacking", label: "Hacking"}]}
+                                    options={[{value: 9, label: "Programming"}, {value: 2, label: "Management"}, {value: 5, label: "Data Engineering"}, {value: 7, label: "Networks"}, {value: 3, label: "Software Engineering"}, {value: 4, label: "Cloud Computing"}, {value: 8, label: "Parallel Computing"}, {value: 1, label: "IOT"}, {value: 0, label: "Computer Architecture"}, {value: 6, label: "Hacking"}]}
                                     className="mt-6"
                                 />
                             </label>
@@ -377,18 +387,18 @@ const Profiler = () => {
                                 <Select 
                                     defaultValue={interestedBooks}
                                     onChange={setInterestedBooks}
-                                    options={[{value: "Series", label: "Series"}, {value: "Autobiographies", label: "Autobiographies"}, {value: "Travel", label: "Travel"}, {value: "Guide", label: "Guide"}, {value: "Health", label: "Health"}, {value: "Journals", label: "Journals"}, {value: "Anthology", label: "Anthology"}, {value: "Dictionaries", label: "Dictionaries"}, {value: "Prayer Books", label: "Prayer Books"}, {value: "Art", label: "Art"}, {value: "Encyclopedias", label: "Encyclopedias"}, {value: "Religion-spirituality", label: "Religion-spirituality"}, {value: "Action and Adventure", label: "Action and Adventure"}, {value: "Comics", label: "Comics"}, {value: "Horror", label: "Horror"}, {value: "Satire", label: "Satire"}, {value: "Self Help", label: "Self Help"}, {value: "History", label: "History"}, {value: "Cookbooks", label: "Cookbooks"}, {value: "Math", label: "Math"}, {value: "Art", label: "Art"}, {value: "Biographies", label: "Biographies"}, {value: "Drama", label: "Drama"}, {value: "Diaries", label: "Diaries"}, {value: "Science Fiction", label: "Science Fiction"}, {value: "Poetry", label: "Poetry"}, {value: "Romance", label: "Romance"}, {value: "Science", label: "Science"}, {value: "Triology", label: "Triology"}, {value: "Fantasy", label: "Fantasy"}, {value: "Childrens", label: "Childrens"}, {value: "Mystery", label: "Mystery"}]}
+                                    options={[{value: 28, label: "Series"}, {value: 3, label: "Autobiographies"}, {value: 29, label: "Travel"}, {value: 13, label: "Guide"}, {value: 14, label: "Health"}, {value: 17, label: "Journals"}, {value: 1, label: "Anthology"}, {value: 9, label: "Dictionaries"}, {value: 21, label: "Prayer Books"}, {value: 2, label: "Art"}, {value: 11, label: "Encyclopedias"}, {value: 22, label: "Religion-spirituality"}, {value: 0, label: "Action and Adventure"}, {value: 6, label: "Comics"}, {value: 16, label: "Horror"}, {value: 24, label: "Satire"}, {value: 27, label: "Self Help"}, {value: 15, label: "History"}, {value: 7, label: "Cookbooks"}, {value: 18, label: "Math"}, {value: 2, label: "Art"}, {value: 4, label: "Biographies"}, {value: 10, label: "Drama"}, {value: 8, label: "Diaries"}, {value: 26, label: "Science Fiction"}, {value: 20, label: "Poetry"}, {value: 23, label: "Romance"}, {value: 25, label: "Science"}, {value: 30, label: "Triology"}, {value: 12, label: "Fantasy"}, {value: 5, label: "Childrens"}, {value: 19, label: "Mystery"}]}
                                     className="mt-6"
                                 />
                             </label>
                             {interestedBooksError !== "" && <p className="error_text"><i>!</i> &nbsp;{interestedBooksError}</p>}
                         </div>
                         <div className="single_selection_container">
-                            <label>Interested Type Of Books
+                            <label>Certifications
                                 <Select 
                                     defaultValue={interestedTypeOfBooks}
                                     onChange={setInterestedTypeOfBooks}
-                                    options={[{value: "Information Security", label: "Information Security"}, {value: "Shell Programming", label: "Shell Programming"}, {value: "R Programming", label: "R Programming"}, {value: "Distro Making", label: "Distro Making"}, {value: "Machine Learning", label: "Machine Learning"}, {value: "Full stack", label: "Full stack"}, {value: "Hadoop", label: "Hadoop"}, {value: "App Development", label: "App Development"}, {value: "Python", label: "Python"}]}
+                                    options={[{value: 4, label: "Information Security"}, {value: 8, label: "Shell Programming"}, {value: 7, label: "R Programming"}, {value: 1, label: "Distro Making"}, {value: 5, label: "Machine Learning"}, {value: 2, label: "Full stack"}, {value: 3, label: "Hadoop"}, {value: 0, label: "App Development"}, {value: 6, label: "Python"}]}
                                     className="mt-6"
                                 />
                             </label>
@@ -399,7 +409,7 @@ const Profiler = () => {
                                 <Select 
                                     defaultValue={workshopsAttended}
                                     onChange={setWorkshopsAttended}
-                                    options={[{value: "Testing/Database Security", label: "Testing/Database Security"}, {value: "Game Development", label: "Game Development"}, {value: "Data Science", label: "Data Science"}, {value: "System Designing", label: "System Designing"}, {value: "Hacking", label: "Hacking"}, {value: "Cloud Computing", label: "Cloud Computing"}, {value: "Web Technologies", label: "Web Technologies"}]}
+                                    options={[{value: 2, label: "Database Security"}, {value: 3, label: "Game Development"}, {value: 1, label: "Data Science"}, {value: 5, label: "System Designing"}, {value: 4, label: "Hacking"}, {value: 0, label: "Cloud Computing"}, {value: 7, label: "Web Technologies"}]}
                                     className="mt-6"
                                 />
                             </label>
@@ -410,7 +420,7 @@ const Profiler = () => {
                                 <Select 
                                     defaultValue={typeOfCompanyYouWantToSettleIn}
                                     onChange={setTypeOfCompanyYouWantToSettleIn}
-                                    options={[{value: "BPA", label: "BPA"}, {value: "Cloud Services", label: "Cloud Services"}, {value: "Product Development", label: "Product Development"}, {value: "Testing and Maintaining Services", label: "Testing and Maintaining Services"}, {value: "SAAS services", label: "SAAS services"}, {value: "Web services", label: "Web services"}, {value: "Finance", label: "Finance"}, {value: "Sales and Marketing", label: "Sales and Marketing"}, {value: "Product based", label: "Product based"}, {value: "Service based", label: "Service based"}]}
+                                    options={[{value: 0, label: "BPA"}, {value: 1, label: "Cloud Services"}, {value: 9, label: "Product Development"}, {value: 7, label: "Testing and Maintaining Services"}, {value: 4, label: "SAAS services"}, {value: 8, label: "Web services"}, {value: 2, label: "Finance"}, {value: 5, label: "Sales and Marketing"}, {value: 3, label: "Product based"}, {value: 6, label: "Service based"}]}
                                     className="mt-6"
                                 />
                             </label>
@@ -421,7 +431,7 @@ const Profiler = () => {
                                 <Select 
                                     defaultValue={interestedCareerArea}
                                     onChange={setInterestedCareerArea}
-                                    options={[{value: "Testing", label: "Testing"}, {value: "System Developer", label: "System Developer"}, {value: "Business Process Analyst", label: "Business Process Analyst"}, {value: "Security", label: "Security"}, {value: "Developer", label: "Developer"}, {value: "Cloud Computing", label: "Cloud Computing"}]}
+                                    options={[{value: 5, label: "Testing"}, {value: 4, label: "System Developer"}, {value: 0, label: "Business Process Analyst"}, {value: 3, label: "Security"}, {value: 2, label: "Developer"}, {value: 1, label: "Cloud Computing"}]}
                                     className="mt-6"
                                 />
                             </label>
