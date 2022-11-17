@@ -15,6 +15,10 @@ export const CLEAR_SERVER_RESPONSE = "CLEAR_SERVER_RESPONSE";
 export const RECEIVE_CURRENT_STEP = "RECEIVE_CURRENT_STEP";
 export const UPDATE_CURRENT_STEP = "UPDATE_CURRENT_STEP";
 
+// career
+export const RECEIVE_CURRENT_CAREER = "RECEIVE_CURRENT_CAREER";
+export const UPDATE_CURRENT_CAREER = "UPDATE_CURRENT_CAREER";
+
 // Other constants
 // session
 const receiveCurrentUser = user => ({
@@ -50,6 +54,16 @@ export const receiveCurrentStep = (step) => ({
 export const updateCurrentStep = (step) => ({
 	type: UPDATE_CURRENT_STEP,
 	step
+});
+
+// career
+export const receiveCurrentCareer = (career) => ({
+	type: RECEIVE_CURRENT_CAREER,
+	career
+});
+export const updateCurrentCareer = (career) => ({
+	type: UPDATE_CURRENT_CAREER,
+	career
 });
 
 
