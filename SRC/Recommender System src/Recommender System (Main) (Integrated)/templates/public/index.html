@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>College Recommendation System</h1>
+<h3>
+<form action="/" method = "POST">
+ <div>
+  <label for = "cao">CAO Points (max 625)</label><br>
+  <input id='cao' placeholder="Enter your points" type='number' min="0" max="625" name="cao">
+ </div>
+ <br>
+ <div>
+  <label> Prefered City </label>  
+  <select name="city">  
+  	<option selected value = "Athlone"> Athlone </option>  
+  	<option value = "Carlow"> Carlow</option>  
+  	<option value = "Cork"> Cork</option>  
+  	<option value = "Dublin"> Dublin</option>  
+  	<option value = "Dundalk"> Dundalk</option>  
+  	<option value = "Galway"> Galway</option>  
+  	
+  	<option value = "Limerick"> Limerick</option>
+    <option value = "Letterkenny"> Letterkenny </option>
+    <option value = "Mayo"> Mayo </option>  
+  </select>
+ </div>
+ <br>
+ <div>
+  <label> Budget (in Euros) </label>  
+  <select name="budget">  
+  	<option selected value = "3000"> 2000-4000 </option>  
+  	<option value = "6000"> 4000-8000</option>  
+  	<option value = "9000"> More than 8000</option>  
+  </select>
+ </div>
+ <br>
+ <div>
+  <label> Prefered Job Domain </label>  
+  <select name="jobs">  
+  	<option selected value = "Management"> Management </option>  
+  	<option value = "IT"> IT </option>  
+  	<option value = "HR"> HR </option>  
+  	<option value = "Support"> Support </option>  
+  	<option value = "Finance"> Finance </option>  
+  	<option value = "Law"> Law </option>  
+  </select>
+ </div>
+ <br>
+ <div>
+  <label> Personal Interests </label>  
+  <select name="interests">  
+  	<option selected value = "Cricket"> Cricket </option>  
+  	<option value = "Football"> Football </option>  
+  	<option value = "Singing"> Singing </option>  
+  	<option value = "Chess"> Chess </option>  
+  	<option value = "Athletics"> Athletics </option>  
+  	<option value = "Automation"> Automation </option>  
+  </select>
+ </div>
+ <br> 
+ <div>
+    <button id="submit"> Submit </button>
+ </div>
+</form> 
+
+</h3>
+</body>
+</html>
