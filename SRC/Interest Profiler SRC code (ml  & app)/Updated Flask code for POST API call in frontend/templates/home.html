@@ -1,0 +1,605 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interest Profiler</title>
+
+
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+
+    <!-- css -->
+    <link rel="stylesheet" href="static/css/styles.css">
+
+
+</head>
+
+<body>
+
+    <!-- As a heading -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <!-- <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Skillcate Project: Flight Price Prediction</a>
+            </div>
+        </div> -->
+    </nav>
+
+    <br><br><br>
+
+
+    <div class="container">
+
+
+
+        <form action="\predict" method="post">
+
+            <!-- Logical_quotient_rating -->
+            <br>
+            <br>
+            <br>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <!-- Logical_quotient_rating -->
+                            <h5 class="card-title">Logical_quotient_rating</h5>
+                            <select name="Logical_quotient_rating" id="Logical_quotient_rating" required="required">
+                                <option value=0>0</option>
+                                <option value=1>1</option>
+                                <option value=2>2</option>
+                                <option value=3>3</option>
+                                <option value=4>4</option>
+                                <option value=5>5</option>
+                                <option value=6>6</option>
+                                <option value=7>7</option>
+                                <option value=8>8</option>
+                                <option value=9>9</option>
+                              
+<!-- Hackathon -->
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">hackathons</h5>
+                            <!-- Destination -->
+                            <select name="hackathons" id="hackathons" required="required">
+                                <option value=0>0</option>
+                                <option value=1>1</option>
+                                <option value=2>2</option>
+                                <option value=3>3</option>
+                                <option value=4>4</option>
+                                <option value=5>5</option>
+                                <option value=6>6</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<!-- coding_skills_rating -->
+
+            <br>
+            <br>
+            <br>
+
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">coding_skills_rating</h5>
+                           
+                            <select name="coding_skills_rating" id="coding_skills_rating" required="required">
+                                <option value=0>0</option>
+                                <option value=1>1</option>
+                                <option value=2>2</option>
+                                <option value=3>3</option>
+                                <option value=4>4</option>
+                                <option value=5>5</option>
+                                <option value=6>6</option>
+                                <option value=7>7</option>
+                                <option value=8>8</option>
+                                <option value=9>9</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <br>
+            <br>
+            <br>
+<!-- public_speaking_points -->
+
+<br>
+<br>
+<br>
+
+
+<div class="row">
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">public_speaking_points</h5>
+               
+                <select name="public_speaking_points" id="public_speaking_points" required="required">
+                    <option value=0>0</option>
+                    <option value=1>1</option>
+                    <option value=2>2</option>
+                    <option value=3>3</option>
+                    <option value=4>4</option>
+                    <option value=5>5</option>
+                    <option value=6>6</option>
+                    <option value=7>7</option>
+                    <option value=8>8</option>
+                    <option value=9>9</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<br>
+<br>
+<br>
+
+<!-- self_learning_capability -->
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">self_learning_capability</h5>
+                            <!-- Destination -->
+                            <select name="self_learning_capability" id="self_learning_capability" required="required">
+                                <option value="no">no</option>
+                                <option value="yes">yes</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <br>
+            <br>
+            <br>
+
+<!-- Extra_courses_did -->
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Extra_courses_did</h5>
+                            <!-- Destination -->
+                            <select name="Extra_courses_did" id="Extra_courses_did" required="required">
+                                <option value="no">no</option>
+                                <option value="yes">yes</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <br>
+            <br>
+            <br>
+
+
+<!-- reading_and_writing_skills -->
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">reading_and_writing_skills</h5>
+                            <!-- Destination -->
+                            <select name="reading_and_writing_skills" id="reading_and_writing_skills" required="required">
+                                <option value=0>Poor</option>
+                                <option value=1>Medium</option>
+                                <option value=2>Excellent</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+<!-- memory_capability_score -->
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">memory_capability_score</h5>
+                            <!-- Destination -->
+                            <select name="memory_capability_score" id="memory_capability_score" required="required">
+                                <option value=0>Poor</option>
+                                <option value=1>Medium</option>
+                                <option value=2>Excellent</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+
+<!-- Taken_inputs_from_seniors_or_elders -->
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Taken_inputs_from_seniors_or_elders</h5>
+                            <!-- Destination -->
+                            <select name="Taken_inputs_from_seniors_or_elders" id="Taken_inputs_from_seniors_or_elders" required="required">
+                                <option value=0>no</option>
+                                <option value=1>yes</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+
+<!-- worked_in_teams_ever -->
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">worked_in_teams_ever</h5>
+                            <!-- Destination -->
+                            <select name="worked_in_teams_ever" id="worked_in_teams_ever" required="required">
+                                <option value=0>no</option>
+                                <option value=1>yes</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!-- certifications -->
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">certifications</h5>
+                            <!-- Destination -->
+                            <select name="certifications" id="certifications" required="required">
+                                <option value="app development">App Development</option>
+                                <option value="distro making">Distro making</option>
+                                <option value="full stack">Full Stack</option>
+                                <option value="hadoop">Hadoop</option>
+                                <option value="information security">Information Security</option>
+                                <option value="machine learning">Machine Learning</option>
+                                <option value="python">Python</option>
+                                <option value="r programming">R programming</option>
+                                <option value="shell programming">Shell Programming</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!-- workshops -->
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">workshops</h5>
+                            <!-- Destination -->
+                            <select name="workshops" id="workshops" required="required">
+                                <option value="cloud computing">Cloud Computing</option>
+                                <option value="data science">Data Science</option>
+                                <option value="database security">Data Base Security</option>
+                                <option value="game development">Game Development</option>
+                                <option value="hacking">Hacking</option>
+                                <option value="system designing">System Designing</option>
+                                <option value="testing">Testing</option>
+                                <option value="web technologies">Web Technologies</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         
+<!-- interested_subjects -->
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">interested_subjects</h5>
+                   
+                        <select name="interested_subjects" id="interested_subjects" required="required">
+                            <option value="Computer Architecture">Computer Architecture</option>
+                            <option value="IOT">IOT</option>
+                            <option value="Management">Management</option>
+                            <option value="Software Engineering">"Software" Engineering</option>
+                            <option value="cloud computing">Cloud Computing</option>
+                            <option value="data engineering">Data Engineering</option>
+                            <option value="hacking">Hacking</option>
+                            <option value="networks">Networks</option>
+                            <option value="parallel computing">Parallel Computing</option>
+                            <option value="programming">Programming</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- interested_career_area -->
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">interested_career_area</h5>
+                        <!-- Destination -->
+                        <select name="interested_career_area" id="interested_career_area" required="required">
+                            <option value="Business process analyst">Business Process Analyst</option>
+                            <option value="cloud computing">Cloud Computing</option>
+                            <option value="developer">Developer</option>
+                            <option value="security">Security</option>
+                            <option value="system developer">System Developer</option>
+                            <option value="testing">Testing</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!-- Type_of_company_want_to_settle_in -->
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Type_of_company_want_to_settle_in</h5>
+                      
+                        <select name="Type_of_company_want_to_settle_in" id="Type_of_company_want_to_settle_in" required="required">
+                            <option value="BPA">BPA</option>
+                            <option value="Cloud Services">Cloud Services</option>
+                            <option value="Finance">Finance</option>
+                            <option value="Product based">Product Based</option>
+                            <option value="SAaS services">SAas services</option>
+                            <option value="Sales and Marketing">Sales and Marketing</option>
+                            <option value="Service Based">Service Based</option>
+                            <option value="Testing and Maintainance Services">Testing and Maintainence Services</option>
+                            <option value="Web Services">Web Services</option>
+                            <option value="product development">Product Development</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- Interested_Type_of_Books -->
+<div class="row">
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Interested_Type_of_Books</h5>
+                <!-- Destination -->
+                <select name="Interested_Type_of_Books" id="Interested_Type_of_Books" required="required">
+                    <option value="Autobiographies">Autobiographies</option>
+                    <option value="Series">Series</option>
+
+                </select>
+            </div>
+        </div>
+    </div>
+</div>      
+
+          <!-- hard_smart_worker -->
+<div class="row">
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">hard_smart_worker</h5>
+                <!-- Destination -->
+                <select name="hard_smart_worker" id="hard_smart_worker" required="required">
+                    <option value='hard worker'>hard worker</option>
+                    <option value='smart worker'>smart worker</option>
+
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Management_or_Technical -->
+<div class="row">
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Management_or_Technical</h5>
+                <!-- Destination -->
+                <select name="Management_or_Technical" id="Management_or_Technical" required="required">
+                    <option value='Management'>Management</option>
+                    <option value='Technical'>Technical</option>
+
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+            
+<!-- Introvert -->
+<div class="row">
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Introvert</h5>
+                <!-- Destination -->
+                <select name="Introvert" id="Introvert" required="required">
+                    <option value="no">no</option>
+                    <option value="yes">yes</option>
+
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+       
+
+
+            <br>
+            <br>
+            <br>
+            <!-- Submit -->
+            <input type="submit" value="Predict your Career" class="btn btn-secondary">
+        </form>
+
+        <br>
+        <br>
+        <h3>{{ prediction_text }}</h3>
+
+        <br>
+        <br>
+        
+
+    </div>
+
+
+
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
