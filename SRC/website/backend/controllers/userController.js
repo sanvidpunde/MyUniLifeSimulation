@@ -241,7 +241,7 @@ const simulation = (req, res) => {
 	});
 };
 
-const profiler = async (req, res) => {
+const profiler = async (req, res, next) => {
 	
 	// get input values
 	console.log("req body:", req.body);
@@ -255,32 +255,40 @@ const profiler = async (req, res) => {
 
 	console.log("Profiler ready to make API call to EC2");
 	// Make API call to python app and await response
-	// request.post({url: 'http://localhost:8888/foo', data: req.body.data.body}, (err, res, body) => {
-	// 	if (err) {
-	// 		return console.error('API req failed:', err);
-	// 	}
-	// 	console.log('Successful!  Server responded with:', body);
-	// });
-
-	const predictedCareer = "Business Management";
-	console.log("predictedCareer:", predictedCareer);
-
-	let identifiedCareer;
-	try {
-		identifiedCareer = await Profiler.findOne({ career: predictedCareer }).exec();
-		console.log("identifiedCareer ===============", identifiedCareer);
-	} catch(err) {
-		console.log("err", err);
-		const error = new HttpError('Error in finding email', 500);
-		return next(error);
-	}
-	if (identifiedCareer) {
-		res.status(200).json({
-			career: identifiedCareer.toObject({getters: true}),
-			message: 'Successfully Predicted',
-			success: true
-		});
-	}
+	let predictedCareer;
+	request.post({url: 'http://localhost:5000/predict', json: req.body}, async (err, res, body) => {
+		if (err) {
+			return console.error('API req failed:', err);
+		}
+		predictedCareer = body;
+		console.log("body", body);
+		
+	});
+	const timer = setTimeout(async () => {
+		let identifiedCareer;
+		try {
+			identifiedCareer = await Profiler.findOne({ career: predictedCareer });
+		} catch(err) {
+			console.log("err", err);
+			const error = new HttpError('Error in finding email', 500);
+			return next(error);
+		}
+		console.log("identifiedCareer ===============", identifiedCareer);	
+		if (identifiedCareer) {
+			res.status(200).json({
+				career: identifiedCareer.toObject({getters: true}),
+				message: 'Successfully Predicted',
+				success: true
+			});
+		} else {
+			return res.json({
+				type: 'fail',
+				success: false,
+				message: 'Cannot predict career, something went wrong'
+			});
+		}
+	}, 500);
+	return () => clearTimeout(timer);
 };
 
 const functionToSendInstructionsViaEmail = (url, email) => {
