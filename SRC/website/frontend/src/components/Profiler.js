@@ -201,6 +201,7 @@ const Profiler = () => {
                     }
                     // update redux with interest profiler details
                     dispatch(updateCurrentCareer(resp.data.career));
+                    dispatch(receiveSuccessMessage({success: `Predicted career is ${resp.data.career.career}`}));
                     history.push('/interest_profiler_details');
                 });
         }

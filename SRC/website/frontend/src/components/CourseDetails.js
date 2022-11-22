@@ -59,7 +59,7 @@ const CourseDetails = ({ loggedIn }) => {
                                 aria-controls="panel2a-content"
                                 id="panel2a-header"
                                 >
-                                <Typography><div className="acc-title">Course Title</div></Typography>
+                                <Typography><div className="acc-title">Course Content</div></Typography>
                                 </AccordionSummary>
                                 <AccordionDetails>
                                 <Typography>
