@@ -19,6 +19,10 @@ export const UPDATE_CURRENT_STEP = "UPDATE_CURRENT_STEP";
 export const RECEIVE_CURRENT_CAREER = "RECEIVE_CURRENT_CAREER";
 export const UPDATE_CURRENT_CAREER = "UPDATE_CURRENT_CAREER";
 
+// course
+export const RECEIVE_CURRENT_COURSE = "RECEIVE_CURRENT_COURSE";
+export const UPDATE_CURRENT_COURSE = "UPDATE_CURRENT_COURSE";
+
 // Other constants
 // session
 const receiveCurrentUser = user => ({
@@ -64,6 +68,16 @@ export const receiveCurrentCareer = (career) => ({
 export const updateCurrentCareer = (career) => ({
 	type: UPDATE_CURRENT_CAREER,
 	career
+});
+
+// course
+export const receiveCurrentCourse = (course) => ({
+	type: RECEIVE_CURRENT_COURSE,
+	course
+});
+export const updateCurrentCourse = (course) => ({
+	type: UPDATE_CURRENT_COURSE,
+	course
 });
 
 

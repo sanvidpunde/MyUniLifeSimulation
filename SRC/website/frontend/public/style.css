@@ -675,6 +675,7 @@ li.user:hover ul {
 }
 .recommended_course_description h2 {
 	color: #333;
+	margin-bottom: 10px;
 }
 .recommended_course_description h2 a:link,
 .recommended_course_description h2 a:visited {

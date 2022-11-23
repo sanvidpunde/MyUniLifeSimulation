@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, {useState, useEffect, useMemo} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
-import { Routes, Route, useLocation, useHistory } from 'react-router-dom';
+import { useLocation, useHistory } from 'react-router-dom';
 
 import {receiveFailureMessage, receiveSuccessMessage} from '../redux/util/controller';
 

@@ -1,22 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import {Link} from 'react-router-dom';
-import {connect} from 'react-redux';
+import {useSelector, useDispatch} from 'react-redux';
 
 import {receiveSuccessMessage} from '../redux/util/controller';
 
-const mapStateToProps = ({ session }) => ({
-	loggedIn: Boolean(session.email),
-	email: session.email,
-	name: session.name
-});
+const RecommendedCourses = () => {
 
-const mapDispatchToProps = dispatch => {
-  return {
-  	receiveSuccessMessage: message => dispatch(receiveSuccessMessage(message))
-  }
-};
-
-const RecommendedCourses = ({ loggedIn }) => {
+    const dispatch = useDispatch();
+    const courses = useSelector(state => state.course);
 
     useEffect(() => {
 		window.scrollTo(0, 0);
@@ -33,78 +24,41 @@ const RecommendedCourses = ({ loggedIn }) => {
             <div className="p-60">
                 <div className="container">
                     <div className="recommended_course">
-                        <Link to="/course_details">
-                            <img src="https://dummyimage.com/500x260/333/fff.jpg" alt="" className="responsive-image mb-30" />
+                        <Link to={`/course_details?code${courses.course_suggested.code}`}>
+                            <img src={courses.course_suggested.thumbnail_image_url} alt="" className="responsive-image mb-30" />
                         </Link>
                         <div className="recommended_course_description mb-60">
-                            <h2><Link to="/course_details">Technological University Dublin</Link></h2>
-                            <p><strong>Fees</strong>: €7000</p>
-                            <p><strong>Course ID</strong>: TU059</p>
-                            <p><strong>Course Name</strong>: MSc Computer Science (Data Science)</p>
-                            <p><strong>Course Starts</strong>: Fall 2023</p>
-                            <p><strong>Link</strong>: <a href="https://www.tudublin.ie/" target="_blank">https://www.tudublin.ie/</a></p>
-                            <p className="location"><i className="fa fa-map-marker" aria-hidden="true"></i> Grangegorman</p>
+                            <h2><Link to={`/course_details?code${courses.course_suggested.code}`}>{courses.course_suggested.college}</Link></h2>
+                            <p><strong>Fees</strong>: {`€${courses.course_suggested.fees}`}</p>
+                            <p><strong>Course ID</strong>: {courses.course_suggested.code}</p>
+                            <p><strong>Course Name</strong>: {courses.course_suggested.course}</p>
+                            <p><strong>Course Starts</strong>: {courses.course_suggested.course_starts}</p>
+                            <p><strong>Link</strong>: <a href={courses.course_suggested.website_url} target="_blank">{courses.course_suggested.website_url}</a></p>
+                            <p className="location"><i className="fa fa-map-marker" aria-hidden="true"></i> {courses.course_suggested.location}</p>
                         </div>
                     </div>
                     <div className="title text-left">Similar Universities you might like:</div>
                     <div className="grey-border"></div>
                     <div className="other_universities">
-                        <div className="single_course">
-                            <Link to="/course_details">
-                                <img src="https://dummyimage.com/500x260/333/fff.jpg" alt="" className="responsive-image mb-30" />
-                            </Link>
-                            <div className="recommended_course_description mb-60">
-                                <h2><Link to="/course_details">University College Dublin</Link></h2>
-                                <p><strong>Fees</strong>: €9000</p>
-                                <p><strong>Course ID</strong>: TU059</p>
-                                <p><strong>Course Name</strong>: MSc Computer Science (Data Science)</p>
-                                <p><strong>Course Starts</strong>: Fall 2023</p>
-                                <p><strong>Link</strong>: <a href="https://www.ucd.ie/" target="_blank">https://www.ucd.ie/</a></p>
-                                <p className="location"><i className="fa fa-map-marker" aria-hidden="true"></i> Dublin</p>
-                            </div>
-                        </div>
-                        <div className="single_course">
-                            <Link to="/course_details">
-                                <img src="https://dummyimage.com/500x260/333/fff.jpg" alt="" className="responsive-image mb-30" />
-                            </Link>
-                            <div className="recommended_course_description mb-60">
-                                <h2><Link to="/course_details">University College Dublin</Link></h2>
-                                <p><strong>Fees</strong>: €9000</p>
-                                <p><strong>Course ID</strong>: TU059</p>
-                                <p><strong>Course Name</strong>: MSc Computer Science (Data Science)</p>
-                                <p><strong>Course Starts</strong>: Fall 2023</p>
-                                <p><strong>Link</strong>: <a href="https://www.ucd.ie/" target="_blank">https://www.ucd.ie/</a></p>
-                                <p className="location"><i className="fa fa-map-marker" aria-hidden="true"></i> Dublin</p>
-                            </div>
-                        </div>
-                        <div className="single_course">
-                            <Link to="/course_details">
-                                <img src="https://dummyimage.com/500x260/333/fff.jpg" alt="" className="responsive-image mb-30" />
-                            </Link>
-                            <div className="recommended_course_description mb-60">
-                                <h2><Link to="/course_details">University College Dublin</Link></h2>
-                                <p><strong>Fees</strong>: €9000</p>
-                                <p><strong>Course ID</strong>: TU059</p>
-                                <p><strong>Course Name</strong>: MSc Computer Science (Data Science)</p>
-                                <p><strong>Course Starts</strong>: Fall 2023</p>
-                                <p><strong>Link</strong>: <a href="https://www.ucd.ie/" target="_blank">https://www.ucd.ie/</a></p>
-                                <p className="location"><i className="fa fa-map-marker" aria-hidden="true"></i> Dublin</p>
-                            </div>
-                        </div>
-                        <div className="single_course">
-                            <Link to="/course_details">
-                                <img src="https://dummyimage.com/500x260/333/fff.jpg" alt="" className="responsive-image mb-30" />
-                            </Link>
-                            <div className="recommended_course_description mb-60">
-                                <h2><Link to="/course_details">University College Dublin</Link></h2>
-                                <p><strong>Fees</strong>: €9000</p>
-                                <p><strong>Course ID</strong>: TU059</p>
-                                <p><strong>Course Name</strong>: MSc Computer Science (Data Science)</p>
-                                <p><strong>Course Starts</strong>: Fall 2023</p>
-                                <p><strong>Link</strong>: <a href="https://www.ucd.ie/" target="_blank">https://www.ucd.ie/</a></p>
-                                <p className="location"><i className="fa fa-map-marker" aria-hidden="true"></i> Dublin</p>
-                            </div>
-                        </div>
+                        {courses.other_courses.length && courses.other_courses.map((course) => {
+                            return (
+                                <div className="single_course">
+                                    <Link to={`/course_details?code${course.code}`}>
+                                        <img src={course.thumbnail_image_url} alt="" className="responsive-image mb-30" />
+                                    </Link>
+                                    <div className="recommended_course_description mb-60">
+                                        <h2><Link to={`/course_details?code${course.code}`}>{course.college}</Link></h2>
+                                        <p><strong>Fees</strong>: {`€${course.fees}`}</p>
+                                        <p><strong>Course ID</strong>: {course.code}</p>
+                                        <p><strong>Course Name</strong>: {course.course}</p>
+                                        <p><strong>Course Starts</strong>: {course.course_starts}</p>
+                                        <p><strong>Link</strong>: <a href={course.website_url} target="_blank">{course.website_url}</a></p>
+                                        <p className="location"><i className="fa fa-map-marker" aria-hidden="true"></i> {course.location}</p>
+                                    </div>
+                                </div>
+                            );
+                        })
+                        }
                     </div>
 
                 </div>
@@ -113,4 +67,4 @@ const RecommendedCourses = ({ loggedIn }) => {
     )
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(RecommendedCourses);
+export default RecommendedCourses;
