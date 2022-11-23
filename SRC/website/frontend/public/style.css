@@ -165,6 +165,9 @@ button:focus {
 .mb-60 {
 	margin-bottom: 60px;
 }
+.mt-60 {
+	margin-top: 60px;
+}
 
 /* Navbar */
 .container {
@@ -768,6 +771,59 @@ li.user:hover ul {
 }
 .course_details_helpful_resources p {
 	line-height: 1.6;
+}
+.additional_func {
+	display: flex;
+	background-color: #E7EBF0;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	gap: 30px;
+	border-radius: 8px;
+	padding: 10px;
+	margin-top: 60px;
+}
+.single_additional_func {
+	flex: 1;
+	min-width: 260px;
+	max-width: 400px;
+	text-align: center;
+	background: #fff;
+	padding: 10px;
+	border-radius: 6px;
+	flex-basis: 280px;
+}
+.single_additional_func img {
+	height: auto;
+	max-height: 130px;
+	max-width: 100%;
+	width: auto;
+	margin: auto;
+}
+.single_additional_func img:hover {
+	cursor: pointer;
+}
+.additional_func_link {
+	color: #111;
+	text-decoration: none;
+}
+.additional_func_link:hover {
+	color: #007FC0 !important;
+}
+.single_additional_func_title {
+	color: #111;
+	font-size: 20px;
+	font-weight: 700;
+	margin: 10px 0;
+	text-decoration: none;
+}
+a.single_additional_func_title:link,
+a.single_additional_func_title:visited {
+	color: #111;
+	text-decoration: none;
+}
+a.single_additional_func_title:hover {
+	color: #007FC0 !important;
+	cursor: pointer;
 }
 
 /* Explore Your Course */

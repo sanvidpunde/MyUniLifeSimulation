@@ -24,11 +24,11 @@ const RecommendedCourses = () => {
             <div className="p-60">
                 <div className="container">
                     <div className="recommended_course">
-                        <Link to={`/course_details?code${courses.course_suggested.code}`}>
+                        <Link to={`/course_details?code=${courses.course_suggested.code}`}>
                             <img src={courses.course_suggested.thumbnail_image_url} alt="" className="responsive-image mb-30" />
                         </Link>
                         <div className="recommended_course_description mb-60">
-                            <h2><Link to={`/course_details?code${courses.course_suggested.code}`}>{courses.course_suggested.college}</Link></h2>
+                            <h2><Link to={`/course_details?code=${courses.course_suggested.code}`}>{courses.course_suggested.college}</Link></h2>
                             <p><strong>Fees</strong>: {`€${courses.course_suggested.fees}`}</p>
                             <p><strong>Course ID</strong>: {courses.course_suggested.code}</p>
                             <p><strong>Course Name</strong>: {courses.course_suggested.course}</p>
