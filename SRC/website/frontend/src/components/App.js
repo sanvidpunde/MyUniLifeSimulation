@@ -9,6 +9,7 @@ import Home from './Home';
 import Simulation from './Simulation';
 import RecommendedCourses from './RecommendedCourses';
 import CourseDetails from './CourseDetails';
+import ExploreYourCourse from './ExploreYourCourse';
 import Profiler from './Profiler';
 import ProfilerDetails from './ProfilerDetails';
 import Login from './Login';
@@ -60,6 +61,9 @@ const App = ({ loggedIn, email }) => {
 				</Route>
 				<Route path="/course_details" exact>
 					<CourseDetails />
+				</Route>
+				<Route path="/explore_your_course" exact>
+					<ExploreYourCourse />
 				</Route>
 				<Route path="/interest_profiler" exact>
 					<Profiler />

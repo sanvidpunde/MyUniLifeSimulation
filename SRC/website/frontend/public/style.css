@@ -767,7 +767,41 @@ li.user:hover ul {
 	border-radius: 50%;
 }
 .course_details_helpful_resources p {
-	line-height: 1.6;;
+	line-height: 1.6;
+}
+
+/* Explore Your Course */
+.flex_icons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	gap: 30px;
+}
+.single_flex_icon {
+	flex: 1;
+	min-width: 300px;
+	max-width: 400px;
+}
+.icon_area {
+	width: 90px;
+	height: 90px;
+	background-color: #D4E8FF;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+}
+.icon_area img {
+	/* display: table-cell; */
+	/* vertical-align: middle; */
+	width: 100%;
+	max-width: 50px;
+}
+.single_flex_icon_title {
+	font-size: 24px;
+	color: #111;
+	font-weight: bold;
+	margin: 10px 0;
 }
 
 /* Login */
@@ -1261,13 +1295,14 @@ a.signUpBtnLink {
 	width: 300px;
 	/*background: #d4edda;*/
 	border-radius: 5px;
+	z-index: 2000;
 }
 .modal {
 	display: flex;
 	align-items: flex-start;
 	max-width: 300px;
 	padding: 10px;
-	z-index: 10;
+	z-index: 200;
 	border-radius: 5px;
 }
 .modal-success {
