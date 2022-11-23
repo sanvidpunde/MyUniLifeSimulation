@@ -1,26 +1,44 @@
-import React, { useState, useEffect } from 'react';
-import {connect} from 'react-redux';
+import React, { useState, useEffect, useMemo } from 'react';
+import {useSelector, useDispatch} from 'react-redux';
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { useLocation } from 'react-router-dom';
+import ReactPlayer from 'react-player';
 
 import {receiveSuccessMessage} from '../redux/util/controller';
 
-const mapStateToProps = ({ session }) => ({
-	loggedIn: Boolean(session.email),
-	email: session.email,
-	name: session.name
-});
+const CourseDetails = () => {
 
-const mapDispatchToProps = dispatch => {
-  return {
-  	receiveSuccessMessage: message => dispatch(receiveSuccessMessage(message))
-  }
-};
+    const dispatch = useDispatch();
+    const courses = useSelector(state => state.course);
 
-const CourseDetails = ({ loggedIn }) => {
+    // Get the code param from the URL.
+    const useQuery = () => {
+        const { search } = useLocation();
+        return useMemo(() => new URLSearchParams(search), [search]);
+    };
+    let query = useQuery();
+
+    const sample_structure = {
+        course: "", code: "", title: "", course_type: "", course_starts: "", college: "Technological University Dublin", fees: "", level: "", award: "", duration: "", mode_of_study: "", method_of_delivery: "", commencement_date: "", location: "", thumbnail_image_url: "https://dummyimage.com/500x260/333/fff.jpg", website_url: "", course_description: "", course_content: "", minimum_entry_requirements: "", video: "", faculty_information: [], job_opportunities_and_salary_expectations: "", clubs_and_societies: "", course_reviews_and_testimonials: "", map_info: "", students_accomodation_link: "", clubs_and_societies_link: "", workshops: ""
+    };
+    const code = query.get("code");
+    const [record, setRecord] = useState(sample_structure);
+
+    useEffect(() => {
+        if (code) {
+            if (courses.course_suggested.code == code) {
+                setRecord(courses.course_suggested);
+            } else {
+                const filteredData = courses.other_courses.filter(item => item.code == code);
+                console.log("filteredData", filteredData);
+                setRecord(filteredData);
+            }
+        }
+    }, [code]);
 
     useEffect(() => {
 		window.scrollTo(0, 0);
@@ -30,7 +48,7 @@ const CourseDetails = ({ loggedIn }) => {
         <React.Fragment>
 			<div className="header">
                 <div className="container">
-                    <div className="header-text">Course Title</div>
+                    <div className="header-text">{record.title}</div>
                     <p>Lorem Ipsum Dolor Sit Amet</p>
                 </div>
             </div>
@@ -38,126 +56,128 @@ const CourseDetails = ({ loggedIn }) => {
                 <div className="container">
                     <div className="course_details_parent">
                         <div className="course_details_acc">
-                            <Accordion>
-                                <AccordionSummary
-                                expandIcon={<ExpandMoreIcon />}
-                                aria-controls="panel1a-content"
-                                id="panel1a-header"
-                                >
-                                <Typography><div className="acc-title">Course Description</div></Typography>
-                                </AccordionSummary>
-                                <AccordionDetails>
-                                <Typography>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                                    malesuada lacus ex, sit amet blandit leo lobortis eget.
-                                </Typography>
-                                </AccordionDetails>
-                            </Accordion>
-                            <Accordion>
-                                <AccordionSummary
-                                expandIcon={<ExpandMoreIcon />}
-                                aria-controls="panel2a-content"
-                                id="panel2a-header"
-                                >
-                                <Typography><div className="acc-title">Course Content</div></Typography>
-                                </AccordionSummary>
-                                <AccordionDetails>
-                                <Typography>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                                    malesuada lacus ex, sit amet blandit leo lobortis eget.
-                                </Typography>
-                                </AccordionDetails>
-                            </Accordion>
-                            <Accordion>
-                                <AccordionSummary
-                                expandIcon={<ExpandMoreIcon />}
-                                aria-controls="panel3a-content"
-                                id="panel3a-header"
-                                >
-                                <Typography><div className="acc-title">Minimum Entry Requirements</div></Typography>
-                                </AccordionSummary>
-                                <AccordionDetails>
-                                <Typography>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                                    malesuada lacus ex, sit amet blandit leo lobortis eget.
-                                </Typography>
-                                </AccordionDetails>
-                            </Accordion>
-                            <Accordion>
-                                <AccordionSummary
-                                expandIcon={<ExpandMoreIcon />}
-                                aria-controls="panel4a-content"
-                                id="panel4a-header"
-                                >
-                                <Typography><div className="acc-title">Video Explaining Course</div></Typography>
-                                </AccordionSummary>
-                                <AccordionDetails>
-                                <Typography>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                                    malesuada lacus ex, sit amet blandit leo lobortis eget.
-                                </Typography>
-                                </AccordionDetails>
-                            </Accordion>
-                            <Accordion>
-                                <AccordionSummary
-                                expandIcon={<ExpandMoreIcon />}
-                                aria-controls="panel5a-content"
-                                id="panel5a-header"
-                                >
-                                <Typography><div className="acc-title">Faculty Information</div></Typography>
-                                </AccordionSummary>
-                                <AccordionDetails>
-                                <Typography>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                                    malesuada lacus ex, sit amet blandit leo lobortis eget.
-                                </Typography>
-                                </AccordionDetails>
-                            </Accordion>
-                            <Accordion>
-                                <AccordionSummary
-                                expandIcon={<ExpandMoreIcon />}
-                                aria-controls="panel6a-content"
-                                id="panel6a-header"
-                                >
-                                <Typography><div className="acc-title">Job Opportunities and Salary Expectations</div></Typography>
-                                </AccordionSummary>
-                                <AccordionDetails>
-                                <Typography>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                                    malesuada lacus ex, sit amet blandit leo lobortis eget.
-                                </Typography>
-                                </AccordionDetails>
-                            </Accordion>
-                            <Accordion>
-                                <AccordionSummary
-                                expandIcon={<ExpandMoreIcon />}
-                                aria-controls="panel7a-content"
-                                id="panel7a-header"
-                                >
-                                <Typography><div className="acc-title">Clubs and Societies</div></Typography>
-                                </AccordionSummary>
-                                <AccordionDetails>
-                                <Typography>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                                    malesuada lacus ex, sit amet blandit leo lobortis eget.
-                                </Typography>
-                                </AccordionDetails>
-                            </Accordion>
-                            <Accordion>
-                                <AccordionSummary
-                                expandIcon={<ExpandMoreIcon />}
-                                aria-controls="panel8a-content"
-                                id="panel8a-header"
-                                >
-                                <Typography><div className="acc-title">Course Reviews</div></Typography>
-                                </AccordionSummary>
-                                <AccordionDetails>
-                                <Typography>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                                    malesuada lacus ex, sit amet blandit leo lobortis eget.
-                                </Typography>
-                                </AccordionDetails>
-                            </Accordion>
+                            {record.course_description.length > 0 &&
+                                <Accordion>
+                                    <AccordionSummary
+                                    expandIcon={<ExpandMoreIcon />}
+                                    aria-controls="panel1a-content"
+                                    id="panel1a-header"
+                                    >
+                                    <Typography><div className="acc-title">Course Description</div></Typography>
+                                    </AccordionSummary>
+                                    <AccordionDetails>
+                                    <Typography>{record.course_description}</Typography>
+                                    </AccordionDetails>
+                                </Accordion>
+                            }
+                            {record.course_content.length > 0 &&
+                                <Accordion>
+                                    <AccordionSummary
+                                    expandIcon={<ExpandMoreIcon />}
+                                    aria-controls="panel1a-content"
+                                    id="panel1a-header"
+                                    >
+                                    <Typography><div className="acc-title">Course Content</div></Typography>
+                                    </AccordionSummary>
+                                    <AccordionDetails>
+                                    <Typography>{record.course_content}</Typography>
+                                    </AccordionDetails>
+                                </Accordion>
+                            }
+                            {record.minimum_entry_requirements.length > 0 &&
+                                <Accordion>
+                                    <AccordionSummary
+                                    expandIcon={<ExpandMoreIcon />}
+                                    aria-controls="panel3a-content"
+                                    id="panel3a-header"
+                                    >
+                                    <Typography><div className="acc-title">Minimum Entry Requirements</div></Typography>
+                                    </AccordionSummary>
+                                    <AccordionDetails>
+                                    <Typography>{record.minimum_entry_requirements}</Typography>
+                                    </AccordionDetails>
+                                </Accordion>
+                            }
+                            {record.video.length > 0 &&
+                                <Accordion>
+                                    <AccordionSummary
+                                    expandIcon={<ExpandMoreIcon />}
+                                    aria-controls="panel4a-content"
+                                    id="panel4a-header"
+                                    >
+                                    <Typography><div className="acc-title">Video Explaining Course</div></Typography>
+                                    </AccordionSummary>
+                                    <AccordionDetails>
+                                    <Typography>
+                                        <ReactPlayer 
+                                            url={record.video}
+                                            width="100%"
+                                            className=""
+                                            controls={true}
+                                            pip={true}
+                                        />
+                                    </Typography>
+                                    </AccordionDetails>
+                                </Accordion>
+                            }
+                            {record.faculty_information.length > 0 &&
+                                <Accordion>
+                                    <AccordionSummary
+                                    expandIcon={<ExpandMoreIcon />}
+                                    aria-controls="panel5a-content"
+                                    id="panel5a-header"
+                                    >
+                                    <Typography><div className="acc-title">Faculty Information</div></Typography>
+                                    </AccordionSummary>
+                                    <AccordionDetails>
+                                    <Typography>
+                                        {record.faculty_information}
+                                    </Typography>
+                                    </AccordionDetails>
+                                </Accordion>
+                            }
+                            {record.job_opportunities_and_salary_expectations.length > 0 &&
+                                <Accordion>
+                                    <AccordionSummary
+                                    expandIcon={<ExpandMoreIcon />}
+                                    aria-controls="panel6a-content"
+                                    id="panel6a-header"
+                                    >
+                                    <Typography><div className="acc-title">Job Opportunities and Salary Expectations</div></Typography>
+                                    </AccordionSummary>
+                                    <AccordionDetails>
+                                    <Typography>{record.job_opportunities_and_salary_expectations}</Typography>
+                                    </AccordionDetails>
+                                </Accordion>
+                            }
+                            {record.clubs_and_societies.length > 0 &&
+                                <Accordion>
+                                    <AccordionSummary
+                                    expandIcon={<ExpandMoreIcon />}
+                                    aria-controls="panel7a-content"
+                                    id="panel7a-header"
+                                    >
+                                    <Typography><div className="acc-title">Clubs and Societies</div></Typography>
+                                    </AccordionSummary>
+                                    <AccordionDetails>
+                                    <Typography>{record.clubs_and_societies}</Typography>
+                                    </AccordionDetails>
+                                </Accordion>
+                            }
+                            {record.course_reviews_and_testimonials.length > 0 &&
+                                <Accordion>
+                                    <AccordionSummary
+                                    expandIcon={<ExpandMoreIcon />}
+                                    aria-controls="panel8a-content"
+                                    id="panel8a-header"
+                                    >
+                                    <Typography><div className="acc-title">Course Reviews</div></Typography>
+                                    </AccordionSummary>
+                                    <AccordionDetails>
+                                    <Typography>{record.course_reviews_and_testimonials}</Typography>
+                                    </AccordionDetails>
+                                </Accordion>
+                            }
                         </div>
                         <div className="course_details_helpful_resources">
                             <h3>Helpful Resources</h3>
@@ -191,4 +211,4 @@ const CourseDetails = ({ loggedIn }) => {
     )
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(CourseDetails);
+export default CourseDetails;

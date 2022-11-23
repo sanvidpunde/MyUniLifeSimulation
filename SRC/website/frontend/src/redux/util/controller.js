@@ -11,13 +11,13 @@ export const RECEIVE_SUCCESS_MESSAGE = "RECEIVE_SUCCESS_MESSAGE";
 export const RECEIVE_FAILURE_MESSAGE = "RECEIVE_FAILURE_MESSAGE";
 export const CLEAR_SERVER_RESPONSE = "CLEAR_SERVER_RESPONSE";
 
-// step
-export const RECEIVE_CURRENT_STEP = "RECEIVE_CURRENT_STEP";
-export const UPDATE_CURRENT_STEP = "UPDATE_CURRENT_STEP";
-
 // career
 export const RECEIVE_CURRENT_CAREER = "RECEIVE_CURRENT_CAREER";
 export const UPDATE_CURRENT_CAREER = "UPDATE_CURRENT_CAREER";
+
+// course
+export const RECEIVE_CURRENT_COURSE = "RECEIVE_CURRENT_COURSE";
+export const UPDATE_CURRENT_COURSE = "UPDATE_CURRENT_COURSE";
 
 // Other constants
 // session
@@ -46,16 +46,6 @@ export const clearResponse = () => ({
 	type: CLEAR_SERVER_RESPONSE
 });
 
-// step
-export const receiveCurrentStep = (step) => ({
-	type: RECEIVE_CURRENT_STEP,
-	step
-});
-export const updateCurrentStep = (step) => ({
-	type: UPDATE_CURRENT_STEP,
-	step
-});
-
 // career
 export const receiveCurrentCareer = (career) => ({
 	type: RECEIVE_CURRENT_CAREER,
@@ -66,13 +56,19 @@ export const updateCurrentCareer = (career) => ({
 	career
 });
 
+// course
+export const receiveCurrentCourse = (course) => ({
+	type: RECEIVE_CURRENT_COURSE,
+	course
+});
+export const updateCurrentCourse = (course) => ({
+	type: UPDATE_CURRENT_COURSE,
+	course
+});
+
 
 
 // FUNCTIONS
-// CHANGE STEP
-export const changeStep = (step) => {
-	return dispatch => dispatch(updateCurrentStep(step));
-};
 
 export const login = (user) => {
 	return dispatch =>
