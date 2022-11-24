@@ -47,7 +47,7 @@ const Simulation = () => {
     const cityOptions = [{value: "Dublin", label: "Dublin"}, {value: "Cork", label: "Cork"}, {value: "Galway", label: "Galway"}, {value: "Limerick", label: "Limerick"}, {value: "Athlone", label: "Athlone"}, {value: "Carlow", label: "Carlow"}];
     const jobDomainOptions = [{value: "IT", label: "IT"}, {value: "HR", label: "HR"}, {value: "Management", label: "Management"}, {value: "Support", label: "Support"}, {value: "Finance", label: "Finance"}];
     const hobbiesOptions = [{value: "Cricket", label: "Cricket"}, {value: "Football", label: "Football"}, {value: "Chess", label: "Chess"}, {value: "Athletics", label: "Athletics"}, {value: "Automation", label: "Automation"}, {value: "Singing", label: "Singing"}];
-    const spendingLimitOptions = [{value: "€2000 - €4000", label: "€2000 - €4000"}, {value: "€4000 - €6000", label: "€4000 - €6000"}, {value: "€6000 - €8000", label: "€6000 - €8000"}, {value: "€8000 - above", label: "€8000 - above"}];
+    const spendingLimitOptions = [{value: "2000 - 4000", label: "€2000 - €4000"}, {value: "4000 - 6000", label: "€4000 - €6000"}, {value: "6000 - 8000", label: "€6000 - €8000"}, {value: "8000 - above", label: "€8000 - above"}];
 
     // scroll to top of page
     useEffect(() => {
@@ -99,21 +99,26 @@ const Simulation = () => {
             // call API
             console.log("No errors");
             const simulationData = {
-                cao,
-                fieldOfInterest,
-                city,
-                jobDomain,
-                hobbies,
-                spendingLimit
+                CAO_Score: cao,
+                field_interest: fieldOfInterest.value,
+                City: city.value,
+                Job_domain: jobDomain.value,
+                Interest: hobbies.value,
+                Budget: spendingLimit.value
             }
             console.log("simulation inputs are", simulationData);
             // API call
             axios.post('/api/simulation', simulationData)
                 .then(resp => {
-                    console.log("resp is:", resp);
                     dispatch(receiveSuccessMessage({success: "Simulation request sent successfully"}));
+                    console.log("resp is:", resp);
+                    if (resp.data.success) {
+                        // redirect
+                        history.push('/recommended_courses');
+                        // update redux
+                    }
                 });
-            history.push('/recommended_courses');
+            // history.push('/recommended_courses');
         }
     };
 	
@@ -158,7 +163,6 @@ const Simulation = () => {
                                     defaultValue={city}
                                     onChange={setCity}
                                     options={cityOptions}
-                                    isMulti
                                     className="mt-6"
                                 />
                             </label>
@@ -181,7 +185,6 @@ const Simulation = () => {
                                     defaultValue={hobbies}
                                     onChange={setHobbies}
                                     options={hobbiesOptions}
-                                    isMulti
                                     className="mt-6"
                                 />
                             </label>

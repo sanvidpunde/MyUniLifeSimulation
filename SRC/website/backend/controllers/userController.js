@@ -9,6 +9,7 @@ import User from '../models/user';
 import Token from '../models/token';
 import HttpError from '../models/httpError';
 import Profiler from '../models/profiler';
+import Course from '../models/course';
 import transporter from '../models/myNodemailer';
 import { response } from 'express';
 
@@ -223,22 +224,42 @@ const simulation = (req, res) => {
 	// const {} = req.body;
 
 	// Make API call to python app and await response
-	request('https://jsonplaceholder.typicode.com/todos/1', (error, response, body) => {
-		console.log("body is", body);
+	console.log("ready to call flask app");
+	let predictedCourse;
+	request.post({url: 'https://flask-service.s3nc4honh0a9c.ap-south-1.cs.amazonlightsail.com/course_recommender_predict', json: req.body}, async (err, res, body) => {
+		if (err) {
+			return console.error('API req failed:', err);
+		}
+		predictedCourse = body;
+		console.log("body", body);
+		
 	});
-	// request.post({url: '52.210.222.30:8888/post_json', data: req.body.data.body}, (err, res, body) => {
-	// 	if (err) {
-	// 		return console.error('API req failed:', err);
-	// 	}
-	// 	console.log('Successful!  Server responded with:', body);
-	// });
-
-	res.status(201).json({
-		body: req.body,
-		redirect: true,
-		type: 'success',
-		message: 'Simulation request received'
-	});
+	console.log("made out of flask app");
+	const timer = setTimeout(async () => {
+		let identifiedCourse;
+		try {
+			identifiedCourse = await Course.findOne({ code: predictedCourse });
+		} catch(err) {
+			console.log("err", err);
+			const error = new HttpError('Error in finding email', 500);
+			return next(error);
+		}
+		console.log("identifiedCourse ===============", identifiedCourse);	
+		if (identifiedCourse) {
+			res.status(200).json({
+				course: identifiedCourse.toObject({getters: true}),
+				message: 'Successfully Predicted',
+				success: true
+			});
+		} else {
+			return res.json({
+				type: 'fail',
+				success: false,
+				message: 'Cannot predict career, something went wrong'
+			});
+		}
+	}, 500);
+	return () => clearTimeout(timer);
 };
 
 const profiler = async (req, res, next) => {
@@ -256,7 +277,7 @@ const profiler = async (req, res, next) => {
 	console.log("Profiler ready to make API call to EC2");
 	// Make API call to python app and await response
 	let predictedCareer;
-	request.post({url: 'http://localhost:5000/predict', json: req.body}, async (err, res, body) => {
+	request.post({url: 'https://flask-service.s3nc4honh0a9c.ap-south-1.cs.amazonlightsail.com/interest_profiler_predict', json: req.body}, async (err, res, body) => {
 		if (err) {
 			return console.error('API req failed:', err);
 		}
