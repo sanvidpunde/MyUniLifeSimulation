@@ -26,7 +26,7 @@ server.use((req, res, next) => {
 })
 
 // Connect to db
-mongoose.connect(config.mongodbUri, {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true})
+mongoose.connect(config.mongodbUri, {useNewUrlParser: true, useUnifiedTopology: true})
 	.catch(err => {
 		console.log(err);
 	})

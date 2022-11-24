@@ -10,6 +10,9 @@ import Simulation from './Simulation';
 import RecommendedCourses from './RecommendedCourses';
 import CourseDetails from './CourseDetails';
 import ExploreYourCourse from './ExploreYourCourse';
+import VideoLectures from './VideoLectures';
+import Classrooms from './Classrooms';
+import AcademicStaff from './AcademicStaff';
 import Profiler from './Profiler';
 import ProfilerDetails from './ProfilerDetails';
 import Login from './Login';
@@ -64,6 +67,15 @@ const App = ({ loggedIn, email }) => {
 				</Route>
 				<Route path="/explore_your_course" exact>
 					<ExploreYourCourse />
+				</Route>
+				<Route path="/video_lectures" exact>
+					<VideoLectures />
+				</Route>
+				<Route path="/classrooms" exact>
+					<Classrooms />
+				</Route>
+				<Route path="/academic_staff" exact>
+					<AcademicStaff />
 				</Route>
 				<Route path="/interest_profiler" exact>
 					<Profiler />
