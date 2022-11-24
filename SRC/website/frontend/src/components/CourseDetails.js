@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import {useSelector, useDispatch} from 'react-redux';
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
@@ -179,7 +180,7 @@ const CourseDetails = () => {
                                 </Accordion>
                             }
                         </div>
-                        <div className="course_details_helpful_resources">
+                        <div className="course_details_helpful_resources mb-60">
                             <h3>Helpful Resources</h3>
                             <div className="highlight-border"></div>
                             <div className="single_resource">
@@ -202,6 +203,52 @@ const CourseDetails = () => {
                                 <h3><a href="#" target="_blank">Students Accomodation Helper</a></h3>
                                 <p>Find all information about student accomodation here</p>
                             </div>
+                        </div>
+                    </div>
+                    <div className="title text-left">Additional Functionalities:</div>
+                    <div className="grey-border"></div>
+                    <div className="additional_func">
+                        <div className="single_additional_func">
+                            <Link to="#"><img src="/images/1.png" alt="img" /></Link>
+                            <div className="single_additional_func_title">
+                                <Link to="#" className="additional_func_link">Brightspace</Link>
+                            </div>
+                            <p>Learn Lot of Stuff On Brightspace, Assignments and Stuff</p>
+                        </div>
+                        <div className="single_additional_func">
+                            <Link to="#"><img src="/images/2.png" alt="img" /></Link>
+                            <div className="single_additional_func_title">
+                                <Link to="#" className="additional_func_link">Explore our campus</Link>
+                            </div>
+                            <p>TU Dublin has 5 campuses across the Dublin region with our flagship campus at Grangegorman</p>
+                        </div>
+                        <div className="single_additional_func">
+                            <Link to="#"><img src="/images/3.png" alt="img" /></Link>
+                            <div className="single_additional_func_title">
+                                <Link to="#" className="additional_func_link">How to apply?</Link>
+                            </div>
+                            <p>This will help you to apply in particular course</p>
+                        </div>
+                        <div className="single_additional_func">
+                            <Link to="#"><img src="/images/4.png" alt="img" /></Link>
+                            <div className="single_additional_func_title">
+                                <Link to="#" className="additional_func_link">Contact Students Union</Link>
+                            </div>
+                            <p>Lorem Ipsum Dolor Sit Amet</p>
+                        </div>
+                        <div className="single_additional_func">
+                            <Link to="#"><img src="/images/5.png" alt="img" /></Link>
+                            <div className="single_additional_func_title">
+                                <Link to="#" className="additional_func_link">Our Privacy Policy</Link>
+                            </div>
+                            <p>Lorem Ipsum Dolor Sit Amet</p>
+                        </div>
+                        <div className="single_additional_func">
+                            <Link to="#"><img src="/images/6.png" alt="img" /></Link>
+                            <div className="single_additional_func_title">
+                                <Link to="#" className="additional_func_link">Our Libraries</Link>
+                            </div>
+                            <p>Lorem Ipsum Dolor Sit Amet</p>
                         </div>
                     </div>
                     
