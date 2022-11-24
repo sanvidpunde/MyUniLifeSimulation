@@ -831,7 +831,7 @@ a.single_additional_func_title:hover {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
-	gap: 30px;
+	gap: 30px 10px;
 }
 .single_flex_icon {
 	flex: 1;
@@ -858,6 +858,74 @@ a.single_additional_func_title:hover {
 	color: #111;
 	font-weight: bold;
 	margin: 10px 0;
+}
+
+/* Staff */
+.staff_container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.single_staff {
+	margin-bottom: 30px;
+}
+.single_staff img {
+	display: block;
+	max-width: 350px;
+	width: 100%;
+	height: auto;
+	margin-bottom: 10px;
+}
+.single_staff p.dept {
+	color: #007FC0;
+	font-weight: bold;
+	font-size: 13px;
+	margin-bottom: 6px;
+}
+.single_staff h3 {
+	color: #111;
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+.single_staff p {
+	color: #666;
+	line-height: 1.6;
+}
+
+
+/* Video Lectures */
+.video_container {
+	display: flex;
+	justify-content: space-between;
+	gap: 0;
+	flex-wrap: wrap;
+}
+.single_video {
+	max-width: 600px;
+	flex-basis: 560px;
+	margin-bottom: 30px;
+}
+.single_video img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+/* Classrooms */
+.classroom_container {
+	display: flex;
+	justify-content: space-between;
+	gap: 0;
+	flex-wrap: wrap;
+}
+.single_classroom {
+	flex-basis: 540px;
+	margin-bottom: 30px;
+}
+.single_classroom img {
+	max-width: 100%;
+	height: auto;
+	display: block;
 }
 
 /* Login */
