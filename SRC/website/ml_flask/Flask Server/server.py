@@ -106,12 +106,14 @@ def predictCourse():
             Job_domain_code = 0
 
         Budget = content["Budget"]
-        if (int(Budget) <2001):
+        if (Budget == "2000 - 4000"):
+            Budget = 0
+        elif (Budget == "4001 - 6000"):
             Budget = 1
-        elif (int(Budget) >2000 and int(Budget) <5000):
+        elif (Budget == "6001 - 8000"):
             Budget = 2
-        elif (int(Budget) >4999):
-            Budget = 3 
+        elif (Budget == "8001 - above"):
+            Budget = 3
         else:
             Budget = 2
 
