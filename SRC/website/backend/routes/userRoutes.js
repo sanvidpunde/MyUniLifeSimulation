@@ -24,12 +24,12 @@ router.post('/signup', [
 
 // Post request for Simulation request
 router.post('/simulation', [
-	check('cao').isFloat({ min: 0, max: 625 }),
-	check('fieldOfInterest').not().isEmpty(),
-	check('city').not().isEmpty(),
-	check('jobDomain').not().isEmpty(),
-	check('hobbies').not().isEmpty(),
-	check('spendingLimit').not().isEmpty(),
+	check('CAO_Score').isFloat({ min: 0, max: 625 }),
+	check('field_interest').not().isEmpty(),
+	check('City').not().isEmpty(),
+	check('Job_domain').not().isEmpty(),
+	check('Interest').not().isEmpty(),
+	check('Budget').not().isEmpty(),
 ], userController.simulation);
 
 // Post request for Simulation request
