@@ -4,7 +4,7 @@ import Select from 'react-select';
 import axios from 'axios';
 import {useSelector, useDispatch} from 'react-redux';
 
-import {receiveSuccessMessage} from '../redux/util/controller';
+import {receiveSuccessMessage, updateCurrentCourse} from '../redux/util/controller';
 
 const Simulation = () => {
 
@@ -12,6 +12,7 @@ const Simulation = () => {
 
     const dispatch = useDispatch();
     // const step = useSelector(state => state.step);
+    const course = useSelector(state => state.course);
 
     const [cao, setCao] = useState(null);
     const [fieldOfInterest, setFieldOfInterest] = useState(null);
@@ -113,9 +114,11 @@ const Simulation = () => {
                     dispatch(receiveSuccessMessage({success: "Simulation request sent successfully"}));
                     console.log("resp is:", resp);
                     if (resp.data.success) {
+                        // update redux
+                        const updatedCourse = {...course, course_suggested: resp.data.course}
+                        dispatch(updateCurrentCourse(updatedCourse));
                         // redirect
                         history.push('/recommended_courses');
-                        // update redux
                     }
                 });
             // history.push('/recommended_courses');
