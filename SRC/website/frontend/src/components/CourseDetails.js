@@ -14,7 +14,7 @@ import {receiveSuccessMessage} from '../redux/util/controller';
 const CourseDetails = () => {
 
     const dispatch = useDispatch();
-    const courses = useSelector(state => state.course);
+    const course = useSelector(state => state.course);
 
     // Get the code param from the URL.
     const useQuery = () => {
@@ -30,13 +30,23 @@ const CourseDetails = () => {
     const [record, setRecord] = useState(sample_structure);
 
     useEffect(() => {
+        console.log("record", record);
+    }, [record]);
+
+    useEffect(() => {
         if (code) {
-            if (courses.course_suggested.code == code) {
-                setRecord(courses.course_suggested);
+            console.log("code is", code);
+            if (course.course_suggested.code == code) {
+                console.log("made inside if");
+                console.log("course.course_suggested", course.course_suggested)
+                setRecord(course.course_suggested);
             } else {
-                const filteredData = courses.other_courses.filter(item => item.code == code);
+                console.log("made inside else");
+                const filteredData = course.other_courses.filter(item => item.code == code);
                 console.log("filteredData", filteredData);
-                setRecord(filteredData);
+                if (filteredData) {
+                    setRecord(filteredData[0]);
+                }                
             }
         }
     }, [code]);
@@ -57,7 +67,7 @@ const CourseDetails = () => {
                 <div className="container">
                     <div className="course_details_parent">
                         <div className="course_details_acc">
-                            {record.course_description.length > 0 &&
+                            {record.course_description && record.course_description.length > 0 &&
                                 <Accordion>
                                     <AccordionSummary
                                     expandIcon={<ExpandMoreIcon />}
@@ -71,7 +81,7 @@ const CourseDetails = () => {
                                     </AccordionDetails>
                                 </Accordion>
                             }
-                            {record.course_content.length > 0 &&
+                            {record.course_content && record.course_content.length > 0 &&
                                 <Accordion>
                                     <AccordionSummary
                                     expandIcon={<ExpandMoreIcon />}
@@ -85,7 +95,7 @@ const CourseDetails = () => {
                                     </AccordionDetails>
                                 </Accordion>
                             }
-                            {record.minimum_entry_requirements.length > 0 &&
+                            {record.minimum_entry_requirements && record.minimum_entry_requirements.length > 0 &&
                                 <Accordion>
                                     <AccordionSummary
                                     expandIcon={<ExpandMoreIcon />}
@@ -99,7 +109,7 @@ const CourseDetails = () => {
                                     </AccordionDetails>
                                 </Accordion>
                             }
-                            {record.video.length > 0 &&
+                            {record.video && record.video.length > 0 &&
                                 <Accordion>
                                     <AccordionSummary
                                     expandIcon={<ExpandMoreIcon />}
@@ -121,7 +131,7 @@ const CourseDetails = () => {
                                     </AccordionDetails>
                                 </Accordion>
                             }
-                            {record.faculty_information.length > 0 &&
+                            {record.faculty_information && record.faculty_information.length > 0 &&
                                 <Accordion>
                                     <AccordionSummary
                                     expandIcon={<ExpandMoreIcon />}
@@ -137,7 +147,7 @@ const CourseDetails = () => {
                                     </AccordionDetails>
                                 </Accordion>
                             }
-                            {record.job_opportunities_and_salary_expectations.length > 0 &&
+                            {record.job_opportunities_and_salary_expectations && record.job_opportunities_and_salary_expectations.length > 0 &&
                                 <Accordion>
                                     <AccordionSummary
                                     expandIcon={<ExpandMoreIcon />}
@@ -151,7 +161,7 @@ const CourseDetails = () => {
                                     </AccordionDetails>
                                 </Accordion>
                             }
-                            {record.clubs_and_societies.length > 0 &&
+                            {record.clubs_and_societies && record.clubs_and_societies.length > 0 &&
                                 <Accordion>
                                     <AccordionSummary
                                     expandIcon={<ExpandMoreIcon />}
@@ -165,7 +175,7 @@ const CourseDetails = () => {
                                     </AccordionDetails>
                                 </Accordion>
                             }
-                            {record.course_reviews_and_testimonials.length > 0 &&
+                            {record.course_reviews_and_testimonials && record.course_reviews_and_testimonials.length > 0 &&
                                 <Accordion>
                                     <AccordionSummary
                                     expandIcon={<ExpandMoreIcon />}
