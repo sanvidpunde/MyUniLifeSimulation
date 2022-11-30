@@ -18,8 +18,8 @@ def predictInterest():
         print(content)
 
         prediction = interest_profiler_model.predict([[
-            content["Logical_quotient_rating"],content["coding_skills_rating"], content["hackathons"], content["public_speaking_points"], content["self_learning_capability"], content["Extra_courses_did"], content["Taken_inputs_from_seniors_or_elders"], content["worked_in_teams_ever"], content["Introvert"], content["reading_and_writing_skills"], content["memory_capability_score"],  content["B_hard_worker"] , content["B_smart_worker"], content["A_Management"], content["A_Technical"], content["Interested_subjects_code"], content["Interested_Type_of_Books_code"], content["certifications_code"], content["workshops_code"], content["Type_of_company_want_to_settle_in_code"], content["interested_career_area_code"]
-        ]])
+            content["Logical_quotient_rating"],content["i_get_stressed_out_easily"],content["coding_skills_rating"],content["public_speaking_points"],content["i_am_always_prepared"],content["i_follow_a_schedule"],content["i_am_quick_to_understand_things"],content["i_am_full_of_ideas"],content["i_start_conversations"],content["do_you_like_sports"],content["entrepreneurial_mindset"],content["tendency_to_worry"],content["self_learning_capability"],content["Extra_courses_did"],content["Taken_inputs_from_seniors_or_elders"],content["reading_and_writing_skills"],content["memory_capability_score"],content["worked_in_teams_ever"],content["Introvert"],content["interested_career_area_code"],content["Type_of_company_want_to_settle_in_code"],content["Interested_Type_of_Books_code"],content["A_NonTechnical"],content["A_Technical"],content["B_hard_worker"],content["B_smart_worker"]
+            ]])
 
         print("===========================")
         print(prediction)
