@@ -6,7 +6,7 @@ EXPOSE 5000/tcp
 WORKDIR /app
 # copy the requirements file into the image
 COPY ./requirements.txt .
-COPY ./interest_profiler_model.pkl .
+COPY ./predictInterestProfiler.pkl .
 COPY ./course_recommender_model.pkl .
 # install the dependencies and packages in the requirements file
 RUN pip install -r requirements.txt
