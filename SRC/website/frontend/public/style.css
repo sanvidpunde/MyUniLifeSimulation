@@ -624,7 +624,7 @@ li.user:hover ul {
 }
 .selection_container {
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
 	gap: 30px 40px;
 	flex-wrap: wrap;
 	margin-top: 20px;

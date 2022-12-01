@@ -217,6 +217,7 @@ const simulation = (req, res) => {
 	console.log("req body:", req.body);
 	// validation result
 	const errors = validationResult(req);
+	console.log("validation error", errors);
 	if(!errors.isEmpty()) {
 		const error = new HttpError("Could not process simulation request, check your data", 422);
 		return next(error);
@@ -226,7 +227,7 @@ const simulation = (req, res) => {
 	// Make API call to python app and await response
 	console.log("ready to call flask app");
 	let predictedCourse;
-	request.post({url: 'https://flask-service.s3nc4honh0a9c.ap-south-1.cs.amazonlightsail.com/course_recommender_predict', json: req.body}, async (err, res, body) => {
+	request.post({url: 'https://flask-service.s3nc4honh0a9c.ap-south-1.cs.amazonlightsail.com/predict_course', json: req.body}, async (err, res, body) => {
 		if (err) {
 			return console.error('API req failed:', err);
 		}
@@ -269,6 +270,7 @@ const profiler = async (req, res, next) => {
 	
 	// validation result
 	const errors = validationResult(req);
+	console.log("val error is", errors);
 	if(!errors.isEmpty()) {
 		const error = new HttpError("Could not process simulation request, check your data", 422);
 		return next(error);
@@ -277,9 +279,14 @@ const profiler = async (req, res, next) => {
 	console.log("Profiler ready to make API call to EC2");
 	// Make API call to python app and await response
 	let predictedCareer;
-	request.post({url: 'https://flask-service.s3nc4honh0a9c.ap-south-1.cs.amazonlightsail.com/interest_profiler_predict', json: req.body}, async (err, res, body) => {
+	request.post({url: 'https://flask-service.s3nc4honh0a9c.ap-south-1.cs.amazonlightsail.com/predict_interest', json: req.body}, async (err, res, body) => {
 		if (err) {
-			return console.error('API req failed:', err);
+			console.error('API req failed:', err);
+			return res.json({
+				type: 'fail',
+				success: false,
+				message: 'Cannot predict career, something went wrong'
+			});
 		}
 		predictedCareer = body;
 		console.log("body", body);
