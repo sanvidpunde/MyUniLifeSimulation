@@ -1,44 +1,80 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import confusion_matrix,accuracy_score
+from sklearn import preprocessing
+from numpy.linalg import norm
+import warnings
+warnings.filterwarnings("ignore")
+
+import pickle
 from flask import Flask, request
 from flask_cors import cross_origin
-import pickle
 
 app = Flask(__name__)
 
-interest_profiler_model = pickle.load(open("interest_profiler_model.pkl", "rb"))
-course_recommender_model = pickle.load(open("course_recommender_model.pkl", "rb"))
-
-@app.route("/interest_profiler_predict", methods = ["GET", "POST"])
+# Interest Profiler
+@app.route("/predict_interest", methods = ["GET", "POST"])
 @cross_origin()
 def predictInterest():
-    
-    if request.method == "POST": 
-        #   Receive inputs from Post req
-        print('made inside post req predictInterest')
+    if request.method == "POST":    
+      
+        # Receive inputs from Post req
         content = request.json
-        print(content)
+        # print(content)
 
-        prediction = interest_profiler_model.predict([[
-            content["Logical_quotient_rating"],content["i_get_stressed_out_easily"],content["coding_skills_rating"],content["public_speaking_points"],content["i_am_always_prepared"],content["i_follow_a_schedule"],content["i_am_quick_to_understand_things"],content["i_am_full_of_ideas"],content["i_start_conversations"],content["do_you_like_sports"],content["entrepreneurial_mindset"],content["tendency_to_worry"],content["self_learning_capability"],content["Extra_courses_did"],content["Taken_inputs_from_seniors_or_elders"],content["reading_and_writing_skills"],content["memory_capability_score"],content["worked_in_teams_ever"],content["Introvert"],content["interested_career_area_code"],content["Type_of_company_want_to_settle_in_code"],content["Interested_Type_of_Books_code"],content["A_NonTechnical"],content["A_Technical"],content["B_hard_worker"],content["B_smart_worker"]
-            ]])
+        model = pickle.load(open("predictInterestProfiler.pkl", "rb"))
 
-        print("===========================")
-        print(prediction)
-        print(prediction[0])
-        print("===========================")
-  
+        prediction=model.predict([[
+            content["Logical_quotient_rating"],
+            content["i_get_stressed_out_easily"],
+            content["coding_skills_rating"], 
+            content["public_speaking_points"],
+            content["i_am_always_prepared"],
+            content["i_follow_a_schedule"], 
+            content["i_am_quick_to_understand_things"],
+            content["i_am_full_of_ideas"],
+            content["i_start_conversations"], 
+            content["do_you_like_sports"],
+            content["entrepreneurial_mindset"], 
+            content["tendency_to_worry"],
+            content["self_learning_capability"], 
+            content["Extra_courses_did"],
+            content["Taken_inputs_from_seniors_or_elders"],
+            content["reading_and_writing_skills"],
+            content["memory_capability_score"], 
+            content["worked_in_teams_ever"],
+            content["Introvert"],
+            content["interested_career_area_code"],
+            content["Type_of_company_want_to_settle_in_code"],
+            content["Interested_Type_of_Books_code"], 
+            content["A_Non Technical"],
+            content["A_Technical"], 
+            content["B_hard_worker"], 
+            content["B_smart_worker"]
+        ]])
+
+        # print("===========================")
+        # print(prediction)
+        # print(prediction[0])
+        # print("===========================")
+            
         return prediction[0]
 
-
-
-@app.route("/course_recommender_predict", methods = ["GET", "POST"])
+@app.route("/predict_course", methods = ["GET", "POST"])
 @cross_origin()
 def predictCourse():
 
     if request.method == "POST":
+
         #   Receive inputs from Post req
-        print('made inside post req predictCourse')
+        # print('made inside post req predictCourse')
         content = request.json
-        print(content)
+        # print(content)
+
+        course_recommender_model = pickle.load(open("course_recommender_model.pkl", "rb"))
 
         City = content["City"]
         if (City == 'Dublin'):
@@ -106,13 +142,13 @@ def predictCourse():
             Job_domain_code = 0
 
         Budget = content["Budget"]
-        if (Budget == "2000 - 4000"):
+        if (int(Budget) == "2000 - 4000"):
             Budget = 0
-        elif (Budget == "4001 - 6000"):
+        elif (int(Budget) == "4001 - 6000"):
             Budget = 1
-        elif (Budget == "6001 - 8000"):
+        elif (int(Budget) == "6001 - 8000"):
             Budget = 2
-        elif (Budget == "8001 - above"):
+        elif (int(Budget) == "8001 - above"):
             Budget = 3
         else:
             Budget = 2
@@ -135,10 +171,10 @@ def predictCourse():
             Job_domain_code
         ]])
 
-        print("===========================")
-        print(prediction)
-        print(prediction[0])
-        print("===========================")
+        # print("===========================")
+        # print(prediction)
+        # print(prediction[0])
+        # print("===========================")
   
         return prediction[0]
 

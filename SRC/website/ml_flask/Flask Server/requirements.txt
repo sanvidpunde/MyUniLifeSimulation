@@ -1,4 +1,7 @@
 Flask
 Flask-Cors
 requests
-pickle5
+scikit-learn
+pandas
+matplotlib
+seaborn
