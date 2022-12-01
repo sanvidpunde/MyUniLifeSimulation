@@ -80,13 +80,13 @@ const Simulation = () => {
         if (!jobDomain) {
             setJobDomainError("Please select your preferred job domain");
         }
-        if (!hobbies) {
-            setHobbiesError("Please select your hobbies");
-        }
+        // if (!hobbies) {
+        //     setHobbiesError("Please select your hobbies");
+        // }
         if (!spendingLimit) {
             setSpendingLimitError("Please select your preferred spending limit");
         }
-		if (!cao || 0 < cao > 625 || !fieldOfInterest || !city || !jobDomain || !hobbies || !spendingLimit) {
+		if (!cao || 0 < cao > 625 || !fieldOfInterest || !city || !jobDomain || !spendingLimit) {
 			return false;
 		}
 		return true;
@@ -101,10 +101,9 @@ const Simulation = () => {
             console.log("No errors");
             const simulationData = {
                 CAO_Score: cao,
-                field_interest: fieldOfInterest.value,
                 City: city.value,
                 Job_domain: jobDomain.value,
-                Interest: hobbies.value,
+                Interest: fieldOfInterest.value,
                 Budget: spendingLimit.value
             }
             console.log("simulation inputs are", simulationData);
@@ -182,7 +181,7 @@ const Simulation = () => {
                             </label>
                             {jobDomainError !== "" && <p className="error_text"><i>!</i> &nbsp;{jobDomainError}</p>}
                         </div>
-                        <div className="single-simulation-form">
+                        {/* <div className="single-simulation-form">
                             <label>Hobbies
                                 <Select
                                     defaultValue={hobbies}
@@ -192,7 +191,7 @@ const Simulation = () => {
                                 />
                             </label>
                             {hobbiesError !== "" && <p className="error_text"><i>!</i> &nbsp;{hobbiesError}</p>}
-                        </div>
+                        </div> */}
                         <div className="single-simulation-form">
                             <label>Spending Limit
                                 <Select

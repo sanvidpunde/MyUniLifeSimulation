@@ -25,7 +25,6 @@ router.post('/signup', [
 // Post request for Simulation request
 router.post('/simulation', [
 	check('CAO_Score').isFloat({ min: 0, max: 625 }),
-	check('field_interest').not().isEmpty(),
 	check('City').not().isEmpty(),
 	check('Job_domain').not().isEmpty(),
 	check('Interest').not().isEmpty(),

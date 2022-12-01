@@ -25,7 +25,14 @@ const RecommendedCourses = () => {
                 <div className="container">
                     <div className="recommended_course">
                         <Link to={`/course_details?code=${courses.course_suggested.code}`}>
-                            <img src={courses.course_suggested.thumbnail_image_url} alt="" className="responsive-image mb-30" />
+                            <img src={courses.course_suggested.college == "Technological University Dublin" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/tud.jpg" ||
+                            courses.course_suggested.college == "Dublin Business School" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/dbs.jpg" ||
+                            courses.course_suggested.college == "Dublin City University" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/dcu.jpg" ||
+                            courses.course_suggested.college == "Griffith College" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/griffith.jpg" ||
+                            courses.course_suggested.college == "National College of Ireland" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/nci.jpg" ||
+                            courses.course_suggested.college == "Trinity College Dublin" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/tcd.jpg" ||
+                            courses.course_suggested.college == "University College Dublin" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/ucd.jpg" ||
+                            courses.course_suggested.college == "Technological University Dublin" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/tud.jpg"} alt="" className="responsive-image mb-30" />
                         </Link>
                         <div className="recommended_course_description mb-60">
                             <h2><Link to={`/course_details?code=${courses.course_suggested.code}`}>{courses.course_suggested.college}</Link></h2>
@@ -43,11 +50,18 @@ const RecommendedCourses = () => {
                         {courses.other_courses.length && courses.other_courses.map((course) => {
                             return (
                                 <div className="single_course">
-                                    <Link to={`/course_details?code${course.code}`}>
-                                        <img src={course.thumbnail_image_url} alt="" className="responsive-image mb-30" />
+                                    <Link to={`/course_details?code=${course.code}`}>
+                                        <img src={course.college == "Technological University Dublin" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/tud.jpg" ||
+                            course.college == "Dublin Business School" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/dbs.jpg" ||
+                            course.college == "Dublin City University" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/dcu.jpg" ||
+                            course.college == "Griffith College" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/griffith.jpg" ||
+                            course.college == "National College of Ireland" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/nci.jpg" ||
+                            course.college == "Trinity College Dublin" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/tcd.jpg" ||
+                            course.college == "University College Dublin" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/ucd.jpg" ||
+                            course.college == "Technological University Dublin" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/tud.jpg"} alt="" className="responsive-image mb-30" />
                                     </Link>
                                     <div className="recommended_course_description mb-60">
-                                        <h2><Link to={`/course_details?code${course.code}`}>{course.college}</Link></h2>
+                                        <h2><Link to={`/course_details?code=${course.code}`}>{course.college}</Link></h2>
                                         <p><strong>Fees</strong>: {`€${course.fees}`}</p>
                                         <p><strong>Course ID</strong>: {course.code}</p>
                                         <p><strong>Course Name</strong>: {course.course}</p>
