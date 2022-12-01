@@ -13,14 +13,19 @@ const Profiler = () => {
     const history = useHistory();
 
     const [logical, setLogical] = useState(3);
+    const [stressedEasily, setStressedEasily] = useState(3);
+    const [alwaysPrepared, setAlwaysPrepared] = useState(3);
+    const [followSchedule, setFollowSchedule] = useState(3);
+    const [quickToUnderstandThings, setQuickToUnderstandThings] = useState(3);
+    const [fullOfIdeas, setFullOfIdeas] = useState(3);
+    const [iStartConversation, setIStartConversation] = useState(3);
     const [coding, setCoding] = useState(3);
     const [hackathons, setHackathons] = useState(3);
     const [publicSpeaking, setPublicSpeaking] = useState(3);
 
-    useEffect(() => {
-        console.log("coding", coding);
-    }, [coding]);
-
+    const [likeSports, setLikeSports] = useState(null);
+    const [entrepreneurialMindset, setEntrepreneurialMindset] = useState(null);
+    const [tendencyToWorry, setTendencyToWorry] = useState(null);
     const [selfLearningCapability, setSelfLearningCapability] = useState(null);
     const [extraCourses, setExtraCourses] = useState(null);
     const [tookAdvice, setTookAdvice] = useState(null);
@@ -37,6 +42,9 @@ const Profiler = () => {
     const [typeOfCompanyYouWantToSettleIn, setTypeOfCompanyYouWantToSettleIn] = useState(null);
     const [interestedCareerArea, setInterestedCareerArea] = useState(null);
 
+    const [likeSportsError, setLikeSportsError] = useState('');
+    const [entrepreneurialMindsetError, setEntrepreneurialMindsetError] = useState('');
+    const [tendencyToWorryError, setTendencyToWorryError] = useState('');
     const [selfLearningCapabilityError, setSelfLearningCapabilityError] = useState('');
     const [extraCoursesError, setExtraCoursesError] = useState('');
     const [tookAdviceError, setTookAdviceError] = useState('');
@@ -46,7 +54,6 @@ const Profiler = () => {
     const [memoryCapabilityError, setMemoryCapabilityError] = useState('');
     const [workError, setWorkError] = useState('');
     const [managementTechnicalError, setManagementTechnicalError] = useState('');
-    const [interestedSubjectsError, setInterestedSubjectsError] = useState('');
     const [interestedBooksError, setInterestedBooksError] = useState('');
     const [interestedTypeOfBooksError, setInterestedTypeOfBooksError] = useState('');
     const [workshopsAttendedError, setWorkshopsAttendedError] = useState('');
@@ -71,6 +78,18 @@ const Profiler = () => {
     useEffect(() => {
         setTookAdviceError('');
     }, [tookAdvice]);
+
+    useEffect(() => {
+        setLikeSportsError('');
+    }, [likeSports]);
+    useEffect(() => {
+        setEntrepreneurialMindsetError('');
+    }, [entrepreneurialMindset]);
+    useEffect(() => {
+        setTendencyToWorryError('');
+    }, [tendencyToWorry]);
+
+
     useEffect(() => {
         setTeamCoError('');
     }, [teamCo]);
@@ -89,9 +108,6 @@ const Profiler = () => {
     useEffect(() => {
         setManagementTechnicalError('');
     }, [managementTechnical]);
-    useEffect(() => {
-        setInterestedSubjectsError('');
-    }, [interestedSubjects]);
     useEffect(() => {
         setInterestedBooksError('');
     }, [interestedBooks]);
@@ -119,6 +135,15 @@ const Profiler = () => {
         if (!tookAdvice) {
             setTookAdviceError('Please select');
         }
+        if (!likeSports) {
+            setLikeSportsError('Please select');
+        }
+        if (!entrepreneurialMindset) {
+            setEntrepreneurialMindsetError('Please select');
+        }
+        if (!tendencyToWorry) {
+            setTendencyToWorryError('Please select');
+        }
         if (!teamCo) {
             setTeamCoError('Please select');
         }
@@ -137,9 +162,6 @@ const Profiler = () => {
         if (!managementTechnical) {
             setManagementTechnicalError('Please select');
         }
-        if (!interestedSubjects) {
-            setInterestedSubjectsError('Please select');
-        }
         if (!interestedBooks) {
             setInterestedBooksError('Please select');
         }
@@ -155,9 +177,11 @@ const Profiler = () => {
         if (!interestedCareerArea) {
             setInterestedCareerAreaError('Please select');
         }
-		if (!selfLearningCapability || !extraCourses || !tookAdvice || !teamCo || !introvert || !readingWriting || !memoryCapability || !work || !managementTechnical || !interestedSubjects || !interestedBooks || !interestedTypeOfBooks || !workshopsAttended || !typeOfCompanyYouWantToSettleIn || !interestedCareerArea) {
+		if (!selfLearningCapability || !extraCourses || !tookAdvice || !likeSports || !entrepreneurialMindset || !tendencyToWorry || !teamCo || !introvert || !readingWriting || !memoryCapability || !work || !managementTechnical || !interestedBooks || !typeOfCompanyYouWantToSettleIn || !interestedCareerArea) {
+            console.log('false returned');
 			return false;
 		}
+        console.log('true returned');
 		return true;
 	};
 
@@ -169,9 +193,17 @@ const Profiler = () => {
             // call API
             const profilerData = {
                 Logical_quotient_rating: logical,
+                i_get_stressed_out_easily: stressedEasily,
                 coding_skills_rating: coding,
-                hackathons: hackathons,
                 public_speaking_points: publicSpeaking,
+                i_am_always_prepared: alwaysPrepared,
+                i_follow_a_schedule: followSchedule,
+                i_am_quick_to_understand_things: quickToUnderstandThings,
+                i_am_full_of_ideas: fullOfIdeas,
+                i_start_conversations: iStartConversation,
+                do_you_like_sports: likeSports.value,
+                entrepreneurial_mindset: entrepreneurialMindset.value,
+                tendency_to_worry: tendencyToWorry.value,
                 self_learning_capability: selfLearningCapability.value,
                 Extra_courses_did: extraCourses.value,
                 Taken_inputs_from_seniors_or_elders: tookAdvice.value,
@@ -181,12 +213,8 @@ const Profiler = () => {
                 memory_capability_score: memoryCapability.value,
                 B_hard_worker: work.value === "Hard worker" ? 1 : 0,
                 B_smart_worker: work.value === "Hard worker" ? 0 : 1,
-                A_Management: managementTechnical.value === "Management" ? 1 : 0,
+                "A_Non Technical": managementTechnical.value === "Management" ? 1 : 0,
                 A_Technical: managementTechnical.value === "Technical" ? 1 : 0,
-                Interested_subjects_code: interestedSubjects.value,
-                Interested_Type_of_Books_code: interestedBooks.value,
-                certifications_code: interestedTypeOfBooks.value,
-                workshops_code: workshopsAttended.value,
                 Type_of_company_want_to_settle_in_code: typeOfCompanyYouWantToSettleIn.value,
                 interested_career_area_code: interestedCareerArea.value
             };
@@ -233,6 +261,90 @@ const Profiler = () => {
                             />
                         </div>
                         <div className="single_range_selection">
+                            <label htmlFor="stressedEasily">I get stressed out easily</label>
+                            <Slider
+                                aria-label="stressedEasily"
+                                value={stressedEasily}
+                                onChange={(e) => setStressedEasily(e.target.value)}
+                                valueLabelDisplay="auto"
+                                step={1}
+                                marks
+                                min={0}
+                                max={9}
+                            />
+                        </div>
+
+                        <div className="single_range_selection">
+                            <label htmlFor="alwaysPrepared">I am always prepared</label>
+                            <Slider
+                                aria-label="alwaysPrepared"
+                                value={alwaysPrepared}
+                                onChange={(e) => setAlwaysPrepared(e.target.value)}
+                                valueLabelDisplay="auto"
+                                step={1}
+                                marks
+                                min={0}
+                                max={9}
+                            />
+                        </div>
+                        <div className="single_range_selection">
+                            <label htmlFor="followSchedule">I follow schedule</label>
+                            <Slider
+                                aria-label="followSchedule"
+                                value={followSchedule}
+                                onChange={(e) => setFollowSchedule(e.target.value)}
+                                valueLabelDisplay="auto"
+                                step={1}
+                                marks
+                                min={0}
+                                max={9}
+                            />
+                        </div>
+
+                        <div className="single_range_selection">
+                            <label htmlFor="quickToUnderstandThings">I am quick to understand things</label>
+                            <Slider
+                                aria-label="quickToUnderstandThings"
+                                value={quickToUnderstandThings}
+                                onChange={(e) => setQuickToUnderstandThings(e.target.value)}
+                                valueLabelDisplay="auto"
+                                step={1}
+                                marks
+                                min={0}
+                                max={9}
+                            />
+                        </div>
+                        <div className="single_range_selection">
+                            <label htmlFor="fullOfIdeas">I am full of ideas</label>
+                            <Slider
+                                aria-label="fullOfIdeas"
+                                value={fullOfIdeas}
+                                onChange={(e) => setFullOfIdeas(e.target.value)}
+                                valueLabelDisplay="auto"
+                                step={1}
+                                marks
+                                min={0}
+                                max={9}
+                            />
+                        </div>
+                        <div className="single_range_selection">
+                            <label htmlFor="iStartConversation">I start conversations</label>
+                            <Slider
+                                aria-label="iStartConversation"
+                                value={iStartConversation}
+                                onChange={(e) => setIStartConversation(e.target.value)}
+                                valueLabelDisplay="auto"
+                                step={1}
+                                marks
+                                min={0}
+                                max={9}
+                            />
+                        </div>
+
+
+
+
+                        <div className="single_range_selection">
                             <label htmlFor="coding">Rate your Coding skills</label>
                             <Slider
                                 aria-label="coding"
@@ -245,19 +357,7 @@ const Profiler = () => {
                                 max={9}
                             />
                         </div>
-                        <div className="single_range_selection">
-                            <label htmlFor="hackathons">Enter number of Hackathons participated</label>
-                            <Slider
-                                aria-label="hackathons"
-                                value={hackathons}
-                                onChange={(e) => setHackathons(e.target.value)}
-                                valueLabelDisplay="auto"
-                                step={1}
-                                marks
-                                min={0}
-                                max={9}
-                            />
-                        </div>
+                        
                         <div className="single_range_selection">
                             <label htmlFor="publicSpeaking">Rate Your Public Speaking</label>
                             <Slider
@@ -306,6 +406,41 @@ const Profiler = () => {
                             </label>
                             {tookAdviceError !== "" && <p className="error_text"><i>!</i> &nbsp;{tookAdviceError}</p>}
                         </div>
+
+                        <div className="single_selection_container">
+                            <label>Do you like sports
+                                <Select 
+                                    defaultValue={likeSports}
+                                    onChange={setLikeSports}
+                                    options={yesNoOptions}
+                                    className="mt-6"
+                                />
+                            </label>
+                            {likeSportsError !== "" && <p className="error_text"><i>!</i> &nbsp;{likeSportsError}</p>}
+                        </div>
+                        <div className="single_selection_container">
+                            <label>Entrepreneurial Mindset
+                                <Select 
+                                    defaultValue={entrepreneurialMindset}
+                                    onChange={setEntrepreneurialMindset}
+                                    options={yesNoOptions}
+                                    className="mt-6"
+                                />
+                            </label>
+                            {entrepreneurialMindsetError !== "" && <p className="error_text"><i>!</i> &nbsp;{entrepreneurialMindsetError}</p>}
+                        </div>
+                        <div className="single_selection_container">
+                            <label>Tendency to worry
+                                <Select 
+                                    defaultValue={tendencyToWorry}
+                                    onChange={setTendencyToWorry}
+                                    options={yesNoOptions}
+                                    className="mt-6"
+                                />
+                            </label>
+                            {tendencyToWorryError !== "" && <p className="error_text"><i>!</i> &nbsp;{tendencyToWorryError}</p>}
+                        </div>
+
                         <div className="single_selection_container">
                             <label>Team co-ordination skill
                                 <Select 
@@ -362,18 +497,18 @@ const Profiler = () => {
                             {workError !== "" && <p className="error_text"><i>!</i> &nbsp;{workError}</p>}
                         </div>
                         <div className="single_selection_container">
-                            <label>Management or Technical
+                            <label>Technical or Non Technical
                                 <Select 
                                     defaultValue={managementTechnical}
                                     onChange={setManagementTechnical}
-                                    options={[{value: "Management", label: "Management"}, {value: "Technical", label: "Technical"}]}
+                                    options={[{value: "Non Technical", label: "Non Technical"}, {value: "Technical", label: "Technical"}]}
                                     className="mt-6"
                                 />
                             </label>
                             {managementTechnicalError !== "" && <p className="error_text"><i>!</i> &nbsp;{managementTechnicalError}</p>}
                         </div>
 
-                        <div className="single_selection_container">
+                        {/* <div className="single_selection_container">
                             <label>Interested Subjects
                                 <Select 
                                     defaultValue={interestedSubjects}
@@ -383,7 +518,7 @@ const Profiler = () => {
                                 />
                             </label>
                             {interestedSubjectsError !== "" && <p className="error_text"><i>!</i> &nbsp;{interestedSubjectsError}</p>}
-                        </div>
+                        </div> */}
                         <div className="single_selection_container">
                             <label>Interested Books Category
                                 <Select 
@@ -394,28 +529,6 @@ const Profiler = () => {
                                 />
                             </label>
                             {interestedBooksError !== "" && <p className="error_text"><i>!</i> &nbsp;{interestedBooksError}</p>}
-                        </div>
-                        <div className="single_selection_container">
-                            <label>Certifications
-                                <Select 
-                                    defaultValue={interestedTypeOfBooks}
-                                    onChange={setInterestedTypeOfBooks}
-                                    options={[{value: 4, label: "Information Security"}, {value: 8, label: "Shell Programming"}, {value: 7, label: "R Programming"}, {value: 1, label: "Distro Making"}, {value: 5, label: "Machine Learning"}, {value: 2, label: "Full stack"}, {value: 3, label: "Hadoop"}, {value: 0, label: "App Development"}, {value: 6, label: "Python"}]}
-                                    className="mt-6"
-                                />
-                            </label>
-                            {interestedTypeOfBooksError !== "" && <p className="error_text"><i>!</i> &nbsp;{interestedTypeOfBooksError}</p>}
-                        </div>
-                        <div className="single_selection_container">
-                            <label>Workshops Attended
-                                <Select 
-                                    defaultValue={workshopsAttended}
-                                    onChange={setWorkshopsAttended}
-                                    options={[{value: 2, label: "Database Security"}, {value: 3, label: "Game Development"}, {value: 1, label: "Data Science"}, {value: 5, label: "System Designing"}, {value: 4, label: "Hacking"}, {value: 0, label: "Cloud Computing"}, {value: 7, label: "Web Technologies"}]}
-                                    className="mt-6"
-                                />
-                            </label>
-                            {workshopsAttendedError !== "" && <p className="error_text"><i>!</i> &nbsp;{workshopsAttendedError}</p>}
                         </div>
                         <div className="single_selection_container">
                             <label>Type of company you want to settle in
