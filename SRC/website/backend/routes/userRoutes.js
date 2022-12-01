@@ -58,6 +58,7 @@ router.post('/profiler', [
 	check('A_Non Technical').not().isEmpty(),
 	check('A_Technical').not().isEmpty(),
 	check('Type_of_company_want_to_settle_in_code').not().isEmpty(),
+	check('interested_Type_of_Books_code').not().isEmpty(),
 	check('interested_career_area_code').not().isEmpty(),
 ], userController.profiler);
 

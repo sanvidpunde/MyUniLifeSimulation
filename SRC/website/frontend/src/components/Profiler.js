@@ -216,6 +216,7 @@ const Profiler = () => {
                 "A_Non Technical": managementTechnical.value === "Management" ? 1 : 0,
                 A_Technical: managementTechnical.value === "Technical" ? 1 : 0,
                 Type_of_company_want_to_settle_in_code: typeOfCompanyYouWantToSettleIn.value,
+                interested_Type_of_Books_code: interestedBooks.value,
                 interested_career_area_code: interestedCareerArea.value
             };
             console.log("Profiler inputs are", profilerData);

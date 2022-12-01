@@ -241,9 +241,7 @@ const simulation = (req, res) => {
 		try {
 			identifiedCourse = await Course.findOne({ code: predictedCourse });
 		} catch(err) {
-			console.log("err", err);
-			const error = new HttpError('Error in finding email', 500);
-			return next(error);
+			return console.log("err", err);
 		}
 		console.log("identifiedCourse ===============", identifiedCourse);	
 		if (identifiedCourse) {
