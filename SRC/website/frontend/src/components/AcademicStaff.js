@@ -25,21 +25,21 @@ const AcademicStaff = () => {
           <div className="container">
             <div className="staff_container">
                 <div className="single_staff">
-                    <img src="https://dummyimage.com/350x220/333/fff.jpg" alt="" />
+                    <img src="/images/s1.png" alt="" />
                     <p className="dept">Head of Research</p>
                     <h3 className="staff_name">Dr Dympna O'Sullivan</h3>
                     <p>dympna.osullivan@tudublin.ie</p>
                     <p>+353-1-220-5634</p>
                 </div>
                 <div className="single_staff">
-                    <img src="https://dummyimage.com/350x220/333/fff.jpg" alt="" />
+                    <img src="/images/s2.png" alt="" />
                     <p className="dept">Head of Research</p>
                     <h3 className="staff_name">Dr Dympna O'Sullivan</h3>
                     <p>dympna.osullivan@tudublin.ie</p>
                     <p>+353-1-220-5634</p>
                 </div>
                 <div className="single_staff">
-                    <img src="https://dummyimage.com/350x220/333/fff.jpg" alt="" />
+                    <img src="/images/s3.png" alt="" />
                     <p className="dept">Head of Research</p>
                     <h3 className="staff_name">Dr Dympna O'Sullivan</h3>
                     <p>dympna.osullivan@tudublin.ie</p>
