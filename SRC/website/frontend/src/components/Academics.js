@@ -4,7 +4,7 @@ import {useSelector, useDispatch} from 'react-redux';
 
 import {receiveSuccessMessage} from '../redux/util/controller';
 
-const Classrooms = () => {
+const Academics = () => {
 
     const dispatch = useDispatch();
     const courses = useSelector(state => state.course);
@@ -17,26 +17,17 @@ const Classrooms = () => {
     <React.Fragment>
       <div className="header">
           <div className="container">
-              <div className="header-text">Your Classrooms</div>
+              <div className="header-text">Your Academics</div>
               <p>Lorem Ipsum Dolor Sit Amet</p>
           </div>
       </div>
       <div className="p-60">
           <div className="container">
-            <h3 className="mb-20">Modern state of the art classrooms:</h3>
-            <div className="grey-border"></div>
-            <div className="classroom_container">
-                <div className="single_classroom">
-                    <img src="/images/classroom1.jpg" alt="img" />
-                </div>
-                <div className="single_classroom">
-                    <img src="/images/classroom1.jpg" alt="img" />
-                </div>
-            </div>
+            
           </div>
       </div>
     </React.Fragment>
   );
 }
 
-export default Classrooms;
+export default Academics;

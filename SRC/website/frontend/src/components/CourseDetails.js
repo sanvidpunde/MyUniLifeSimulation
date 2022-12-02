@@ -264,6 +264,12 @@ const CourseDetails = () => {
                     
                 </div>
             </div>
+            <div className="cta">
+                <div className="container">
+                    <h2>Explore more about classrooms, lecturers, video lectures, academics, societies and workshops</h2>
+                    <Link to="/explore_your_course" className="cta_link">Explore your course</Link>
+                </div>
+            </div>
         </React.Fragment>
     )
 }

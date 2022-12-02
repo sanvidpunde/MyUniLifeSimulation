@@ -13,6 +13,7 @@ import ExploreYourCourse from './ExploreYourCourse';
 import VideoLectures from './VideoLectures';
 import Classrooms from './Classrooms';
 import AcademicStaff from './AcademicStaff';
+import Academics from './Academics';
 import Profiler from './Profiler';
 import ProfilerDetails from './ProfilerDetails';
 import Login from './Login';
@@ -41,7 +42,7 @@ const App = ({ loggedIn, email }) => {
 				<Route path="/" exact>
 					<Home />
 				</Route>
-				<Route path="/simulation" exact>
+				<Route path="/course_recommender" exact>
 					<Simulation />
 				</Route>
 				<Route path="/interest_profiler" exact>
@@ -56,7 +57,7 @@ const App = ({ loggedIn, email }) => {
 				<Route path="/" exact>
 					<Home />
 				</Route>
-				<Route path="/simulation" exact>
+				<Route path="/course_recommender" exact>
 					<Simulation />
 				</Route>
 				<Route path="/recommended_courses" exact>
@@ -76,6 +77,9 @@ const App = ({ loggedIn, email }) => {
 				</Route>
 				<Route path="/academic_staff" exact>
 					<AcademicStaff />
+				</Route>
+				<Route path="/academics" exact>
+					<Academics />
 				</Route>
 				<Route path="/interest_profiler" exact>
 					<Profiler />
