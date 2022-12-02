@@ -372,7 +372,7 @@ const passwordReset = async (req, res) => {
 	}
 	if (tokenExists) {
 		// send email again but with same token
-		const url = `http://localhost:3000/change_password?email=${email}&token=${tokenExists.token}`;
+		const url = `/change_password?email=${email}&token=${tokenExists.token}`;
 
 		functionToSendInstructionsViaEmail(url, email);
 
@@ -385,7 +385,7 @@ const passwordReset = async (req, res) => {
 	// send email
 	const token = uuidv4();
 
-	const url = `http://localhost:3000/change_password?email=${email}&token=${token}`;
+	const url = `/change_password?email=${email}&token=${token}`;
 
 	console.log("token", token);
 	console.log("url", url);
