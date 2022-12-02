@@ -48,7 +48,7 @@ const Simulation = () => {
     const cityOptions = [{value: "Dublin", label: "Dublin"}, {value: "Cork", label: "Cork"}, {value: "Galway", label: "Galway"}, {value: "Limerick", label: "Limerick"}, {value: "Athlone", label: "Athlone"}, {value: "Carlow", label: "Carlow"}];
     const jobDomainOptions = [{value: "IT", label: "IT"}, {value: "HR", label: "HR"}, {value: "Management", label: "Management"}, {value: "Support", label: "Support"}, {value: "Finance", label: "Finance"}];
     const hobbiesOptions = [{value: "Cricket", label: "Cricket"}, {value: "Football", label: "Football"}, {value: "Chess", label: "Chess"}, {value: "Athletics", label: "Athletics"}, {value: "Automation", label: "Automation"}, {value: "Singing", label: "Singing"}];
-    const spendingLimitOptions = [{value: "2000 - 4000", label: "€2000 - €4000"}, {value: "4000 - 6000", label: "€4000 - €6000"}, {value: "6000 - 8000", label: "€6000 - €8000"}, {value: "8000 - above", label: "€8000 - above"}];
+    const spendingLimitOptions = [{value: 2000, label: "€2000 - €4000"}, {value: 4000, label: "€4000 - €6000"}, {value: 6000, label: "€6000 - €8000"}, {value: 8000, label: "€8000 - above"}];
 
     // scroll to top of page
     useEffect(() => {
