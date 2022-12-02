@@ -222,7 +222,7 @@ const Profiler = () => {
             console.log("Profiler inputs are", profilerData);
             dispatch(receiveSuccessMessage({success: "Profiler request sent successfully"}));
             // API call
-            axios.post('http://localhost:8080/api/profiler', profilerData)
+            axios.post('/api/profiler', profilerData)
                 .then(resp => {
                     console.log("resp is:", resp);
                     if (resp.data.success === false) {
