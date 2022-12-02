@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const ExploreYourCourse = () => {
 
@@ -22,7 +23,7 @@ const ExploreYourCourse = () => {
                                 <img src="/images/our_classrooms.png" alt="" />
                             </div>
                             <div className="single_flex_icon_title">
-                                Our Classrooms
+                                <Link to="/classrooms">Our Classrooms</Link>
                             </div>
                             <p>Click here to get a tour of your classrooms</p>
                         </div>
@@ -31,7 +32,7 @@ const ExploreYourCourse = () => {
                                 <img src="/images/our_lecturers.png" alt="" />
                             </div>
                             <div className="single_flex_icon_title">
-                                Our Lecturers
+                                <Link to="/academic_staff">Our Lecturers</Link>
                             </div>
                             <p>Click here to see video lectures of the professors from your course</p>
                         </div>
@@ -40,7 +41,7 @@ const ExploreYourCourse = () => {
                                 <img src="/images/video_lectures.png" alt="" />
                             </div>
                             <div className="single_flex_icon_title">
-                                Video Lectures
+                                <Link to="/video_lectures">Video Lectures</Link>
                             </div>
                             <p>Lets explore few lectures from our professors</p>
                         </div>
@@ -49,7 +50,7 @@ const ExploreYourCourse = () => {
                                 <img src="/images/academics.png" alt="" />
                             </div>
                             <div className="single_flex_icon_title">
-                                Your Academics
+                                <Link to="academics">Your Academics</Link>
                             </div>
                             <p>Click here to see what kind of assignments and exams you may get</p>
                         </div>
@@ -58,7 +59,7 @@ const ExploreYourCourse = () => {
                                 <img src="/images/societies.png" alt="" />
                             </div>
                             <div className="single_flex_icon_title">
-                                Societies for you
+                                <a href="#" target="_blank">Societies for you</a>
                             </div>
                             <p>Clubs and societies for you</p>
                         </div>
@@ -67,7 +68,7 @@ const ExploreYourCourse = () => {
                                 <img src="/images/workshops.png" alt="" />
                             </div>
                             <div className="single_flex_icon_title">
-                                Workshops
+                                <a href="#" target="_blank">Workshops</a>
                             </div>
                             <p>Lets explore all workshops which might interest you</p>
                         </div>
