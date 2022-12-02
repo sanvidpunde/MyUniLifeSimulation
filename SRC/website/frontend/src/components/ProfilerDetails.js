@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {useSelector, useDispatch} from 'react-redux';
+import { Link } from 'react-router-dom';
 
 const ProfilerDetails = () => {
 
@@ -166,6 +167,12 @@ const ProfilerDetails = () => {
                             </ul>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div className="cta">
+                <div className="container">
+                    <h2>Run our course recommender and find out which course is ideal for you</h2>
+                    <Link to="/course_recommender" className="cta_link">Run Course Recommender</Link>
                 </div>
             </div>
         </React.Fragment>

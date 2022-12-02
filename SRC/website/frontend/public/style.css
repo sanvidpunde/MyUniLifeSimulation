@@ -664,6 +664,30 @@ li.user:hover ul {
 	color: #333;
 }
 
+/* CTA */
+.cta {
+	background: #0E3363;
+	padding: 60px 0;
+	text-align: center;
+}
+.cta h2 {
+	color: #fff;
+	text-align: center;
+	margin-bottom: 30px;
+}
+a.cta_link:link,
+a.cta_link:visited {
+	color: #fff;
+	text-decoration: none;
+	padding: 8px 16px;
+	border: 1.5px solid #00a1f3;
+	border-radius: 8px;
+	font-weight: 600;
+}
+a.cta_link:hover {
+	background-color: #00a1f3;
+}
+
 /* Recommended Course */
 .recommended_course img {
 	max-width: 500px;
@@ -858,6 +882,14 @@ a.single_additional_func_title:hover {
 	color: #111;
 	font-weight: bold;
 	margin: 10px 0;
+}
+.single_flex_icon_title a:link,
+.single_flex_icon_title a:visited {
+	color: #111;
+	text-decoration: none;
+}
+.single_flex_icon_title a:hover {
+	color: #007FC0;
 }
 
 /* Staff */
