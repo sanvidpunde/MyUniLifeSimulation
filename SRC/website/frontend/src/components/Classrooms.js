@@ -27,10 +27,10 @@ const Classrooms = () => {
             <div className="grey-border"></div>
             <div className="classroom_container">
                 <div className="single_classroom">
-                    <img src="https://dummyimage.com/540x400/333/fff.jpg" alt="img" />
+                    <img src="/images/classroom1.jpg" alt="img" />
                 </div>
                 <div className="single_classroom">
-                    <img src="https://dummyimage.com/540x400/333/fff.jpg" alt="img" />
+                    <img src="/images/classroom1.jpg" alt="img" />
                 </div>
             </div>
           </div>
