@@ -110,7 +110,7 @@ const ProfilerDetails = () => {
         <React.Fragment>
 			<div className="header">
                 <div className="container">
-                    <div className="header-text">Interest Profiler</div>
+                    <div className="header-text">Predicted Interest</div>
                     <p>Our Interest Profiler test is designed for students who are unsure of what career they want to pursue and guide them in making informed decision</p>
                 </div>
             </div>

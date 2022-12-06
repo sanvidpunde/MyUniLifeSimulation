@@ -220,7 +220,7 @@ const Profiler = () => {
                 interested_career_area_code: interestedCareerArea.value
             };
             console.log("Profiler inputs are", profilerData);
-            dispatch(receiveSuccessMessage({success: "Profiler request sent successfully"}));
+            dispatch(receiveSuccessMessage({success: "Interest Profiler request sent"}));
             // API call
             axios.post('/api/profiler', profilerData)
                 .then(resp => {

@@ -107,12 +107,13 @@ const Simulation = () => {
                 Budget: spendingLimit.value
             }
             console.log("simulation inputs are", simulationData);
+            dispatch(receiveSuccessMessage({success: "Course Prediction request sent"}));
             // API call
             axios.post('/api/simulation', simulationData)
                 .then(resp => {
-                    dispatch(receiveSuccessMessage({success: "Simulation request sent successfully"}));
                     console.log("resp is:", resp);
                     if (resp.data.success) {
+                        dispatch(receiveSuccessMessage({success: `Predicted Course ID is ${resp.data.course.code}`}));
                         // update redux
                         const updatedCourse = {...course, course_suggested: resp.data.course}
                         dispatch(updateCurrentCourse(updatedCourse));

@@ -14,6 +14,8 @@ import VideoLectures from './VideoLectures';
 import Classrooms from './Classrooms';
 import AcademicStaff from './AcademicStaff';
 import Academics from './Academics';
+import Personality from './Personality';
+import PersonalityDetails from './PersonalityDetails';
 import Profiler from './Profiler';
 import ProfilerDetails from './ProfilerDetails';
 import Login from './Login';
@@ -80,6 +82,12 @@ const App = ({ loggedIn, email }) => {
 				</Route>
 				<Route path="/academics" exact>
 					<Academics />
+				</Route>
+				<Route path="/personality_test" exact>
+					<Personality />
+				</Route>
+				<Route path="/personality_details" exact>
+					<PersonalityDetails />
 				</Route>
 				<Route path="/interest_profiler" exact>
 					<Profiler />

@@ -11,6 +11,10 @@ export const RECEIVE_SUCCESS_MESSAGE = "RECEIVE_SUCCESS_MESSAGE";
 export const RECEIVE_FAILURE_MESSAGE = "RECEIVE_FAILURE_MESSAGE";
 export const CLEAR_SERVER_RESPONSE = "CLEAR_SERVER_RESPONSE";
 
+// personality
+export const RECEIVE_CURRENT_PERSONALITY = "RECEIVE_CURRENT_PERSONALITY";
+export const UPDATE_CURRENT_PERSONALITY = "UPDATE_CURRENT_PERSONALITY";
+
 // career
 export const RECEIVE_CURRENT_CAREER = "RECEIVE_CURRENT_CAREER";
 export const UPDATE_CURRENT_CAREER = "UPDATE_CURRENT_CAREER";
@@ -44,6 +48,16 @@ export const receiveFailureMessage = (message) => ({
 });
 export const clearResponse = () => ({
 	type: CLEAR_SERVER_RESPONSE
+});
+
+// personality
+export const receiveCurrentPersonality = (personality) => ({
+	type: RECEIVE_CURRENT_PERSONALITY,
+	personality
+});
+export const updateCurrentPersonality = (personality) => ({
+	type: UPDATE_CURRENT_PERSONALITY,
+	personality
 });
 
 // career

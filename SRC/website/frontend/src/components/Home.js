@@ -60,9 +60,9 @@ const Home = ({ loggedIn, email, name }) => {
 						<img src="/images/home.jpg" alt="Home Image" className="responsive-image" />
 					</div>
 					<div className="take-test-cta">
-						<div className="title text-left">Interest Profiler Test</div>
+						<div className="title text-left">Personality Test</div>
 						<p>Our Interest Profiler test is designed for students who are unsure of what career they want to pursue and guide them in making informed decision.</p><br/>
-						<Link className="take-test-button" to="/interest_profiler">Take Test Now</Link>
+						<Link className="take-test-button" to="/personality_test">Take Test Now</Link>
 					</div>
 				</div>
 			</div>
