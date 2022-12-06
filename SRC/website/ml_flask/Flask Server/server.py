@@ -15,6 +15,49 @@ from flask_cors import cross_origin
 
 app = Flask(__name__)
 
+
+# Personality Predictor
+@app.route("/predict_personality", methods = ["GET", "POST"])
+@cross_origin()
+def predictPersonality():
+    if request.method == "POST":    
+      
+        # Receive inputs from Post req
+        content = request.json
+        # print(content)
+
+        model = pickle.load(open("personality_model.pkl", "rb"))
+
+        prediction=model.predict([[
+            content["EXT1"],
+            content["EXT2"],
+            content["EXT3"], 
+            content["EXT4"],
+            content["EST1"],
+            content["EST2"], 
+            content["EST3"],
+            content["EST4"],
+            content["AGR1"], 
+            content["AGR2"],
+            content["AGR3"], 
+            content["AGR4"],
+            content["CSN1"], 
+            content["CSN2"],
+            content["CSN3"],
+            content["CSN4"],
+            content["OPN1"], 
+            content["OPN2"],
+            content["OPN3"],
+            content["OPN4"]
+        ]])
+
+        # print("===========================")
+        # print(prediction)
+        print(prediction[0])
+        # print("===========================")
+            
+        return prediction[0]
+
 # Interest Profiler
 @app.route("/predict_interest", methods = ["GET", "POST"])
 @cross_origin()
