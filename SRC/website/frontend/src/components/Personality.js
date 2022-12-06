@@ -12,6 +12,11 @@ const Personality = () => {
     const dispatch = useDispatch();
     const history = useHistory();
 
+    // Scroll Top
+    useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
+
     const [lifeOfParty, setLifeOfParty] = useState(3);
     const [talkALot, setTalkALot] = useState(3);
     const [comfortableAroundPeople, setComfortableAroundPeople] = useState(3);
