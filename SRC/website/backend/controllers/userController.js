@@ -9,6 +9,7 @@ import User from '../models/user';
 import Token from '../models/token';
 import HttpError from '../models/httpError';
 import Profiler from '../models/profiler';
+import Trait from '../models/trait';
 import Course from '../models/course';
 import transporter from '../models/myNodemailer';
 import { response } from 'express';
@@ -261,6 +262,65 @@ const simulation = (req, res) => {
 	return () => clearTimeout(timer);
 };
 
+const personality = async (req, res, next) => {
+	
+	// get input values
+	// console.log("req body:", req.body);
+		
+	// validation result
+	const errors = validationResult(req);
+	// console.log("val error is", errors);
+	if(!errors.isEmpty()) {
+		const error = new HttpError("Could not process simulation request, check your data", 422);
+		return next(error);
+	}
+
+	console.log("Personality ready to make API call to machine learning server");
+	// Make API call to python app and await response
+	let predictedPersonality;
+	let predictedPersonalityCapitalized;
+	request.post({url: 'https://flask-service.s3nc4honh0a9c.ap-south-1.cs.amazonlightsail.com/predict_personality', json: req.body}, async (err, res, body) => {
+		if (err) {
+			console.error('API req failed:', err);
+			return res.json({
+				type: 'fail',
+				success: false,
+				message: 'Cannot predict personality, something went wrong'
+			});
+		}
+		predictedPersonality = body;
+		console.log("body", body);
+		predictedPersonalityCapitalized = predictedPersonality[0].toUpperCase() + predictedPersonality.substring(1);
+		
+	});
+	const timer = setTimeout(async () => {
+		// console.log("predictedPersonalityCapitalized inside timer", predictedPersonalityCapitalized);
+		let identifiedPersonality;
+		try {
+			identifiedPersonality = await Trait.findOne({ personality: predictedPersonalityCapitalized });
+		} catch(err) {
+			console.log("err", err);
+			const error = new HttpError('Error in finding email', 500);
+			return next(error);
+		}
+		// console.log("identifiedPersonality ===============", identifiedPersonality);	
+		if (identifiedPersonality) {
+			res.status(200).json({
+				personality: identifiedPersonality.toObject({getters: true}),
+				message: 'Successfully Predicted',
+				success: true
+			});
+		} else {
+			return res.json({
+				type: 'fail',
+				success: false,
+				message: 'Cannot predict personality, something went wrong'
+			});
+		}
+	}, 500);
+	return () => clearTimeout(timer);
+};
+
 const profiler = async (req, res, next) => {
 	
 	// get input values
@@ -487,4 +547,4 @@ const changePassword = async (req, res) => {
 	});
 };
 
-export default {getUser, getUserDetails, login, signup, logout, simulation, profiler, passwordReset, checkToken, changePassword};
+export default {getUser, getUserDetails, login, signup, logout, simulation, personality, profiler, passwordReset, checkToken, changePassword};

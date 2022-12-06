@@ -22,7 +22,7 @@ router.post('/signup', [
 		check('password').isLength({min: 6})
 	], userController.signup);
 
-// Post request for Simulation request
+// Post request for Course Recommender
 router.post('/simulation', [
 	check('CAO_Score').isFloat({ min: 0, max: 625 }),
 	check('City').not().isEmpty(),
@@ -60,6 +60,30 @@ router.post('/profiler', [
 	check('Interested_Type_of_Books_code').not().isEmpty(),
 	check('interested_career_area_code').not().isEmpty(),
 ], userController.profiler);
+
+// Post req Personality test
+router.post('/personality', [
+	check('EXT1').isFloat({ min: 1, max: 5 }),
+	check('EXT2').isFloat({ min: 1, max: 5 }),
+	check('EXT3').isFloat({ min: 1, max: 5 }),
+	check('EXT4').isFloat({ min: 1, max: 5 }),
+	check('EST1').isFloat({ min: 1, max: 5 }),
+	check('EST2').isFloat({ min: 1, max: 5 }),
+	check('EST3').isFloat({ min: 1, max: 5 }),
+	check('EST4').isFloat({ min: 1, max: 5 }),
+	check('AGR1').isFloat({ min: 1, max: 5 }),
+	check('AGR2').isFloat({ min: 1, max: 5 }),
+	check('AGR3').isFloat({ min: 1, max: 5 }),
+	check('AGR4').isFloat({ min: 1, max: 5 }),
+	check('CSN1').isFloat({ min: 1, max: 5 }),
+	check('CSN2').isFloat({ min: 1, max: 5 }),
+	check('CSN3').isFloat({ min: 1, max: 5 }),
+	check('CSN4').isFloat({ min: 1, max: 5 }),
+	check('OPN1').isFloat({ min: 1, max: 5 }),
+	check('OPN2').isFloat({ min: 1, max: 5 }),
+	check('OPN3').isFloat({ min: 1, max: 5 }),
+	check('OPN4').isFloat({ min: 1, max: 5 }),
+], userController.personality);
 
 // Password Reset
 router.post('/password_reset', [
