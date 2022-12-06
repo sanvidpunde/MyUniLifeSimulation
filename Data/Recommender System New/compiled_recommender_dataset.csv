@@ -1,363 +1,399 @@
-,college,course,code,fees,location,cao_score,interest,job_domain
-0,Technological University Dublin,TU059 Computer Science  (Data Science),TU059,7000,Dublin,304,Problem Solving,Support
-1,University College Dublin,DN150 Biomedical Engineering,DN150,7574,Dublin,551,Trading,Finance
-2,University College Dublin,NQS2 Chemical & Bioprocess Engineering,NQS2,7574,Dublin,224,Problem Solving,Support
-3,University College Dublin,NVS1 Civil Engineering,NVS1,7574,Dublin,313,Problem Solving,Support
-4,University College Dublin,DN201 Computer Science,DN201,7574,Dublin,497,Organising Events,HR
-5,University College Dublin,NES1 Electronic Engineering or Electrical Engineering,NES1,7574,Dublin,291,Problem Solving,Support
-6,University College Dublin,NMS1 Mechanical Engineering,NMS1,7574,Dublin,244,Organising Events,HR
-7,University College Dublin,NAS1 Structural Engineering with Architecture,NAS1,7574,Dublin,335,Coding,IT
-8,Trinity College Dublin,TR060 Biological and Biomedical Sciences,TR060,7332,Dublin,406,Communication,Management
-9,Trinity College Dublin,TR064 Environmental Science and Engineering,TR064,7332,Dublin,430,Problem Solving,Support
-10,Trinity College Dublin,"TR032 Civil, Structural, and Environmental Engineering",TR032,7332,Dublin,503,Problem Solving,Support
-11,Trinity College Dublin,TR032 Computer engineering,TR032,7332,Dublin,410,Organising Events,HR
-12,Trinity College Dublin,TR032 Electronic Engineering,TR032,7332,Dublin,407,Communication,Management
-13,Trinity College Dublin,TR032 Mechanical and Manufacturing Engineering,TR032,7332,Dublin,288,Trading,Finance
-14,Trinity College Dublin,"TR081 Business, Economics and Social Studies",TR081,7332,Dublin,343,Organising Events,HR
-15,Trinity College Dublin,TR803 Dental Technology,TR803,7332,Dublin,325,Communication,Management
-16,National College of Ireland,NC003 Computing,NC003,3080,Dublin,583,Problem Solving,Support
-17,National College of Ireland,NC009 Business,NC009,3080,Dublin,513,Organising Events,HR
-18,National College of Ireland,NC020 Marketing Practice,NC020,3080,Dublin,422,Communication,Management
-19,National College of Ireland,NC022 Accounting and Finance,NC022,3080,Dublin,234,Communication,Management
-20,National College of Ireland,NC010 Psychology,NC010,3080,Dublin,542,Organising Events,HR
-21,National College of Ireland,NC025 Data Science,NC025,3080,Dublin,312,Coding,IT
-22,National College of Ireland,NC030 Early Childhood Education and Care,NC030,3080,Dublin,322,Trading,Finance
-23,Technological University Dublin,TU828 Automation / Biomedical Design / Mechanical Engineering / Sustainable Energy Engineering,TU828,14500,Dublin,352,Coding,IT
-24,Dublin City University,DC194 Mechanical and Sustainability Engineering,DC194,6679,Dublin,343,Organising Events,HR
-25,Dublin City University,DC193 Mechatronic Engineering,DC193,6679,Dublin,439,Problem Solving,Support
-26,Dublin City University,DC190 Electronic and Computer Engineering,DC190,6679,Dublin,279,Communication,Management
-27,Dublin City University,DC123 Data Science,DC123,6679,Dublin,251,Communication,Management
-28,Dublin City University,DC120 Computing for Business,DC120,6679,Dublin,393,Communication,Management
-29,Dublin City University,DC195 Mechanical and Manufacturing Engineering,DC195,6679,Dublin,368,Coding,IT
-30,Dublin City University,DC121 Computer Science,DC121,6679,Dublin,286,Communication,Management
-31,Dublin City University,DC197 Biomedical Engineering,DC197,6679,Dublin,425,Organising Events,HR
-32,Dublin City University,DC200 Common Entry into Engineering,DC200,6679,Dublin,561,Trading,Finance
-33,Technological University Dublin,TU910 Accounting,TU910,13500,Dublin,447,Communication,Management
-34,Technological University Dublin,TU851 Analytical Chemistry (Environmental Forensic and Pharmaceutical),TU851,13500,Dublin,494,Trading,Finance
-35,Technological University Dublin,TU866 Biomedical & Molecular Diagnostics,TU866,14500,Dublin,469,Organising Events,HR
-36,Technological University Dublin,TU877 Physics Technology,TU877,14500,Dublin,558,Problem Solving,Support
-37,Technological University Dublin,TU867 Medical Science,TU867,13500,Dublin,419,Coding,IT
-38,Technological University Dublin,TU952 International Hospitality Management,TU952,13500,Dublin,592,Communication,Management
-39,Technological University Dublin,TU984 Game Design,TU984,13500,Dublin,535,Problem Solving,Support
-40,Technological University Dublin,TU820 Electrical Services & Energy Management,TU820,14500,Dublin,483,Communication,Management
-41,Technological University Dublin,TU821 Electrical & Electronic / Computer & Communications Engineering,TU821,14500,Dublin,272,Trading,Finance
-42,Technological University Dublin,TU856 Computer Science,TU856,13500,Dublin,256,Organising Events,HR
-43,Technological University Dublin,TU852 Chemical Sciences with Medicinal Chemistry,TU852,14500,Dublin,583,Trading,Finance
-44,Technological University Dublin,TU919 Advertising and Marketing Communications,TU919,13500,Dublin,539,Coding,IT
-45,Technological University Dublin,TU933 Accounting & Finance,TU933,13500,Dublin,511,Trading,Finance
-46,Technological University Dublin,TU786 International Business,TU786,13500,Dublin,302,Trading,Finance
-47,Technological University Dublin,TU803 Electronic Engineering,TU803,14500,Dublin,432,Problem Solving,Support
-48,Technological University Dublin,TU921 Digital Marketing Technologies,TU921,13500,Dublin,424,Problem Solving,Support
-49,Technological University Dublin,TU864 DNA and Forensic Science,TU864,14500,Dublin,263,Trading,Finance
-50,Technological University Dublin,TU922 Marketing,TU922,13500,Dublin,399,Communication,Management
-51,Technological University Dublin,TU670 Business,TU670,13500,Dublin,472,Trading,Finance
-52,Technological University Dublin,TU876 Pharmaceutical Science,TU876,13500,Dublin,370,Problem Solving,Support
-53,Technological University Dublin,TU722 Process Instrumentation & Automation,TU722,14500,Dublin,286,Organising Events,HR
-54,Technological University Dublin,TU810 Mechatronic Engineering,TU810,14500,Dublin,258,Organising Events,HR
-55,Technological University Dublin,"TU812 Design, Technology & Innovation",TU812,14500,Dublin,215,Coding,IT
-56,Technological University Dublin,TU716 Networking Technologies,TU716,14500,Dublin,522,Organising Events,HR
-57,Technological University Dublin,TU863 Computing in Digital Forensics and Cyber Security,TU863,13500,Dublin,365,Problem Solving,Support
-58,Technological University Dublin,TU807 Computer Engineering in Mobile Systems,TU807,14500,Dublin,389,Organising Events,HR
-59,Technological University Dublin,TU860 Computing - Information Technology,TU860,13500,Dublin,205,Problem Solving,Support
-60,Griffith College,Certificate in Animation,GA1111,8950,Dublin,581,Communication,Management
-61,Griffith College,Audio and Music Technology,GA1112,8950,Dublin,391,Communication,Management
-62,Griffith College,GC430 Computing Science,GC430,5600,Dublin,325,Coding,IT
-63,Griffith College,Essential Counselling Skills,GA1113,800,Dublin,357,Trading,Finance
-64,Griffith College,GC480 Graphic Communication Design,GC480,6450,Dublin,429,Organising Events,HR
-65,Griffith College,Intelligent Technologies in Procurement and Supply Chain 4.0,GA1114,950,Dublin,502,Problem Solving,Support
-66,Griffith College,Industrial Manufacturing and Maintenance Skills,GA1115,3900,Dublin,564,Coding,IT
-67,Griffith College,Industrial and Systems Engineering,GA1116,3900,Dublin,568,Trading,Finance
-68,Griffith College,Pharmaceutical Business Operations,GA1117,4950,Dublin,210,Trading,Finance
-69,Griffith College,Music Production,GA1118,8950,Dublin,568,Problem Solving,Support
-70,Griffith College,Procurement and Supply Chain Management,GA1119,5950,Dublin,530,Problem Solving,Support
-71,Dublin Business School,BSc (Hons) Computing - Full-time,"DB500, DB501, DB502",6300,Dublin,299,Organising Events,HR
-72,Dublin Business School,BSc (Hons) Computing - Full-time,"DB500, DB501, DB503",6300,Dublin,504,Organising Events,HR
-73,Dublin Business School,BA (Hons) Business â€“ Full-time,"DB512, DB514, DB569, DB515, DB520",5995,Dublin,281,Coding,IT
-74,Dublin Business School,DB521 Accounting & Finance â€“ Full-time,DB521,5995,Dublin,421,Trading,Finance
-75,Dublin Business School,BA (Hons) Marketing â€“ Full-time,"DB517, DB518, DB525, DB531",5895,Dublin,349,Problem Solving,Support
-76,Dublin Business School,Digital Media and Cloud Computing,"DB517, DB518, DB525, DB531",5895,Dublin,295,Communication,Management
-77,Dublin Business School,DB567 Film & Creative Media,DB567,5995,Dublin,381,Coding,IT
-78,University of Limerick,LM099 Architecture,LM099,10446,Limerick,494,Coding,IT
-79,University of Limerick,LM115 Chemical & Biochemical Engineering,LM115,10446,Limerick,573,Trading,Finance
-80,University of Limerick,LM118 Electronic and Computer Engineering,LM118,10446,Limerick,481,Trading,Finance
-81,University of Limerick,LM121 Computer Science Common Entry,LM121,10446,Limerick,251,Trading,Finance
-82,University of Limerick,LM082 Construction Management and Engineering,LM082,10446,Limerick,404,Communication,Management
-83,University of Limerick,LM066 Environmental Science,LM066,10446,Limerick,301,Communication,Management
-84,University of Limerick,LM093 Equine Science,LM093,11895,Limerick,331,Trading,Finance
-85,University of Limerick,LM058 Financial Mathematics,LM058,10446,Limerick,220,Coding,IT
-86,University of Limerick,LM068 Food Science and Health,LM068,10446,Limerick,386,Communication,Management
-87,University of Limerick,LM173 Immersive Software Engineering,LM173,8000,Limerick,568,Problem Solving,Support
-88,University of Limerick,LM116 Engineering (Common Entry),LM116,10446,Limerick,383,Problem Solving,Support
-89,University of Limerick,LM124 Mathematics (Common Entry),LM124,10446,Limerick,470,Problem Solving,Support
-90,University of Limerick,LM076 Product Design and Technology,LM076,10446,Limerick,302,Organising Events,HR
-91,University of Limerick,LM077 Aeronautical Engineering,LM077,10446,Limerick,223,Problem Solving,Support
-92,University of Limerick,LM174 Artificial Intelligence and Machine Learning,LM174,10000,Limerick,346,Coding,IT
-93,University of Limerick,LM180 Equine Science,LM180,12200,Limerick,233,Coding,IT
-94,University of Limerick,LM122 Creative Media and Interaction Design Common Entry,LM122,10446,Limerick,287,Problem Solving,Support
-95,University of Limerick,LM096 concurrent Teacher Education (Physical Sciences with Chemistry AND Physics),LM096,10446,Limerick,306,Organising Events,HR
-96,University of Limerick,LM092 concurrent Teacher Education (Science Education with Physics OR Chemistry OR Agricultural Science),LM092,10446,Limerick,427,Organising Events,HR
-97,University of Limerick,LM123 Biological and Chemical Sciences (Common Entry),LM123,10446,Limerick,227,Problem Solving,Support
-98,University of Limerick,LM125 Physics (Common Entry),LM125,10446,Limerick,500,Problem Solving,Support
-99,Munster Technological University,Agriculture - Clonakilty / Cork Campus,MT750,7348,Cork,496,Trading,Finance
-100,Munster Technological University,Analytical & Pharmaceutical Chemistry - Cork Campus,MT774,7348,Cork,249,Problem Solving,Support
-101,Munster Technological University,Analytical Chemistry with Quality Assurance - Cork Campus,MT874,7348,Cork,318,Communication,Management
-102,Munster Technological University,Information Technology - Cork Campus,MT705,7348,Cork,462,Communication,Management
-103,Munster Technological University,Automotive Technology & Management - Cork Campus,MT747,7348,Cork,579,Communication,Management
-104,Munster Technological University,Nautical Science - NMCI Ringaskiddy,MT766,7348,Cork,398,Organising Events,HR
-105,Munster Technological University,Science - Physical Sciences - Common Entry - Cork Campus,MT770,7348,Cork,556,Coding,IT
-106,Munster Technological University,International Business with Language - Cork Campus,MT945,7348,Cork,325,Communication,Management
-107,Munster Technological University,Marine Electrotechnology - NMCI Ringaskiddy,MT765,7348,Cork,282,Trading,Finance
-108,Munster Technological University,Engineering - Biomedical Engineering - Cork Campus,MT739,7348,Cork,257,Trading,Finance
-109,Munster Technological University,Accounting - Cork Campus,MT942,7348,Cork,492,Communication,Management
-110,Munster Technological University,Agri-Biosciences - Cork Campus,MT879,7348,Cork,247,Problem Solving,Support
-111,Munster Technological University,Interior Architecture - Cork Campus,MT760,7348,Cork,211,Organising Events,HR
-112,University College Cork,CK202 Accounting (BSc (Hons)),CK202,3138,Cork,580,Trading,Finance
-113,University College Cork,Anthropology (BA (Hons)) (CK123),CK123,3138,Cork,242,Trading,Finance
-114,University College Cork,Arts (BA (Hons)) CK101,CK101,3138,Cork,464,Problem Solving,Support
-115,University College Cork,Biochemistry (BSc (Hons)) (CK402),CK402,3138,Cork,507,Organising Events,HR
-116,University College Cork,Biological & Chemical Sciences (BSc (Hons)) (CK402),CK403,3138,Cork,564,Coding,IT
-117,University College Cork,Business Information Systems (BSc (Hons)) (CK203),CK203,3138,Cork,467,Organising Events,HR
-118,University College Cork,Chemical Physics (BSc (Hons)) (CK406),CK406,3138,Cork,318,Problem Solving,Support
-119,University College Cork,Commerce (BComm (Hons)) (CK201),CK201,3138,Cork,558,Communication,Management
-120,University College Cork,Computer Science (BSc (Hons)) (CK401),CK401,3138,Cork,385,Problem Solving,Support
-121,University College Cork,Data Science & Analytics (BSc (Hons)) (CK 411),CK 411,3138,Cork,394,Problem Solving,Support
-122,Technological University of the Shannon,International Business Bachelor of Business (Honours)(US853),US853,7000,Athlone,598,Organising Events,HR
-123,Technological University of the Shannon,Business Bachelor of Business(US720),US720,5000,Atholne,220,Organising Events,HR
-124,Technological University of the Shannon,Business Bachelor of Business (Honours)(US840),US840,9000,Atholne,203,Coding,IT
-125,Technological University of the Shannon,Business and Law Bachelor of Business (Honours)(US848),US848,6700,Atholne,256,Problem Solving,Support
-126,Technological University of the Shannon,Digital Marketing Bachelor of Business (Honours)(US844),US844,7800,Atholne,293,Organising Events,HR
-127,Technological University of the Shannon,Digital Marketing Bachelor of Business(US724),US724,5000,Atholne,302,Trading,Finance
-128,Technological University of the Shannon,Civil Engineering Bachelor of Engineering (Honours)(AL811),AL811,4500,Atholne,438,Trading,Finance
-129,Technological University of the Shannon,Business Higher Certificate in Business(US611),US611,5000,Atholne,490,Communication,Management
-130,Technological University of the Shannon,Business Higher Diploma,BH711,5000,Atholne,481,Problem Solving,Support
-131,Technological University of the Shannon,Early Years Care and Education Bachelor of Arts (Honours)(AL864),AL864,9000,Atholne,595,Communication,Management
-132,Technological University of the Shannon,Applied Psychology Bachelor of Science (Honours)(AL870),AL870,7500,Atholne,326,Coding,IT
-133,Technological University of the Shannon,BA (Hons) in Accounting with Finance Bachelor of Arts (Honours)(US846),US846,9000,Atholne,425,Problem Solving,Support
-134,Technological University of the Shannon,BA (Hons) in Accounting with Finance and placement Bachelor of Arts (Honours)(US847),US847,6700,Atholne,567,Organising Events,HR
-135,Technological University of the Shannon,Hospitality Management (International Placement) Bachelor of Arts (Honours)(AL855),AL855,7800,Atholne,257,Problem Solving,Support
-136,Technological University of the Shannon,Graphic & Digital Design Bachelor of Arts (Honours)(AL863),AL863,5000,Atholne,474,Communication,Management
-137,Technological University of the Shannon,Animation and Illustration Bachelor of Arts (Honours)(AL861),AL861,4500,Atholne,530,Organising Events,HR
-138,Technological University of the Shannon,Social Care Practice Bachelor of Arts (Honours)(AL860),AL860,5000,Atholne,519,Problem Solving,Support
-139,Technological University of the Shannon,Applied Social Studies in Social Care Bachelor of Arts(AL765),AL765,5000,Atholne,511,Organising Events,HR
-140,Technological University of the Shannon,Early Years Care and Education Bachelor of Arts(AL764),AL764,9000,Atholne,375,Organising Events,HR
-141,Technological University of the Shannon,Graphic Design Bachelor of Arts(AL763),AL763,7500,Atholne,522,Problem Solving,Support
-142,Technological University of the Shannon,B.B. Hons Sport Management (with international placement) Bachelor of Business (Honours)(AL854),AL854,9000,Atholne,459,Organising Events,HR
-143,Technological University of the Shannon,Bachelor of Engineering (Honours) in Mechanical & Polymer Engineering Bachelor of Engineering(AL820),AL820,6700,Atholne,500,Organising Events,HR
-144,Technological University of the Shannon,Automation & Robotics Bachelor of Engineering(AL712),AL712,7800,Atholne,210,Communication,Management
-145,Technological University of the Shannon,Civil Engineering Bachelor of Engineering(US761),US761,5000,Atholne,332,Organising Events,HR
-146,Technological University of the Shannon,Computer Engineering Bachelor of Engineering(AL704),AL704,4500,Atholne,393,Problem Solving,Support
-147,Technological University of the Shannon,Mechanical Engineering Bachelor of Engineering(AL710),AL710,5000,Atholne,310,Organising Events,HR
-148,Technological University of the Shannon,Bachelor of Engineering in Computer Engineering for Robotics Bachelor of Engineering (US716),US716,5000,Atholne,296,Coding,IT
-149,Technological University of the Shannon,BSc(Hons) in Bioveterinary Science Bachelor of Science (Honours)(AL842),AL842,9000,Atholne,409,Organising Events,HR
-150,Technological University of the Shannon,Microbiology Bachelor of Science (Honours)(AL839),AL839,7500,Atholne,343,Communication,Management
-151,Technological University of the Shannon,Software Design with Virtual Reality and Gaming Bachelor of Science (Honours)(AL801),AL801,5000,Atholne,579,Communication,Management
-152,Dundalk Institute of Technology,B.Sc. (Hons) in Engineering Entrepreneurship,DKA41,3819,Dundalk,341,Communication,Management
-153,Dundalk Institute of Technology,BA (Hons) in Accounting & Finance,DKA42,3500,Dundalk,574,Problem Solving,Support
-154,Dundalk Institute of Technology,BA (Hons) in Applied Youth Work,DKA43,3500,Dundalk,290,Trading,Finance
-155,Dundalk Institute of Technology,BA (Hons) in Arts,DKA44,3500,Dundalk,531,Trading,Finance
-156,Dundalk Institute of Technology,BA (Hons) in Audio and Music Production,DKA45,3500,Dundalk,220,Problem Solving,Support
-157,Dundalk Institute of Technology,BA (Hons) in Creative Media,DKA46,3500,Dundalk,461,Coding,IT
-158,Dundalk Institute of Technology,BA (Hons) in Culinary Enterprise,DKA47,3500,Dundalk,591,Problem Solving,Support
-159,Dundalk Institute of Technology,BA (Hons) in Culinary Enterprise (Part-time Level 8 Add-On),DKA48,3500,Dundalk,342,Problem Solving,Support
-160,Dundalk Institute of Technology,BA (Hons) in Drama and Performance,DKA49,3500,Dundalk,428,Problem Solving,Support
-161,Dundalk Institute of Technology,BA (Hons) in Early Childhood Studies,DKA50,3500,Dundalk,216,Trading,Finance
-162,Dundalk Institute of Technology,BA (Hons) in Event Management,DKA51,3500,Dundalk,470,Problem Solving,Support
-163,Dundalk Institute of Technology,BA (Hons) in Event Management (Part-time Level 8 Add-on),DKA52,3500,Dundalk,446,Organising Events,HR
-164,Dundalk Institute of Technology,BA (Hons) in Film & Television Production,DKA53,3500,Dundalk,281,Coding,IT
-165,Dundalk Institute of Technology,BA (Hons) in Global Marketing,DKA54,3500,Dundalk,539,Communication,Management
-166,Dundalk Institute of Technology,BA (Hons) in Hospitality Management,DKA55,3500,Dundalk,414,Communication,Management
-167,Dundalk Institute of Technology,BA (Hons) in Hospitality Management (Part-time Level 8 Add-On),DKA56,3500,Dundalk,263,Trading,Finance
-168,Dundalk Institute of Technology,BA (Hons) in International Tourism Management,DKA57,3500,Dundalk,451,Coding,IT
-169,Dundalk Institute of Technology,BA (Hons) in Leadership and Management for the Early Years Sector,DKA58,3500,Dundalk,410,Trading,Finance
-170,Dundalk Institute of Technology,BA (Hons) in Music,DKA59,3500,Dundalk,481,Coding,IT
-171,Dundalk Institute of Technology,BA (Hons) in Public Relations,DKA60,3500,Dundalk,272,Organising Events,HR
-172,Dundalk Institute of Technology,BA (Hons) in Social Care,DKA61,3500,Dundalk,271,Communication,Management
-173,Dundalk Institute of Technology,"BA (Hons) in Sport, Exercise with Enterprise",DKA62,3500,Dundalk,314,Communication,Management
-174,Dundalk Institute of Technology,BA (Hons) in Youth Work â€” NSETS Endorsed,DKA63,3500,Dundalk,563,Problem Solving,Support
-175,Dundalk Institute of Technology,BA in Applied Early Childhood Studies [Advanced Entry to Year 2 Only],DKA64,3500,Dundalk,496,Communication,Management
-176,Dundalk Institute of Technology,BA in Audio and Music Production,DKA65,3500,Dundalk,504,Trading,Finance
-177,Dundalk Institute of Technology,BA in Community Youth Work,DKA66,3500,Dundalk,459,Communication,Management
-178,Dundalk Institute of Technology,BA in Creative Media,DKA67,3500,Dundalk,381,Coding,IT
-179,Dundalk Institute of Technology,BA in Culinary Arts,DKA68,3500,Dundalk,282,Coding,IT
-180,Dundalk Institute of Technology,BA in Digital Marketing & Public Relations,DKA69,3500,Dundalk,426,Organising Events,HR
-181,Dundalk Institute of Technology,BA in Event Management,DKA70,3500,Dundalk,489,Problem Solving,Support
-182,Dundalk Institute of Technology,BA in Hospitality Management,DKA71,3500,Dundalk,282,Organising Events,HR
-183,Dundalk Institute of Technology,BA in Musical Theatre,DKA72,3500,Dundalk,482,Problem Solving,Support
-184,Dundalk Institute of Technology,"BA in Sport, Exercise & Enterprise",DKA73,3500,Dundalk,594,Trading,Finance
-185,Dundalk Institute of Technology,BA in Theatre and Film Practice,DKA74,3500,Dundalk,272,Organising Events,HR
-186,Dundalk Institute of Technology,Bachelor (Hons) of Business - Monaghan Institute / DkIT,DKA75,3500,Dundalk,598,Problem Solving,Support
-187,Dundalk Institute of Technology,Bachelor (Hons) of Business Studies (Part-time),DKA76,3500,Dundalk,296,Coding,IT
-188,Dundalk Institute of Technology,Bachelor of Business Studies (Honours),DKA77,3500,Dundalk,534,Communication,Management
-189,Dundalk Institute of Technology,Bachelor of Business Studies (Honours),DKA78,3500,Dundalk,425,Problem Solving,Support
-190,Dundalk Institute of Technology,Bachelor of Engineering (Hons) in Civil Engineering,DKA79,3500,Dundalk,237,Trading,Finance
-191,Dundalk Institute of Technology,Bachelor of Engineering (Hons) in Electrical and Electronic Engineering,DKA80,3500,Dundalk,434,Problem Solving,Support
-192,Dundalk Institute of Technology,Bachelor of Engineering (Hons) in Engineering (Common Entry),DKA81,3500,Dundalk,543,Communication,Management
-193,Dundalk Institute of Technology,Bachelor of Engineering (Hons) in Mechanical Engineering,DKA82,3500,Dundalk,210,Coding,IT
-194,Dundalk Institute of Technology,Bachelor of Engineering in Civil Engineering,DKA83,3500,Dundalk,426,Trading,Finance
-195,Dundalk Institute of Technology,Bachelor of Engineering in Electrical & Electronic Systems,DKA84,3500,Dundalk,468,Communication,Management
-196,Dundalk Institute of Technology,Bachelor of Engineering in Mechanical Engineering,DKA85,3500,Dundalk,278,Trading,Finance
-197,Dundalk Institute of Technology,Barista Training,DKA86,3500,Dundalk,344,Coding,IT
-198,Dundalk Institute of Technology,BB (Hons) in Digital & International Business,DKA87,3500,Dundalk,328,Communication,Management
-199,Dundalk Institute of Technology,BB in Business and Management,DKA88,3500,Dundalk,372,Trading,Finance
-200,Dundalk Institute of Technology,BB in Business and Technology,DKA89,3500,Dundalk,308,Problem Solving,Support
-201,Dundalk Institute of Technology,BSc (Hons) in Advanced Veterinary Nursing,DKA90,3500,Dundalk,489,Trading,Finance
-202,Dundalk Institute of Technology,BSc (Hons) in Architectural Technology,DKA91,3500,Dundalk,354,Communication,Management
-203,Dundalk Institute of Technology,BSc (Hons) in Augmented and Virtual Reality,DKA92,3500,Dundalk,358,Problem Solving,Support
-204,Dundalk Institute of Technology,BSc (Hons) in Biopharmaceutical Science,DKA93,3500,Dundalk,404,Problem Solving,Support
-205,Dundalk Institute of Technology,BSc (Hons) in Building Surveying,DKA94,3500,Dundalk,570,Organising Events,HR
-206,Dundalk Institute of Technology,BSc (Hons) in Civil Engineering,DKA95,3500,Dundalk,399,Problem Solving,Support
-207,Dundalk Institute of Technology,BSc (Hons) in Civil Engineering - Level 8 Add-on (Part-time),DKA96,3500,Dundalk,508,Problem Solving,Support
-208,Dundalk Institute of Technology,BSc (Hons) in Computing in Cloud and Data Centre Operations,DKA97,3500,Dundalk,402,Communication,Management
-209,Dundalk Institute of Technology,BSc (Hons) In Computing in Cloud Computing,DKA98,3500,Dundalk,570,Problem Solving,Support
-210,Dundalk Institute of Technology,BSc (Hons) in Computing in Games Development,DKA99,3500,Dundalk,223,Organising Events,HR
-211,Dundalk Institute of Technology,BSc (Hons) in Computing in Software Development,DKA100,3500,Dundalk,236,Coding,IT
-212,Dundalk Institute of Technology,BSc (Hons) in Computing Systems and Operations (Software Development and DevOps),DKA101,3500,Dundalk,238,Coding,IT
-213,Dundalk Institute of Technology,BSc (Hons) in Construction Management,DKA102,3500,Dundalk,370,Trading,Finance
-214,Dundalk Institute of Technology,BSc (Hons) in Construction Project Management,DKA103,3500,Dundalk,423,Communication,Management
-215,Dundalk Institute of Technology,BSc (Hons) in Food Production,DKA104,3500,Dundalk,361,Trading,Finance
-216,Dundalk Institute of Technology,BSc (Hons) in General Nursing,DKA105,3500,Dundalk,487,Organising Events,HR
-217,Dundalk Institute of Technology,BSc (Hons) in Health and Physical Activity,DKA106,3500,Dundalk,300,Trading,Finance
-218,Dundalk Institute of Technology,BSc (Hons) in Intellectual Disability Nursing,DKA107,3500,Dundalk,245,Trading,Finance
-219,Dundalk Institute of Technology,BSc (Hons) in Mathematics and Data Science,DKA108,3500,Dundalk,387,Communication,Management
-220,Dundalk Institute of Technology,BSc (Hons) in Mental Health Nursing,DKA109,3500,Dundalk,359,Organising Events,HR
-221,Dundalk Institute of Technology,BSc (Hons) in Midwifery,DKA110,3500,Dundalk,275,Organising Events,HR
-222,Dundalk Institute of Technology,BSc (Hons) in Science with 2 Award options: Biopharmaceutical Science / Environmental Bioscience,DKA111,3500,Dundalk,439,Trading,Finance
-223,Dundalk Institute of Technology,BSc (Hons) in Sustainable Agriculture/Agri-Food Production,DKA112,3500,Dundalk,234,Communication,Management
-224,Dundalk Institute of Technology,BSc in Agriculture,DKA113,3500,Dundalk,423,Coding,IT
-225,Dundalk Institute of Technology,BSc in Architectural Technology,DKA114,3500,Dundalk,544,Organising Events,HR
-226,Dundalk Institute of Technology,BSc in Augmented and Virtual Reality,DKA115,3500,Dundalk,428,Problem Solving,Support
-227,Dundalk Institute of Technology,BSc in Bioscience,DKA116,3500,Dundalk,208,Coding,IT
-228,Dundalk Institute of Technology,BSc in Building Surveying,DKA117,3500,Dundalk,404,Trading,Finance
-229,Dundalk Institute of Technology,BSc in Computing,DKA118,3500,Dundalk,340,Communication,Management
-230,Dundalk Institute of Technology,BSc in Computing Systems and Operations (Software Development and DevOps),DKA119,3500,Dundalk,599,Trading,Finance
-231,Dundalk Institute of Technology,BSc in Construction Management,DKA120,3500,Dundalk,517,Communication,Management
-232,Dundalk Institute of Technology,BSc in Pharmaceutical Science,DKA121,3500,Dundalk,214,Trading,Finance
-233,Dundalk Institute of Technology,BSc in Veterinary Nursing,DKA122,3500,Dundalk,238,Organising Events,HR
-234,Dundalk Institute of Technology,Building Information Modelling (using Autodesk Revit),DKA123,3500,Dundalk,240,Trading,Finance
-235,Dundalk Institute of Technology,Carpentry / Joinery,DKA124,3500,Dundalk,576,Communication,Management
-236,Dundalk Institute of Technology,Certificate in 2D & 3D Digital Animation Production,DKA125,3500,Dundalk,280,Problem Solving,Support
-237,Dundalk Institute of Technology,Certificate in Accounting,DKA126,3500,Dundalk,514,Problem Solving,Support
-238,Dundalk Institute of Technology,Certificate in Adult Respiratory Nursing Practice,DKA127,3500,Dundalk,355,Trading,Finance
-239,Dundalk Institute of Technology,Certificate in Advanced Comprehensive Health Assessment for Midwives,DKA128,3500,Dundalk,541,Problem Solving,Support
-240,Dundalk Institute of Technology,Certificate in Advanced Veterinary Analytical Techniques,DKA129,3500,Dundalk,341,Communication,Management
-241,Dundalk Institute of Technology,Certificate in Animal Biotechnology,DKA130,3500,Dundalk,572,Communication,Management
-242,Dundalk Institute of Technology,Certificate in Animal Production,DKA131,3500,Dundalk,457,Coding,IT
-243,Dundalk Institute of Technology,Certificate in Applied Electrical Engineering,DKA132,3500,Dundalk,323,Communication,Management
-244,Dundalk Institute of Technology,Certificate in Archaeological Excavation and Recording,DKA133,3500,Dundalk,551,Coding,IT
-245,Dundalk Institute of Technology,Certificate in Assessment and Feedback,DKA134,3500,Dundalk,585,Trading,Finance
-246,Dundalk Institute of Technology,Certificate in Audio-Visual Production for Online Platforms,DKA135,3500,Dundalk,465,Problem Solving,Support
-247,Dundalk Institute of Technology,Certificate in Bio Energy,DKA136,3500,Dundalk,580,Coding,IT
-248,Dundalk Institute of Technology,Certificate in Building Energy Management,DKA137,3500,Dundalk,264,Communication,Management
-249,Dundalk Institute of Technology,"Certificate in Clinical Governance, Leadership and Evidence Based Veterinary Care",DKA138,3500,Dundalk,433,Trading,Finance
-250,Dundalk Institute of Technology,Certificate in Communication Skills,DKA139,3500,Dundalk,216,Communication,Management
-251,Dundalk Institute of Technology,Certificate in Comprehensive Advanced Health Assessment,DKA140,3500,Dundalk,446,Problem Solving,Support
-252,Atlantic Technological University - Donegal Letterkenny Campus,AU312 Communications with English,AU312,3000,Letterkenny,287,Communication,Management
-253,Atlantic Technological University - Donegal Letterkenny Campus,AU311 Corporate Law,AU311,3000,Letterkenny,287,Problem Solving,Support
-254,Atlantic Technological University - Donegal Letterkenny Campus,AU310 LLB,AU310,3000,Letterkenny,280,Communication,Management
-255,Atlantic Technological University - Donegal Letterkenny Campus,AU330 Design (Common Entry),AU330,3000,Letterkenny,503,Trading,Finance
-256,Atlantic Technological University - Donegal Letterkenny Campus,AU330 Animation,AU330,3000,Letterkenny,307,Communication,Management
-257,Atlantic Technological University - Donegal Letterkenny Campus,AU330 Fashion Design with Promotion,AU330,3000,Letterkenny,420,Coding,IT
-258,Atlantic Technological University - Donegal Letterkenny Campus,AU330 Film & Media Production,AU330,3000,Letterkenny,318,Coding,IT
-259,Atlantic Technological University - Donegal Letterkenny Campus,AU330 Graphic & UX Design,AU330,3000,Letterkenny,268,Communication,Management
-260,Atlantic Technological University - Donegal Letterkenny Campus,AU321 Athletic Therapy and Exercise Rehabilitation,AU321,3000,Letterkenny,569,Problem Solving,Support
-261,Atlantic Technological University - Donegal Letterkenny Campus,AU322 Hospitality Management Ab-initio,AU322,3000,Letterkenny,334,Problem Solving,Support
-262,Atlantic Technological University - Donegal Letterkenny Campus,AU320 Sport & Exercise (Common Entry),AU320,3000,Letterkenny,332,Trading,Finance
-263,Atlantic Technological University - Donegal Letterkenny Campus,AU320 Sport & Exercise with Performance and Well-being,AU320,3000,Letterkenny,389,Coding,IT
-264,Atlantic Technological University - Donegal Letterkenny Campus,AU320 Sport & Exercise with Physical Education,AU320,3000,Letterkenny,474,Problem Solving,Support
-265,Atlantic Technological University - Donegal Letterkenny Campus,AU300 Accounting,AU300,3000,Letterkenny,508,Organising Events,HR
-266,Atlantic Technological University - Donegal Letterkenny Campus,AU301 Business,AU301,3000,Letterkenny,358,Organising Events,HR
-267,Atlantic Technological University - Donegal Letterkenny Campus,AU302 Marketing with Online Technologies,AU302,3000,Letterkenny,499,Problem Solving,Support
-268,Atlantic Technological University - Donegal Letterkenny Campus,AU343 Architectural Technology,AU343,3000,Letterkenny,490,Coding,IT
-269,Atlantic Technological University - Donegal Letterkenny Campus,AU342 Construction Management,AU342,3000,Letterkenny,236,Trading,Finance
-270,South East Technological University,Bachelor of Business (Hons) (Common Entry) (SE402),SE402,10250,Carlow,219,Organising Events,HR
-271,South East Technological University,Bachelor of Business (Honours) in Business Management (SE401),SE401,10250,Carlow,306,Coding,IT
-272,South East Technological University,Bachelor of Business Hons (Human Resource Management) (SE414),SE414,10250,Carlow,597,Communication,Management
-273,South East Technological University,Bachelor of Business (Honours) in International Business (SE401),SE401,10250,Carlow,395,Organising Events,HR
-274,South East Technological University,Bachelor of Business Hons (Accounting) (SE407),SE407,10250,Carlow,544,Coding,IT
-275,South East Technological University,Bachelor of Business Hons (Management) (SE414),SE414,10250,Carlow,261,Coding,IT
-276,South East Technological University,Bachelor of Business Hons (Marketing) (SE401),SE401,10250,Carlow,242,Organising Events,HR
-277,South East Technological University,Bachelor of Business (Hons) in Business Information Systems (BIS) (SE409),SE409,10250,Carlow,514,Organising Events,HR
-278,South East Technological University,Bachelor of Business (Honours) in Business with Law (SE403),SE403,10250,Carlow,469,Organising Events,HR
-279,South East Technological University,Bachelor of Business (Honours) in Finance and Accounting (SE401),SE401,10250,Carlow,585,Trading,Finance
-280,South East Technological University,Higher Certificate in Business with Law (SE421),SE421,7750,Carlow,336,Trading,Finance
-281,South East Technological University,Bachelor of Science (Honours) in Cybercrime and IT Security (SE606),SE606,10250,Carlow,335,Coding,IT
-282,South East Technological University,Bachelor of Science in Cybercrime and IT Security (SE612),SE612,10250,Carlow,536,Communication,Management
-283,South East Technological University,Bachelor of Science (Honours) in Computing in Interactive Digital Art and Design (SE608),SE608,10250,Carlow,496,Problem Solving,Support
-284,South East Technological University,Bachelor of Science in Computing in Interactive Digital Art and Design (SE615),SE615,10250,Carlow,500,Problem Solving,Support
-285,South East Technological University,Bachelor of Science (Honours) in Computer Games Development (SE607),SE607,10250,Carlow,322,Problem Solving,Support
-286,South East Technological University,Bachelor of Science (Honours) in Software Development (SE603),SE603,10250,Carlow,237,Organising Events,HR
-287,South East Technological University,Bachelor of Science in Software Development (SE609),SE609,10250,Carlow,513,Communication,Management
-288,South East Technological University,Bachelor of Science (Honours) in Information Technology Management (SE601),SE601,10250,Carlow,525,Problem Solving,Support
-289,South East Technological University,Bachelor of Science in Information Technology Management (SE614),SE614,10250,Carlow,488,Communication,Management
-290,South East Technological University,Higher Certificate Science in Computing (with Options in Applications or Programming) (SE616),SE616,7750,Carlow,275,Organising Events,HR
-291,South East Technological University,Bachelor of Science (Honours) Common Entry (SE500),SE500,10250,Carlow,362,Organising Events,HR
-292,South East Technological University,Bachelor of Science (Honours) in Biosciences with Biopharmaceuticals (SE500),SE500,10250,Carlow,308,Trading,Finance
-293,South East Technological University,Bachelor of Science (Honours) in Pharmaceutics and Drug Formulation (SE500),SE500,10250,Carlow,369,Communication,Management
-294,South East Technological University,Bachelor of Science (Honours) in Brewing and Distilling (SE521),SE521,10250,Carlow,525,Communication,Management
-295,South East Technological University,Bachelor of Science in Biosciences (SE515),SE515,10250,Carlow,234,Trading,Finance
-296,South East Technological University,Bachelor of Science in Analytical Science (SE513),SE513,10250,Carlow,318,Trading,Finance
-297,South East Technological University,Higher Certificate Science in Applied Biology or Applied Chemistry (SE516),SE516,7750,Carlow,363,Problem Solving,Support
-298,South East Technological University,Higher Certificate in Science in Pharmacy Technician Studies (SE937),SE937,7750,Carlow,204,Communication,Management
-299,South East Technological University,Bachelor of Engineering (Honours) in Electronic Systems (SE708),SE708,10250,Carlow,449,Communication,Management
-300,South East Technological University,Bachelor of Engineering in Electronic Engineering (SE722),SE722,10250,Carlow,339,Trading,Finance
-301,South East Technological University,Bachelor of Science (Honours) in TV and Media Production (SE208),SE208,10250,Carlow,316,Problem Solving,Support
-302,South East Technological University,Bachelor of Science in TV and Media Production (SE212),SE212,10250,Carlow,398,Problem Solving,Support
-303,South East Technological University,Bachelor of Engineering in Aircraft Systems (SE729),SE729,10250,Carlow,583,Communication,Management
-304,South East Technological University,Bachelor of Engineering (Honours) Agricultural Systems Engineering (SE732),SE732,10250,Carlow,418,Problem Solving,Support
-305,South East Technological University,Bachelor of Engineering Agricultural Systems Engineering (SE733),SE733,10250,Carlow,596,Trading,Finance
-306,South East Technological University,Bachelor of Engineering in Mechanical Engineering (SE724),SE724,10250,Carlow,253,Communication,Management
-307,South East Technological University,Bachelor of Science in Pilot Studies (SE715),SE715,10250,Carlow,481,Communication,Management
-308,South East Technological University,Bachelor of Engineering (Honours) in Mechanical Engineering (SE711),SE711,10250,Carlow,256,Coding,IT
-309,South East Technological University,Bachelor of Engineering (Honours) in Aerospace Engineering (SE714),SE714,10250,Carlow,252,Organising Events,HR
-310,South East Technological University,Bachelor of Science (Honours) in Sustainable Farm Management and Agribusiness (SE5030,SE5030,10250,Carlow,557,Organising Events,HR
-311,South East Technological University,Bachelor of Science (Honours) Organic Agriculture (SE517),SE517,10250,Carlow,563,Trading,Finance
-312,South East Technological University,Bachelor of Science Organic Agriculture (SE518),SE518,10250,Carlow,462,Trading,Finance
-313,South East Technological University,Bachelor of Science in Sustainable Farm Management and Agribusiness (SE509),SE509,10250,Carlow,483,Organising Events,HR
-314,South East Technological University,Bachelor of Education (Honours) in Early Childhood Education and Practice (SE912),SE912,10250,Carlow,222,Coding,IT
-315,South East Technological University,Bachelor of Education in Early Childhood Education and Practice (SE934),SE934,10250,Carlow,500,Problem Solving,Support
-316,South East Technological University,Bachelor of Arts (Honours) in Applied Social Studies in Professional Social Care (SE917),SE917,10250,Carlow,569,Communication,Management
-317,South East Technological University,Bachelor of Business (Honours) Common Entry (SE402),SE402,10250,Carlow,382,Coding,IT
-318,South East Technological University,Bachelor of Business (Honours) in Business (SE402),SE402,10250,Carlow,215,Organising Events,HR
-319,South East Technological University,Bachelor of Business (Honours) in Digital Marketing (SE402),SE402,10250,Carlow,531,Problem Solving,Support
-320,South East Technological University,Bachelor of Business Common Entry (Options in Business & Digital Marketing) (SE416),SE416,10250,Carlow,323,Organising Events,HR
-321,South East Technological University,Bachelor of Business in Business (SE416),SE416,10250,Carlow,288,Organising Events,HR
-322,South East Technological University,Bachelor of Business in Digital Marketing (SE416),SE416,10250,Carlow,550,Trading,Finance
-323,South East Technological University,Higher Certificate in Business (XBS) (SE420),SE420,7750,Carlow,494,Communication,Management
-324,South East Technological University,Bachelor of Science (Honours) in Tourism and Event Management (SE922),SE922,10250,Carlow,494,Problem Solving,Support
-325,South East Technological University,Bachelor of Science in Tourism and Event Management (SE925),SE925,10250,Carlow,521,Trading,Finance
-326,South East Technological University,Bachelor of Arts (Honours) Visual Communications and Design (SE204),SE204,10250,Carlow,256,Problem Solving,Support
-327,South East Technological University,Bachelor of Arts Visual Communications and Design (SE210),SE210,10250,Carlow,234,Trading,Finance
-328,South East Technological University,Bachelor of Arts (Honours) in Art (SE207),SE207,10250,Carlow,431,Problem Solving,Support
-329,South East Technological University,Bachelor of Arts in Art (SE211),SE211,10250,Carlow,440,Trading,Finance
-330,South East Technological University,Bachelor of Engineering (Honours) Agricultural Systems Engineering (SE732),SE732,10250,Carlow,490,Trading,Finance
-331,South East Technological University,Bachelor of Engineering Agricultural Systems Engineering (SE733),SE733,10250,Carlow,449,Organising Events,HR
-332,"Carlow College, St Patrick's",B.A. in Arts & Humanities (PC402),PC402,10250,Carlow,387,Communication,Management
-333,"Carlow College, St Patrick's",B.A. in Applied Social Studies (Professional Social Care)(PC404),PC404,10250,Carlow,342,Trading,Finance
-334,"Carlow College, St Patrick's",BA (Hons) in Arts & Humanities (PC410),PC410,10250,Carlow,374,Coding,IT
-335,"Carlow College, St Patrick's",BA (Hons) in English & History (PC411),PC411,10250,Carlow,325,Trading,Finance
-336,"Carlow College, St Patrick's","BA (Hons) in Social, Political & Community Studies (PC405)",PC405,10250,Carlow,416,Communication,Management
-337,"Carlow College, St Patrick's",BA (Hons) in Psychology (PC414),PC414,10250,Carlow,459,Coding,IT
-338,"Carlow College, St Patrick's","BA (Hons) in Philosophy, Politics & Sociology (PC415)",PC415,10250,Carlow,520,Communication,Management
-339,"Carlow College, St Patrick's","BA (Hons) in Media, English & Culture (PC416)",PC416,10250,Carlow,347,Trading,Finance
-340,"Carlow College, St Patrick's",BA (Hons) in Applied Social Studies (Professional Social Care) (PC000),PC000,10250,Carlow,288,Coding,IT
-341,NUI Galway,GY322 Agricultural Science,GY322,7408,Galway,570,Coding,IT
-342,NUI Galway,GY408 Biomedical Engineering,GY408,7408,Galway,475,Coding,IT
-343,NUI Galway,GY303 Biomedical Science,GY303,7408,Galway,323,Organising Events,HR
-344,NUI Galway,GY304 Biotechnology,GY304,7408,Galway,261,Organising Events,HR
-345,NUI Galway,GY402 Civil Engineering,GY402,7408,Galway,226,Organising Events,HR
-346,NUI Galway,GY350 Computer Science and Information Technology,GY350,7408,Galway,264,Problem Solving,Support
-347,NUI Galway,GY314 Earth and Ocean Sciences,GY314,7408,Galway,424,Communication,Management
-348,NUI Galway,GY414 Electrical and Electronic Engineering,GY414,7408,Galway,271,Organising Events,HR
-349,NUI Galway,GY406 Electronic and Computer,GY406,7408,Galway,212,Trading,Finance
-350,NUI Galway,GY413 Energy Systems,GY413,7408,Galway,412,Organising Events,HR
-351,NUI Galway,GY401 Engineering (Undenominated),GY401,7408,Galway,572,Trading,Finance
-352,NUI Galway,GY313 Environmental Health and Safety,GY313,7408,Galway,452,Trading,Finance
-353,NUI Galway,GY308 Environmental Science,GY308,7408,Galway,459,Problem Solving,Support
-354,NUI Galway,GY309 Financial Mathematics and Economics,GY309,7408,Galway,426,Communication,Management
-355,NUI Galway,GY321 Genetics and Genomics,GY321,7408,Galway,252,Trading,Finance
-356,NUI Galway,GY310 Marine Science,GY310,7408,Galway,522,Trading,Finance
-357,NUI Galway,GY319 Mathematical Science,GY319,7408,Galway,302,Communication,Management
-358,NUI Galway,GY405 Mechanical Engineering,GY405,7408,Galway,323,Trading,Finance
-359,NUI Galway,"GY320 Physics-degree options in Applied, Astrophysics, Biomedical, Climate, Theoretical",GY320,7408,Galway,571,Organising Events,HR
-360,NUI Galway,GY410 Project and Construction Management,GY410,7408,Galway,406,Trading,Finance
-361,NUI Galway,GY301 Science,GY301,7408,Galway,371,Communication,Management
+college,course,code,fees,location,cao_score,interest,job_domain
+Technological University Dublin,TU059 Computer Science  (Data Science),TU059,7000,Dublin,304,Problem Solving,Support
+University College Dublin,DN150 Biomedical Engineering,DN150,7574,Dublin,551,Trading,Finance
+University College Dublin,NQS2 Chemical & Bioprocess Engineering,NQS2,7574,Dublin,224,Problem Solving,Support
+University College Dublin,NVS1 Civil Engineering,NVS1,7574,Dublin,313,Problem Solving,Support
+University College Dublin,DN201 Computer Science,DN201,7574,Dublin,497,Organising Events,HR
+University College Dublin,NES1 Electronic Engineering or Electrical Engineering,NES1,7574,Dublin,291,Problem Solving,Support
+University College Dublin,NMS1 Mechanical Engineering,NMS1,7574,Dublin,244,Organising Events,HR
+University College Dublin,NAS1 Structural Engineering with Architecture,NAS1,7574,Dublin,335,Coding,IT
+Trinity College Dublin,TR060 Biological and Biomedical Sciences,TR060,7332,Dublin,406,Communication,Management
+Trinity College Dublin,TR064 Environmental Science and Engineering,TR064,7332,Dublin,430,Problem Solving,Support
+Trinity College Dublin,"TR032 Civil, Structural, and Environmental Engineering",TR032,7332,Dublin,503,Problem Solving,Support
+Trinity College Dublin,TR032 Computer engineering,TR032,7332,Dublin,410,Organising Events,HR
+Trinity College Dublin,TR032 Electronic Engineering,TR032,7332,Dublin,407,Communication,Management
+Trinity College Dublin,TR032 Mechanical and Manufacturing Engineering,TR032,7332,Dublin,288,Trading,Finance
+Trinity College Dublin,"TR081 Business, Economics and Social Studies",TR081,7332,Dublin,343,Organising Events,HR
+Trinity College Dublin,TR803 Dental Technology,TR803,7332,Dublin,325,Communication,Management
+National College of Ireland,NC003 Computing,NC003,3080,Dublin,583,Problem Solving,Support
+National College of Ireland,NC009 Business,NC009,3080,Dublin,513,Organising Events,HR
+National College of Ireland,NC020 Marketing Practice,NC020,3080,Dublin,422,Communication,Management
+National College of Ireland,NC022 Accounting and Finance,NC022,3080,Dublin,234,Communication,Management
+National College of Ireland,NC010 Psychology,NC010,3080,Dublin,542,Organising Events,HR
+National College of Ireland,NC025 Data Science,NC025,3080,Dublin,312,Coding,IT
+National College of Ireland,NC030 Early Childhood Education and Care,NC030,3080,Dublin,322,Trading,Finance
+Technological University Dublin,TU828 Automation / Biomedical Design / Mechanical Engineering / Sustainable Energy Engineering,TU828,14500,Dublin,352,Coding,IT
+Dublin City University,DC194 Mechanical and Sustainability Engineering,DC194,6679,Dublin,343,Organising Events,HR
+Dublin City University,DC193 Mechatronic Engineering,DC193,6679,Dublin,439,Problem Solving,Support
+Dublin City University,DC190 Electronic and Computer Engineering,DC190,6679,Dublin,279,Communication,Management
+Dublin City University,DC123 Data Science,DC123,6679,Dublin,251,Communication,Management
+Dublin City University,DC120 Computing for Business,DC120,6679,Dublin,393,Communication,Management
+Dublin City University,DC195 Mechanical and Manufacturing Engineering,DC195,6679,Dublin,368,Coding,IT
+Dublin City University,DC121 Computer Science,DC121,6679,Dublin,286,Communication,Management
+Dublin City University,DC197 Biomedical Engineering,DC197,6679,Dublin,425,Organising Events,HR
+Dublin City University,DC200 Common Entry into Engineering,DC200,6679,Dublin,561,Trading,Finance
+Technological University Dublin,TU910 Accounting,TU910,13500,Dublin,447,Communication,Management
+Technological University Dublin,TU851 Analytical Chemistry (Environmental Forensic and Pharmaceutical),TU851,13500,Dublin,494,Trading,Finance
+Technological University Dublin,TU866 Biomedical & Molecular Diagnostics,TU866,14500,Dublin,469,Organising Events,HR
+Technological University Dublin,TU877 Physics Technology,TU877,14500,Dublin,558,Problem Solving,Support
+Technological University Dublin,TU867 Medical Science,TU867,13500,Dublin,419,Coding,IT
+Technological University Dublin,TU952 International Hospitality Management,TU952,13500,Dublin,592,Communication,Management
+Technological University Dublin,TU984 Game Design,TU984,13500,Dublin,535,Problem Solving,Support
+Technological University Dublin,TU820 Electrical Services & Energy Management,TU820,14500,Dublin,483,Communication,Management
+Technological University Dublin,TU821 Electrical & Electronic / Computer & Communications Engineering,TU821,14500,Dublin,272,Trading,Finance
+Technological University Dublin,TU856 Computer Science,TU856,13500,Dublin,256,Organising Events,HR
+Technological University Dublin,TU852 Chemical Sciences with Medicinal Chemistry,TU852,14500,Dublin,583,Trading,Finance
+Technological University Dublin,TU919 Advertising and Marketing Communications,TU919,13500,Dublin,539,Coding,IT
+Technological University Dublin,TU933 Accounting & Finance,TU933,13500,Dublin,511,Trading,Finance
+Technological University Dublin,TU786 International Business,TU786,13500,Dublin,302,Trading,Finance
+Technological University Dublin,TU803 Electronic Engineering,TU803,14500,Dublin,432,Problem Solving,Support
+Technological University Dublin,TU921 Digital Marketing Technologies,TU921,13500,Dublin,424,Problem Solving,Support
+Technological University Dublin,TU864 DNA and Forensic Science,TU864,14500,Dublin,263,Trading,Finance
+Technological University Dublin,TU922 Marketing,TU922,13500,Dublin,399,Communication,Management
+Technological University Dublin,TU670 Business,TU670,13500,Dublin,472,Trading,Finance
+Technological University Dublin,TU876 Pharmaceutical Science,TU876,13500,Dublin,370,Problem Solving,Support
+Technological University Dublin,TU722 Process Instrumentation & Automation,TU722,14500,Dublin,286,Organising Events,HR
+Technological University Dublin,TU810 Mechatronic Engineering,TU810,14500,Dublin,258,Organising Events,HR
+Technological University Dublin,"TU812 Design, Technology & Innovation",TU812,14500,Dublin,215,Coding,IT
+Technological University Dublin,TU716 Networking Technologies,TU716,14500,Dublin,522,Organising Events,HR
+Technological University Dublin,TU863 Computing in Digital Forensics and Cyber Security,TU863,13500,Dublin,365,Problem Solving,Support
+Technological University Dublin,TU807 Computer Engineering in Mobile Systems,TU807,14500,Dublin,389,Organising Events,HR
+Technological University Dublin,TU860 Computing - Information Technology,TU860,13500,Dublin,205,Problem Solving,Support
+Griffith College,Certificate in Animation,GA1111,8950,Dublin,581,Communication,Management
+Griffith College,Audio and Music Technology,GA1112,8950,Dublin,391,Communication,Management
+Griffith College,GC430 Computing Science,GC430,5600,Dublin,325,Coding,IT
+Griffith College,Essential Counselling Skills,GA1113,800,Dublin,357,Trading,Finance
+Griffith College,GC480 Graphic Communication Design,GC480,6450,Dublin,429,Organising Events,HR
+Griffith College,Intelligent Technologies in Procurement and Supply Chain 4.0,GA1114,950,Dublin,502,Problem Solving,Support
+Griffith College,Industrial Manufacturing and Maintenance Skills,GA1115,3900,Dublin,564,Coding,IT
+Griffith College,Industrial and Systems Engineering,GA1116,3900,Dublin,568,Trading,Finance
+Griffith College,Pharmaceutical Business Operations,GA1117,4950,Dublin,210,Trading,Finance
+Griffith College,Music Production,GA1118,8950,Dublin,568,Problem Solving,Support
+Griffith College,Procurement and Supply Chain Management,GA1119,5950,Dublin,530,Problem Solving,Support
+Dublin Business School,BSc (Hons) Computing - Full-time,"DB500, DB501, DB502",6300,Dublin,299,Organising Events,HR
+Dublin Business School,BSc (Hons) Computing - Full-time,"DB500, DB501, DB503",6300,Dublin,504,Organising Events,HR
+Dublin Business School,BA (Hons) Business â€“ Full-time,"DB512, DB514, DB569, DB515, DB520",5995,Dublin,281,Coding,IT
+Dublin Business School,DB521 Accounting & Finance â€“ Full-time,DB521,5995,Dublin,421,Trading,Finance
+Dublin Business School,BA (Hons) Marketing â€“ Full-time,"DB517, DB518, DB525, DB531",5895,Dublin,349,Problem Solving,Support
+Dublin Business School,Digital Media and Cloud Computing,"DB517, DB518, DB525, DB531",5895,Dublin,295,Communication,Management
+Dublin Business School,DB567 Film & Creative Media,DB567,5995,Dublin,381,Coding,IT
+University of Limerick,LM099 Architecture,LM099,10446,Limerick,494,Coding,IT
+University of Limerick,LM115 Chemical & Biochemical Engineering,LM115,10446,Limerick,573,Trading,Finance
+University of Limerick,LM118 Electronic and Computer Engineering,LM118,10446,Limerick,481,Trading,Finance
+University of Limerick,LM121 Computer Science Common Entry,LM121,10446,Limerick,251,Trading,Finance
+University of Limerick,LM082 Construction Management and Engineering,LM082,10446,Limerick,404,Communication,Management
+University of Limerick,LM066 Environmental Science,LM066,10446,Limerick,301,Communication,Management
+University of Limerick,LM093 Equine Science,LM093,11895,Limerick,331,Trading,Finance
+University of Limerick,LM058 Financial Mathematics,LM058,10446,Limerick,220,Coding,IT
+University of Limerick,LM068 Food Science and Health,LM068,10446,Limerick,386,Communication,Management
+University of Limerick,LM173 Immersive Software Engineering,LM173,8000,Limerick,568,Problem Solving,Support
+University of Limerick,LM116 Engineering (Common Entry),LM116,10446,Limerick,383,Problem Solving,Support
+University of Limerick,LM124 Mathematics (Common Entry),LM124,10446,Limerick,470,Problem Solving,Support
+University of Limerick,LM076 Product Design and Technology,LM076,10446,Limerick,302,Organising Events,HR
+University of Limerick,LM077 Aeronautical Engineering,LM077,10446,Limerick,223,Problem Solving,Support
+University of Limerick,LM174 Artificial Intelligence and Machine Learning,LM174,10000,Limerick,346,Coding,IT
+University of Limerick,LM180 Equine Science,LM180,12200,Limerick,233,Coding,IT
+University of Limerick,LM122 Creative Media and Interaction Design Common Entry,LM122,10446,Limerick,287,Problem Solving,Support
+University of Limerick,LM096 concurrent Teacher Education (Physical Sciences with Chemistry AND Physics),LM096,10446,Limerick,306,Organising Events,HR
+University of Limerick,LM092 concurrent Teacher Education (Science Education with Physics OR Chemistry OR Agricultural Science),LM092,10446,Limerick,427,Organising Events,HR
+University of Limerick,LM123 Biological and Chemical Sciences (Common Entry),LM123,10446,Limerick,227,Problem Solving,Support
+University of Limerick,LM125 Physics (Common Entry),LM125,10446,Limerick,500,Problem Solving,Support
+Munster Technological University,Agriculture - Clonakilty / Cork Campus,MT750,7348,Cork,496,Trading,Finance
+Munster Technological University,Analytical & Pharmaceutical Chemistry - Cork Campus,MT774,7348,Cork,249,Problem Solving,Support
+Munster Technological University,Analytical Chemistry with Quality Assurance - Cork Campus,MT874,7348,Cork,318,Communication,Management
+Munster Technological University,Information Technology - Cork Campus,MT705,7348,Cork,462,Communication,Management
+Munster Technological University,Automotive Technology & Management - Cork Campus,MT747,7348,Cork,579,Communication,Management
+Munster Technological University,Nautical Science - NMCI Ringaskiddy,MT766,7348,Cork,398,Organising Events,HR
+Munster Technological University,Science - Physical Sciences - Common Entry - Cork Campus,MT770,7348,Cork,556,Coding,IT
+Munster Technological University,International Business with Language - Cork Campus,MT945,7348,Cork,325,Communication,Management
+Munster Technological University,Marine Electrotechnology - NMCI Ringaskiddy,MT765,7348,Cork,282,Trading,Finance
+Munster Technological University,Engineering - Biomedical Engineering - Cork Campus,MT739,7348,Cork,257,Trading,Finance
+Munster Technological University,Accounting - Cork Campus,MT942,7348,Cork,492,Communication,Management
+Munster Technological University,Agri-Biosciences - Cork Campus,MT879,7348,Cork,247,Problem Solving,Support
+Munster Technological University,Interior Architecture - Cork Campus,MT760,7348,Cork,211,Organising Events,HR
+University College Cork,CK202 Accounting (BSc (Hons)),CK202,3138,Cork,580,Trading,Finance
+University College Cork,Anthropology (BA (Hons)) (CK123),CK123,3138,Cork,242,Trading,Finance
+University College Cork,Arts (BA (Hons)) CK101,CK101,3138,Cork,464,Problem Solving,Support
+University College Cork,Biochemistry (BSc (Hons)) (CK402),CK402,3138,Cork,507,Organising Events,HR
+University College Cork,Biological & Chemical Sciences (BSc (Hons)) (CK402),CK403,3138,Cork,564,Coding,IT
+University College Cork,Business Information Systems (BSc (Hons)) (CK203),CK203,3138,Cork,467,Organising Events,HR
+University College Cork,Chemical Physics (BSc (Hons)) (CK406),CK406,3138,Cork,318,Problem Solving,Support
+University College Cork,Commerce (BComm (Hons)) (CK201),CK201,3138,Cork,558,Communication,Management
+University College Cork,Computer Science (BSc (Hons)) (CK401),CK401,3138,Cork,385,Problem Solving,Support
+University College Cork,Data Science & Analytics (BSc (Hons)) (CK 411),CK 411,3138,Cork,394,Problem Solving,Support
+Technological University of the Shannon,International Business Bachelor of Business (Honours)(US853),US853,7000,Athlone,598,Organising Events,HR
+Technological University of the Shannon,Business Bachelor of Business(US720),US720,5000,Atholne,220,Organising Events,HR
+Technological University of the Shannon,Business Bachelor of Business (Honours)(US840),US840,9000,Atholne,203,Coding,IT
+Technological University of the Shannon,Business and Law Bachelor of Business (Honours)(US848),US848,6700,Atholne,256,Problem Solving,Support
+Technological University of the Shannon,Digital Marketing Bachelor of Business (Honours)(US844),US844,7800,Atholne,293,Organising Events,HR
+Technological University of the Shannon,Digital Marketing Bachelor of Business(US724),US724,5000,Atholne,302,Trading,Finance
+Technological University of the Shannon,Civil Engineering Bachelor of Engineering (Honours)(AL811),AL811,4500,Atholne,438,Trading,Finance
+Technological University of the Shannon,Business Higher Certificate in Business(US611),US611,5000,Atholne,490,Communication,Management
+Technological University of the Shannon,Business Higher Diploma,BH711,5000,Atholne,481,Problem Solving,Support
+Technological University of the Shannon,Early Years Care and Education Bachelor of Arts (Honours)(AL864),AL864,9000,Atholne,595,Communication,Management
+Technological University of the Shannon,Applied Psychology Bachelor of Science (Honours)(AL870),AL870,7500,Atholne,326,Coding,IT
+Technological University of the Shannon,BA (Hons) in Accounting with Finance Bachelor of Arts (Honours)(US846),US846,9000,Atholne,425,Problem Solving,Support
+Technological University of the Shannon,BA (Hons) in Accounting with Finance and placement Bachelor of Arts (Honours)(US847),US847,6700,Atholne,567,Organising Events,HR
+Technological University of the Shannon,Hospitality Management (International Placement) Bachelor of Arts (Honours)(AL855),AL855,7800,Atholne,257,Problem Solving,Support
+Technological University of the Shannon,Graphic & Digital Design Bachelor of Arts (Honours)(AL863),AL863,5000,Atholne,474,Communication,Management
+Technological University of the Shannon,Animation and Illustration Bachelor of Arts (Honours)(AL861),AL861,4500,Atholne,530,Organising Events,HR
+Technological University of the Shannon,Social Care Practice Bachelor of Arts (Honours)(AL860),AL860,5000,Atholne,519,Problem Solving,Support
+Technological University of the Shannon,Applied Social Studies in Social Care Bachelor of Arts(AL765),AL765,5000,Atholne,511,Organising Events,HR
+Technological University of the Shannon,Early Years Care and Education Bachelor of Arts(AL764),AL764,9000,Atholne,375,Organising Events,HR
+Technological University of the Shannon,Graphic Design Bachelor of Arts(AL763),AL763,7500,Atholne,522,Problem Solving,Support
+Technological University of the Shannon,B.B. Hons Sport Management (with international placement) Bachelor of Business (Honours)(AL854),AL854,9000,Atholne,459,Organising Events,HR
+Technological University of the Shannon,Bachelor of Engineering (Honours) in Mechanical & Polymer Engineering Bachelor of Engineering(AL820),AL820,6700,Atholne,500,Organising Events,HR
+Technological University of the Shannon,Automation & Robotics Bachelor of Engineering(AL712),AL712,7800,Atholne,210,Communication,Management
+Technological University of the Shannon,Civil Engineering Bachelor of Engineering(US761),US761,5000,Atholne,332,Organising Events,HR
+Technological University of the Shannon,Computer Engineering Bachelor of Engineering(AL704),AL704,4500,Atholne,393,Problem Solving,Support
+Technological University of the Shannon,Mechanical Engineering Bachelor of Engineering(AL710),AL710,5000,Atholne,310,Organising Events,HR
+Technological University of the Shannon,Bachelor of Engineering in Computer Engineering for Robotics Bachelor of Engineering (US716),US716,5000,Atholne,296,Coding,IT
+Technological University of the Shannon,BSc(Hons) in Bioveterinary Science Bachelor of Science (Honours)(AL842),AL842,9000,Atholne,409,Organising Events,HR
+Technological University of the Shannon,Microbiology Bachelor of Science (Honours)(AL839),AL839,7500,Atholne,343,Communication,Management
+Technological University of the Shannon,Software Design with Virtual Reality and Gaming Bachelor of Science (Honours)(AL801),AL801,5000,Atholne,579,Communication,Management
+Dundalk Institute of Technology,B.Sc. (Hons) in Engineering Entrepreneurship,DKA41,3819,Dundalk,341,Communication,Management
+Dundalk Institute of Technology,BA (Hons) in Accounting & Finance,DKA42,3500,Dundalk,574,Problem Solving,Support
+Dundalk Institute of Technology,BA (Hons) in Applied Youth Work,DKA43,3500,Dundalk,290,Trading,Finance
+Dundalk Institute of Technology,BA (Hons) in Arts,DKA44,3500,Dundalk,531,Trading,Finance
+Dundalk Institute of Technology,BA (Hons) in Audio and Music Production,DKA45,3500,Dundalk,220,Problem Solving,Support
+Dundalk Institute of Technology,BA (Hons) in Creative Media,DKA46,3500,Dundalk,461,Coding,IT
+Dundalk Institute of Technology,BA (Hons) in Culinary Enterprise,DKA47,3500,Dundalk,591,Problem Solving,Support
+Dundalk Institute of Technology,BA (Hons) in Culinary Enterprise (Part-time Level 8 Add-On),DKA48,3500,Dundalk,342,Problem Solving,Support
+Dundalk Institute of Technology,BA (Hons) in Drama and Performance,DKA49,3500,Dundalk,428,Problem Solving,Support
+Dundalk Institute of Technology,BA (Hons) in Early Childhood Studies,DKA50,3500,Dundalk,216,Trading,Finance
+Dundalk Institute of Technology,BA (Hons) in Event Management,DKA51,3500,Dundalk,470,Problem Solving,Support
+Dundalk Institute of Technology,BA (Hons) in Event Management (Part-time Level 8 Add-on),DKA52,3500,Dundalk,446,Organising Events,HR
+Dundalk Institute of Technology,BA (Hons) in Film & Television Production,DKA53,3500,Dundalk,281,Coding,IT
+Dundalk Institute of Technology,BA (Hons) in Global Marketing,DKA54,3500,Dundalk,539,Communication,Management
+Dundalk Institute of Technology,BA (Hons) in Hospitality Management,DKA55,3500,Dundalk,414,Communication,Management
+Dundalk Institute of Technology,BA (Hons) in Hospitality Management (Part-time Level 8 Add-On),DKA56,3500,Dundalk,263,Trading,Finance
+Dundalk Institute of Technology,BA (Hons) in International Tourism Management,DKA57,3500,Dundalk,451,Coding,IT
+Dundalk Institute of Technology,BA (Hons) in Leadership and Management for the Early Years Sector,DKA58,3500,Dundalk,410,Trading,Finance
+Dundalk Institute of Technology,BA (Hons) in Music,DKA59,3500,Dundalk,481,Coding,IT
+Dundalk Institute of Technology,BA (Hons) in Public Relations,DKA60,3500,Dundalk,272,Organising Events,HR
+Dundalk Institute of Technology,BA (Hons) in Social Care,DKA61,3500,Dundalk,271,Communication,Management
+Dundalk Institute of Technology,"BA (Hons) in Sport, Exercise with Enterprise",DKA62,3500,Dundalk,314,Communication,Management
+Dundalk Institute of Technology,BA (Hons) in Youth Work â€” NSETS Endorsed,DKA63,3500,Dundalk,563,Problem Solving,Support
+Dundalk Institute of Technology,BA in Applied Early Childhood Studies [Advanced Entry to Year 2 Only],DKA64,3500,Dundalk,496,Communication,Management
+Dundalk Institute of Technology,BA in Audio and Music Production,DKA65,3500,Dundalk,504,Trading,Finance
+Dundalk Institute of Technology,BA in Community Youth Work,DKA66,3500,Dundalk,459,Communication,Management
+Dundalk Institute of Technology,BA in Creative Media,DKA67,3500,Dundalk,381,Coding,IT
+Dundalk Institute of Technology,BA in Culinary Arts,DKA68,3500,Dundalk,282,Coding,IT
+Dundalk Institute of Technology,BA in Digital Marketing & Public Relations,DKA69,3500,Dundalk,426,Organising Events,HR
+Dundalk Institute of Technology,BA in Event Management,DKA70,3500,Dundalk,489,Problem Solving,Support
+Dundalk Institute of Technology,BA in Hospitality Management,DKA71,3500,Dundalk,282,Organising Events,HR
+Dundalk Institute of Technology,BA in Musical Theatre,DKA72,3500,Dundalk,482,Problem Solving,Support
+Dundalk Institute of Technology,"BA in Sport, Exercise & Enterprise",DKA73,3500,Dundalk,594,Trading,Finance
+Dundalk Institute of Technology,BA in Theatre and Film Practice,DKA74,3500,Dundalk,272,Organising Events,HR
+Dundalk Institute of Technology,Bachelor (Hons) of Business - Monaghan Institute / DkIT,DKA75,3500,Dundalk,598,Problem Solving,Support
+Dundalk Institute of Technology,Bachelor (Hons) of Business Studies (Part-time),DKA76,3500,Dundalk,296,Coding,IT
+Dundalk Institute of Technology,Bachelor of Business Studies (Honours),DKA77,3500,Dundalk,534,Communication,Management
+Dundalk Institute of Technology,Bachelor of Business Studies (Honours),DKA78,3500,Dundalk,425,Problem Solving,Support
+Dundalk Institute of Technology,Bachelor of Engineering (Hons) in Civil Engineering,DKA79,3500,Dundalk,237,Trading,Finance
+Dundalk Institute of Technology,Bachelor of Engineering (Hons) in Electrical and Electronic Engineering,DKA80,3500,Dundalk,434,Problem Solving,Support
+Dundalk Institute of Technology,Bachelor of Engineering (Hons) in Engineering (Common Entry),DKA81,3500,Dundalk,543,Communication,Management
+Dundalk Institute of Technology,Bachelor of Engineering (Hons) in Mechanical Engineering,DKA82,3500,Dundalk,210,Coding,IT
+Dundalk Institute of Technology,Bachelor of Engineering in Civil Engineering,DKA83,3500,Dundalk,426,Trading,Finance
+Dundalk Institute of Technology,Bachelor of Engineering in Electrical & Electronic Systems,DKA84,3500,Dundalk,468,Communication,Management
+Dundalk Institute of Technology,Bachelor of Engineering in Mechanical Engineering,DKA85,3500,Dundalk,278,Trading,Finance
+Dundalk Institute of Technology,Barista Training,DKA86,3500,Dundalk,344,Coding,IT
+Dundalk Institute of Technology,BB (Hons) in Digital & International Business,DKA87,3500,Dundalk,328,Communication,Management
+Dundalk Institute of Technology,BB in Business and Management,DKA88,3500,Dundalk,372,Trading,Finance
+Dundalk Institute of Technology,BB in Business and Technology,DKA89,3500,Dundalk,308,Problem Solving,Support
+Dundalk Institute of Technology,BSc (Hons) in Advanced Veterinary Nursing,DKA90,3500,Dundalk,489,Trading,Finance
+Dundalk Institute of Technology,BSc (Hons) in Architectural Technology,DKA91,3500,Dundalk,354,Communication,Management
+Dundalk Institute of Technology,BSc (Hons) in Augmented and Virtual Reality,DKA92,3500,Dundalk,358,Problem Solving,Support
+Dundalk Institute of Technology,BSc (Hons) in Biopharmaceutical Science,DKA93,3500,Dundalk,404,Problem Solving,Support
+Dundalk Institute of Technology,BSc (Hons) in Building Surveying,DKA94,3500,Dundalk,570,Organising Events,HR
+Dundalk Institute of Technology,BSc (Hons) in Civil Engineering,DKA95,3500,Dundalk,399,Problem Solving,Support
+Dundalk Institute of Technology,BSc (Hons) in Civil Engineering - Level 8 Add-on (Part-time),DKA96,3500,Dundalk,508,Problem Solving,Support
+Dundalk Institute of Technology,BSc (Hons) in Computing in Cloud and Data Centre Operations,DKA97,3500,Dundalk,402,Communication,Management
+Dundalk Institute of Technology,BSc (Hons) In Computing in Cloud Computing,DKA98,3500,Dundalk,570,Problem Solving,Support
+Dundalk Institute of Technology,BSc (Hons) in Computing in Games Development,DKA99,3500,Dundalk,223,Organising Events,HR
+Dundalk Institute of Technology,BSc (Hons) in Computing in Software Development,DKA100,3500,Dundalk,236,Coding,IT
+Dundalk Institute of Technology,BSc (Hons) in Computing Systems and Operations (Software Development and DevOps),DKA101,3500,Dundalk,238,Coding,IT
+Dundalk Institute of Technology,BSc (Hons) in Construction Management,DKA102,3500,Dundalk,370,Trading,Finance
+Dundalk Institute of Technology,BSc (Hons) in Construction Project Management,DKA103,3500,Dundalk,423,Communication,Management
+Dundalk Institute of Technology,BSc (Hons) in Food Production,DKA104,3500,Dundalk,361,Trading,Finance
+Dundalk Institute of Technology,BSc (Hons) in General Nursing,DKA105,3500,Dundalk,487,Organising Events,HR
+Dundalk Institute of Technology,BSc (Hons) in Health and Physical Activity,DKA106,3500,Dundalk,300,Trading,Finance
+Dundalk Institute of Technology,BSc (Hons) in Intellectual Disability Nursing,DKA107,3500,Dundalk,245,Trading,Finance
+Dundalk Institute of Technology,BSc (Hons) in Mathematics and Data Science,DKA108,3500,Dundalk,387,Communication,Management
+Dundalk Institute of Technology,BSc (Hons) in Mental Health Nursing,DKA109,3500,Dundalk,359,Organising Events,HR
+Dundalk Institute of Technology,BSc (Hons) in Midwifery,DKA110,3500,Dundalk,275,Organising Events,HR
+Dundalk Institute of Technology,BSc (Hons) in Science with 2 Award options: Biopharmaceutical Science / Environmental Bioscience,DKA111,3500,Dundalk,439,Trading,Finance
+Dundalk Institute of Technology,BSc (Hons) in Sustainable Agriculture/Agri-Food Production,DKA112,3500,Dundalk,234,Communication,Management
+Dundalk Institute of Technology,BSc in Agriculture,DKA113,3500,Dundalk,423,Coding,IT
+Dundalk Institute of Technology,BSc in Architectural Technology,DKA114,3500,Dundalk,544,Organising Events,HR
+Dundalk Institute of Technology,BSc in Augmented and Virtual Reality,DKA115,3500,Dundalk,428,Problem Solving,Support
+Dundalk Institute of Technology,BSc in Bioscience,DKA116,3500,Dundalk,208,Coding,IT
+Dundalk Institute of Technology,BSc in Building Surveying,DKA117,3500,Dundalk,404,Trading,Finance
+Dundalk Institute of Technology,BSc in Computing,DKA118,3500,Dundalk,340,Communication,Management
+Dundalk Institute of Technology,BSc in Computing Systems and Operations (Software Development and DevOps),DKA119,3500,Dundalk,599,Trading,Finance
+Dundalk Institute of Technology,BSc in Construction Management,DKA120,3500,Dundalk,517,Communication,Management
+Dundalk Institute of Technology,BSc in Pharmaceutical Science,DKA121,3500,Dundalk,214,Trading,Finance
+Dundalk Institute of Technology,BSc in Veterinary Nursing,DKA122,3500,Dundalk,238,Organising Events,HR
+Dundalk Institute of Technology,Building Information Modelling (using Autodesk Revit),DKA123,3500,Dundalk,240,Trading,Finance
+Dundalk Institute of Technology,Carpentry / Joinery,DKA124,3500,Dundalk,576,Communication,Management
+Dundalk Institute of Technology,Certificate in 2D & 3D Digital Animation Production,DKA125,3500,Dundalk,280,Problem Solving,Support
+Dundalk Institute of Technology,Certificate in Accounting,DKA126,3500,Dundalk,514,Problem Solving,Support
+Dundalk Institute of Technology,Certificate in Adult Respiratory Nursing Practice,DKA127,3500,Dundalk,355,Trading,Finance
+Dundalk Institute of Technology,Certificate in Advanced Comprehensive Health Assessment for Midwives,DKA128,3500,Dundalk,541,Problem Solving,Support
+Dundalk Institute of Technology,Certificate in Advanced Veterinary Analytical Techniques,DKA129,3500,Dundalk,341,Communication,Management
+Dundalk Institute of Technology,Certificate in Animal Biotechnology,DKA130,3500,Dundalk,572,Communication,Management
+Dundalk Institute of Technology,Certificate in Animal Production,DKA131,3500,Dundalk,457,Coding,IT
+Dundalk Institute of Technology,Certificate in Applied Electrical Engineering,DKA132,3500,Dundalk,323,Communication,Management
+Dundalk Institute of Technology,Certificate in Archaeological Excavation and Recording,DKA133,3500,Dundalk,551,Coding,IT
+Dundalk Institute of Technology,Certificate in Assessment and Feedback,DKA134,3500,Dundalk,585,Trading,Finance
+Dundalk Institute of Technology,Certificate in Audio-Visual Production for Online Platforms,DKA135,3500,Dundalk,465,Problem Solving,Support
+Dundalk Institute of Technology,Certificate in Bio Energy,DKA136,3500,Dundalk,580,Coding,IT
+Dundalk Institute of Technology,Certificate in Building Energy Management,DKA137,3500,Dundalk,264,Communication,Management
+Dundalk Institute of Technology,"Certificate in Clinical Governance, Leadership and Evidence Based Veterinary Care",DKA138,3500,Dundalk,433,Trading,Finance
+Dundalk Institute of Technology,Certificate in Communication Skills,DKA139,3500,Dundalk,216,Communication,Management
+Dundalk Institute of Technology,Certificate in Comprehensive Advanced Health Assessment,DKA140,3500,Dundalk,446,Problem Solving,Support
+Atlantic Technological University - Donegal Letterkenny Campus,AU312 Communications with English,AU312,3000,Letterkenny,287,Communication,Management
+Atlantic Technological University - Donegal Letterkenny Campus,AU311 Corporate Law,AU311,3000,Letterkenny,287,Problem Solving,Support
+Atlantic Technological University - Donegal Letterkenny Campus,AU310 LLB,AU310,3000,Letterkenny,280,Communication,Management
+Atlantic Technological University - Donegal Letterkenny Campus,AU330 Design (Common Entry),AU330,3000,Letterkenny,503,Trading,Finance
+Atlantic Technological University - Donegal Letterkenny Campus,AU330 Animation,AU330,3000,Letterkenny,307,Communication,Management
+Atlantic Technological University - Donegal Letterkenny Campus,AU330 Fashion Design with Promotion,AU330,3000,Letterkenny,420,Coding,IT
+Atlantic Technological University - Donegal Letterkenny Campus,AU330 Film & Media Production,AU330,3000,Letterkenny,318,Coding,IT
+Atlantic Technological University - Donegal Letterkenny Campus,AU330 Graphic & UX Design,AU330,3000,Letterkenny,268,Communication,Management
+Atlantic Technological University - Donegal Letterkenny Campus,AU321 Athletic Therapy and Exercise Rehabilitation,AU321,3000,Letterkenny,569,Problem Solving,Support
+Atlantic Technological University - Donegal Letterkenny Campus,AU322 Hospitality Management Ab-initio,AU322,3000,Letterkenny,334,Problem Solving,Support
+Atlantic Technological University - Donegal Letterkenny Campus,AU320 Sport & Exercise (Common Entry),AU320,3000,Letterkenny,332,Trading,Finance
+Atlantic Technological University - Donegal Letterkenny Campus,AU320 Sport & Exercise with Performance and Well-being,AU320,3000,Letterkenny,389,Coding,IT
+Atlantic Technological University - Donegal Letterkenny Campus,AU320 Sport & Exercise with Physical Education,AU320,3000,Letterkenny,474,Problem Solving,Support
+Atlantic Technological University - Donegal Letterkenny Campus,AU300 Accounting,AU300,3000,Letterkenny,508,Organising Events,HR
+Atlantic Technological University - Donegal Letterkenny Campus,AU301 Business,AU301,3000,Letterkenny,358,Organising Events,HR
+Atlantic Technological University - Donegal Letterkenny Campus,AU302 Marketing with Online Technologies,AU302,3000,Letterkenny,499,Problem Solving,Support
+Atlantic Technological University - Donegal Letterkenny Campus,AU343 Architectural Technology,AU343,3000,Letterkenny,490,Coding,IT
+Atlantic Technological University - Donegal Letterkenny Campus,AU342 Construction Management,AU342,3000,Letterkenny,236,Trading,Finance
+South East Technological University,Bachelor of Business (Hons) (Common Entry) (SE402),SE402,10250,Carlow,219,Organising Events,HR
+South East Technological University,Bachelor of Business (Honours) in Business Management (SE401),SE401,10250,Carlow,306,Coding,IT
+South East Technological University,Bachelor of Business Hons (Human Resource Management) (SE414),SE414,10250,Carlow,597,Communication,Management
+South East Technological University,Bachelor of Business (Honours) in International Business (SE401),SE401,10250,Carlow,395,Organising Events,HR
+South East Technological University,Bachelor of Business Hons (Accounting) (SE407),SE407,10250,Carlow,544,Coding,IT
+South East Technological University,Bachelor of Business Hons (Management) (SE414),SE414,10250,Carlow,261,Coding,IT
+South East Technological University,Bachelor of Business Hons (Marketing) (SE401),SE401,10250,Carlow,242,Organising Events,HR
+South East Technological University,Bachelor of Business (Hons) in Business Information Systems (BIS) (SE409),SE409,10250,Carlow,514,Organising Events,HR
+South East Technological University,Bachelor of Business (Honours) in Business with Law (SE403),SE403,10250,Carlow,469,Organising Events,HR
+South East Technological University,Bachelor of Business (Honours) in Finance and Accounting (SE401),SE401,10250,Carlow,585,Trading,Finance
+South East Technological University,Higher Certificate in Business with Law (SE421),SE421,7750,Carlow,336,Trading,Finance
+South East Technological University,Bachelor of Science (Honours) in Cybercrime and IT Security (SE606),SE606,10250,Carlow,335,Coding,IT
+South East Technological University,Bachelor of Science in Cybercrime and IT Security (SE612),SE612,10250,Carlow,536,Communication,Management
+South East Technological University,Bachelor of Science (Honours) in Computing in Interactive Digital Art and Design (SE608),SE608,10250,Carlow,496,Problem Solving,Support
+South East Technological University,Bachelor of Science in Computing in Interactive Digital Art and Design (SE615),SE615,10250,Carlow,500,Problem Solving,Support
+South East Technological University,Bachelor of Science (Honours) in Computer Games Development (SE607),SE607,10250,Carlow,322,Problem Solving,Support
+South East Technological University,Bachelor of Science (Honours) in Software Development (SE603),SE603,10250,Carlow,237,Organising Events,HR
+South East Technological University,Bachelor of Science in Software Development (SE609),SE609,10250,Carlow,513,Communication,Management
+South East Technological University,Bachelor of Science (Honours) in Information Technology Management (SE601),SE601,10250,Carlow,525,Problem Solving,Support
+South East Technological University,Bachelor of Science in Information Technology Management (SE614),SE614,10250,Carlow,488,Communication,Management
+South East Technological University,Higher Certificate Science in Computing (with Options in Applications or Programming) (SE616),SE616,7750,Carlow,275,Organising Events,HR
+South East Technological University,Bachelor of Science (Honours) Common Entry (SE500),SE500,10250,Carlow,362,Organising Events,HR
+South East Technological University,Bachelor of Science (Honours) in Biosciences with Biopharmaceuticals (SE500),SE500,10250,Carlow,308,Trading,Finance
+South East Technological University,Bachelor of Science (Honours) in Pharmaceutics and Drug Formulation (SE500),SE500,10250,Carlow,369,Communication,Management
+South East Technological University,Bachelor of Science (Honours) in Brewing and Distilling (SE521),SE521,10250,Carlow,525,Communication,Management
+South East Technological University,Bachelor of Science in Biosciences (SE515),SE515,10250,Carlow,234,Trading,Finance
+South East Technological University,Bachelor of Science in Analytical Science (SE513),SE513,10250,Carlow,318,Trading,Finance
+South East Technological University,Higher Certificate Science in Applied Biology or Applied Chemistry (SE516),SE516,7750,Carlow,363,Problem Solving,Support
+South East Technological University,Higher Certificate in Science in Pharmacy Technician Studies (SE937),SE937,7750,Carlow,204,Communication,Management
+South East Technological University,Bachelor of Engineering (Honours) in Electronic Systems (SE708),SE708,10250,Carlow,449,Communication,Management
+South East Technological University,Bachelor of Engineering in Electronic Engineering (SE722),SE722,10250,Carlow,339,Trading,Finance
+South East Technological University,Bachelor of Science (Honours) in TV and Media Production (SE208),SE208,10250,Carlow,316,Problem Solving,Support
+South East Technological University,Bachelor of Science in TV and Media Production (SE212),SE212,10250,Carlow,398,Problem Solving,Support
+South East Technological University,Bachelor of Engineering in Aircraft Systems (SE729),SE729,10250,Carlow,583,Communication,Management
+South East Technological University,Bachelor of Engineering (Honours) Agricultural Systems Engineering (SE732),SE732,10250,Carlow,418,Problem Solving,Support
+South East Technological University,Bachelor of Engineering Agricultural Systems Engineering (SE733),SE733,10250,Carlow,596,Trading,Finance
+South East Technological University,Bachelor of Engineering in Mechanical Engineering (SE724),SE724,10250,Carlow,253,Communication,Management
+South East Technological University,Bachelor of Science in Pilot Studies (SE715),SE715,10250,Carlow,481,Communication,Management
+South East Technological University,Bachelor of Engineering (Honours) in Mechanical Engineering (SE711),SE711,10250,Carlow,256,Coding,IT
+South East Technological University,Bachelor of Engineering (Honours) in Aerospace Engineering (SE714),SE714,10250,Carlow,252,Organising Events,HR
+South East Technological University,Bachelor of Science (Honours) in Sustainable Farm Management and Agribusiness (SE5030,SE5030,10250,Carlow,557,Organising Events,HR
+South East Technological University,Bachelor of Science (Honours) Organic Agriculture (SE517),SE517,10250,Carlow,563,Trading,Finance
+South East Technological University,Bachelor of Science Organic Agriculture (SE518),SE518,10250,Carlow,462,Trading,Finance
+South East Technological University,Bachelor of Science in Sustainable Farm Management and Agribusiness (SE509),SE509,10250,Carlow,483,Organising Events,HR
+South East Technological University,Bachelor of Education (Honours) in Early Childhood Education and Practice (SE912),SE912,10250,Carlow,222,Coding,IT
+South East Technological University,Bachelor of Education in Early Childhood Education and Practice (SE934),SE934,10250,Carlow,500,Problem Solving,Support
+South East Technological University,Bachelor of Arts (Honours) in Applied Social Studies in Professional Social Care (SE917),SE917,10250,Carlow,569,Communication,Management
+South East Technological University,Bachelor of Business (Honours) Common Entry (SE402),SE402,10250,Carlow,382,Coding,IT
+South East Technological University,Bachelor of Business (Honours) in Business (SE402),SE402,10250,Carlow,215,Organising Events,HR
+South East Technological University,Bachelor of Business (Honours) in Digital Marketing (SE402),SE402,10250,Carlow,531,Problem Solving,Support
+South East Technological University,Bachelor of Business Common Entry (Options in Business & Digital Marketing) (SE416),SE416,10250,Carlow,323,Organising Events,HR
+South East Technological University,Bachelor of Business in Business (SE416),SE416,10250,Carlow,288,Organising Events,HR
+South East Technological University,Bachelor of Business in Digital Marketing (SE416),SE416,10250,Carlow,550,Trading,Finance
+South East Technological University,Higher Certificate in Business (XBS) (SE420),SE420,7750,Carlow,494,Communication,Management
+South East Technological University,Bachelor of Science (Honours) in Tourism and Event Management (SE922),SE922,10250,Carlow,494,Problem Solving,Support
+South East Technological University,Bachelor of Science in Tourism and Event Management (SE925),SE925,10250,Carlow,521,Trading,Finance
+South East Technological University,Bachelor of Arts (Honours) Visual Communications and Design (SE204),SE204,10250,Carlow,256,Problem Solving,Support
+South East Technological University,Bachelor of Arts Visual Communications and Design (SE210),SE210,10250,Carlow,234,Trading,Finance
+South East Technological University,Bachelor of Arts (Honours) in Art (SE207),SE207,10250,Carlow,431,Problem Solving,Support
+South East Technological University,Bachelor of Arts in Art (SE211),SE211,10250,Carlow,440,Trading,Finance
+South East Technological University,Bachelor of Engineering (Honours) Agricultural Systems Engineering (SE732),SE732,10250,Carlow,490,Trading,Finance
+South East Technological University,Bachelor of Engineering Agricultural Systems Engineering (SE733),SE733,10250,Carlow,449,Organising Events,HR
+"Carlow College, St Patrick's",B.A. in Arts & Humanities (PC402),PC402,10250,Carlow,387,Communication,Management
+"Carlow College, St Patrick's",B.A. in Applied Social Studies (Professional Social Care)(PC404),PC404,10250,Carlow,342,Trading,Finance
+"Carlow College, St Patrick's",BA (Hons) in Arts & Humanities (PC410),PC410,10250,Carlow,374,Coding,IT
+"Carlow College, St Patrick's",BA (Hons) in English & History (PC411),PC411,10250,Carlow,325,Trading,Finance
+"Carlow College, St Patrick's","BA (Hons) in Social, Political & Community Studies (PC405)",PC405,10250,Carlow,416,Communication,Management
+"Carlow College, St Patrick's",BA (Hons) in Psychology (PC414),PC414,10250,Carlow,459,Coding,IT
+"Carlow College, St Patrick's","BA (Hons) in Philosophy, Politics & Sociology (PC415)",PC415,10250,Carlow,520,Communication,Management
+"Carlow College, St Patrick's","BA (Hons) in Media, English & Culture (PC416)",PC416,10250,Carlow,347,Trading,Finance
+"Carlow College, St Patrick's",BA (Hons) in Applied Social Studies (Professional Social Care) (PC000),PC000,10250,Carlow,288,Coding,IT
+NUI Galway,GY322 Agricultural Science,GY322,7408,Galway,570,Coding,IT
+NUI Galway,GY408 Biomedical Engineering,GY408,7408,Galway,475,Coding,IT
+NUI Galway,GY303 Biomedical Science,GY303,7408,Galway,323,Organising Events,HR
+NUI Galway,GY304 Biotechnology,GY304,7408,Galway,261,Organising Events,HR
+NUI Galway,GY402 Civil Engineering,GY402,7408,Galway,226,Organising Events,HR
+NUI Galway,GY350 Computer Science and Information Technology,GY350,7408,Galway,264,Problem Solving,Support
+NUI Galway,GY314 Earth and Ocean Sciences,GY314,7408,Galway,424,Communication,Management
+NUI Galway,GY414 Electrical and Electronic Engineering,GY414,7408,Galway,271,Organising Events,HR
+NUI Galway,GY406 Electronic and Computer,GY406,7408,Galway,212,Trading,Finance
+NUI Galway,GY413 Energy Systems,GY413,7408,Galway,412,Organising Events,HR
+NUI Galway,GY401 Engineering (Undenominated),GY401,7408,Galway,572,Trading,Finance
+NUI Galway,GY313 Environmental Health and Safety,GY313,7408,Galway,452,Trading,Finance
+NUI Galway,GY308 Environmental Science,GY308,7408,Galway,459,Problem Solving,Support
+NUI Galway,GY309 Financial Mathematics and Economics,GY309,7408,Galway,426,Communication,Management
+NUI Galway,GY321 Genetics and Genomics,GY321,7408,Galway,252,Trading,Finance
+NUI Galway,GY310 Marine Science,GY310,7408,Galway,522,Trading,Finance
+NUI Galway,GY319 Mathematical Science,GY319,7408,Galway,302,Communication,Management
+NUI Galway,GY405 Mechanical Engineering,GY405,7408,Galway,323,Trading,Finance
+NUI Galway,"GY320 Physics-degree options in Applied, Astrophysics, Biomedical, Climate, Theoretical",GY320,7408,Galway,571,Organising Events,HR
+NUI Galway,GY410 Project and Construction Management,GY410,7408,Galway,406,Trading,Finance
+NUI Galway,GY301 Science,GY301,7408,Galway,371,Communication,Management
+Mayo Sligo Leitrim ETB,48532 Adult Basic Education,48532,4500,Mayo,356,,Support
+Mayo Teagasc Training Centre - Ballinrobe,Adult Green Cert - Part-time (5M20454 6S20487),5M20454 6S20487,5200,Mayo,281,,Management
+Mayo College of FE & Training - Westport Campus and Mayo Sligo Leitrim ETB and Mayo College of FE & Training,Agriculture (5M20454),5M20454,6548,Mayo,301,,Support
+Mayo College of FE & Training - Westport Campus and Mayo Sligo Leitrim ETB and Mayo College of FE & Training,Agriculture - Advanced - Green Cert (6M20486),6M20486,5648,Mayo,256,,Management
+Mayo College of FE & Training - Westport Campus and Mayo Sligo Leitrim ETB,Agriculture - Green Cert (5M20454 6S20487),5M20454 6S20487,2458,Mayo,278,,Support
+Mayo College of FE & Training - Westport Campus and Mayo Sligo Leitrim ETB and Mayo College of FE & Training,Animal Care (5M2768),5M2768,4500,Mayo,356,,Management
+Mayo College of FE & Training - Westport Campus and Mayo Sligo Leitrim ETB,Animal Grooming (5N0752),5N0752,5200,Mayo,281,,Support
+Mayo College of FE & Training - Westport Campus and Mayo Sligo Leitrim ETB and Mayo College of FE & Training,Animal Science - Advanced (6M5153),6M5153,6548,Mayo,301,,Management
+Mayo College of FE & Training - Ballina Campus and Mayo Sligo Leitrim ETB and Mayo College of FE & Training,Animation (5M5048),5M5048,5648,Mayo,256,,Support
+Mayo College of FE & Training - Westport Campus and Mayo Sligo Leitrim ETB and Mayo College of FE & Training,Art (6M4029),6M4029,2458,Mayo,278,,Management
+St. Louis Community School,Art (114358),114358,4500,Mayo,356,,Support
+ATU - Mayo Campus and ATU - Atlantic Technological University,Art - Contemporary Art Practices (GA_ACOAG_B07),GA_ACOAG_B07,5200,Mayo,281,,Management
+Mayo College of FE & Training - Westport Campus and Mayo Sligo Leitrim ETB,Art - Life Drawing (98497),98497,6548,Mayo,301,,Support
+Mayo College of FE & Training - Westport Campus and Mayo Sligo Leitrim ETB,Astronomy (101421),101421,5648,Mayo,256,,Management
+National Learning Network Mayo - Castlebar,Autism Support Programme - The Hub (110699),110699,2458,Mayo,278,,Support
+Mayo Sligo Leitrim ETB,Back to Education Initiative BTEI (108635),108635,4500,Mayo,356,,Management
+Mayo College of FE & Training - Westport Campus and Mayo Sligo Leitrim ETB and Mayo College of FE & Training,Beauty Therapy (6M3479),6M3479,5200,Mayo,281,,Support
+Mayo College of FE & Training - Westport Campus and Mayo Sligo Leitrim ETB and Mayo College of FE & Training,Beauty Therapy (5M3471),5M3471,6548,Mayo,301,,Management
+Mayo College of FE & Training - Westport Campus and Mayo Sligo Leitrim ETB,Beekeeping (5N2554),5N2554,5648,Mayo,256,,Support
+St. Louis Community School,Bookkeeping Manual & Computerised (5N1354),5N1354,2458,Mayo,278,,Management
+Mayo College of FE & Training - Castlebar Campus and Mayo Sligo Leitrim ETB and Mayo College of FE & Training,Business - Advanced (6M4985),6M4985,4500,Mayo,356,,Support
+Mayo College of FE & Training - Castlebar Campus and Mayo Sligo Leitrim ETB and Mayo College of FE & Training,Business Studies Administration with Marketing (5M2102),5M2102,5200,Mayo,281,,Management
+National Learning Network Mayo - Castlebar,Career Pathways (3M0935 4M0857),3M0935 4M0857,6548,Mayo,301,,Support
+Mayo College of FE & Training - Westport Campus and Mayo Sligo Leitrim ETB,Cleanroom Operations (5N1921),5N1921,5648,Mayo,256,,Management
+Mayo College of FE & Training - Castlebar Campus and Mayo Sligo Leitrim ETB and Mayo College of FE & Training,Computer Systems & Networks - Network Technician - Advanced (6M0695),6M0695,2458,Mayo,278,,IT
+Mayo College of FE & Training - Castlebar Campus and Mayo Sligo Leitrim ETB and Mayo College of FE & Training,Computer Systems & Networks with Mobile Technologies - Network Technician (5M0536),5M0536,4500,Mayo,356,,IT
+Mayo College of FE & Training - Westport Campus and Mayo Sligo Leitrim ETB,Creative Application Ceramics (6N3445),6N3445,5200,Mayo,281,,IT
+ATU - Mayo Campus and ATU - Atlantic Technological University,Culture & Environment - Castlebar Campus (AU591),AU591,6548,Mayo,301,,IT
+ATU - Mayo Campus and ATU - Atlantic Technological University,Cybersecurity Operations (GA_KCYGC_V09),GA_KCYGC_V09,5648,Mayo,256,,IT
+ATU - Mayo Campus and ATU - Atlantic Technological University,Cybersecurity Risk & Compliance (GA_KCYGC_L08),GA_KCYGC_L08,2458,Mayo,278,,IT
+ATU - Mayo Campus and ATU - Atlantic Technological University,Data Cybersecurity (GA_KDCGC_N07),GA_KDCGC_N07,4500,Mayo,356,,IT
+ATU - Mayo Campus and ATU - Atlantic Technological University,Digital Media & Marketing (GA_BDMGC_V09),GA_BDMGC_V09,5200,Mayo,281,,IT
+Mayo College of FE & Training - Castlebar Campus and Mayo Sligo Leitrim ETB and Mayo College of FE & Training,Disability Studies with SNA (5M4468),5M4468,6548,Mayo,301,,Support
+ATU - Mayo Campus and ATU - Atlantic Technological University,Early Childhood Education & Care - Castlebar Campus (AU491),AU491,5648,Mayo,256,,Support
+ATU - Mayo Campus and ATU - Atlantic Technological University,Early Childhood Education & Care - Castlebar Campus (AU592),AU592,2458,Mayo,278,,Support
+ATU - Mayo Campus and ATU - Atlantic Technological University,Early Childhood Education & Care - Castlebar Campus (AU695),AU695,4500,Mayo,356,,Support
