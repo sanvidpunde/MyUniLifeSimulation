@@ -9,6 +9,7 @@ import User from '../models/user';
 import Token from '../models/token';
 import HttpError from '../models/httpError';
 import Profiler from '../models/profiler';
+import Professor from '../models/professor';
 import Trait from '../models/trait';
 import Course from '../models/course';
 import transporter from '../models/myNodemailer';
@@ -316,6 +317,36 @@ const personality = async (req, res, next) => {
 	});
 };
 
+const professor = async (req, res, next) => {
+	console.log("req.query.college", req.query.college);
+	const college = req.query.college;
+	console.log("college", college);
+	if (college) {
+		// look into DB
+		let identifiedCollege;
+		try {
+			identifiedCollege = await Professor.find();
+			// identifiedCollege = await Professor.findOne({ college: college });
+		} catch(err) {
+			console.log("err", err);
+			const error = new HttpError('Error in finding email', 500);
+			return next(error);
+		}
+		// console.log("identifiedCollege", identifiedCollege);
+		if (identifiedCollege) {
+			return res.status(200).json({
+				// professor: identifiedCollege.toObject({getters: true}),
+				professor: identifiedCollege,
+				success: true
+			});
+		}
+	}
+	res.json({
+		success: false,
+		message: "Something went wrong"
+	});
+};
+
 const profiler = async (req, res, next) => {
 	
 	// get input values
@@ -540,4 +571,4 @@ const changePassword = async (req, res) => {
 	});
 };
 
-export default {getUser, getUserDetails, login, signup, logout, simulation, personality, profiler, passwordReset, checkToken, changePassword};
+export default {getUser, getUserDetails, login, signup, logout, simulation, personality, professor, profiler, passwordReset, checkToken, changePassword};
