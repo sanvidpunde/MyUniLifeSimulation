@@ -28,7 +28,7 @@ const ReviewSentiment = () => {
             </div>
             <div className="p-60">
                 <div className="container">
-                    
+                    <iframe src="https://public.tableau.com/views/forkthdata/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link" style={{width: "100%"}}></iframe>
                 </div>
             </div>
         </React.Fragment>

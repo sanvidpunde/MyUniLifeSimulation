@@ -35,8 +35,8 @@ const CourseDetails = () => {
         <React.Fragment>
 			<div className="header">
                 <div className="container">
-                    <div className="header-text">{record.title}</div>
-                    <p>{record.college}</p>
+                    <div className="header-text">{selectedCourse.title}</div>
+                    <p>{selectedCourse.college}</p>
                 </div>
             </div>
             <div className="p-60">
@@ -85,7 +85,7 @@ const CourseDetails = () => {
                                     </AccordionDetails>
                                 </Accordion>
                             }
-                            {record.fees &&
+                            {selectedCourse.fees &&
                                 <Accordion>
                                     <AccordionSummary
                                     expandIcon={<ExpandMoreIcon />}
@@ -95,7 +95,7 @@ const CourseDetails = () => {
                                     <Typography><div className="acc-title">Course Fees</div></Typography>
                                     </AccordionSummary>
                                     <AccordionDetails>
-                                    <Typography>{record.fees}</Typography>
+                                    <Typography>{selectedCourse.fees}</Typography>
                                     </AccordionDetails>
                                 </Accordion>
                             }
