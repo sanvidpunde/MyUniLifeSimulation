@@ -195,7 +195,7 @@ const CourseDetails = () => {
                             <div className="highlight-border"></div>
                             <div className="single_resource">
                             <a href="#" target="_blank"><img src="/images/uniExperienceSq.jpg" alt="img" /></a>
-                                <h3><a href="#" target="_blank">Uni Game Experience</a></h3>
+                                <h3><Link to="/review_sentiment">Review Sentiment</Link></h3>
                                 <p>Start exploring university through a game and familiarize yourself with your new campus</p>
                             </div>
                             <div className="single_resource">

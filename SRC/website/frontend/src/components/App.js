@@ -18,6 +18,7 @@ import Personality from './Personality';
 import PersonalityDetails from './PersonalityDetails';
 import Profiler from './Profiler';
 import ProfilerDetails from './ProfilerDetails';
+import ReviewSentiment from './ReviewSentiment';
 import Login from './Login';
 import Signup from './Signup';
 import PasswordReset from './PasswordReset';
@@ -94,6 +95,9 @@ const App = ({ loggedIn, email }) => {
 				</Route>
 				<Route path="/interest_profiler_details" exact>
 					<ProfilerDetails />
+				</Route>
+				<Route path="/review_sentiment" exact>
+					<ReviewSentiment />
 				</Route>
 				<Route path="/login" exact>
 					<Login />
