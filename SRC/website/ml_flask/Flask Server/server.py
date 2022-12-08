@@ -8,11 +8,92 @@ from sklearn import preprocessing
 from numpy.linalg import norm
 import warnings
 warnings.filterwarnings("ignore")
+import pandas as pd
+import numpy as np
+import math
+from numpy.linalg import norm
+from sklearn.preprocessing import OneHotEncoder
+from sklearn import preprocessing
+
+import warnings
+warnings.filterwarnings("ignore")
 
 import pickle
 from flask import Flask, request
 from flask_cors import cross_origin
+#############################
 
+
+## Calling the dataframe
+data = pd.read_excel(r"main_final_recommender_dataset.xlsx")
+
+data.head()
+
+## making the buckets for the Budget
+## 1: € 2000- € 4000 2: € 4000 - € 8000 3: € 8000 - € 10000 4: € 10000 - € 20000 Making in the Increasing Order
+def budget(num):
+  if num>=2000 and num<4000:
+    return 1
+  elif num>=4000 and num<8000:
+    return 2
+  elif num>=8000 and num<10000:
+    return 3
+  else:
+    return 4
+
+bud_value = data['fees'].values
+bucket_bud = []
+for num in bud_value:
+  bucket_bud.append(budget(num))
+
+data['fees_Bucket'] = bucket_bud
+
+cols = list(data.columns.values)
+cat_cols = ["college","course","code","location","interest","job_domain","personality"]
+num_cols = ["cao_score"]
+data1 = data.copy()
+
+le_p = preprocessing.LabelEncoder()
+le_l = preprocessing.LabelEncoder()
+le_i = preprocessing.LabelEncoder()
+le_jd = preprocessing.LabelEncoder()
+le_bd = preprocessing.LabelEncoder()
+
+data1['fees_Bucket'] = data1['fees_Bucket'].astype('str')
+
+data1["location"] = le_l.fit_transform(data1["location"])
+for elem in data1['location'].unique():
+    data1['location'+str(elem)] = data1['location'] == elem
+
+data1["interest"] = le_i.fit_transform(data1["interest"])
+for elem in data1['interest'].unique():
+    data1['interest'+str(elem)] = data1['interest'] == elem
+
+data1["job_domain"] = le_jd.fit_transform(data1["job_domain"])
+for elem in data1['job_domain'].unique():
+    data1['job_domain'+str(elem)] = data1['job_domain'] == elem
+
+#data1["Budget_Bucket"] = data1["Budget_Bucket"])
+for elem in data1['fees_Bucket'].unique():
+    data1['fees'+str(elem)] = data1['fees_Bucket'] == elem
+
+data1["personality"] = le_p.fit_transform(data1["personality"])
+for elem in data1['personality'].unique():
+    data1['personality'+str(elem)] = data1['personality'] == elem
+
+for num in num_cols:
+  data1[num] = data1[num].astype('int')
+
+rank_nor = []
+maxi = 600.0
+mini = 0.0
+for num in data1['cao_score'].values:
+  rank_nor.append(float((num - mini)/(maxi - mini)))
+
+data1['cao_score'] = rank_nor
+
+
+#################################
 app = Flask(__name__)
 
 
@@ -106,120 +187,84 @@ def predictInterest():
             
         return prediction[0]
 
+
+####PREDICT COURSE
+
 @app.route("/predict_course", methods = ["GET", "POST"])
 @cross_origin()
+
 def predictCourse():
-
-    if request.method == "POST":
-
-        #   Receive inputs from Post req
-        # print('made inside post req predictCourse')
+    if request.method == "POST": 
         content = request.json
-        # print(content)
+        data_input = pd.DataFrame()
+        cao_points = content["CAO"] #request.form["CAO"] #input("Enter the CAO Points: [Note: Max 600 and min 0 is acceptable] - ")
+        city_name = content["location"]#request.form["location"] #input("Enter the City Name from the Drop Down: ")
+        field_interest =content["job_domain"] #request.form["job_domain"]#input("Enter the filed of Job interest from the choice: ")
+        hobbies = content["interest"] #request.form["interest"]#input("Enter your career interest: ")
+        spending_limit =content["Budget"]#7000# input("Enter the fees: ")
+        personality =content["personality"] #request.form["personality"]#input("Enter the kind of person from the drop down: ")
 
-        course_recommender_model = pickle.load(open("course_recommender_model.pkl", "rb"))
 
-        City = content["City"]
-        if (City == 'Dublin'):
-            City_code = 4
-        elif (City == 'Carlow'):
-            City_code = 1
-        elif (City == 'Letterkenny'):
-            City_code = 8 
-        elif (City == 'Limerick'):
-            City_code = 9
-        elif (City == 'Athlone'):
-            City_code = 0
-        elif (City == 'Dundalk'):
-            City_code = 5
-        elif (City == 'Cork'):
-            City_code = 2
-        elif (City == 'Mayo'):
-            City_code = 10
-        elif (City == 'Donegal'):
-            City_code = 3
-        elif (City == 'Waterford'):
-            City_code = 13
-        elif (City == 'Wexford'):
-            City_code = 14
-        elif (City == 'Tipperary'):
-            City_code = 12
-        elif (City == 'Sligo'):
-            City_code = 11
-        elif (City == 'Galway'):
-            City_code = 6
-        else:
-            City_code = 0
+        # cao_points =request.form["CAO"] #input("Enter the CAO Points: [Note: Max 600 and min 0 is acceptable] - ")
+        # city_name = request.form["location"] #input("Enter the City Name from the Drop Down: ")
+        # field_interest =request.form["job_domain"]#input("Enter the filed of Job interest from the choice: ")
+        # hobbies =request.form["interest"]#input("Enter your career interest: ")
+        # spending_limit =7000# input("Enter the fees: ")
+        # personality =request.form["personality"]#input("Enter the kind of person from the drop down: ")
+        
+        data_sim = data1.copy()
 
-            
-        Interest = content["Interest"]
-        if (Interest == 'Cricket'):
-            Interest_code = 4
-        elif (Interest == 'Football'):
-            Interest_code = 1
-        elif (Interest == 'Singing'):
-            Interest_code = 8 
-        elif (Interest == 'Chess'):
-            Interest_code = 9
-        elif (Interest == 'Athletics'):
-            Interest_code = 0
-        elif (Interest == 'Automation'):
-            Interest_code = 5
-        else:
-            Interest_code = 0
+        data_input['cao_score'] = [float((int(cao_points)-mini)/(maxi-mini))]
+        data_input['fees_Bucket'] = [budget(int(spending_limit))]
+        data_input['location'] = [city_name]
+        data_input['interest'] = [hobbies]
+        data_input['job_domain'] = [field_interest]
+        data_input['personality'] = [personality]
 
-        Job_domain = content["Job_domain"]
-        if (Job_domain == 'IT'):
-            Job_domain_code = 2
-        elif (Job_domain == 'HR'):
-            Job_domain_code = 1
-        elif (Job_domain == 'Management'):
-            Job_domain_code = 4 
-        elif (Job_domain == 'Support'):
-            Job_domain_code = 5
-        elif (Interest == 'Finance'):
-            Job_domain_code = 0
-        elif (Job_domain == 'Law'):
-            Job_domain_code = 3
-        else:
-            Job_domain_code = 0
+        data_input['location'] = le_l.transform(data_input['location'])
+        for elem in data1['location'].unique():
+            data_input['location'+str(elem)] = data_input['location'] == elem
+        data_input['interest'] = le_i.transform(data_input['interest'])
+        for elem in data1['interest'].unique():
+            data_input['interest'+str(elem)] = data_input['interest'] == elem
+        data_input['job_domain'] = le_jd.transform(data_input['job_domain'])
+        for elem in data1['job_domain'].unique():
+            data_input['job_domain'+str(elem)] = data_input['job_domain'] == elem
+        data_input["personality"] = le_p.fit_transform(data_input["personality"])
+        for elem in data1['personality'].unique():
+            data_input['personality'+str(elem)] = data_input['personality'] == elem
+        data_input['fees_Bucket'] = data_input['fees_Bucket'].astype('str')
+        for elem in data1['fees_Bucket'].unique():
+            data_input['fees_budget'+str(elem)] = data_input['fees_Bucket'] == elem
 
-        Budget = content["Budget"]
-        if (int(Budget) == "2000 - 4000"):
-            Budget = 0
-        elif (int(Budget) == "4001 - 6000"):
-            Budget = 1
-        elif (int(Budget) == "6001 - 8000"):
-            Budget = 2
-        elif (int(Budget) == "8001 - above"):
-            Budget = 3
-        else:
-            Budget = 2
+        for num in ['code','college', 'course', 'fees', 'location', 'interest', 'job_domain', 'fees_Bucket']:
+                data_sim.pop(num)
+                try:
+                    data_input.pop(num)
+                except:
+                    continue
 
-        CAO_Score = content["CAO_Score"]
-        if (int(CAO_Score) <=250):
-            CAO_Score = 1        
-        elif (int(CAO_Score)  >250 and int(CAO_Score)  <450):
-            CAO_Score = 2
-        elif (int(CAO_Score)  >=450):
-            CAO_Score = 3 
-        else:
-            CAO_Score = 2
-            
-        prediction = course_recommender_model.predict([[
-            CAO_Score,
-            Budget,
-            City_code,
-            Interest_code,
-            Job_domain_code
-        ]])
 
-        # print("===========================")
-        # print(prediction)
-        # print(prediction[0])
-        # print("===========================")
-  
-        return prediction[0]
+    pairwise_similarities=np.dot(data_sim.values,data_input.T)/(norm(data_sim.values)*norm(data_input.values))
+    data["similarities"] = pairwise_similarities
+    data_final = data[['college', 'course','code', 'fees', 'similarities']]
+    final_df = data_final.sort_values(by=['similarities'], ascending=False)
 
+    print("Course Code  : ", np.asscalar(final_df.head(1)["code"].values))
+    print("Course Code  : ", np.asscalar(final_df.head(2).tail(1)["code"].values))
+    print("Course Code  : ", np.asscalar(final_df.head(3).tail(1)["code"].values))
+    print("Course Code  : ", np.asscalar(final_df.head(4).tail(1)["code"].values))
+    print("Course Code  : ", np.asscalar(final_df.head(5).tail(1)["code"].values))
+    
+    # output= (np.asscalar(final_df.head(1)["code"].values+","+final_df.head(2).tail(1)["code"].values)+
+    # ","+final_df.head(3).tail(1)["code"].values+","+final_df.head(4).tail(1)["code"].values+","+final_df.head(5).tail(1)["code"].values)
+    output= (np.asscalar(final_df.head(1)["code"].values))
+    output2=(np.asscalar(final_df.head(2).tail(1)["code"].values))
+    output3=(np.asscalar(final_df.head(3).tail(1)["code"].values))
+    output4=(np.asscalar(final_df.head(4).tail(1)["code"].values))
+    output5=(np.asscalar(final_df.head(5).tail(1)["code"].values))
+    output=(output+","+output2+","+output3+","+output4+","+output5)
+       
+    return(format(output))        
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port=6969)
