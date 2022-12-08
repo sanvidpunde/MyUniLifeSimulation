@@ -229,38 +229,35 @@ const simulation = (req, res) => {
 	// Make API call to python app and await response
 	console.log("ready to call flask app");
 	let predictedCourse;
-	request.post({url: 'https://flask-service.s3nc4honh0a9c.ap-south-1.cs.amazonlightsail.com/predict_course', json: req.body}, async (err, res, body) => {
+	request.post({url: 'https://flask-service.s3nc4honh0a9c.ap-south-1.cs.amazonlightsail.com/predict_course', json: req.body}, async (err, response, body) => {
 		if (err) {
 			return console.error('API req failed:', err);
 		}
-		predictedCourse = body;
-		console.log("body", body);
-		
+		if (body) {
+			predictedCourse = body;
+			console.log("body", body);
+			let identifiedCourse;
+			try {
+				identifiedCourse = await Course.findOne({ code: predictedCourse });
+			} catch(err) {
+				return console.log("err", err);
+			}
+			console.log("identifiedCourse ===============", identifiedCourse);	
+			if (identifiedCourse) {
+				res.status(200).json({
+					course: identifiedCourse.toObject({getters: true}),
+					message: 'Successfully Predicted',
+					success: true
+				});
+			} else {
+				return res.json({
+					type: 'fail',
+					success: false,
+					message: 'Cannot predict career, something went wrong'
+				});
+			}
+		}
 	});
-	console.log("made out of flask app");
-	const timer = setTimeout(async () => {
-		let identifiedCourse;
-		try {
-			identifiedCourse = await Course.findOne({ code: predictedCourse });
-		} catch(err) {
-			return console.log("err", err);
-		}
-		console.log("identifiedCourse ===============", identifiedCourse);	
-		if (identifiedCourse) {
-			res.status(200).json({
-				course: identifiedCourse.toObject({getters: true}),
-				message: 'Successfully Predicted',
-				success: true
-			});
-		} else {
-			return res.json({
-				type: 'fail',
-				success: false,
-				message: 'Cannot predict career, something went wrong'
-			});
-		}
-	}, 500);
-	return () => clearTimeout(timer);
 };
 
 const personality = async (req, res, next) => {
@@ -280,7 +277,7 @@ const personality = async (req, res, next) => {
 	// Make API call to python app and await response
 	let predictedPersonality;
 	let predictedPersonalityCapitalized;
-	request.post({url: 'https://flask-service.s3nc4honh0a9c.ap-south-1.cs.amazonlightsail.com/predict_personality', json: req.body}, async (err, res, body) => {
+	request.post({url: 'https://flask-service.s3nc4honh0a9c.ap-south-1.cs.amazonlightsail.com/predict_personality', json: req.body}, async (err, response, body) => {
 		if (err) {
 			console.error('API req failed:', err);
 			return res.json({
@@ -289,37 +286,35 @@ const personality = async (req, res, next) => {
 				message: 'Cannot predict personality, something went wrong'
 			});
 		}
-		predictedPersonality = body;
-		console.log("body", body);
-		predictedPersonalityCapitalized = predictedPersonality[0].toUpperCase() + predictedPersonality.substring(1);
-		
+		if (body) {
+			predictedPersonality = body;
+			console.log("body", body);
+			predictedPersonalityCapitalized = predictedPersonality[0].toUpperCase() + predictedPersonality.substring(1);
+
+			let identifiedPersonality;
+			try {
+				identifiedPersonality = await Trait.findOne({ personality: predictedPersonalityCapitalized });
+			} catch(err) {
+				console.log("err", err);
+				const error = new HttpError('Error in finding email', 500);
+				return next(error);
+			}
+			console.log("identifiedPersonality ===============", identifiedPersonality);	
+			if (identifiedPersonality) {
+				res.status(200).json({
+					personality: identifiedPersonality.toObject({getters: true}),
+					message: 'Successfully Predicted',
+					success: true
+				});
+			} else {
+				return res.json({
+					type: 'fail',
+					success: false,
+					message: 'Cannot predict personality, something went wrong'
+				});
+			}
+		}		
 	});
-	const timer = setTimeout(async () => {
-		// console.log("predictedPersonalityCapitalized inside timer", predictedPersonalityCapitalized);
-		let identifiedPersonality;
-		try {
-			identifiedPersonality = await Trait.findOne({ personality: predictedPersonalityCapitalized });
-		} catch(err) {
-			console.log("err", err);
-			const error = new HttpError('Error in finding email', 500);
-			return next(error);
-		}
-		// console.log("identifiedPersonality ===============", identifiedPersonality);	
-		if (identifiedPersonality) {
-			res.status(200).json({
-				personality: identifiedPersonality.toObject({getters: true}),
-				message: 'Successfully Predicted',
-				success: true
-			});
-		} else {
-			return res.json({
-				type: 'fail',
-				success: false,
-				message: 'Cannot predict personality, something went wrong'
-			});
-		}
-	}, 500);
-	return () => clearTimeout(timer);
 };
 
 const professor = async (req, res, next) => {
@@ -368,7 +363,7 @@ const profiler = async (req, res, next) => {
 	console.log("Profiler ready to make API call to EC2");
 	// Make API call to python app and await response
 	let predictedCareer;
-	request.post({url: 'https://flask-service.s3nc4honh0a9c.ap-south-1.cs.amazonlightsail.com/predict_interest', json: req.body}, async (err, res, body) => {
+	request.post({url: 'https://flask-service.s3nc4honh0a9c.ap-south-1.cs.amazonlightsail.com/predict_interest', json: req.body}, async (err, response, body) => {
 		if (err) {
 			console.error('API req failed:', err);
 			return res.json({
@@ -377,41 +372,39 @@ const profiler = async (req, res, next) => {
 				message: 'Cannot predict career, something went wrong'
 			});
 		}
-		predictedCareer = body;
-		console.log("body", body);
-		
+		if (body) {
+			predictedCareer = body;
+			console.log("body", body);
+			let identifiedCareer;
+			try {
+				identifiedCareer = await Profiler.findOne({ career: predictedCareer });
+			} catch(err) {
+				console.log("err", err);
+				const error = new HttpError('Error in finding email', 500);
+				return next(error);
+			}
+			console.log("identifiedCareer ===============", identifiedCareer);	
+			if (identifiedCareer) {
+				res.status(200).json({
+					career: identifiedCareer.toObject({getters: true}),
+					message: 'Successfully Predicted',
+					success: true
+				});
+			} else {
+				return res.json({
+					type: 'fail',
+					success: false,
+					message: 'Cannot predict career, something went wrong'
+				});
+			}
+		}
 	});
-	const timer = setTimeout(async () => {
-		let identifiedCareer;
-		try {
-			identifiedCareer = await Profiler.findOne({ career: predictedCareer });
-		} catch(err) {
-			console.log("err", err);
-			const error = new HttpError('Error in finding email', 500);
-			return next(error);
-		}
-		console.log("identifiedCareer ===============", identifiedCareer);	
-		if (identifiedCareer) {
-			res.status(200).json({
-				career: identifiedCareer.toObject({getters: true}),
-				message: 'Successfully Predicted',
-				success: true
-			});
-		} else {
-			return res.json({
-				type: 'fail',
-				success: false,
-				message: 'Cannot predict career, something went wrong'
-			});
-		}
-	}, 500);
-	return () => clearTimeout(timer);
 };
 
 const functionToSendInstructionsViaEmail = (url, email) => {
 	// Mail user instructions to reset password
 	const mailOptions = {
-	    from: '"Bloggit" <no-reply@thebootweb.com>', // sender address
+	    from: '"UniSimulation" <no-reply@thebootweb.com>', // sender address
 	    to: email, // list of receivers
 	    subject: "Instructions for changing your UniSimulation password", // Subject line
 	    html: '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="author" content="BootWeb"><meta name="apple-mobile-web-app-capable" content="yes"><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"><style>html, body {font-family: "Open Sans", sans-serif;}</style></head><body style="background: white;"><div style="max-width: 600px;background: #f5f5f5;padding: 20px 10px;margin: auto;"><div style="background: #fff;border: 1px solid #dbdbdb;padding: 20px"><img src="https://bloggit.in/images/bloggit.png" alt="logo" /><div style=""><p style="font-size: 14px;color: #333">Welcome to Uni.</p><p style="font-size: 14px;color: #333">Thank you for creating an account on Bloggit. Now you have free access to create blogs on Bloggit. To access your account click <a href="https://bloggit.in" target="_blank" style="color: #3498db;font-weight: 600;font-size: 13px;">Access Account</a>.</p><p>url - `${url}`</p><p style="font-size: 14px;color: #333;margin-top: 20px;">Sincerely,</p><p style="font-size: 14px;color: #333;margin-bottom: 40px;">BootWeb Team</p><div style="background: #edeeef;width:100%;height: 1px;"></div><p style="font-size: 11px;color: #a9a9a9;margin: 20px 0 10px 0;text-align: center;">Bloggit is a subsidiary of BootWeb Solutions. This message was produced and distributed by BootWeb Solutions, Bhoomi Building, 16th Floor, 1614, B-Wing, St Yadav Marg, Cama Industrial Estate, Goregaon(E), Mumbai - 400063, India.</p></div></div></div></body></html>',
