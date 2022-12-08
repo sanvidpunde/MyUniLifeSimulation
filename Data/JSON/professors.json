@@ -1,0 +1,555 @@
+{
+    "college": "University College Dublin",
+    "staff": [{
+        "professor_name": "Deepak Ajwani",
+        "designation": "Lecturer/Assistant Professor",
+        "email": "deepak.ajwani@ucd.ie",
+        "phone": "+353 1 716 2911",
+        "professor_thumbnail_url": "https://www.ucd.ie/cs/t4media/d-ajwani96x134.jpeg",
+        "see_all_professors": ""
+    },
+    {
+        "professor_name": "Dr Brett Becker",
+        "designation": "Lecturer/Assistant Professor",
+        "email": "brett.becker@ucd.ie",
+        "phone": "+353 1 716 2933",
+        "professor_thumbnail_url": "https://www.ucd.ie/cs/t4media/becker-96x134.png",
+        "see_all_professors": ""
+    },
+    {
+        "professor_name": "Dr Rem Collier",
+        "designation": "Associate Professor",
+        "email": "rem.collier@ucd.ie",
+        "phone": "+353 1 716 2465",
+        "professor_thumbnail_url": "https://www.ucd.ie/cs/t4media/Collier.jpeg",
+        "see_all_professors": ""
+    }]
+}
+{
+    "college": "National College of Ireland",
+    "staff": [{
+        "professor_name": "Anant Aaloka",
+        "designation": "Associate Lecturer in Data Analytics",
+        "email": "aaloka.anant@ncirl.ie",
+        "phone": "+353 1 716 2911",
+        "professor_thumbnail_url": "",
+        "see_all_professors": ""
+    },
+    {
+        "professor_name": "Dr Vanessa Ayala Rivera",
+        "designation": "Assistant Professor in Computing",
+        "email": "Vanessa.Ayala-Rivera@ncirl.ie",
+        "phone": "+353 1 716 2933",
+        "professor_thumbnail_url": "",
+        "see_all_professors": ""
+    },
+    {
+        "professor_name": "Michael Bradford",
+        "designation": "Assistant Professor in Computing",
+        "email": "michael.bradford@ncirl.ie",
+        "phone": "+353 4498619",
+        "professor_thumbnail_url": "https://www.ncirl.ie/DesktopModules/Inventise.NCI/Images/StaffDirectory/f16d6a6b-e9a1-48f8-b79f-c366f63aea59.jpg",
+        "see_all_professors": ""
+    }]
+}
+{
+   "college": "Trinity College Ireland",
+    "staff": [{
+        "professor_name": "Olivia Walkers",
+        "designation": "ADAPT Marketing & Communications Manager",
+        "email": "owaters@tcd.ie",
+        "phone": "3531896 4996",
+        "professor_thumbnail_url": "",
+        "see_all_professors": ""
+        },
+        {
+        "professor_name": "Dr. Marco Ruffini",
+        "designation": "Associate Professor",
+        "email": "MARCO.RUFFINI@tcd.ie",
+        "phone": "35318963635/3635",
+        "professor_thumbnail_url": "",
+        "see_all_professors": ""
+        },
+        {
+        "professor_name": "Dr. Giovanni Di Liberto",
+        "designation": "Assistant Professor",
+        "email": "gdiliber@tcd.ie",
+        "phone": "35318961261",
+        "professor_thumbnail_url": "",
+        "see_all_professors": ""
+    }]
+}
+{
+    "college": "Dublin City University",
+    "staff": [{
+        "professor_name": "Dr Therese Dooley ",
+        "designation": "Associate Professor Emerita",
+        "email": "therese.dooley@dcu.ie",
+        "phone": "01 700 9176",
+        "professor_thumbnail_url": "",
+        "see_all_professors": ""
+        },
+        {
+        "professor_name": "Dr James Lovatt",
+        "designation": "Academic Staff",
+        "email": "james.lovatt@dcu.ie",
+        "phone": "01 700 9119",
+        "professor_thumbnail_url": "",
+        "see_all_professors": ""
+        },
+        {
+        "professor_name": "Dr Caitriona Ni Cassaithe",
+        "designation": "Academic Staff",
+        "email": "caitriona.nicassaithe@dcu.ie",
+        "phone": "01 700 9170",
+        "professor_thumbnail_url": "",
+        "see_all_professors": ""
+    }]
+}
+{
+    "college": "Griffith College Dublin",
+    "staff": [{
+        "professor_name": "Aisling Farrell ",
+        "designation": "Programme Administrator - Computing",
+        "email": "aisling.farrell@griffith.ie",
+        "phone": "01-4150428",
+        "professor_thumbnail_url": "",
+        "see_all_professors": ""
+        },
+        {
+        "professor_name": "Angela Curran",
+        "designation": "Programme Administrator - Short Courses Programme Administrator - Lifelong Learning Programme Administrator - Counselling & Psychotherapy",
+        "email": "angela.curran@griffith.ie",
+        "phone": "01-4163378",
+        "professor_thumbnail_url": "https://www.griffith.ie/sites/all/modules/copyprevention/transparent.gif",
+        "see_all_professors": ""
+        },
+        {
+        "professor_name": "Ann Donegan",
+        "designation": "Head of Faculty - Griffith Professional Accountancy",
+        "email": "ann.donegan@griffith.ie",
+        "phone": "01-4150471",
+        "professor_thumbnail_url": "",
+        "see_all_professors": ""    
+    }]
+}
+{
+    "college": "Dublin Business School",
+    "staff": [{
+        "professor_name": "Alison Kinsella",
+        "designation": "Lecturer in Counselling & Psychotherapy",
+        "email": "alison.kinsella@dbs.ie",
+        "phone": "",
+        "professor_thumbnail_url": "https://www.dbs.ie/images/default-source/dbs-staff/alison-kinsella-(2).jpg?sfvrsn=9feb2cea_0",
+        "see_all_professors": ""
+        },
+        {
+        "professor_name": "Dr. Andrew Browne",
+        "designation": "Lecturer in Arts and English Language",
+        "email": "andrew.browne@dbs.ie",
+        "phone": "",
+        "professor_thumbnail_url": "https://www.dbs.ie/images/default-source/dbs-staff/andrew_browne_square.png?sfvrsn=53302dea_0",
+        "see_all_professors": ""
+        },
+        {
+        "professor_name": "Andy Fitzgerald",
+        "designation": "Lecturer in Computing",
+        "email": "andy.fitzgerald@dbs.ie",
+        "phone": "",
+        "professor_thumbnail_url": "https://www.dbs.ie/images/default-source/dbs-staff/andyfitzgeraldprofile---andy-fitzgerald.png?sfvrsn=11c138ea_0",
+        "see_all_professors": ""    
+    }]
+}
+{
+    "college": "South East Technological University",
+    "staff": [{
+        "professor_name": "Ms Connell, Breda",
+        "designation": "Life Long Learning Assistant Librarian",
+        "email": "breda.connell@setu.ie",
+        "phone": "059-9175776",
+        "professor_thumbnail_url": "https://www.itcarlow.ie/public/userfiles/cms/staff/1566985770_breda-connell-2019.jpg",
+        "see_all_professors": ""
+        },
+        {
+        "professor_name": "Ms Mulligan, Julie",
+        "designation": "Lecturer - Business",
+        "email": "julie.mulligan@setu.ie",
+        "phone": "053-9185817",
+        "professor_thumbnail_url": "https://www.itcarlow.ie/public/userfiles/cms/staff/1650973644_20220425-Julie_Mulligan.jpg",
+        "see_all_professors": ""
+        },
+        {
+        "professor_name": "Mr Norton, Mark",
+        "designation": "Lecturer - Electronic Engineering",
+        "email": "mark.norton@setu.ie",
+        "phone": "059-9175462",
+        "professor_thumbnail_url": "",
+        "see_all_professors": ""    
+    }]
+}
+{
+    "college": "Carlow College St Patrick's",
+    "staff": [{
+        "professor_name": "Dr Regina Donlon",
+        "designation": "Lecturer in Irish History",
+        "email": "rdonlon@carlowcollege.ie",
+        "phone": "059 915 3291",
+        "professor_thumbnail_url": "https://carlowcollege.ie/media/Regina-Donlon.jpg",
+        "see_all_professors": ""
+        },
+        {
+        "professor_name": "Clare King",
+        "designation": "Assistant Lecturer in Psychology",
+        "email": "cking@carlowcollege.ie",
+        "phone": "059 915 3281",
+        "professor_thumbnail_url": "https://carlowcollege.ie/media/Clare-King.jpg",
+        "see_all_professors": ""
+        },
+        {
+        "professor_name": "Dr Derek Coyle",
+        "designation": "Lecturer in English",
+        "email": "dcoyle@carlowcollege.ie",
+        "phone": "059 915 3204",
+        "professor_thumbnail_url": "https://carlowcollege.ie/media/2018/07/Dr-Derek-Coyle.jpg",
+        "see_all_professors": ""    
+    }]
+}
+{
+    "college": "Atlantic Technological University - Donegal Letterkenny Campus",
+    "staff": [{
+        "professor_name": "Hugh Boyle",
+        "designation": "",
+        "email": "hugh.boyle@gmit.ie",
+        "phone": "35391742279",
+        "professor_thumbnail_url": "https://www.gmit.ie/themes/custom/nights/assets/img/avatar-placeholder.jpg",
+        "see_all_professors": ""
+        },
+        {
+        "professor_name": "Bernadette Armstrong",
+        "designation": "",
+        "email": "Bernadette.Armstrong@gmit.ie",
+        "phone": "35391742065",
+        "professor_thumbnail_url": "https://www.gmit.ie/themes/custom/nights/assets/img/avatar-placeholder.jpg",
+        "see_all_professors": ""
+        },
+        {
+        "professor_name": "Catherine Arnold",
+        "designation": "",
+        "email": "Catherine.Arnold@gmit.ie",
+        "phone": "35391742078",
+        "professor_thumbnail_url": "https://www.gmit.ie/themes/custom/nights/assets/img/avatar-placeholder.jpg",
+        "see_all_professors": ""    
+    }]
+}
+{
+    "college": "University of Limerick",
+    "staff": [{
+        "professor_name": "Dr. Neil O Connor",
+        "designation": "Lecturer",
+        "email": "neil.oconnor@ul.ie",
+        "phone": "+353 61 202381",
+        "professor_thumbnail_url": "https://www.ul.ie/sites/default/files/styles/person_portrait/public/scieng/OConnorNeil.JPG?h=01f7c274&itok=xBIXpvLO",
+        "see_all_professors": ""
+        },
+        {
+        "professor_name": "Aisling Leahy",
+        "designation": "Executive Administrator",
+        "email": "aisling.leahy@ul.ie",
+        "phone": "",
+        "professor_thumbnail_url": "https://www.ul.ie/sites/default/files/styles/person_portrait/public/scieng/Aisling.jpg?h=fbf7a813&itok=-de8m07l",
+        "see_all_professors": ""
+        },
+        {
+        "professor_name": "Prof. Brian Fitzgerald",
+        "designation": "Krehbiel Chair in Innovation in Business and Technology and Director of Lero",
+        "email": "bf@ul.ie",
+        "phone": "+353 61 202720",
+        "professor_thumbnail_url": "https://www.ul.ie/sites/default/files/styles/person_portrait/public/scieng/FitzgeraldBrian.jpg?h=4997dc06&itok=jqLa8ZpX",
+        "see_all_professors": ""    
+    }]
+}
+{
+    "college": "Technological University of the Shannon",
+    "staff": [{
+        "professor_name": "Noel Tierney",
+        "designation": "Lecturer in Computer Applications",
+        "email": "ntierney@ait.ie",
+        "phone": "(090) 6468112",
+        "professor_thumbnail_url": "https://www.ait.ie/images/made/uploads/head-shots/nt_photo_300_169.jpg",
+        "see_all_professors": ""
+        },
+        {
+        "professor_name": "Daniel Seery",
+        "designation": "Lecturer in Digital Marketing",
+        "email": "dseery@ait.ie",
+        "phone": "(090) 6468136",
+        "professor_thumbnail_url": "",
+        "see_all_professors": ""
+        },
+        {
+        "professor_name": "Dr. Anne Marie O’Brien",
+        "designation": "Lecturer Science",
+        "email": "amobrien@ait.ie",
+        "phone": "(090) 6468090",
+        "professor_thumbnail_url": "",
+        "see_all_professors": ""    
+    }]
+}
+{
+    "college": "Dundalk Institute of Technology",
+    "staff": [{
+        "professor_name": "Dr. Fiona Lawless",
+        "designation": "Head Of Department Department of Computing Science and Mathematics",
+        "email": "Fiona.Lawless@dkit.ie",
+        "phone": "+353429370200",
+        "professor_thumbnail_url": "https://www.dkit.ie/staff-directory/uploads/Fiona-Lawless.jpg",
+        "see_all_professors": ""
+        },
+        {
+        "professor_name": "Dr. Natalia Budarina",
+        "designation": "Lecturer Grade Department of Computing Science and Mathematics",
+        "email": "Natalia.Budarina@dikt.ie",
+        "phone": "+353429372607",
+        "professor_thumbnail_url": "https://www.dkit.ie/staff-directory/uploads/Natalia-Budarina.jpg",
+        "see_all_professors": ""
+        },
+        {
+        "professor_name": "Dr. Jack McDonnell",
+        "designation": "Lecturer Grade Department of Computing Science and Mathematics",
+        "email": "Jack.McDonnell@dkit.ie",
+        "phone": "+353429370200",
+        "professor_thumbnail_url": "https://www.dkit.ie/staff-directory/uploads/Jack-McDonnell.jpg",
+        "see_all_professors": ""    
+    }]
+}
+{
+    "college": "University College Cork",
+    "staff": [{
+        "professor_name": "Yvonne Nolan",
+        "designation": "Professor",
+        "email": "y.nolan@ucc.ie",
+        "phone": "353 (0)21 420 5476",
+        "professor_thumbnail_url": "",
+        "see_all_professors": ""
+        },
+        {
+        "professor_name": "Gerard O'Keeffe",
+        "designation": "Professor",
+        "email": "g.okeeffe@ucc.ie",
+        "phone": "353 (0)21 420 5570",
+        "professor_thumbnail_url": "",
+        "see_all_professors": ""
+        },
+        {
+        "professor_name": "Jane English",
+        "designation": "Lecturer in Anatomy & Neuroscience",
+        "email": "jane.english@ucc.ie",
+        "phone": "(021)420 5481",
+        "professor_thumbnail_url": "",
+        "see_all_professors": ""    
+    }]
+}
+{
+    "college": "Munster Technological University",
+    "staff": [{
+        "professor_name": "Dr Olivia Brickley",
+        "designation": "Lecturer",
+        "email": "Olivia.Brickley@mtu.ie",
+        "phone": "021 433 5582",
+        "professor_thumbnail_url": "",
+        "see_all_professors": "https://cs.cit.ie/staff"
+        },
+        {
+        "professor_name": "Dr Ignacio Castiñeiras",
+        "designation": "Lecturer",
+        "email": "Ignacio.Castineiras@mtu.ie",
+        "phone": "021 433 5857",
+        "professor_thumbnail_url": "",
+        "see_all_professors": "https://cs.cit.ie/staff"
+        },
+        {
+        "professor_name": "Mr Gerard MacSweeney",
+        "designation": "Lecturer",
+        "email": "Gerard.MacSweeney@mtu.ie",
+        "phone": "021 433 5574",
+        "professor_thumbnail_url": "",
+        "see_all_professors": "https://cs.cit.ie/staff"    
+    }]
+}
+{
+    "college": "Atlantic Technological University",
+    "staff": [{
+        "professor_name": "Hugh Boyle",
+        "designation": "",
+        "email": "hugh.boyle@gmit.ie",
+        "phone": "35391742279",
+        "professor_thumbnail_url": "https://www.gmit.ie/themes/custom/nights/assets/img/avatar-placeholder.jpg",
+        "see_all_professors": "",
+        "college": "Atlantic Technological University"
+        },
+        {
+        "professor_name": "Bernadette Armstrong",
+        "designation": "",
+        "email": "Bernadette.Armstrong@gmit.ie",
+        "phone": "35391742065",
+        "professor_thumbnail_url": "https://www.gmit.ie/themes/custom/nights/assets/img/avatar-placeholder.jpg",
+        "see_all_professors": "",
+        "college": "Atlantic Technological University"
+        },
+        {
+        "professor_name": "Catherine Arnold",
+        "designation": "",
+        "email": "Catherine.Arnold@gmit.ie",
+        "phone": "35391742078",
+        "professor_thumbnail_url": "https://www.gmit.ie/themes/custom/nights/assets/img/avatar-placeholder.jpg",
+        "see_all_professors": "",
+        "college": "Atlantic Technological University"    
+    }]
+}
+{
+    "college": "ATU - Sligo Campus and ATU - Atlantic Technological University",
+    "staff": [{
+        "professor_name": "Hugh Boyle",
+        "designation": "",
+        "email": "hugh.boyle@gmit.ie",
+        "phone": "35391742279",
+        "professor_thumbnail_url": "https://www.gmit.ie/themes/custom/nights/assets/img/avatar-placeholder.jpg",
+        "see_all_professors": "",
+        "college": "ATU - Sligo Campus and ATU - Atlantic Technological University"
+        },
+        {
+        "professor_name": "Bernadette Armstrong",
+        "designation": "",
+        "email": "Bernadette.Armstrong@gmit.ie",
+        "phone": "35391742065",
+        "professor_thumbnail_url": "https://www.gmit.ie/themes/custom/nights/assets/img/avatar-placeholder.jpg",
+        "see_all_professors": "",
+        "college": "ATU - Sligo Campus and ATU - Atlantic Technological University"
+        },
+        {
+        "professor_name": "Catherine Arnold",
+        "designation": "",
+        "email": "Catherine.Arnold@gmit.ie",
+        "phone": "35391742078",
+        "professor_thumbnail_url": "https://www.gmit.ie/themes/custom/nights/assets/img/avatar-placeholder.jpg",
+        "see_all_professors": "",
+        "college": "ATU - Sligo Campus and ATU - Atlantic Technological University"    
+    }]
+}
+{
+    "college": "NUI Galway",
+    "staff": [{
+        "professor_name": "Dr. John Burns",
+        "designation": "Lecturer",
+        "email": "john.burns@nuigalway.ie",
+        "phone": "+353 91 524411 ",
+        "professor_thumbnail_url": "http://www.uiginn.com/maths/staff/jburns.jpg",
+        "see_all_professors": "",
+        "college": "NUI Galway"
+        },
+        {
+        "professor_name": "Dr. Aisling McCluskey",
+        "designation": "Lecturer",
+        "email": "aisling.mccluskey@nuigalway.ie",
+        "phone": "+353 91 524411",
+        "professor_thumbnail_url": "http://www.uiginn.com/maths/staff/aemccluskey.jpg",
+        "see_all_professors": "",
+        "college": "NUI Galway"
+        },
+        {
+        "professor_name": "Donal O'Regan",
+        "designation": "Lecturer",
+        "email": "donal.oregan@nuigalway.ie",
+        "phone": "  +353 91 524411",
+        "professor_thumbnail_url": "http://www.uiginn.com/maths/staff/doregan.jpg",
+        "see_all_professors": "",
+        "college": "NUI Galway"    
+    }]
+}
+{
+    "college": "Technological University Dublin",
+    "staff": [{
+        "professor_name": "Damian Gordon",
+        "designation": "Lecturer, Computer Science",
+        "email": "Damian.x.Gordon@TUDublin.ie",
+        "phone": "+35312205612",
+        "professor_thumbnail_url": "",
+        "see_all_professors": ""
+        },
+        {
+        "professor_name": "Lucas Rizzo",
+        "designation": "Assistant Lecturer, Computer Science",
+        "email": "Lucas.Rizzo@TUDublin.ie",
+        "phone": "+35312205765",
+        "professor_thumbnail_url": "",
+        "see_all_professors": ""
+        },
+        {
+        "professor_name": "Brendan Tierney",
+        "designation": "Lecturer, Computer Science",
+        "email": "brendan.tierney@TUDublin.ie",
+        "phone": "+35312205639",
+        "professor_thumbnail_url": "",
+        "see_all_professors": ""    
+    }]
+}
+{
+    "college": "Technological Universtiy Dublin Tallaght",
+    "staff": [{
+        "professor_name": "Terence Brennan",
+        "designation": "D701 - School Of Engineering Administration",
+        "email": "Terence.Brennan@TUDublin.ie",
+        "phone": "+35312207184",
+        "professor_thumbnail_url": "",
+        "see_all_professors": "",
+        "college": "Technological Universtiy Dublin Tallaght"
+        },
+        {
+        "professor_name": "Denise Behan",
+        "designation": "Lecturer - D825 - Common",
+        "email": "Denise.Behan@TUDublin.ie",
+        "phone": "+35312207887",
+        "professor_thumbnail_url": "",
+        "see_all_professors": "",
+        "college": "Technological Universtiy Dublin Tallaght"
+        },
+        {
+        "professor_name": "David Beckley King",
+        "designation": "Lecturer - Technology Services (ICT)",
+        "email": "David.BeckleyKing@TUDublin.ie",
+        "phone": "+35312205436",
+        "professor_thumbnail_url": "",
+        "see_all_professors": "",
+        "college": "Technological Universtiy Dublin Tallaght"    
+    }]
+}
+{
+    "college": "Technological Universtiy Dublin Blanchardstown",
+    "staff": [{
+        "professor_name": "Christina Thorpe",
+        "designation": "Lecturer, Informatics",
+        "email": "Christina.Thorpe@tudublin.ie",
+        "phone": "+35312207397",
+        "professor_thumbnail_url": "",
+        "see_all_professors": "",
+        "college": "Technological Universtiy Dublin Blanchardstown"
+        },
+        {
+        "professor_name": "Peter Alexander",
+        "designation": "Lecturer, Informatics",
+        "email": "Peter.Alexander@tudublin.ie",
+        "phone": "+35312207364",
+        "professor_thumbnail_url": "",
+        "see_all_professors": "",
+        "college": "Technological Universtiy Dublin Blanchardstown"
+        },
+        {
+        "professor_name": "Derek Bradley",
+        "designation": "Assistant Staff Officer, School of Informatics and Engineering",
+        "email": "Derek.Bradley@tudublin.ie",
+        "phone": "+35312206178",
+        "professor_thumbnail_url": "",
+        "see_all_professors": "",
+        "college": "Technological Universtiy Dublin Blanchardstown"    
+    }]
+}

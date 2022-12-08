@@ -35,8 +35,8 @@ const CourseDetails = () => {
         <React.Fragment>
 			<div className="header">
                 <div className="container">
-                    <div className="header-text">{selectedCourse.title}</div>
-                    <p>Lorem Ipsum Dolor Sit Amet</p>
+                    <div className="header-text">{record.title}</div>
+                    <p>{record.college}</p>
                 </div>
             </div>
             <div className="p-60">
@@ -82,6 +82,20 @@ const CourseDetails = () => {
                                     </AccordionSummary>
                                     <AccordionDetails>
                                     <Typography>{selectedCourse.minimum_entry_requirements}</Typography>
+                                    </AccordionDetails>
+                                </Accordion>
+                            }
+                            {record.fees &&
+                                <Accordion>
+                                    <AccordionSummary
+                                    expandIcon={<ExpandMoreIcon />}
+                                    aria-controls="panel33a-content"
+                                    id="panel33a-header"
+                                    >
+                                    <Typography><div className="acc-title">Course Fees</div></Typography>
+                                    </AccordionSummary>
+                                    <AccordionDetails>
+                                    <Typography>{record.fees}</Typography>
                                     </AccordionDetails>
                                 </Accordion>
                             }
