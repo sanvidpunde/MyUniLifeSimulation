@@ -9,19 +9,21 @@ const Footer = () => {
                         <div className="single-footer-column">
                             <div className="footer-title"><img src="/images/logo.png" alt="logo" /></div>
                             <div className="title-attention"></div>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            <p>UniLifeSimulation is proud to be a part of transforming the lives of students looking to further their education. We know that choosing a course can be challenging and we aim to help all our users to make informed decisions on choosing their desired course. Shaping tomorrow starts today.</p>
                         </div>
                         <div className="single-footer-column">
                             <div className="footer-title">Contact Us</div>
                             <div className="title-attention"></div>
-                            <p className="mb-20">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                            <p><i className="fa fa-phone" aria-hidden="true"></i> <span>Phone:</span> +353 0899999999</p>
-                            <p><i className="fa fa-envelope" aria-hidden="true"></i> <span>Email:</span> info@website.com</p>
-                            <p><i className="fa fa-clock-o"></i> <span>Mon-Sun:</span> 9:00am - 6:00pm</p>
+                            <p className="mb-20">We are dedicated to delivering the best experience to all our users. If you have any queries, please reach out to us and a member of our team will get back to you as soon as possible</p>
+                            <p><i className="fa fa-envelope" aria-hidden="true"></i> <span>Email:</span> forkthedata@gmail.com</p>
+                            <p><i className="fa fa-clock-o"></i> <span>Mon-Fri:</span> 9:00am - 6:00pm</p>
                         </div>
                         <div className="single-footer-column">
                             <div className="footer-title">Important Links</div>
                             <div className="title-attention"></div>
+                            <p><a href='https://usi.ie/'>Union of Students in Ireland</a></p>
+                            <p><a href='https://www.internationalstudents.ie/'>international Students</a></p>
+                            <p><a href='https://www.cao.ie/index.php?page=studentresources'>CAO Student Resources</a></p>
                         </div>
                     </div>
                     <div className="footer-border"></div>

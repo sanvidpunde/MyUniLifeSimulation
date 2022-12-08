@@ -27,7 +27,13 @@ export default class Quiz extends Component {
             17: 'Which of the following is NOT a machine learning algorithm?',
             18: 'What is Big Data?',
             19: 'What is R an implementation of?',
-            20: 'The 5 steps required to identify a problem and come up with a solution are referred to as the ________ Cycle'
+            20: 'The 5 steps required to identify a problem and come up with a solution are referred to as the ________ Cycle',
+            21: 'Which of the following Python libraries are used to import, merge, export data files?',
+            22: 'Which of the following language is best suited to extract meaningful data from a database?',
+            23: 'Which of the following types of visualisation is best suited to show the trend of prices over a period of time?',
+            24: 'The best form of visualising outliers in a dataset is to use the _________ .',
+            25: 'A p-value of _________ on statistical tests allows you to reject the null hypothesis'
+
         },
 
       // options for the quiz     
@@ -151,7 +157,37 @@ export default class Quiz extends Component {
                 2: 'Investigative',
                 3: 'Conclusion',
 				4: 'None of the  above'
-            }                                                
+            },
+            21:{
+                1: 'numpy',
+                2: 'sklearn',
+                3: 'pandas',
+                4: 'matplotlib'
+            },
+            22:{
+                1: 'python',
+                2: 'java',
+                3: 'javascript',
+                4: 'sql'
+            },
+            23:{
+                1: 'bar chart',
+                2: 'line graph',
+                3: 'pie chart',
+                4: 'histogram'
+            },    
+            24:{
+                1: 'boxplot',
+                2: 'bar chart',
+                3: 'histogram',
+                4: 'pie chart'
+            },
+            25:{
+                1: '0.5',
+                2: '0.05',
+                3: '0.1',
+                4: '1.0'
+            }                                            
         },
 
            // answers for the quiz
@@ -175,7 +211,12 @@ export default class Quiz extends Component {
 			17: '1',
             18: '3',
             19: '2',
-            20: '2',            
+            20: '2',
+            21: '3', 
+            22: '4', 
+            23: '2',
+            24: '1',
+            25: '2'       
         },
         correctAnswer: 0,
         clickedAnswer: 0,
