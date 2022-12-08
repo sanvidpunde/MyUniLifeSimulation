@@ -61,7 +61,7 @@ const Home = ({ loggedIn, email, name }) => {
 					</div>
 					<div className="take-test-cta">
 						<div className="title text-left">Personality Test</div>
-						<p>Our Interest Profiler test is designed for students who are unsure of what career they want to pursue and guide them in making informed decision.</p><br/>
+						<p>Take our personality test which is based on big five personality traits Openness, Conscientiousness, Extroversion, Agreeableness, and Neuroticism.</p><br/>
 						<Link className="take-test-button" to="/personality_test">Take Test Now</Link>
 					</div>
 				</div>
