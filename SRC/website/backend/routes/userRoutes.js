@@ -85,6 +85,9 @@ router.post('/personality', [
 	check('OPN4').isFloat({ min: 1, max: 5 }),
 ], userController.personality);
 
+// Staff
+router.get('/professor', userController.professor);
+
 // Password Reset
 router.post('/password_reset', [
 	check('email').isEmail(),

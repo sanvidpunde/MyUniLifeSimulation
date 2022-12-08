@@ -120,8 +120,9 @@ const other_courses = [{
 
 const _nullSession = {
   course_suggested: sample_structure,
-  other_courses: other_courses
-}
+  other_courses: other_courses,
+  selected_course: sample_structure
+};
 const course = (state = _nullSession, { type, course }) => {
   Object.freeze(state);
   switch (type) {

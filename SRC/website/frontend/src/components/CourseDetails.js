@@ -14,7 +14,7 @@ import {receiveSuccessMessage} from '../redux/util/controller';
 const CourseDetails = () => {
 
     const dispatch = useDispatch();
-    const course = useSelector(state => state.course);
+    const selectedCourse = useSelector(state => state.course.selected_course);
 
     // Get the code param from the URL.
     const useQuery = () => {
@@ -26,30 +26,6 @@ const CourseDetails = () => {
     const sample_structure = {
         course: "", code: "", title: "", course_type: "", course_starts: "", college: "Technological University Dublin", fees: "", level: "", award: "", duration: "", mode_of_study: "", method_of_delivery: "", commencement_date: "", location: "", thumbnail_image_url: "https://dummyimage.com/500x260/333/fff.jpg", website_url: "", course_description: "", course_content: "", minimum_entry_requirements: "", video: "", faculty_information: [], job_opportunities_and_salary_expectations: "", clubs_and_societies: "", course_reviews_and_testimonials: "", map_info: "", students_accomodation_link: "", clubs_and_societies_link: "", workshops: ""
     };
-    const code = query.get("code");
-    const [record, setRecord] = useState(sample_structure);
-
-    useEffect(() => {
-        console.log("record", record);
-    }, [record]);
-
-    useEffect(() => {
-        if (code) {
-            console.log("code is", code);
-            if (course.course_suggested.code == code) {
-                console.log("made inside if");
-                console.log("course.course_suggested", course.course_suggested)
-                setRecord(course.course_suggested);
-            } else {
-                console.log("made inside else");
-                const filteredData = course.other_courses.filter(item => item.code == code);
-                console.log("filteredData", filteredData);
-                if (filteredData) {
-                    setRecord(filteredData[0]);
-                }                
-            }
-        }
-    }, [code]);
 
     useEffect(() => {
 		window.scrollTo(0, 0);
@@ -67,7 +43,7 @@ const CourseDetails = () => {
                 <div className="container">
                     <div className="course_details_parent">
                         <div className="course_details_acc">
-                            {record.course_description && record.course_description.length > 0 &&
+                            {selectedCourse.course_description && selectedCourse.course_description.length > 0 &&
                                 <Accordion>
                                     <AccordionSummary
                                     expandIcon={<ExpandMoreIcon />}
@@ -77,11 +53,11 @@ const CourseDetails = () => {
                                     <Typography><div className="acc-title">Course Description</div></Typography>
                                     </AccordionSummary>
                                     <AccordionDetails>
-                                    <Typography>{record.course_description}</Typography>
+                                    <Typography>{selectedCourse.course_description}</Typography>
                                     </AccordionDetails>
                                 </Accordion>
                             }
-                            {record.course_content && record.course_content.length > 0 &&
+                            {selectedCourse.course_content && selectedCourse.course_content.length > 0 &&
                                 <Accordion>
                                     <AccordionSummary
                                     expandIcon={<ExpandMoreIcon />}
@@ -91,11 +67,11 @@ const CourseDetails = () => {
                                     <Typography><div className="acc-title">Course Content</div></Typography>
                                     </AccordionSummary>
                                     <AccordionDetails>
-                                    <Typography>{record.course_content}</Typography>
+                                    <Typography>{selectedCourse.course_content}</Typography>
                                     </AccordionDetails>
                                 </Accordion>
                             }
-                            {record.minimum_entry_requirements && record.minimum_entry_requirements.length > 0 &&
+                            {selectedCourse.minimum_entry_requirements && selectedCourse.minimum_entry_requirements.length > 0 &&
                                 <Accordion>
                                     <AccordionSummary
                                     expandIcon={<ExpandMoreIcon />}
@@ -105,7 +81,7 @@ const CourseDetails = () => {
                                     <Typography><div className="acc-title">Minimum Entry Requirements</div></Typography>
                                     </AccordionSummary>
                                     <AccordionDetails>
-                                    <Typography>{record.minimum_entry_requirements}</Typography>
+                                    <Typography>{selectedCourse.minimum_entry_requirements}</Typography>
                                     </AccordionDetails>
                                 </Accordion>
                             }
@@ -123,7 +99,7 @@ const CourseDetails = () => {
                                     </AccordionDetails>
                                 </Accordion>
                             }
-                            {record.video && record.video.length > 0 &&
+                            {selectedCourse.video && selectedCourse.video.length > 0 &&
                                 <Accordion>
                                     <AccordionSummary
                                     expandIcon={<ExpandMoreIcon />}
@@ -135,7 +111,7 @@ const CourseDetails = () => {
                                     <AccordionDetails>
                                     <Typography>
                                         <ReactPlayer 
-                                            url={record.video}
+                                            url={selectedCourse.video}
                                             width="100%"
                                             className=""
                                             controls={true}
@@ -145,7 +121,7 @@ const CourseDetails = () => {
                                     </AccordionDetails>
                                 </Accordion>
                             }
-                            {record.faculty_information && record.faculty_information.length > 0 &&
+                            {selectedCourse.faculty_information && selectedCourse.faculty_information.length > 0 &&
                                 <Accordion>
                                     <AccordionSummary
                                     expandIcon={<ExpandMoreIcon />}
@@ -156,12 +132,12 @@ const CourseDetails = () => {
                                     </AccordionSummary>
                                     <AccordionDetails>
                                     <Typography>
-                                        {record.faculty_information}
+                                        {selectedCourse.faculty_information}
                                     </Typography>
                                     </AccordionDetails>
                                 </Accordion>
                             }
-                            {record.job_opportunities_and_salary_expectations && record.job_opportunities_and_salary_expectations.length > 0 &&
+                            {selectedCourse.job_opportunities_and_salary_expectations && selectedCourse.job_opportunities_and_salary_expectations.length > 0 &&
                                 <Accordion>
                                     <AccordionSummary
                                     expandIcon={<ExpandMoreIcon />}
@@ -171,11 +147,11 @@ const CourseDetails = () => {
                                     <Typography><div className="acc-title">Job Opportunities and Salary Expectations</div></Typography>
                                     </AccordionSummary>
                                     <AccordionDetails>
-                                    <Typography>{record.job_opportunities_and_salary_expectations}</Typography>
+                                    <Typography>{selectedCourse.job_opportunities_and_salary_expectations}</Typography>
                                     </AccordionDetails>
                                 </Accordion>
                             }
-                            {record.clubs_and_societies && record.clubs_and_societies.length > 0 &&
+                            {selectedCourse.clubs_and_societies && selectedCourse.clubs_and_societies.length > 0 &&
                                 <Accordion>
                                     <AccordionSummary
                                     expandIcon={<ExpandMoreIcon />}
@@ -185,11 +161,11 @@ const CourseDetails = () => {
                                     <Typography><div className="acc-title">Clubs and Societies</div></Typography>
                                     </AccordionSummary>
                                     <AccordionDetails>
-                                    <Typography>{record.clubs_and_societies}</Typography>
+                                    <Typography>{selectedCourse.clubs_and_societies}</Typography>
                                     </AccordionDetails>
                                 </Accordion>
                             }
-                            {record.course_reviews_and_testimonials && record.course_reviews_and_testimonials.length > 0 &&
+                            {selectedCourse.course_reviews_and_testimonials && selectedCourse.course_reviews_and_testimonials.length > 0 &&
                                 <Accordion>
                                     <AccordionSummary
                                     expandIcon={<ExpandMoreIcon />}
@@ -199,7 +175,7 @@ const CourseDetails = () => {
                                     <Typography><div className="acc-title">Course Reviews</div></Typography>
                                     </AccordionSummary>
                                     <AccordionDetails>
-                                    <Typography>{record.course_reviews_and_testimonials}</Typography>
+                                    <Typography>{selectedCourse.course_reviews_and_testimonials}</Typography>
                                     </AccordionDetails>
                                 </Accordion>
                             }
@@ -235,42 +211,42 @@ const CourseDetails = () => {
                         <div className="single_additional_func">
                             <Link to="#"><img src="/images/1.png" alt="img" /></Link>
                             <div className="single_additional_func_title">
-                                <Link to="#" className="additional_func_link">Brightspace</Link>
+                                <a href="https://youtu.be/BWFqCrRhYws" target="_blank" className="additional_func_link">Brightspace</a>
                             </div>
                             <p>Learn Lot of Stuff On Brightspace, Assignments and Stuff</p>
                         </div>
                         <div className="single_additional_func">
                             <Link to="#"><img src="/images/2.png" alt="img" /></Link>
                             <div className="single_additional_func_title">
-                                <Link to="#" className="additional_func_link">Explore our campus</Link>
+                                <a href="https://www.gov.ie/en/organisation/department-of-education/" target="_blank" className="additional_func_link">Ministry of Education</a>
                             </div>
                             <p>TU Dublin has 5 campuses across the Dublin region with our flagship campus at Grangegorman</p>
                         </div>
                         <div className="single_additional_func">
                             <Link to="#"><img src="/images/3.png" alt="img" /></Link>
                             <div className="single_additional_func_title">
-                                <Link to="#" className="additional_func_link">How to apply?</Link>
+                                <a href="https://www.cao.ie/handbook.php" target="_blank" className="additional_func_link">How to apply?</a>
                             </div>
                             <p>This will help you to apply in particular course</p>
                         </div>
                         <div className="single_additional_func">
                             <Link to="#"><img src="/images/4.png" alt="img" /></Link>
                             <div className="single_additional_func_title">
-                                <Link to="#" className="additional_func_link">Contact Students Union</Link>
+                                <a href="https://usi.ie/" target="_blank" className="additional_func_link">Union of Student Ireland</a>
                             </div>
                             <p>Lorem Ipsum Dolor Sit Amet</p>
                         </div>
                         <div className="single_additional_func">
                             <Link to="#"><img src="/images/5.png" alt="img" /></Link>
                             <div className="single_additional_func_title">
-                                <Link to="#" className="additional_func_link">Our Privacy Policy</Link>
+                                <a href="https://www.educationinireland.com/en/gdpr/" target="_blank" className="additional_func_link">Data Privacy Policy</a>
                             </div>
                             <p>Lorem Ipsum Dolor Sit Amet</p>
                         </div>
                         <div className="single_additional_func">
                             <Link to="#"><img src="/images/6.png" alt="img" /></Link>
                             <div className="single_additional_func_title">
-                                <Link to="#" className="additional_func_link">Our Libraries</Link>
+                                <a href="https://www.librariesireland.ie/" target="_blank" className="additional_func_link">Libraries</a>
                             </div>
                             <p>Lorem Ipsum Dolor Sit Amet</p>
                         </div>
