@@ -185,7 +185,7 @@ const CourseDetails = () => {
                             <div className="highlight-border"></div>
                             <div className="single_resource">
                             <a href="#" target="_blank"><img src="/images/uniExperienceSq.jpg" alt="img" /></a>
-                                <h3><Link to="/review_sentiment">Review Sentiment</Link></h3>
+                                <h3><a href="https://public.tableau.com/views/forkthdata/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link" target="_blank">Review Sentiment</a></h3>
                                 <p>Start exploring university through a game and familiarize yourself with your new campus</p>
                             </div>
                             <div className="single_resource">
