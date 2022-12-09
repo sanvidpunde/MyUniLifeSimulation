@@ -52,12 +52,6 @@ const Profiler = () => {
     const [readingWritingError, setReadingWritingError] = useState('');
     const [memoryCapabilityError, setMemoryCapabilityError] = useState('');
     const [workError, setWorkError] = useState('');
-    const [managementTechnicalError, setManagementTechnicalError] = useState('');
-    const [interestedBooksError, setInterestedBooksError] = useState('');
-    const [interestedTypeOfBooksError, setInterestedTypeOfBooksError] = useState('');
-    const [workshopsAttendedError, setWorkshopsAttendedError] = useState('');
-    const [typeOfCompanyYouWantToSettleInError, setTypeOfCompanyYouWantToSettleInError] = useState('');
-    const [interestedCareerAreaError, setInterestedCareerAreaError] = useState('');
 
     const yesNoOptions = [{value: 1, label: "yes"}, {value: 0, label: "no"}];
     const ordinalOptions = [{value: 0, label: "poor"}, {value: 1, label: "medium"}, {value: 2, label: "excellent"}];
@@ -104,24 +98,6 @@ const Profiler = () => {
     useEffect(() => {
         setWorkError('');
     }, [work]);
-    useEffect(() => {
-        setManagementTechnicalError('');
-    }, [managementTechnical]);
-    useEffect(() => {
-        setInterestedBooksError('');
-    }, [interestedBooks]);
-    useEffect(() => {
-        setInterestedTypeOfBooksError('');
-    }, [interestedTypeOfBooks]);
-    useEffect(() => {
-        setWorkshopsAttendedError('');
-    }, [workshopsAttended]);
-    useEffect(() => {
-        setTypeOfCompanyYouWantToSettleInError('');
-    }, [typeOfCompanyYouWantToSettleIn]);
-    useEffect(() => {
-        setInterestedCareerAreaError('');
-    }, [interestedCareerArea]);
 
     // Validation
 	const validate = () => {
@@ -158,25 +134,7 @@ const Profiler = () => {
         if (!work) {
             setWorkError('Please select');
         }
-        if (!managementTechnical) {
-            setManagementTechnicalError('Please select');
-        }
-        if (!interestedBooks) {
-            setInterestedBooksError('Please select');
-        }
-        if (!interestedTypeOfBooks) {
-            setInterestedTypeOfBooksError('Please select');
-        }
-        if (!workshopsAttended) {
-            setWorkshopsAttendedError('Please select');
-        }
-        if (!typeOfCompanyYouWantToSettleIn) {
-            setTypeOfCompanyYouWantToSettleInError('Please select');
-        }
-        if (!interestedCareerArea) {
-            setInterestedCareerAreaError('Please select');
-        }
-		if (!selfLearningCapability || !extraCourses || !tookAdvice || !likeSports || !entrepreneurialMindset || !tendencyToWorry || !teamCo || !introvert || !readingWriting || !memoryCapability || !work || !managementTechnical || !interestedBooks || !typeOfCompanyYouWantToSettleIn || !interestedCareerArea) {
+		if (!selfLearningCapability || !extraCourses || !tookAdvice || !likeSports || !entrepreneurialMindset || !tendencyToWorry || !teamCo || !introvert || !readingWriting || !memoryCapability || !work) {
             console.log('false returned');
 			return false;
 		}
@@ -211,12 +169,7 @@ const Profiler = () => {
                 reading_and_writing_skills: readingWriting.value,
                 memory_capability_score: memoryCapability.value,
                 B_hard_worker: work.value === "Hard worker" ? 1 : 0,
-                B_smart_worker: work.value === "Hard worker" ? 0 : 1,
-                "A_Non Technical": managementTechnical.value === "Management" ? 1 : 0,
-                A_Technical: managementTechnical.value === "Technical" ? 1 : 0,
-                Type_of_company_want_to_settle_in_code: typeOfCompanyYouWantToSettleIn.value,
-                Interested_Type_of_Books_code: interestedBooks.value,
-                interested_career_area_code: interestedCareerArea.value
+                B_smart_worker: work.value === "Hard worker" ? 0 : 1
             };
             console.log("Profiler inputs are", profilerData);
             dispatch(receiveSuccessMessage({success: "Interest Profiler request sent"}));
@@ -495,62 +448,6 @@ const Profiler = () => {
                                 />
                             </label>
                             {workError !== "" && <p className="error_text"><i>!</i> &nbsp;{workError}</p>}
-                        </div>
-                        <div className="single_selection_container">
-                            <label>Technical or Non Technical
-                                <Select 
-                                    defaultValue={managementTechnical}
-                                    onChange={setManagementTechnical}
-                                    options={[{value: "Non Technical", label: "Non Technical"}, {value: "Technical", label: "Technical"}]}
-                                    className="mt-6"
-                                />
-                            </label>
-                            {managementTechnicalError !== "" && <p className="error_text"><i>!</i> &nbsp;{managementTechnicalError}</p>}
-                        </div>
-
-                        {/* <div className="single_selection_container">
-                            <label>Interested Subjects
-                                <Select 
-                                    defaultValue={interestedSubjects}
-                                    onChange={setInterestedSubjects}
-                                    options={[{value: 9, label: "Programming"}, {value: 2, label: "Management"}, {value: 5, label: "Data Engineering"}, {value: 7, label: "Networks"}, {value: 3, label: "Software Engineering"}, {value: 4, label: "Cloud Computing"}, {value: 8, label: "Parallel Computing"}, {value: 1, label: "IOT"}, {value: 0, label: "Computer Architecture"}, {value: 6, label: "Hacking"}]}
-                                    className="mt-6"
-                                />
-                            </label>
-                            {interestedSubjectsError !== "" && <p className="error_text"><i>!</i> &nbsp;{interestedSubjectsError}</p>}
-                        </div> */}
-                        <div className="single_selection_container">
-                            <label>Interested Books Category
-                                <Select 
-                                    defaultValue={interestedBooks}
-                                    onChange={setInterestedBooks}
-                                    options={[{value: 28, label: "Series"}, {value: 3, label: "Autobiographies"}, {value: 29, label: "Travel"}, {value: 13, label: "Guide"}, {value: 14, label: "Health"}, {value: 17, label: "Journals"}, {value: 1, label: "Anthology"}, {value: 9, label: "Dictionaries"}, {value: 21, label: "Prayer Books"}, {value: 2, label: "Art"}, {value: 11, label: "Encyclopedias"}, {value: 22, label: "Religion-spirituality"}, {value: 0, label: "Action and Adventure"}, {value: 6, label: "Comics"}, {value: 16, label: "Horror"}, {value: 24, label: "Satire"}, {value: 27, label: "Self Help"}, {value: 15, label: "History"}, {value: 7, label: "Cookbooks"}, {value: 18, label: "Math"}, {value: 2, label: "Art"}, {value: 4, label: "Biographies"}, {value: 10, label: "Drama"}, {value: 8, label: "Diaries"}, {value: 26, label: "Science Fiction"}, {value: 20, label: "Poetry"}, {value: 23, label: "Romance"}, {value: 25, label: "Science"}, {value: 30, label: "Triology"}, {value: 12, label: "Fantasy"}, {value: 5, label: "Childrens"}, {value: 19, label: "Mystery"}]}
-                                    className="mt-6"
-                                />
-                            </label>
-                            {interestedBooksError !== "" && <p className="error_text"><i>!</i> &nbsp;{interestedBooksError}</p>}
-                        </div>
-                        <div className="single_selection_container">
-                            <label>Type of company you want to settle in
-                                <Select 
-                                    defaultValue={typeOfCompanyYouWantToSettleIn}
-                                    onChange={setTypeOfCompanyYouWantToSettleIn}
-                                    options={[{value: 0, label: "BPA"}, {value: 1, label: "Cloud Services"}, {value: 9, label: "Product Development"}, {value: 7, label: "Testing and Maintaining Services"}, {value: 4, label: "SAAS services"}, {value: 8, label: "Web services"}, {value: 2, label: "Finance"}, {value: 5, label: "Sales and Marketing"}, {value: 3, label: "Product based"}, {value: 6, label: "Service based"}]}
-                                    className="mt-6"
-                                />
-                            </label>
-                            {typeOfCompanyYouWantToSettleInError !== "" && <p className="error_text"><i>!</i> &nbsp;{typeOfCompanyYouWantToSettleInError}</p>}
-                        </div>
-                        <div className="single_selection_container">
-                            <label>Interested Career Area
-                                <Select 
-                                    defaultValue={interestedCareerArea}
-                                    onChange={setInterestedCareerArea}
-                                    options={[{value: 5, label: "Testing"}, {value: 4, label: "System Developer"}, {value: 0, label: "Business Process Analyst"}, {value: 3, label: "Security"}, {value: 2, label: "Developer"}, {value: 1, label: "Cloud Computing"}]}
-                                    className="mt-6"
-                                />
-                            </label>
-                            {interestedCareerAreaError !== "" && <p className="error_text"><i>!</i> &nbsp;{interestedCareerAreaError}</p>}
                         </div>
                     </div>
                     <div className="mt-20">
