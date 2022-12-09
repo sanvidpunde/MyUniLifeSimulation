@@ -228,24 +228,43 @@ const simulation = (req, res) => {
 
 	// Make API call to python app and await response
 	console.log("ready to call flask app");
-	let predictedCourse;
+	let predictedCourses;
 	request.post({url: 'https://flask-service.s3nc4honh0a9c.ap-south-1.cs.amazonlightsail.com/predict_course', json: req.body}, async (err, response, body) => {
 		if (err) {
 			return console.error('API req failed:', err);
 		}
 		if (body) {
-			predictedCourse = body;
 			console.log("body", body);
-			let identifiedCourse;
+			predictedCourses = body;
+			const stringOf5 = predictedCourses.substring(2, predictedCourses.length - 2);
+			console.log("stringOf5", stringOf5);
+			const arrayOfCourseIds = stringOf5.split(",");
+			console.log("arrayOfCourseIds", arrayOfCourseIds);
+			
+			let identifiedCourse1, identifiedCourse2, identifiedCourse3, identifiedCourse4, identifiedCourse5;
 			try {
-				identifiedCourse = await Course.findOne({ code: predictedCourse });
+				identifiedCourse1 = await Course.findOne({ code: arrayOfCourseIds[0] });
+				identifiedCourse2 = await Course.findOne({ code: arrayOfCourseIds[1] });
+				identifiedCourse3 = await Course.findOne({ code: arrayOfCourseIds[2] });
+				identifiedCourse4 = await Course.findOne({ code: arrayOfCourseIds[3] });
+				identifiedCourse5 = await Course.findOne({ code: arrayOfCourseIds[4] });
 			} catch(err) {
 				return console.log("err", err);
 			}
-			console.log("identifiedCourse ===============", identifiedCourse);	
-			if (identifiedCourse) {
+			console.log("identifiedCourse 1 ===============", identifiedCourse1);
+			console.log("identifiedCourse 2 ===============", identifiedCourse2);
+			console.log("identifiedCourse 3 ===============", identifiedCourse3);
+			console.log("identifiedCourse 4 ===============", identifiedCourse4);
+			console.log("identifiedCourse 5 ===============", identifiedCourse5);
+			if (identifiedCourse1) {
 				res.status(200).json({
-					course: identifiedCourse.toObject({getters: true}),
+					course_suggested: identifiedCourse1.toObject({getters: true}),
+					other_courses: [
+						identifiedCourse2,
+						identifiedCourse3,
+						identifiedCourse4,
+						identifiedCourse5
+					],
 					message: 'Successfully Predicted',
 					success: true
 				});
@@ -253,7 +272,7 @@ const simulation = (req, res) => {
 				return res.json({
 					type: 'fail',
 					success: false,
-					message: 'Cannot predict career, something went wrong'
+					message: 'Cannot predict course, something went wrong'
 				});
 			}
 		}

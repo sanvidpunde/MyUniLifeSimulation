@@ -4,7 +4,7 @@ import Select from 'react-select';
 import axios from 'axios';
 import {useSelector, useDispatch} from 'react-redux';
 
-import {receiveSuccessMessage, updateCurrentCourse} from '../redux/util/controller';
+import {receiveSuccessMessage, receiveFailureMessage, updateCurrentCourse} from '../redux/util/controller';
 
 const Simulation = () => {
 
@@ -13,24 +13,19 @@ const Simulation = () => {
     const dispatch = useDispatch();
     // const step = useSelector(state => state.step);
     const course = useSelector(state => state.course);
+    const personality = useSelector(state => state.personality);
+    const career = useSelector(state => state.career);
 
     const [cao, setCao] = useState(null);
-    const [fieldOfInterest, setFieldOfInterest] = useState(null);
     const [city, setCity] = useState(null);
     const [jobDomain, setJobDomain] = useState(null);
-    const [hobbies, setHobbies] = useState(null);
     const [spendingLimit, setSpendingLimit] = useState(null);
     const [caoError, setCaoError] = useState('');
-    const [fieldOfInterestError, setFieldOfInterestError] = useState('');
     const [cityError, setCityError] = useState('');
     const [jobDomainError, setJobDomainError] = useState('');
-    const [hobbiesError, setHobbiesError] = useState('');
     const [spendingLimitError, setSpendingLimitError] = useState('');
 
     // Remove errors on change
-    useEffect(() => {
-        setFieldOfInterestError('');
-    }, [fieldOfInterest]);
     useEffect(() => {
         setCityError('');
     }, [city]);
@@ -38,16 +33,11 @@ const Simulation = () => {
         setJobDomainError('');
     }, [jobDomain]);
     useEffect(() => {
-        setHobbiesError('');
-    }, [hobbies]);
-    useEffect(() => {
         setSpendingLimitError('');
     }, [spendingLimit]);
 
-    const fieldOfInterestOptions = [{value: "Computer & IT", label: "Computer & IT"}, {value: "Management", label: "Management"}, {value: "Business", label: "Business"}, {value: "Art", label: "Art"}, {value: "Finance", label: "Finance"}, {value: "Law", label: "Law"}];
     const cityOptions = [{value: "Dublin", label: "Dublin"}, {value: "Cork", label: "Cork"}, {value: "Galway", label: "Galway"}, {value: "Limerick", label: "Limerick"}, {value: "Athlone", label: "Athlone"}, {value: "Carlow", label: "Carlow"}];
     const jobDomainOptions = [{value: "IT", label: "IT"}, {value: "HR", label: "HR"}, {value: "Management", label: "Management"}, {value: "Support", label: "Support"}, {value: "Finance", label: "Finance"}];
-    const hobbiesOptions = [{value: "Cricket", label: "Cricket"}, {value: "Football", label: "Football"}, {value: "Chess", label: "Chess"}, {value: "Athletics", label: "Athletics"}, {value: "Automation", label: "Automation"}, {value: "Singing", label: "Singing"}];
     const spendingLimitOptions = [{value: 2000, label: "€2000 - €4000"}, {value: 4000, label: "€4000 - €6000"}, {value: 6000, label: "€6000 - €8000"}, {value: 8000, label: "€8000 - above"}];
 
     // scroll to top of page
@@ -71,22 +61,16 @@ const Simulation = () => {
         if (cao > 625 || cao < 0) {
             setCaoError('Invalid CAO point entered')
         }
-        if (!fieldOfInterest) {
-            setFieldOfInterestError("Please select your field of interest");
-        }
         if (!city) {
             setCityError("Please select your preferred city");
         }
         if (!jobDomain) {
             setJobDomainError("Please select your preferred job domain");
         }
-        // if (!hobbies) {
-        //     setHobbiesError("Please select your hobbies");
-        // }
         if (!spendingLimit) {
             setSpendingLimitError("Please select your preferred spending limit");
         }
-		if (!cao || 0 < cao > 625 || !fieldOfInterest || !city || !jobDomain || !spendingLimit) {
+		if (!cao || 0 < cao > 625 || !city || !jobDomain || !spendingLimit) {
 			return false;
 		}
 		return true;
@@ -100,10 +84,11 @@ const Simulation = () => {
             // call API
             console.log("No errors");
             const simulationData = {
-                CAO_Score: cao,
-                City: city.value,
-                Job_domain: jobDomain.value,
-                Interest: fieldOfInterest.value,
+                CAO: cao,
+                location: city.value,
+                job_domain: jobDomain.value,
+                interest: career.career || "Applications Developer",
+                personality: personality.personality.toLowerCase() || "serious",
                 Budget: spendingLimit.value
             }
             console.log("simulation inputs are", simulationData);
@@ -112,10 +97,13 @@ const Simulation = () => {
             axios.post('/api/simulation', simulationData)
                 .then(resp => {
                     console.log("resp is:", resp);
+                    if (resp.data.success === false) {
+                        return dispatch(receiveFailureMessage({failure: resp.data.message}));
+                    }
                     if (resp.data.success) {
-                        dispatch(receiveSuccessMessage({success: `Predicted Course ID is ${resp.data.course.code}`}));
+                        dispatch(receiveSuccessMessage({success: `Predicted Course ID is ${resp.data.course_suggested.code}`}));
                         // update redux
-                        const updatedCourse = {...course, course_suggested: resp.data.course}
+                        const updatedCourse = {...course, course_suggested: resp.data.course_suggested, other_courses: resp.data.other_courses}
                         dispatch(updateCurrentCourse(updatedCourse));
                         // redirect
                         history.push('/recommended_courses');
@@ -150,17 +138,6 @@ const Simulation = () => {
                             {caoError !== "" && <p className="error_text"><i>!</i> &nbsp;{caoError}</p>}
                         </div>
                         <div className="single-simulation-form">
-                            <label>Field of Interest
-                                <Select 
-                                    defaultValue={fieldOfInterest}
-                                    onChange={setFieldOfInterest}
-                                    options={fieldOfInterestOptions}
-                                    className="mt-6"
-                                />
-                            </label>
-                            {fieldOfInterestError !== "" && <p className="error_text"><i>!</i> &nbsp;{fieldOfInterestError}</p>}
-                        </div>
-                        <div className="single-simulation-form">
                             <label>City
                                 <Select
                                     defaultValue={city}
@@ -182,17 +159,6 @@ const Simulation = () => {
                             </label>
                             {jobDomainError !== "" && <p className="error_text"><i>!</i> &nbsp;{jobDomainError}</p>}
                         </div>
-                        {/* <div className="single-simulation-form">
-                            <label>Hobbies
-                                <Select
-                                    defaultValue={hobbies}
-                                    onChange={setHobbies}
-                                    options={hobbiesOptions}
-                                    className="mt-6"
-                                />
-                            </label>
-                            {hobbiesError !== "" && <p className="error_text"><i>!</i> &nbsp;{hobbiesError}</p>}
-                        </div> */}
                         <div className="single-simulation-form">
                             <label>Spending Limit
                                 <Select
