@@ -24,10 +24,11 @@ router.post('/signup', [
 
 // Post request for Course Recommender
 router.post('/simulation', [
-	check('CAO_Score').isFloat({ min: 0, max: 625 }),
-	check('City').not().isEmpty(),
-	check('Job_domain').not().isEmpty(),
-	check('Interest').not().isEmpty(),
+	check('CAO').isFloat({ min: 0, max: 625 }),
+	check('location').not().isEmpty(),
+	check('job_domain').not().isEmpty(),
+	check('interest').not().isEmpty(),
+	check('personality').not().isEmpty(),
 	check('Budget').not().isEmpty(),
 ], userController.simulation);
 

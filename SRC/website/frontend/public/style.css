@@ -741,6 +741,12 @@ a.cta_link:hover {
 	justify-content: space-between;
 	flex-wrap: wrap;
 }
+.other_universities .single_course {
+	flex-basis: 500px;
+}
+
+
+
 
 /* Course Details */
 .course_details_parent {
@@ -1247,6 +1253,21 @@ a.signUpBtnLink {
 	text-align: center;
 	color: #666;
 	margin: 16px 0;
+}
+
+/* Academics */
+.academics {
+	display: flex;
+	justify-content: space-between;
+	gap: 20px; 
+}
+.academics p {
+	line-height: 1.6;
+}
+.quiz_link:link,
+.quiz_link:visited {
+	color: #fff;
+	text-decoration: none;
 }
 
 /* Bucket */

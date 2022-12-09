@@ -48,7 +48,8 @@ const RecommendedCourses = () => {
                             courses.course_suggested.college == "National College of Ireland" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/nci.jpg" ||
                             courses.course_suggested.college == "Trinity College Dublin" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/tcd.jpg" ||
                             courses.course_suggested.college == "University College Dublin" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/ucd.jpg" ||
-                            courses.course_suggested.college == "Technological University Dublin" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/tud.jpg"} alt="" className="responsive-image mb-30" />
+                            courses.course_suggested.college == "Technological University Dublin" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/tud.jpg" ||
+                            "https://dummyimage.com/500x260/ccc/fff.jpg"} alt="" className="responsive-image mb-30" />
                         </Link>
                         <div className="recommended_course_description mb-60">
                             <h2><Link to="#" onClick={() => courseClickHandler(courses.course_suggested)}>{courses.course_suggested.college}</Link></h2>
@@ -74,7 +75,8 @@ const RecommendedCourses = () => {
                             course.college == "National College of Ireland" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/nci.jpg" ||
                             course.college == "Trinity College Dublin" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/tcd.jpg" ||
                             course.college == "University College Dublin" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/ucd.jpg" ||
-                            course.college == "Technological University Dublin" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/tud.jpg"} alt="" className="responsive-image mb-30" />
+                            course.college == "Technological University Dublin" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/tud.jpg" ||
+                            "https://dummyimage.com/500x260/ccc/fff.jpg"} alt="" className="responsive-image mb-30" />
                                     </Link>
                                     <div className="recommended_course_description mb-60">
                                         <h2><Link to="#" onClick={() => courseClickHandler(course)}>{course.college}</Link></h2>
