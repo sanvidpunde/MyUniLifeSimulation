@@ -250,19 +250,19 @@ def predictCourse():
     data_final = data[['college', 'course','code', 'fees', 'similarities']]
     final_df = data_final.sort_values(by=['similarities'], ascending=False)
 
-    print("Course Code  : ", np.asscalar(final_df.head(1)["code"].values))
-    print("Course Code  : ", np.asscalar(final_df.head(2).tail(1)["code"].values))
-    print("Course Code  : ", np.asscalar(final_df.head(3).tail(1)["code"].values))
-    print("Course Code  : ", np.asscalar(final_df.head(4).tail(1)["code"].values))
-    print("Course Code  : ", np.asscalar(final_df.head(5).tail(1)["code"].values))
+    print("Course Code  : ", np.array(final_df.head(1)["code"].values))
+    print("Course Code  : ", np.array(final_df.head(2).tail(1)["code"].values))
+    print("Course Code  : ", np.array(final_df.head(3).tail(1)["code"].values))
+    print("Course Code  : ", np.array(final_df.head(4).tail(1)["code"].values))
+    print("Course Code  : ", np.array(final_df.head(5).tail(1)["code"].values))
     
-    # output= (np.asscalar(final_df.head(1)["code"].values+","+final_df.head(2).tail(1)["code"].values)+
+    # output= (np.array(final_df.head(1)["code"].values+","+final_df.head(2).tail(1)["code"].values)+
     # ","+final_df.head(3).tail(1)["code"].values+","+final_df.head(4).tail(1)["code"].values+","+final_df.head(5).tail(1)["code"].values)
-    output= (np.asscalar(final_df.head(1)["code"].values))
-    output2=(np.asscalar(final_df.head(2).tail(1)["code"].values))
-    output3=(np.asscalar(final_df.head(3).tail(1)["code"].values))
-    output4=(np.asscalar(final_df.head(4).tail(1)["code"].values))
-    output5=(np.asscalar(final_df.head(5).tail(1)["code"].values))
+    output= (np.array(final_df.head(1)["code"].values))
+    output2=(np.array(final_df.head(2).tail(1)["code"].values))
+    output3=(np.array(final_df.head(3).tail(1)["code"].values))
+    output4=(np.array(final_df.head(4).tail(1)["code"].values))
+    output5=(np.array(final_df.head(5).tail(1)["code"].values))
     output=(output+","+output2+","+output3+","+output4+","+output5)
        
     return(format(output))        

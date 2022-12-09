@@ -9,6 +9,7 @@ COPY ./requirements.txt .
 COPY ./predictInterestProfiler.pkl .
 COPY ./course_recommender_model.pkl .
 COPY ./personality_model.pkl .
+COPY ./main_final_recommender_dataset.xlsx .
 # install the dependencies and packages in the requirements file
 RUN pip install -r requirements.txt
 # configure the container to run in an executed manner
