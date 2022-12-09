@@ -171,19 +171,14 @@ def predictInterest():
             content["memory_capability_score"], 
             content["worked_in_teams_ever"],
             content["Introvert"],
-            content["interested_career_area_code"],
-            content["Type_of_company_want_to_settle_in_code"],
-            content["Interested_Type_of_Books_code"], 
-            content["A_Non Technical"],
-            content["A_Technical"], 
-            content["B_hard_worker"], 
+            content["B_hard_worker"],
             content["B_smart_worker"]
         ]])
 
-        # print("===========================")
-        # print(prediction)
-        # print(prediction[0])
-        # print("===========================")
+        print("===========================")
+        print(prediction)
+        print(prediction[0])
+        print("===========================")
             
         return prediction[0]
 
