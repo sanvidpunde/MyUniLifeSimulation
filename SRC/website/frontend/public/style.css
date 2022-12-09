@@ -1237,6 +1237,18 @@ a.signUpBtnLink {
 	background-color: #007FC0;
 	margin-bottom: 10px;
 }
+.footer p a:link,
+.footer p a:visited {
+	color: #111;
+	text-decoration: none;
+}
+.footer p {
+	line-height: 1.6;
+}
+.footer p a:hover {
+	color: #111;
+	text-decoration: underline;
+}
 
 .footer-border {
 	background-color: #cbcbcb;

@@ -21,9 +21,9 @@ const Footer = () => {
                         <div className="single-footer-column">
                             <div className="footer-title">Important Links</div>
                             <div className="title-attention"></div>
-                            <p><a href='https://usi.ie/'>Union of Students in Ireland</a></p>
-                            <p><a href='https://www.internationalstudents.ie/'>international Students</a></p>
-                            <p><a href='https://www.cao.ie/index.php?page=studentresources'>CAO Student Resources</a></p>
+                            <p><a href="https://usi.ie/" target="_blank">Union of Students in Ireland</a></p>
+                            <p><a href="https://www.internationalstudents.ie/" target="_blank">international Students</a></p>
+                            <p><a href="https://www.cao.ie/index.php?page=studentresources" target="_blank">CAO Student Resources</a></p>
                         </div>
                     </div>
                     <div className="footer-border"></div>
