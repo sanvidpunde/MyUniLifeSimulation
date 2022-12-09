@@ -20,7 +20,6 @@ const Profiler = () => {
     const [fullOfIdeas, setFullOfIdeas] = useState(3);
     const [iStartConversation, setIStartConversation] = useState(3);
     const [coding, setCoding] = useState(3);
-    const [hackathons, setHackathons] = useState(3);
     const [publicSpeaking, setPublicSpeaking] = useState(3);
 
     const [likeSports, setLikeSports] = useState(null);
