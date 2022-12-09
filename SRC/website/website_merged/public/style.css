@@ -741,6 +741,12 @@ a.cta_link:hover {
 	justify-content: space-between;
 	flex-wrap: wrap;
 }
+.other_universities .single_course {
+	flex-basis: 500px;
+}
+
+
+
 
 /* Course Details */
 .course_details_parent {
@@ -1237,6 +1243,18 @@ a.signUpBtnLink {
 	background-color: #007FC0;
 	margin-bottom: 10px;
 }
+.footer p a:link,
+.footer p a:visited {
+	color: #111;
+	text-decoration: none;
+}
+.footer p {
+	line-height: 1.6;
+}
+.footer p a:hover {
+	color: #111;
+	text-decoration: underline;
+}
 
 .footer-border {
 	background-color: #cbcbcb;
@@ -1247,6 +1265,21 @@ a.signUpBtnLink {
 	text-align: center;
 	color: #666;
 	margin: 16px 0;
+}
+
+/* Academics */
+.academics {
+	display: flex;
+	justify-content: space-between;
+	gap: 20px; 
+}
+.academics p {
+	line-height: 1.6;
+}
+.quiz_link:link,
+.quiz_link:visited {
+	color: #fff;
+	text-decoration: none;
 }
 
 /* Bucket */
