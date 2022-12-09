@@ -22,8 +22,9 @@ const Footer = () => {
                             <div className="footer-title">Important Links</div>
                             <div className="title-attention"></div>
                             <p><a href="https://usi.ie/" target="_blank">Union of Students in Ireland</a></p>
-                            <p><a href="https://www.internationalstudents.ie/" target="_blank">international Students</a></p>
+                            <p><a href="https://www.internationalstudents.ie/" target="_blank">International Students</a></p>
                             <p><a href="https://www.cao.ie/index.php?page=studentresources" target="_blank">CAO Student Resources</a></p>
+                            <p><a href="https://gdpr-info.eu/" target="_blank">Privacy Policy</a></p>
                         </div>
                     </div>
                     <div className="footer-border"></div>
