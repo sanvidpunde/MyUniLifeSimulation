@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
+import {Slider} from "@mui/material";
 import Select from 'react-select';
 import axios from 'axios';
 import {useSelector, useDispatch} from 'react-redux';
@@ -18,8 +19,8 @@ const Simulation = () => {
 
     const [cao, setCao] = useState(null);
     const [city, setCity] = useState(null);
-    const [jobDomain, setJobDomain] = useState(null);
-    const [spendingLimit, setSpendingLimit] = useState(null);
+    const [jobDomain, setJobDomain] = useState("");
+    const [spendingLimit, setSpendingLimit] = useState(6000);
     const [caoError, setCaoError] = useState('');
     const [cityError, setCityError] = useState('');
     const [jobDomainError, setJobDomainError] = useState('');
@@ -30,6 +31,7 @@ const Simulation = () => {
         setCityError('');
     }, [city]);
     useEffect(() => {
+        console.log("jobDomain is ", jobDomain);
         setJobDomainError('');
     }, [jobDomain]);
     useEffect(() => {
@@ -37,8 +39,7 @@ const Simulation = () => {
     }, [spendingLimit]);
 
     const cityOptions = [{value: "Dublin", label: "Dublin"}, {value: "Cork", label: "Cork"}, {value: "Galway", label: "Galway"}, {value: "Limerick", label: "Limerick"}, {value: "Athlone", label: "Athlone"}, {value: "Carlow", label: "Carlow"}];
-    const jobDomainOptions = [{value: "IT", label: "IT"}, {value: "HR", label: "HR"}, {value: "Management", label: "Management"}, {value: "Support", label: "Support"}, {value: "Finance", label: "Finance"}];
-    const spendingLimitOptions = [{value: 2000, label: "€2000 - €4000"}, {value: 4000, label: "€4000 - €6000"}, {value: 6000, label: "€6000 - €8000"}, {value: 8000, label: "€8000 - above"}];
+    const jobDomainOptions = ["IT", "Non_IT", "Management", "Support"];
 
     // scroll to top of page
     useEffect(() => {
@@ -86,10 +87,10 @@ const Simulation = () => {
             const simulationData = {
                 CAO: cao,
                 location: city.value,
-                job_domain: jobDomain.value,
+                job_domain: jobDomain,
                 interest: career.career || "Applications Developer",
                 personality: personality.personality.toLowerCase() || "serious",
-                Budget: spendingLimit.value
+                Budget: spendingLimit
             }
             console.log("simulation inputs are", simulationData);
             dispatch(receiveSuccessMessage({success: "Course Prediction request sent"}));
@@ -149,27 +150,60 @@ const Simulation = () => {
                             {cityError !== "" && <p className="error_text"><i>!</i> &nbsp;{cityError}</p>}
                         </div>
                         <div className="single-simulation-form">
-                            <label>Preferred Job Domain
-                                <Select
-                                    defaultValue={jobDomain}
-                                    onChange={setJobDomain}
-                                    options={jobDomainOptions}
-                                    className="mt-6"
-                                />
-                            </label>
-                            {jobDomainError !== "" && <p className="error_text"><i>!</i> &nbsp;{jobDomainError}</p>}
+                            <label>Predicted Personality</label>
+                            <input type="text" className="custom_text" placeholder={personality.personality || "Serious"} disabled />
                         </div>
                         <div className="single-simulation-form">
+                            <label>Predicted Career</label>
+                            <input type="text" className="custom_text" placeholder={career.career || "Teacher"} disabled />
+                        </div>
+                    </div>
+                    <div className="mt-30">
+                        <div className="width_slider">
                             <label>Spending Limit
-                                <Select
-                                    defaultValue={spendingLimit}
-                                    onChange={setSpendingLimit}
-                                    options={spendingLimitOptions}
-                                    className="mt-6"
+                                <Slider
+                                    aria-label="spendingLimit"
+                                    value={spendingLimit}
+                                    onChange={(e) => setSpendingLimit(e.target.value)}
+                                    valueLabelDisplay="auto"
+                                    step={1000}
+                                    marks
+                                    min={1000}
+                                    max={20000}
                                 />
                             </label>
                             {spendingLimitError !== "" && <p className="error_text"><i>!</i> &nbsp;{spendingLimitError}</p>}
                         </div>
+                    </div>
+                    <div className="mt-30">
+                        <label>Preferred Job Domain</label>
+                        <div className="job_domain_options_block">
+                            {jobDomainOptions.map(item => {
+                                return (
+                                    <div className="job_domain_flex" key={item}>
+                                        {/* <input
+                                            type="radio"
+                                            id={item}
+                                            name="job_domain_input"
+                                            className="single_option_radio"
+                                            value={jobDomain}
+                                            onChange={(e) => setJobDomain(e.target.value)}
+                                            checked={jobDomain === item}
+                                        /> */}
+                                        <label htmlFor={item} className={`single_option_label ${jobDomain === item && "single_option_label_active"}`} onClick={() => setJobDomain(item)}>{item}</label>
+                                        {/* <button type="button" className={`single_option_label ${jobDomain === item && "single_option_label_active"}`} onClick={() => setJobDomain(item)}>{item}</button> */}
+                                    </div>
+                                )
+                            })}
+                            
+                            {/* <Select
+                                defaultValue={jobDomain}
+                                onChange={setJobDomain}
+                                options={jobDomainOptions}
+                                className="mt-6"
+                            /> */}
+                        </div>
+                        {jobDomainError !== "" && <p className="error_text"><i>!</i> &nbsp;{jobDomainError}</p>}
                     </div>
                     <div className="mt-20">
                         <button type="button" className="take-test-button" onClick={submitHandler} >Run Prediction</button>

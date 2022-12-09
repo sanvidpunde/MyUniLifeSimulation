@@ -156,6 +156,9 @@ button:focus {
 .mt-20 {
 	margin-top: 20px;
 }
+.mt-30 {
+	margin-top: 30px;
+}
 .mb-20 {
 	margin-bottom: 20px;
 }
@@ -604,11 +607,74 @@ li.user:hover ul {
 .simulation-form-area input[type=number]:focus {
 	border: 3px solid #007FC0;
 }
+.simulation-form-area input[type=text]:disabled {
+	cursor: not-allowed;
+}
 .simulation-form-area select {
 	display: block;
 	width: 100%;
 	height: 40px;
 }
+.simulation-form-area .custom_text {
+	display: block;
+	width: 100%;
+	height: 38px;
+	padding: 10px;
+	margin-top: 6px;
+	font-size: 16px;
+	font-weight: bold;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+	outline: none;
+}
+.width_slider {
+	width: 70%;
+}
+.job_domain_options_block {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 20px;
+	margin-top: 20px;
+}
+.job_domain_flex {
+	margin-left: 0;
+}
+.single_option_radio {
+	visibility: hidden;
+}
+.single_option_label {
+	display: block;
+	border: 1px solid #dbdbdb;
+	border-radius: 5px;
+	padding: 10px 24px;
+	/* margin: 10px 0; */
+	margin-bottom: 10px;
+}
+.single_option_label:hover {
+	cursor: pointer;
+	background-color: #dbdbdb;
+	color: #111;
+}
+.single_option_label_active {
+	background-color: #dbdbdb;
+	color: #111;
+}
+.single_option_label-active:hover {
+	background-color: #cbcbcb;
+}
+.single_option_label:active {
+	background-color: #dbdbdb;
+	color: #111;
+}
+/* .custom_text {
+
+} */
+/* .highlighted_p {
+	font-weight: bold;
+	margin-top: 6px;
+} */
 
 /* Profiler */
 .range_selection {
@@ -1767,6 +1833,9 @@ a.signUpBtnLink {
 	}
 }
 @media (max-width: 780px) {
+	.width_slider {
+		width: 100%;
+	}
 	.edit_flexbox {
 		display: block;
 	}
