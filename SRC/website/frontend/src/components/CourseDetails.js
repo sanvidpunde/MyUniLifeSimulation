@@ -41,6 +41,9 @@ const CourseDetails = () => {
             </div>
             <div className="p-60">
                 <div className="container">
+                    <div className="breadcrumb">
+                        <p>Personality test / Interest Profiler / <strong>Course Recommender</strong></p>
+                    </div>
                     <div className="course_details_parent">
                         <div className="course_details_acc">
                             {selectedCourse.course_description && selectedCourse.course_description.length > 0 &&
@@ -190,17 +193,17 @@ const CourseDetails = () => {
                             </div>
                             <div className="single_resource">
                             <a href="#" target="_blank"><img src="/images/leapSq.jpg" alt="img" /></a>
-                                <h3><a href="#" target="_blank">Transport (Cost & How to)</a></h3>
+                                <h3><a href="https://www.transportforireland.ie/" target="_blank">Transport (Cost & How to)</a></h3>
                                 <p>Explore about transport for students in the city</p>
                             </div>
                             <div className="single_resource">
                             <a href="#" target="_blank"><img src="/images/markerSq.jpg" alt="img" /></a>
-                                <h3><a href="#" target="_blank">Campus Map (wayfinder)</a></h3>
+                                <h3><a href={selectedCourse.map_info} target="_blank">Campus Map (wayfinder)</a></h3>
                                 <p>Get a 2D map showcasing the campus</p>
                             </div>
                             <div className="single_resource">
                             <a href="#" target="_blank"><img src="/images/studentsSq.jpg" alt="img" /></a>
-                                <h3><a href="#" target="_blank">Students Accomodation Helper</a></h3>
+                                <h3><a href={selectedCourse.students_accomodation_link} target="_blank">Students Accomodation Helper</a></h3>
                                 <p>Find all information about student accomodation here</p>
                             </div>
                         </div>
@@ -257,7 +260,7 @@ const CourseDetails = () => {
             <div className="cta">
                 <div className="container">
                     <h2>Explore more about classrooms, lecturers, video lectures, academics, societies and workshops</h2>
-                    <Link to="/explore_your_course" className="cta_link">Explore your course</Link>
+                    <Link to="/classrooms" className="cta_link">Explore your course</Link>
                 </div>
             </div>
         </React.Fragment>

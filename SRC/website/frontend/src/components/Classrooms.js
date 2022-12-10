@@ -23,6 +23,9 @@ const Classrooms = () => {
       </div>
       <div className="p-60">
           <div className="container">
+            <div className="breadcrumb">
+                <p><Link to="/classrooms" className="activePage">Our Classrooms</Link> / <Link to="/academic_staff">Our Lecturers</Link> / <Link to="/academics">Your Academics</Link></p>
+            </div>
             <h3 className="mb-20">Modern state of the art classrooms:</h3>
             <div className="grey-border"></div>
             <div className="classroom_container">

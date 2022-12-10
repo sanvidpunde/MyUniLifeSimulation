@@ -1,6 +1,5 @@
 import {validationResult} from 'express-validator';
 import bcryptjs from 'bcryptjs';
-import * as Promise from 'bluebird';
 import request from 'request';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -13,7 +12,6 @@ import Professor from '../models/professor';
 import Trait from '../models/trait';
 import Course from '../models/course';
 import transporter from '../models/myNodemailer';
-import { response } from 'express';
 
 // Get all values of logged in user
 const getUser = async (req, res, next) => {
@@ -225,7 +223,6 @@ const simulation = (req, res) => {
 		return next(error);
 	}
 	// const {} = req.body;
-
 	// Make API call to python app and await response
 	console.log("ready to call flask app");
 	let predictedCourses;

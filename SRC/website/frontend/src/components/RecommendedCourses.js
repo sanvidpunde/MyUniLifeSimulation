@@ -39,6 +39,9 @@ const RecommendedCourses = () => {
             </div>
             <div className="p-60">
                 <div className="container">
+                    <div className="breadcrumb">
+                        <p>Personality test / Interest Profiler / <strong>Course Recommender</strong></p>
+                    </div>
                     <div className="recommended_course">
                         <Link to="#" onClick={() => courseClickHandler(courses.course_suggested)}>
                             <img src={courses.course_suggested.college == "Technological University Dublin" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/tud.jpg" ||

@@ -116,6 +116,9 @@ const ProfilerDetails = () => {
             </div>
             <div className="p-60">
                 <div className="container">
+                    <div className="breadcrumb">
+                        <p>Personality test / <strong>Interest Profiler</strong> / Course Recommender</p>
+                    </div>
                     <div className="profiler_details">
                         <h3 className="">Recommended Career:</h3>
                         <div className="career_title">{career.career}</div>
