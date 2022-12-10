@@ -567,6 +567,25 @@ li.user:hover ul {
 	}
 }
 
+/* Breadcrumb */
+.breadcrumb {
+	color: #666;
+	margin-bottom: 20px;
+}
+.breadcrumb a:link,
+.breadcrumb a:visited {
+	color: #666;
+	text-decoration: none;
+}
+.breadcrumb a:hover {
+	color: #007FC0;
+	text-decoration: underline;
+}
+.breadcrumb a.activePage {
+	color: #007FC0 !important;
+	font-weight: bold;
+}
+
 /* Simulation */
 .content-area {
 	background: #fff;

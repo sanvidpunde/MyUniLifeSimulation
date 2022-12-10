@@ -17,6 +17,9 @@ const ExploreYourCourse = () => {
 			</div>
             <div className="p-60">
                 <div className="container">
+                    <div className="breadcrumb">
+                        <p><Link to="/classrooms" className="activePage">Our Classrooms</Link> / <Link to="/academic_staff">Our Lecturers</Link> / <Link to="/academics">Your Academics</Link></p>
+                    </div>
                     <div className="flex_icons">
                         <div className="single_flex_icon">
                             <div className="icon_area">
@@ -38,15 +41,6 @@ const ExploreYourCourse = () => {
                         </div>
                         <div className="single_flex_icon">
                             <div className="icon_area">
-                                <img src="/images/video_lectures.png" alt="" />
-                            </div>
-                            <div className="single_flex_icon_title">
-                                <Link to="/video_lectures">Video Lectures</Link>
-                            </div>
-                            <p>Lets explore few lectures from our professors</p>
-                        </div>
-                        <div className="single_flex_icon">
-                            <div className="icon_area">
                                 <img src="/images/academics.png" alt="" />
                             </div>
                             <div className="single_flex_icon_title">
@@ -62,15 +56,6 @@ const ExploreYourCourse = () => {
                                 <a href="#" target="_blank">Societies for you</a>
                             </div>
                             <p>Clubs and societies for you</p>
-                        </div>
-                        <div className="single_flex_icon">
-                            <div className="icon_area">
-                                <img src="/images/workshops.png" alt="" />
-                            </div>
-                            <div className="single_flex_icon_title">
-                                <a href="#" target="_blank">Workshops</a>
-                            </div>
-                            <p>Lets explore all workshops which might interest you</p>
                         </div>
                     </div>
                 </div>

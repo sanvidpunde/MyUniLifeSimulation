@@ -124,6 +124,9 @@ const Simulation = () => {
             </div>
             <div className="p-60">
                 <div className="container">
+                    <div className="breadcrumb">
+                        <p>Personality test / Interest Profiler / <strong>Course Recommender</strong></p>
+                    </div>
                     <img src="/images/simulation.jpg" alt="Simulation" className="responsive-image mb-60" />
                     <h3 className="mb-20">Please complete following details:</h3>
                     <div className="simulation-form-area">

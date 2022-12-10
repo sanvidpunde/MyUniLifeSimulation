@@ -89,6 +89,9 @@ const Personality = () => {
             </div>
             <div className="p-60">
                 <div className="container">
+                    <div className="breadcrumb">
+                        <p><strong>Personality test</strong> / Interest Profiler / Course Recommender</p>
+                    </div>
                     <h3 className="mb-20">This test will determine your personality, Lets gooooooo!</h3>
                     <div className="range_selection">
                         <div className="single_range_selection">
