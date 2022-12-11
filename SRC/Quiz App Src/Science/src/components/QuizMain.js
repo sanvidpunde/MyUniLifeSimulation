@@ -23,79 +23,79 @@ export default class Quiz extends Component {
       // options for the quiz     
         answers: {
             1: {
-                1: 'Buying & Selling of Goods',
-                2: 'Commerce & Industry',
-                3: 'Trade',
-				4: 'None of the above'
+                1: 'Silver',
+                2: 'Copper',
+                3: 'Lead',
+				4: 'Mercury'
             },
             2: {
-                1: 'Partnership',
-                2: 'Sole Proprietorship',
-                3: 'HUF',
-				4: 'Co-operative Society'
+                1: 'Mica',
+                2: 'Bauxite',
+                3: 'Granite',
+				4: 'Silica'
             },
             3: {
-                1: 'Joint Trade Business',
-                2: 'Sole Proprietorship',
-                3: 'Co-Operative Society',
-				4: 'Partnership'
+                1: 'Electrons are gained',
+                2: 'Electrons are lost',
+                3: 'Protons are gained',
+				4: 'Protons are lost'
             },
             4: {
-                1: 'Dissolved',
-                2: 'Carried on',
-                3: 'New owner',
-				4: 'None of the above'
+                1: 'Sulphonate method',
+                2: 'Nitrate method',
+                3: 'Zeolite method',
+				4: 'None of these'
             },
             5: {
-                1: 'It is the opposite of a tradeoff.',
-                2: 'It could be a reward but could not be a penalty.',
-                3: 'It could either be a reward or a penalty.',
-				4: 'It could be a penalty but could not be a reward.'
+                1: 'Phenol',
+                2: 'Toluene',
+                3: 'Phenolphthalein',
+				4: 'Nitrobenzene'
             },
             6: {
-                1: 'Security',
-                2: 'European countries buy more goods from foreigners than supply to foreigners',
-                3: 'Health',
-				4: 'Scarcity'
+                1: 'Vitamin A',
+                2: 'Vitamin K',
+                3: 'Vitamin D',
+				4: 'Vitamin E'
             },
             7: {
-                1: 'negative economics',
-                2: 'microeconomics',
-                3: 'positive economics',
-				4: 'macroeconomics'
-            },
-            8: {
-                1: 'Memorandum of Association',
-                2: 'Article of Association',
-                3: 'Partnership Deed',
+                1: 'Calcitonin',
+                2: 'Insulin',
+                3: 'Thyroxine',
 				4: 'None of the above'
             },
+            8: {
+                1: 'Oxylophytes',
+                2: 'Lithophytes',
+                3: 'Helophytes',
+				4: 'Psilophytes'
+            },
             9: {
-                1: 'the prices of individual goods',
-                2: 'important rather than trivial issues',
-                3: 'how individual markets work ',
-				4: 'the economy as a whole'
+                1: 'Whale, Kangaroo, Echidna',
+                2: 'Echidna, Whale, Kangaroo',
+                3: 'Kangaroo, Whale, Echidna',
+				4: 'Echidna, Kangaroo, Whale'
             },
             10: {
-                1: 'total employment',
-                2: 'total unemployment',
-                3: 'global employment',
-				4: 'local employment'
+                1: 'Fibrin',
+                2: 'Thrombin',
+                3: 'Fibrinogen',
+				4: 'Collagen'
             }                                       
         },
 
            // answers for the quiz
         correctAnswers: {
-            1: '2',
-            2: '1',
+            1: '3',
+            2: '3',
             3: '2',
-			4: '1',
-            5: '3',
-            6: '4',
+			4: '2',
+            5: '4',
+            6: '2',
 			7: '2',
-            8: '1',
+            8: '3',
             9: '4',
-			10: '1'      
+			10: '3'      
         },
         correctAnswer: 0,
         clickedAnswer: 0,
