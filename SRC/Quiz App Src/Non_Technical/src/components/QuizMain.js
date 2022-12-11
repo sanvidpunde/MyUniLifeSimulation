@@ -9,13 +9,13 @@ export default class Quiz extends Component {
     state = {
         questions: {
             1: 'What is Business?',
-            2: 'What is an Economic Activity?',
+            2: 'In which firm the agreement is Oral or Written?',
             3: 'Individual Ownership is called as?',
             4: 'In case of death or insolvency of a partner the firm is?',
             5: 'What does the term “Incentive” mean?',
             6: 'The most fundamental economic problem is…..',
             7: 'The study of determining the prices in individual markets is called…',
-            8: 'Which of the following is a macroeconomic problem? ',
+            8: 'What contains the rules regarding the activities of a company?',
             9: 'Macroeconomics is the branch of economics that deals with:',
             10: 'The term “National income” refers to the?'
         },
@@ -29,10 +29,10 @@ export default class Quiz extends Component {
 				4: 'None of the above'
             },
             2: {
-                1: 'The activity of making, providing, purchasing, or selling goods or services.',
-                2: 'An industry in that part of the economy that creates services rather than tangible objects.',
-                3: 'It is a category of property that includes intangible creations of the human intellect.',
-				4: 'Services that focus on the creation, re-arrangement and interpretation of new and existing ideas.e'
+                1: 'Partnership',
+                2: 'Sole Proprietorship',
+                3: 'HUF',
+				4: 'Co-operative Society'
             },
             3: {
                 1: 'Joint Trade Business',
@@ -65,10 +65,10 @@ export default class Quiz extends Component {
 				4: 'macroeconomics'
             },
             8: {
-                1: 'What do plumbers earn more than janitors ',
-                2: 'the reasons for the increase in average prices ',
-                3: 'whether the army should buy more tanks or more missiles',
-				4: 'the reasons for the increase in the price of orange juice'
+                1: 'Memorandum of Association',
+                2: 'Article of Association',
+                3: 'Partnership Deed',
+				4: 'None of the above'
             },
             9: {
                 1: 'the prices of individual goods',
@@ -93,7 +93,7 @@ export default class Quiz extends Component {
             5: '3',
             6: '4',
 			7: '2',
-            8: '2',
+            8: '1',
             9: '4',
 			10: '1'      
         },
