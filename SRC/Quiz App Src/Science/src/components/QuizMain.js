@@ -8,16 +8,16 @@ export default class Quiz extends Component {
    // Question for the quiz
     state = {
         questions: {
-            1: 'What is Business?',
-            2: 'In which firm the agreement is Oral or Written?',
-            3: 'Individual Ownership is called as?',
-            4: 'In case of death or insolvency of a partner the firm is?',
-            5: 'What does the term “Incentive” mean?',
-            6: 'The most fundamental economic problem is…..',
-            7: 'The study of determining the prices in individual markets is called…',
-            8: 'What contains the rules regarding the activities of a company?',
-            9: 'Macroeconomics is the branch of economics that deals with:',
-            10: 'The term “National income” refers to the?'
+            1: 'Which of the following is the poorest conductor of heat in comparison to other options?',
+            2: 'Which of the following is not a non-metallic mineral?',
+            3: 'Which among the following happens in an oxidation reaction?',
+            4: 'Which among the following methods can be used to remove the permanent hardness in water due to calcium or magnesium sulphates?',
+            5: '“Oil of mirbane” is the most common name of which among the following?',
+            6: 'Which of the following Vitamin is required for Normal Blood Circulation ?',
+            7: 'Islets of langerhans are related to which of the following?',
+            8: 'Plants growing on marshy areas are commonly called as _____',
+            9: 'From the point of view of evolution of living organisms, which of the following set of animals is a correct sequence of evolution?',
+            10: 'Blood Plasma with which among the following removed is called Serum?'
         },
 
       // options for the quiz     
