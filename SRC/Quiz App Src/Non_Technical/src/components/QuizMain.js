@@ -23,184 +23,79 @@ export default class Quiz extends Component {
       // options for the quiz     
         answers: {
             1: {
-                1: 'Learning the target domain',
-                2: 'Developing initial hypothesis',
-                3: 'Visualize initial hypothesis',
-				4: 'Identifying key variables'
+                1: 'Buying & Selling of Goods',
+                2: 'Commerce & Industry',
+                3: 'Trade',
+				4: 'None of the above'
             },
             2: {
-                1: 'Ruby',
-                2: 'R',
-                3: 'Java',
-				4: 'None'
+                1: 'The activity of making, providing, purchasing, or selling goods or services.',
+                2: 'An industry in that part of the economy that creates services rather than tangible objects.',
+                3: 'It is a category of property that includes intangible creations of the human intellect.',
+				4: 'Services that focus on the creation, re-arrangement and interpretation of new and existing ideas.e'
             },
             3: {
-                1: 'Visualisation',
-                2: 'Analysis',
-                3: 'Conclusion',
-				4: 'Data'
+                1: 'Joint Trade Business',
+                2: 'Sole Proprietorship',
+                3: 'Co-Operative Society',
+				4: 'Partnership'
             },
             4: {
-                1: 'Median',
-                2: 'Mean',
-                3: 'Mode',
-				4: 'Range'
+                1: 'Dissolved',
+                2: 'Carried on',
+                3: 'New owner',
+				4: 'None of the above'
             },
             5: {
-                1: 'Create reproducible code',
-                2: 'Challenge results',
-                3: 'Define the question',
-				4: 'All of the above'
+                1: 'It is the opposite of a tradeoff.',
+                2: 'It could be a reward but could not be a penalty.',
+                3: 'It could either be a reward or a penalty.',
+				4: 'It could be a penalty but could not be a reward.'
             },
             6: {
-                1: 'Logistic Regression',
-                2: 'Linear & Non-linear Regression',
-                3: 'Histogram',
-				4: 'ANOVA'
+                1: 'Security',
+                2: 'European countries buy more goods from foreigners than supply to foreigners',
+                3: 'Health',
+				4: 'Scarcity'
             },
             7: {
-                1: '85, 95, 100, 100',
-                2: '85, 95 and 100',
-                3: '30',
-				4: '87'
+                1: 'negative economics',
+                2: 'microeconomics',
+                3: 'positive economics',
+				4: 'macroeconomics'
             },
             8: {
-                1: 'Data Set',
-                2: 'Investigative Cycle',
-                3: 'Visualisation',
-				4: 'None of the above'
+                1: 'What do plumbers earn more than janitors ',
+                2: 'the reasons for the increase in average prices ',
+                3: 'whether the army should buy more tanks or more missiles',
+				4: 'the reasons for the increase in the price of orange juice'
             },
             9: {
-                1: 'Median',
-                2: 'Mode',
-                3: 'Mean',
-				4: 'Range'
+                1: 'the prices of individual goods',
+                2: 'important rather than trivial issues',
+                3: 'how individual markets work ',
+				4: 'the economy as a whole'
             },
             10: {
-                1: 'Command line interpreter',
-                2: 'Disk operating system',
-                3: 'Operating system',
-				4: 'User interface operating system'
-            },
-            11: {
-                1: 'Clustering',
-                2: 'Classification',
-                3: 'Association Rules',
-				4: 'Regression'
-            },
-            12: {
-                1: 'Trend',
-                2: 'Spike',
-                3: 'All of above',
-				4: 'None of the above'
-            },
-            13: {
-                1: 'Visualization',
-                2: 'Data Set',
-                3: 'Investigative Cycle',
-				4: 'None'
-            },
-            14: {
-                1: 'Data Integration',
-                2: 'Data Replication',
-                3: 'Data Cleansing',
-				4: 'All of the above'
-            },
-            15: {
-                1: 'Outlier',
-                2: 'Trend',
-                3: 'Spike',
-				4: 'Both 1 & 2'
-            },
-            16: {
-                1: 'Find out the question which is to be answered',
-                2: 'Find only one solution for particular problem',
-                3: 'Find out answer from dataset without asking question',
-				4: 'None of the  above'
-            },
-            17: {
-                1: 'SVG',
-                2: 'Random Forest',
-                3: 'SVM',
-				4: 'None of the  above'
-            },
-            18: {
-                1: 'Data with the word ‘big’ in it',
-                2: 'Data about people who are big',
-                3: 'Data with a large size',
-				4: 'Data made with a big purpose'
-            },
-            19: {
-                1: 'Logical Scoping',
-                2: 'S Programming Language',
-                3: 'Lexical Scoping',
-				4: 'Q Programming Language'
-            },
-            20: {
-                1: 'Visualization',
-                2: 'Investigative',
-                3: 'Conclusion',
-				4: 'None of the  above'
-            },
-            21:{
-                1: 'numpy',
-                2: 'sklearn',
-                3: 'pandas',
-                4: 'matplotlib'
-            },
-            22:{
-                1: 'python',
-                2: 'java',
-                3: 'javascript',
-                4: 'sql'
-            },
-            23:{
-                1: 'bar chart',
-                2: 'line graph',
-                3: 'pie chart',
-                4: 'histogram'
-            },    
-            24:{
-                1: 'boxplot',
-                2: 'bar chart',
-                3: 'histogram',
-                4: 'pie chart'
-            },
-            25:{
-                1: '0.5',
-                2: '0.05',
-                3: '0.1',
-                4: '1.0'
-            }                                            
+                1: 'total employment',
+                2: 'total unemployment',
+                3: 'global employment',
+				4: 'local employment'
+            }                                       
         },
 
            // answers for the quiz
         correctAnswers: {
-            1: '3',
-            2: '2',
-            3: '1',
-			4: '2',
-            5: '2',
-            6: '3',
-			7: '3',
-            8: '3',
-            9: '1',
-			10: '1',
-            11: '3',
-            12: '1',
-			13: '1',
-            14: '3',
-            15: '4',
-            16: '1',
-			17: '1',
-            18: '3',
-            19: '2',
-            20: '2',
-            21: '3', 
-            22: '4', 
-            23: '2',
-            24: '1',
-            25: '2'       
+            1: '2',
+            2: '1',
+            3: '2',
+			4: '1',
+            5: '3',
+            6: '4',
+			7: '2',
+            8: '2',
+            9: '4',
+			10: '1'      
         },
         correctAnswer: 0,
         clickedAnswer: 0,
