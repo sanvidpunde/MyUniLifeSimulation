@@ -40,7 +40,7 @@ const RecommendedCourses = () => {
             <div className="p-60">
                 <div className="container">
                     <div className="breadcrumb">
-                        <p>Personality test / Interest Profiler / <strong>Course Recommender</strong></p>
+                        <p><i className="fa fa-arrows" aria-hidden="true"></i> Personality test / Interest Profiler / <strong>Course Recommender</strong></p>
                     </div>
                     <div className="recommended_course">
                         <Link to="#" onClick={() => courseClickHandler(courses.course_suggested)}>

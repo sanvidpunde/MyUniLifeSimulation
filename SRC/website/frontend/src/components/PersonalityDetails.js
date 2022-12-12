@@ -129,7 +129,7 @@ const ProfilerDetails = () => {
             <div className="p-60">
                 <div className="container">
                     <div className="breadcrumb">
-                        <p><strong>Personality test</strong> / Interest Profiler / Course Recommender</p>
+                        <p><i className="fa fa-arrows" aria-hidden="true"></i> <strong>Personality test</strong> / Interest Profiler / Course Recommender</p>
                     </div>
                     <div className="profiler_details">
                         <h3 className="">Predicted Personality:</h3>
@@ -171,7 +171,7 @@ const ProfilerDetails = () => {
                         </div>
 
                         <div className="mb-30">
-                            <h3 className="">Effects of Personality</h3>
+                            <h3 className="">Effects of Personality:</h3>
                             <p className="jobDescriptionText">{personality.effects_of_personality}</p>
                         </div>                        
                         
@@ -189,7 +189,7 @@ const ProfilerDetails = () => {
                         </div>                        
 
                         <div className="mb-30">
-                            <h3 className="">Word of Advice</h3>
+                            <h3 className="">Word of Advice:</h3>
                             <p className="jobDescriptionText">{personality.word_of_advice}</p>
                         </div>
 

@@ -24,7 +24,7 @@ const Academics = () => {
       <div className="p-60">
           <div className="container">
             <div className="breadcrumb">
-                <p><Link to="/classrooms">Our Classrooms</Link> / <Link to="/academic_staff">Our Lecturers</Link> / <Link to="/academics" className="activePage">Your Academics</Link></p>
+                <p><i className="fa fa-arrows" aria-hidden="true"></i> <Link to="/classrooms">Our Classrooms</Link> / <Link to="/academic_staff">Our Lecturers</Link> / <Link to="/academics" className="activePage">Your Academics</Link></p>
             </div>
             <h3 className="mb-20">Online Quizzes</h3>
             <div className="grey-border"></div>

@@ -38,6 +38,21 @@ const Simulation = () => {
         setSpendingLimitError('');
     }, [spendingLimit]);
 
+    // If we have predeicted career, prefill job domain
+    useEffect(() => {
+        if (career.career) {
+            if (career.career == "Software Engineer" || career.career == "Database Developer" || career.career == "Network Security Engineer" || career.career == "Web Developer") {
+                setJobDomain("IT");
+            } else if (career.career == "Business Analyst" || career.career == "Banker" || career.career == "Pilot") {
+                setJobDomain("Non_IT");
+            } else if (career.career == "Human Resources" || career.career == "Accountant") {
+                setJobDomain("Management");
+            } else if (career.career == "Teacher") {
+                setJobDomain("Support");
+            }
+        }
+    }, []);
+
     const cityOptions = [{value: "Dublin", label: "Dublin"}, {value: "Cork", label: "Cork"}, {value: "Galway", label: "Galway"}, {value: "Limerick", label: "Limerick"}, {value: "Athlone", label: "Athlone"}, {value: "Carlow", label: "Carlow"}];
     const jobDomainOptions = ["IT", "Non_IT", "Management", "Support"];
 
@@ -125,11 +140,34 @@ const Simulation = () => {
             <div className="p-60">
                 <div className="container">
                     <div className="breadcrumb">
-                        <p>Personality test / Interest Profiler / <strong>Course Recommender</strong></p>
+                        <p><i className="fa fa-arrows" aria-hidden="true"></i> Personality test / Interest Profiler / <strong>Course Recommender</strong></p>
                     </div>
                     <img src="/images/simulation.jpg" alt="Simulation" className="responsive-image mb-60" />
                     <h3 className="mb-20">Please complete following details:</h3>
                     <div className="simulation-form-area">
+                        <div className="single-simulation-form">
+                            <label>Predicted Personality</label>
+                            <input type="text" className="custom_text" placeholder={personality.personality} disabled />
+                        </div>
+                        <div className="single-simulation-form">
+                            <label>Predicted Career</label>
+                            <input type="text" className="custom_text" placeholder={career.career} disabled />
+                        </div>
+                    </div>
+                    <div className="mt-30">
+                        <label>Preferred Job Domain</label>
+                        <div className="job_domain_options_block">
+                            {jobDomainOptions.map(item => {
+                                return (
+                                    <div className="job_domain_flex" key={item}>
+                                        <label htmlFor={item} className={`single_option_label ${jobDomain === item && "single_option_label_active"}`}>{item}</label>
+                                    </div>
+                                )
+                            })}
+                        </div>
+                        {jobDomainError !== "" && <p className="error_text"><i>!</i> &nbsp;{jobDomainError}</p>}
+                    </div>
+                    <div className="simulation-form-area mt-30">
                         <div className="single-simulation-form">
                             <label>CAO Point
                                 <input
@@ -152,14 +190,6 @@ const Simulation = () => {
                             </label>
                             {cityError !== "" && <p className="error_text"><i>!</i> &nbsp;{cityError}</p>}
                         </div>
-                        <div className="single-simulation-form">
-                            <label>Predicted Personality</label>
-                            <input type="text" className="custom_text" placeholder={personality.personality || "Serious"} disabled />
-                        </div>
-                        <div className="single-simulation-form">
-                            <label>Predicted Career</label>
-                            <input type="text" className="custom_text" placeholder={career.career || "Teacher"} disabled />
-                        </div>
                     </div>
                     <div className="mt-30">
                         <div className="width_slider">
@@ -178,36 +208,7 @@ const Simulation = () => {
                             {spendingLimitError !== "" && <p className="error_text"><i>!</i> &nbsp;{spendingLimitError}</p>}
                         </div>
                     </div>
-                    <div className="mt-30">
-                        <label>Preferred Job Domain</label>
-                        <div className="job_domain_options_block">
-                            {jobDomainOptions.map(item => {
-                                return (
-                                    <div className="job_domain_flex" key={item}>
-                                        {/* <input
-                                            type="radio"
-                                            id={item}
-                                            name="job_domain_input"
-                                            className="single_option_radio"
-                                            value={jobDomain}
-                                            onChange={(e) => setJobDomain(e.target.value)}
-                                            checked={jobDomain === item}
-                                        /> */}
-                                        <label htmlFor={item} className={`single_option_label ${jobDomain === item && "single_option_label_active"}`} onClick={() => setJobDomain(item)}>{item}</label>
-                                        {/* <button type="button" className={`single_option_label ${jobDomain === item && "single_option_label_active"}`} onClick={() => setJobDomain(item)}>{item}</button> */}
-                                    </div>
-                                )
-                            })}
-                            
-                            {/* <Select
-                                defaultValue={jobDomain}
-                                onChange={setJobDomain}
-                                options={jobDomainOptions}
-                                className="mt-6"
-                            /> */}
-                        </div>
-                        {jobDomainError !== "" && <p className="error_text"><i>!</i> &nbsp;{jobDomainError}</p>}
-                    </div>
+                    
                     <div className="mt-20">
                         <button type="button" className="take-test-button" onClick={submitHandler} >Run Prediction</button>
                     </div>
