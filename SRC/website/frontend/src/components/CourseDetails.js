@@ -42,7 +42,7 @@ const CourseDetails = () => {
             <div className="p-60">
                 <div className="container">
                     <div className="breadcrumb">
-                        <p>Personality test / Interest Profiler / <strong>Course Recommender</strong></p>
+                        <p><i className="fa fa-arrows" aria-hidden="true"></i> Personality test / Interest Profiler / <strong>Course Recommender</strong></p>
                     </div>
                     <div className="course_details_parent">
                         <div className="course_details_acc">
