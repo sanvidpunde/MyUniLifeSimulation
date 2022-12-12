@@ -123,7 +123,7 @@ const ProfilerDetails = () => {
 			<div className="header">
                 <div className="container">
                     <div className="header-text">Predicted Personality</div>
-                    <p>Lorem Ipsum Dolor Sit Amet</p>
+                    <p>Thank you for taking the time to answer the questions. Based on your answers, your predicted personality is as follows.</p>
                 </div>
             </div>
             <div className="p-60">
