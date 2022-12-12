@@ -54,12 +54,7 @@ router.post('/profiler', [
 	check('reading_and_writing_skills').not().isEmpty(),
 	check('memory_capability_score').not().isEmpty(),
 	check('B_hard_worker').not().isEmpty(),
-	check('B_smart_worker').not().isEmpty(),
-	check('A_Non Technical').not().isEmpty(),
-	check('A_Technical').not().isEmpty(),
-	check('Type_of_company_want_to_settle_in_code').not().isEmpty(),
-	check('Interested_Type_of_Books_code').not().isEmpty(),
-	check('interested_career_area_code').not().isEmpty(),
+	check('B_smart_worker').not().isEmpty()
 ], userController.profiler);
 
 // Post req Personality test
