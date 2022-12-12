@@ -84,7 +84,7 @@ const Personality = () => {
 			<div className="header">
                 <div className="container">
                     <div className="header-text">Personality Test</div>
-                    <p>Our Interest Profiler test is designed for students who are unsure of what career they want to pursue and guide them in making informed decision</p>
+                    <p>Welcome to the OCEAN personality test. In this page, you will be prompted 20 questions that take into account different aspects of your personality. We encourage our users to answer these questions as honestly as possible to get the best possible personality prediction. The outcome of this test will be one of the factors in determing which university courses are predicted for you.</p>
                 </div>
             </div>
             <div className="p-60">
