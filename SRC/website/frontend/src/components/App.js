@@ -17,6 +17,8 @@ import Academics from './Academics';
 import Personality from './Personality';
 import PersonalityDetails from './PersonalityDetails';
 import Profiler from './Profiler';
+import Privacy from './Privacy';
+import Profile from './Profile';
 import ProfilerDetails from './ProfilerDetails';
 import ReviewSentiment from './ReviewSentiment';
 import Login from './Login';
@@ -45,11 +47,50 @@ const App = ({ loggedIn, email }) => {
 				<Route path="/" exact>
 					<Home />
 				</Route>
+				<Route path="/profile" exact>
+					<Profile />
+				</Route>
 				<Route path="/course_recommender" exact>
 					<Simulation />
 				</Route>
+				<Route path="/recommended_courses" exact>
+					<RecommendedCourses />
+				</Route>
+				<Route path="/course_details" exact>
+					<CourseDetails />
+				</Route>
+				<Route path="/explore_your_course" exact>
+					<ExploreYourCourse />
+				</Route>
+				<Route path="/video_lectures" exact>
+					<VideoLectures />
+				</Route>
+				<Route path="/classrooms" exact>
+					<Classrooms />
+				</Route>
+				<Route path="/academic_staff" exact>
+					<AcademicStaff />
+				</Route>
+				<Route path="/academics" exact>
+					<Academics />
+				</Route>
+				<Route path="/personality_test" exact>
+					<Personality />
+				</Route>
+				<Route path="/personality_details" exact>
+					<PersonalityDetails />
+				</Route>
 				<Route path="/interest_profiler" exact>
 					<Profiler />
+				</Route>
+				<Route path="/interest_profiler_details" exact>
+					<ProfilerDetails />
+				</Route>
+				<Route path="/review_sentiment" exact>
+					<ReviewSentiment />
+				</Route>
+				<Route path="/privacy" exact>
+					<Privacy />
 				</Route>
 				<Redirect to="/" />
 			</Switch>
@@ -98,6 +139,9 @@ const App = ({ loggedIn, email }) => {
 				</Route>
 				<Route path="/review_sentiment" exact>
 					<ReviewSentiment />
+				</Route>
+				<Route path="/privacy" exact>
+					<Privacy />
 				</Route>
 				<Route path="/login" exact>
 					<Login />
