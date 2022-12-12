@@ -51,7 +51,7 @@ const AcademicStaff = () => {
       <div className="header">
           <div className="container">
               <div className="header-text">Academic Staff</div>
-              <p>Lorem Ipsum Dolor Sit Amet</p>
+              <p>Take a look at some of the faculty that will be with you during your time in campus. These are the people who will be teaching your modules and setting your assessments throughout each semester. You will also be supervised under one of them for your final year project.</p>
           </div>
       </div>
       <div className="p-60">
@@ -59,7 +59,7 @@ const AcademicStaff = () => {
             <div className="breadcrumb">
                 <p><Link to="/classrooms">Our Classrooms</Link> / <Link to="/academic_staff" className="activePage">Our Lecturers</Link> / <Link to="/academics">Your Academics</Link></p>
             </div>
-            <h3 className="mb-20">Some title here:</h3>
+            <h3 className="mb-20">Academic Staff</h3>
             <div className="grey-border"></div>
             <div className="staff_container">
               {staffs && staffs.staff && staffs.staff.length && staffs.staff.map(item => {
