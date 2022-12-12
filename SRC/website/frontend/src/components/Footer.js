@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -24,7 +25,7 @@ const Footer = () => {
                             <p><a href="https://usi.ie/" target="_blank">Union of Students in Ireland</a></p>
                             <p><a href="https://www.internationalstudents.ie/" target="_blank">International Students</a></p>
                             <p><a href="https://www.cao.ie/index.php?page=studentresources" target="_blank">CAO Student Resources</a></p>
-                            <p><a href="https://gdpr-info.eu/" target="_blank">Privacy Policy</a></p>
+                            <p><Link to="/privacy">Privacy Policy</Link></p>
                         </div>
                     </div>
                     <div className="footer-border"></div>
