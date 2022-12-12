@@ -12,7 +12,9 @@ const ExploreYourCourse = () => {
 			<div className="header">
 				<div className="container">
 					<div className="header-text">Explore your Course</div>
-                    <p>Lorem Ipsum Dolor Sit Amet</p>
+                    <p>Welcome to the Course Exploration portal. Below are several links that will guide you through different aspects of what your chosen course has in store for you.
+                        You can have a look at the types of classrooms, academic staff, sample quizzes and even some clubs and societies that you might be interested in joining.
+                    </p>
 				</div>
 			</div>
             <div className="p-60">

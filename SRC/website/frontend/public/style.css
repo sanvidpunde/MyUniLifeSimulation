@@ -1363,7 +1363,17 @@ a.signUpBtnLink {
 }
 .quiz_link:link,
 .quiz_link:visited {
-	color: #fff;
+	color: rgb(48, 19, 196);
+	text-decoration: none;
+}
+.quiz_link1:link,
+.quiz_link1:visited {
+	color: rgb(48, 19, 196);
+	text-decoration: none;
+}
+.quiz_link2:link,
+.quiz_link2:visited {
+	color: rgb(48, 19, 196);
 	text-decoration: none;
 }
 

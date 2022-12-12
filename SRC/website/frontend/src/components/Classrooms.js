@@ -18,7 +18,10 @@ const Classrooms = () => {
       <div className="header">
           <div className="container">
               <div className="header-text">Your Classrooms</div>
-              <p>Lorem Ipsum Dolor Sit Amet</p>
+              <p>Have a look at the different types of classrooms that you will be learning in. Most have built-in projectors and screens. 
+                Some classrooms may be designed like a movie theatre while others are like normal rooms with benches and tables.
+                Universities also have laboratories for differnet majors like Sciences and IT.  
+              </p>
           </div>
       </div>
       <div className="p-60">
