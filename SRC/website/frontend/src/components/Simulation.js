@@ -80,13 +80,10 @@ const Simulation = () => {
         if (!city) {
             setCityError("Please select your preferred city");
         }
-        if (!jobDomain) {
-            setJobDomainError("Please select your preferred job domain");
-        }
         if (!spendingLimit) {
             setSpendingLimitError("Please select your preferred spending limit");
         }
-		if (!cao || 0 < cao > 625 || !city || !jobDomain || !spendingLimit) {
+		if (!cao || 0 < cao > 625 || !city || !spendingLimit) {
 			return false;
 		}
 		return true;
@@ -119,7 +116,7 @@ const Simulation = () => {
                     if (resp.data.success) {
                         dispatch(receiveSuccessMessage({success: `Predicted Course ID is ${resp.data.course_suggested.code}`}));
                         // update redux
-                        const updatedCourse = {...course, course_suggested: resp.data.course_suggested, other_courses: resp.data.other_courses}
+                        const updatedCourse = {...course, course_suggested: resp.data.course_suggested}
                         dispatch(updateCurrentCourse(updatedCourse));
                         // redirect
                         history.push('/recommended_courses');
