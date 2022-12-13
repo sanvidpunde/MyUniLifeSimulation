@@ -209,21 +209,21 @@ const CourseDetails = () => {
                             <div className="single_additional_func_title">
                                 <a href="https://usi.ie/" target="_blank" className="additional_func_link">Union of Student Ireland</a>
                             </div>
-                            <p>Lorem Ipsum Dolor Sit Amet</p>
+                            <p>Take a look at different student information on the Irish Student Union website.</p>
                         </div>
                         <div className="single_additional_func">
                             <Link to="#"><img src="/images/5.png" alt="img" /></Link>
                             <div className="single_additional_func_title">
                                 <a href="https://www.educationinireland.com/en/gdpr/" target="_blank" className="additional_func_link">Data Privacy Policy</a>
                             </div>
-                            <p>Lorem Ipsum Dolor Sit Amet</p>
+                            <p>Make sure to be updated with the European data privacy and data protection laws.</p>
                         </div>
                         <div className="single_additional_func">
                             <Link to="#"><img src="/images/6.png" alt="img" /></Link>
                             <div className="single_additional_func_title">
                                 <a href="https://www.librariesireland.ie/" target="_blank" className="additional_func_link">Libraries</a>
                             </div>
-                            <p>Lorem Ipsum Dolor Sit Amet</p>
+                            <p>Explore different facilities available in the libraries of your universities.</p>
                         </div>
                     </div>
                     
