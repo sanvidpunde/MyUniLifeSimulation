@@ -798,10 +798,14 @@ a.cta_link:hover {
 }
 .recommended_course {
 	display: flex;
-	justify-content: left;
+	justify-content: flex-start;
 	align-items: center;
 	flex-direction: row;
 	gap: 30px;
+}
+.recommended_course_description {
+	max-width: 600px;
+	height: auto;
 }
 .recommended_course_description h2 {
 	color: #333;
