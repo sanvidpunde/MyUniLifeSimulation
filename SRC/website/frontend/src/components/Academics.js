@@ -24,7 +24,7 @@ const Academics = () => {
       <div className="p-60">
           <div className="container">
             <div className="breadcrumb">
-                <p><Link to="/classrooms">Our Classrooms</Link> / <Link to="/academic_staff">Our Lecturers</Link> / <Link to="/academics" className="activePage">Your Academics</Link></p>
+                <p><i className="fa fa-arrows" aria-hidden="true"></i> <Link to="/classrooms">Our Classrooms</Link> / <Link to="/academic_staff">Our Lecturers</Link> / <Link to="/academics" className="activePage">Your Academics</Link> / <Link to="/clubs_and_societies">Clubs and Societies</Link></p>
             </div>
             <h3 className="mb-20">Online Quizzes</h3>
             <div className="grey-border"></div>
@@ -43,6 +43,14 @@ const Academics = () => {
                   <button type="button" className="business_quiz"><a href="https://my-uni-life-simulation-business.vercel.app/" target="_blank" className="quiz_link1">Take Business Test</a></button>
                   <h3>Get a feel of how Science quiz looks like</h3>
                   <button type="button" className="science_quiz"><a href="https://my-uni-life-simulation-science.vercel.app/" target="_blank" className="quiz_link2">Take Science Test</a></button>
+              </div>
+              <div className="control-buttons">
+                <Link to="/academic_staff" className="control-button-back">
+                    BACK
+                </Link>
+                <Link to="/clubs_and_societies" className="control-button-continue">
+                    NEXT
+                </Link>
               </div>
           </div>
       </div>

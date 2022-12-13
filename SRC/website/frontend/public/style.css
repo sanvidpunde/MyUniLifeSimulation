@@ -172,6 +172,11 @@ button:focus {
 	margin-top: 60px;
 }
 
+/* Privacy */
+.privacy {
+	line-height: 1.6;
+}
+
 /* Navbar */
 .container {
     width: 100%;
@@ -383,6 +388,59 @@ p.forgot_password a:hover {
 	top: -10px;
 }
 
+/* Control Buttons */
+.control-buttons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 16px 30px;
+	margin-top: 30px;
+}
+.control-button-back {
+	font-weight: 500;
+	padding: 12px 20px;
+	margin: 10px 0;
+	color: #fff;
+	background: #acacac;
+	border: 1px #acacac solid;
+	border-radius: 25px;
+	text-decoration: none;
+}
+.control-button-back:hover {
+	color: #fff;
+	background: #888;
+	border: 1px solid #888;
+	transition: all .25s;
+	cursor: pointer;
+}
+.control-button-back.active {
+	color: #fff;
+	padding: 6px 15px;
+	border: 1px solid #888;
+}
+.control-button-continue {
+	font-weight: bold;
+	padding: 12px 20px;
+	margin: 10px 0;
+	color: #fff;
+	background: #34a8f5;
+	border: 1px #34a8f5 solid;
+	border-radius: 25px;
+	text-decoration: none;
+}
+.control-button-continue:hover {
+	color: #fff;
+	background: #007FC0;
+	border: 1px solid #007FC0;
+	transition: all .25s;
+	cursor: pointer;
+}
+.control-button-continue.active {
+	color: #fff;
+	padding: 6px 15px;
+	border: 1px solid #34a8f5;
+}
+
 /* Splash Screen */
 .splash_screen {
 	position: fixed;
@@ -396,7 +454,7 @@ p.forgot_password a:hover {
 	max-height: 100%;
 	z-index: 10;
 	animation-name: shrink;
-	animation-delay: 1500ms;
+	animation-delay: 2500ms;
 	animation-duration: 500ms;
 	animation-timing-function: linear;
 }
@@ -585,6 +643,9 @@ li.user:hover ul {
 	color: #007FC0 !important;
 	font-weight: bold;
 }
+.breadcrumb .fa-arrows {
+	color: #007FC0;
+}
 
 /* Simulation */
 .content-area {
@@ -670,11 +731,13 @@ li.user:hover ul {
 	padding: 10px 24px;
 	/* margin: 10px 0; */
 	margin-bottom: 10px;
+	cursor: not-allowed;
 }
 .single_option_label:hover {
 	cursor: pointer;
 	background-color: #dbdbdb;
 	color: #111;
+	cursor: not-allowed;
 }
 .single_option_label_active {
 	background-color: #dbdbdb;
@@ -694,6 +757,41 @@ li.user:hover ul {
 	font-weight: bold;
 	margin-top: 6px;
 } */
+
+/* Welcome */
+.welcome_box {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 600px;
+	padding: 30px 20px;
+	margin: 0;
+	height: auto;
+	background-color: #fff;
+	border: 2px solid #111;
+	border-radius: 5px;
+}
+.welcome_modal {
+	width: 100% !important;
+	height: 100% !important;
+}
+.welcome_box p {
+	margin: 20px 0 30px 0;
+}
+
+/* Profile */
+.profile p {
+	line-height: 1.6;
+	font-size: 18px;
+}
+.profile ol {
+	padding: 0 20px;
+	line-height: 1.6;
+}
+.profile ol li {
+	font-size: 16px;
+}
 
 /* Profiler */
 .range_selection {
@@ -780,10 +878,14 @@ a.cta_link:hover {
 }
 .recommended_course {
 	display: flex;
-	justify-content: left;
+	justify-content: flex-start;
 	align-items: center;
 	flex-direction: row;
 	gap: 30px;
+}
+.recommended_course_description {
+	max-width: 600px;
+	height: auto;
 }
 .recommended_course_description h2 {
 	color: #333;

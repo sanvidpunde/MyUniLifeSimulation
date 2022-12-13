@@ -199,7 +199,7 @@ const Profiler = () => {
             <div className="p-60">
                 <div className="container">
                     <div className="breadcrumb">
-                        <p>Personality test / <strong>Interest Profiler</strong> / Course Recommender</p>
+                        <p><i className="fa fa-arrows" aria-hidden="true"></i> Personality test / <strong>Interest Profiler</strong> / Course Recommender</p>
                     </div>
                     <h3 className="mb-20">This test will determine your career, Lets gooooooo!</h3>
                     <div className="range_selection">

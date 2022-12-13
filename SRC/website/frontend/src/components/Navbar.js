@@ -39,6 +39,9 @@ const Navbar = ({ loggedIn, username, logout }) => {
 										<i className="fa fa-user" aria-hidden="true"></i> Hi, {username} <i className="fa fa-caret-down" aria-hidden="true"></i>
 									</NavLink>
 									<ul>
+										<li>
+											<NavLink to="/profile">Profile</NavLink>
+										</li>
 										<li onClick={() => setToggleBtn(false)}>
 											<Link to="/logout" onClick={() => logout()}>Logout</Link>
 										</li>

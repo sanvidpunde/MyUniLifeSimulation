@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import { CSSTransition } from 'react-transition-group';
 
 import Navbar from './Navbar';
+import Welcome from './Welcome';
 import Modal from './Modal';
 import Home from './Home';
 import Simulation from './Simulation';
@@ -14,9 +15,12 @@ import VideoLectures from './VideoLectures';
 import Classrooms from './Classrooms';
 import AcademicStaff from './AcademicStaff';
 import Academics from './Academics';
+import ClubsSocieties from './ClubsSocieties';
 import Personality from './Personality';
 import PersonalityDetails from './PersonalityDetails';
 import Profiler from './Profiler';
+import Privacy from './Privacy';
+import Profile from './Profile';
 import ProfilerDetails from './ProfilerDetails';
 import ReviewSentiment from './ReviewSentiment';
 import Login from './Login';
@@ -36,7 +40,7 @@ const App = ({ loggedIn, email }) => {
 	useEffect(() => {
 		const timer = setTimeout(() => {
 			setShowSplash(false);
-		}, 2000);
+		}, 3000);
 		return () => clearTimeout(timer);
 	}, [])
 	if (loggedIn) {
@@ -45,11 +49,53 @@ const App = ({ loggedIn, email }) => {
 				<Route path="/" exact>
 					<Home />
 				</Route>
+				<Route path="/profile" exact>
+					<Profile />
+				</Route>
 				<Route path="/course_recommender" exact>
 					<Simulation />
 				</Route>
+				<Route path="/recommended_courses" exact>
+					<RecommendedCourses />
+				</Route>
+				<Route path="/course_details" exact>
+					<CourseDetails />
+				</Route>
+				<Route path="/explore_your_course" exact>
+					<ExploreYourCourse />
+				</Route>
+				<Route path="/video_lectures" exact>
+					<VideoLectures />
+				</Route>
+				<Route path="/classrooms" exact>
+					<Classrooms />
+				</Route>
+				<Route path="/academic_staff" exact>
+					<AcademicStaff />
+				</Route>
+				<Route path="/academics" exact>
+					<Academics />
+				</Route>
+				<Route path="/clubs_and_societies" exact>
+					<ClubsSocieties />
+				</Route>
+				<Route path="/personality_test" exact>
+					<Personality />
+				</Route>
+				<Route path="/personality_details" exact>
+					<PersonalityDetails />
+				</Route>
 				<Route path="/interest_profiler" exact>
 					<Profiler />
+				</Route>
+				<Route path="/interest_profiler_details" exact>
+					<ProfilerDetails />
+				</Route>
+				<Route path="/review_sentiment" exact>
+					<ReviewSentiment />
+				</Route>
+				<Route path="/privacy" exact>
+					<Privacy />
 				</Route>
 				<Redirect to="/" />
 			</Switch>
@@ -84,6 +130,9 @@ const App = ({ loggedIn, email }) => {
 				<Route path="/academics" exact>
 					<Academics />
 				</Route>
+				<Route path="/clubs_and_societies" exact>
+					<ClubsSocieties />
+				</Route>
 				<Route path="/personality_test" exact>
 					<Personality />
 				</Route>
@@ -98,6 +147,9 @@ const App = ({ loggedIn, email }) => {
 				</Route>
 				<Route path="/review_sentiment" exact>
 					<ReviewSentiment />
+				</Route>
+				<Route path="/privacy" exact>
+					<Privacy />
 				</Route>
 				<Route path="/login" exact>
 					<Login />
@@ -120,12 +172,13 @@ const App = ({ loggedIn, email }) => {
 		<React.Fragment>
 			{showSplash ?
 				<div className="splash_screen">
-					<img src="/images/splash_screen.jpg" alt="Splash Screen" />
+					<img src="/images/splash_screen.png" alt="Splash Screen" />
 				</div>
 			:
 				<React.Fragment>
 					<Navbar />
-					<Modal />
+					<Welcome />
+					{email != null && <Modal />}
 					{routes}
 					<Footer />
 				</React.Fragment>
