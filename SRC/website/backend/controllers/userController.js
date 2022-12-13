@@ -248,30 +248,30 @@ const simulation = (req, res) => {
 			} catch(err) {
 				return console.log("err", err);
 			}
+			const sample_structure = {
+				course: "", code: "", title: "", course_type: "", course_starts: "", college: "Technological University Dublin", fees: "", level: "", award: "", duration: "", mode_of_study: "", method_of_delivery: "", commencement_date: "", location: "", thumbnail_image_url: "https://dummyimage.com/500x260/333/fff.jpg", website_url: "", course_description: "", course_content: "", minimum_entry_requirements: "", video: "", faculty_information: [], job_opportunities_and_salary_expectations: "", clubs_and_societies: "", course_reviews_and_testimonials: "", map_info: "", students_accomodation_link: "", clubs_and_societies_link: "", workshops: ""
+			};
 			console.log("identifiedCourse 1 ===============", identifiedCourse1);
 			console.log("identifiedCourse 2 ===============", identifiedCourse2);
 			console.log("identifiedCourse 3 ===============", identifiedCourse3);
 			console.log("identifiedCourse 4 ===============", identifiedCourse4);
 			console.log("identifiedCourse 5 ===============", identifiedCourse5);
-			if (identifiedCourse1) {
-				res.status(200).json({
-					course_suggested: identifiedCourse1.toObject({getters: true}),
-					other_courses: [
-						identifiedCourse2,
-						identifiedCourse3,
-						identifiedCourse4,
-						identifiedCourse5
-					],
-					message: 'Successfully Predicted',
-					success: true
-				});
-			} else {
-				return res.json({
-					type: 'fail',
-					success: false,
-					message: 'Cannot predict course, something went wrong'
-				});
-			}
+			res.status(200).json({
+				course_suggested: [identifiedCourse1 || sample_structure,
+					identifiedCourse2 || sample_structure,
+					identifiedCourse3 || sample_structure,
+					identifiedCourse4 || sample_structure,
+					identifiedCourse5 || sample_structure
+				],
+				message: 'Successfully Predicted',
+				success: true
+			});
+		} else {
+			return res.json({
+				type: 'fail',
+				success: false,
+				message: 'Cannot predict course, something went wrong'
+			});
 		}
 	});
 };

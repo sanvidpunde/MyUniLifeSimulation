@@ -102,28 +102,6 @@ const CourseDetails = () => {
                                     </AccordionDetails>
                                 </Accordion>
                             }
-                            {selectedCourse.video && selectedCourse.video.length > 0 &&
-                                <Accordion>
-                                    <AccordionSummary
-                                    expandIcon={<ExpandMoreIcon />}
-                                    aria-controls="panel4a-content"
-                                    id="panel4a-header"
-                                    >
-                                    <Typography><div className="acc-title">Video Explaining Course</div></Typography>
-                                    </AccordionSummary>
-                                    <AccordionDetails>
-                                    <Typography>
-                                        <ReactPlayer 
-                                            url={selectedCourse.video}
-                                            width="100%"
-                                            className=""
-                                            controls={true}
-                                            pip={true}
-                                        />
-                                    </Typography>
-                                    </AccordionDetails>
-                                </Accordion>
-                            }
                             {selectedCourse.faculty_information && selectedCourse.faculty_information.length > 0 &&
                                 <Accordion>
                                     <AccordionSummary
@@ -168,58 +146,52 @@ const CourseDetails = () => {
                                     </AccordionDetails>
                                 </Accordion>
                             }
-                            {selectedCourse.course_reviews_and_testimonials && selectedCourse.course_reviews_and_testimonials.length > 0 &&
-                                <Accordion>
-                                    <AccordionSummary
-                                    expandIcon={<ExpandMoreIcon />}
-                                    aria-controls="panel8a-content"
-                                    id="panel8a-header"
-                                    >
-                                    <Typography><div className="acc-title">Course Reviews</div></Typography>
-                                    </AccordionSummary>
-                                    <AccordionDetails>
-                                    <Typography>{selectedCourse.course_reviews_and_testimonials}</Typography>
-                                    </AccordionDetails>
-                                </Accordion>
-                            }
                         </div>
                         <div className="course_details_helpful_resources mb-60">
                             <h3>Helpful Resources</h3>
                             <div className="highlight-border"></div>
                             <div className="single_resource">
-                            <a href="#" target="_blank"><img src="/images/uniExperienceSq.jpg" alt="img" /></a>
+                            <a href="https://public.tableau.com/views/forkthdata/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link" target="_blank"><img src="/images/uniExperienceSq.jpg" alt="img" /></a>
                                 <h3><a href="https://public.tableau.com/views/forkthdata/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link" target="_blank">Review Sentiment</a></h3>
                                 <p>Start exploring university through a game and familiarize yourself with your new campus</p>
                             </div>
                             <div className="single_resource">
-                            <a href="#" target="_blank"><img src="/images/leapSq.jpg" alt="img" /></a>
+                            <a href="https://www.transportforireland.ie/" target="_blank"><img src="/images/leapSq.jpg" alt="img" /></a>
                                 <h3><a href="https://www.transportforireland.ie/" target="_blank">Transport (Cost & How to)</a></h3>
                                 <p>Explore about transport for students in the city</p>
                             </div>
                             <div className="single_resource">
-                            <a href="#" target="_blank"><img src="/images/markerSq.jpg" alt="img" /></a>
+                            <a href={selectedCourse.map_info} target="_blank"><img src="/images/markerSq.jpg" alt="img" /></a>
                                 <h3><a href={selectedCourse.map_info} target="_blank">Campus Map (wayfinder)</a></h3>
                                 <p>Get a 2D map showcasing the campus</p>
                             </div>
                             <div className="single_resource">
-                            <a href="#" target="_blank"><img src="/images/studentsSq.jpg" alt="img" /></a>
+                            <a href={selectedCourse.students_accomodation_link} target="_blank"><img src="/images/studentsSq.jpg" alt="img" /></a>
                                 <h3><a href={selectedCourse.students_accomodation_link} target="_blank">Students Accomodation Helper</a></h3>
                                 <p>Find all information about student accomodation here</p>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div className="cta mb-60">
+                    <div className="container">
+                        <h2>Explore more about classrooms, lecturers, video lectures, academics, societies and workshops</h2>
+                        <Link to="/classrooms" className="cta_link">Explore your course</Link>
+                    </div>
+                </div>
+                <div className="container">
                     <div className="title text-left">Additional Functionalities:</div>
                     <div className="grey-border"></div>
                     <div className="additional_func">
                         <div className="single_additional_func">
-                            <Link to="#"><img src="/images/1.png" alt="img" /></Link>
+                            <Link to="#"><img src="/images/bs.png" alt="img" /></Link>
                             <div className="single_additional_func_title">
                                 <a href="https://youtu.be/BWFqCrRhYws" target="_blank" className="additional_func_link">Brightspace</a>
                             </div>
                             <p>Learn Lot of Stuff On Brightspace, Assignments and Stuff</p>
                         </div>
                         <div className="single_additional_func">
-                            <Link to="#"><img src="/images/2.png" alt="img" /></Link>
+                            <Link to="#"><img src="/images/moe.png" alt="img" /></Link>
                             <div className="single_additional_func_title">
                                 <a href="https://www.gov.ie/en/organisation/department-of-education/" target="_blank" className="additional_func_link">Ministry of Education</a>
                             </div>
@@ -233,7 +205,7 @@ const CourseDetails = () => {
                             <p>This will help you to apply in particular course</p>
                         </div>
                         <div className="single_additional_func">
-                            <Link to="#"><img src="/images/4.png" alt="img" /></Link>
+                            <Link to="#"><img src="/images/uos.png" alt="img" /></Link>
                             <div className="single_additional_func_title">
                                 <a href="https://usi.ie/" target="_blank" className="additional_func_link">Union of Student Ireland</a>
                             </div>
@@ -257,12 +229,7 @@ const CourseDetails = () => {
                     
                 </div>
             </div>
-            <div className="cta">
-                <div className="container">
-                    <h2>Explore more about classrooms, lecturers, video lectures, academics, societies and workshops</h2>
-                    <Link to="/classrooms" className="cta_link">Explore your course</Link>
-                </div>
-            </div>
+            
         </React.Fragment>
     )
 }

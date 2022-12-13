@@ -21,11 +21,11 @@ const Profile = () => {
       <div className="header">
           <div className="container">
               <div className="header-text">Your Profile</div>
-              <p>Lorem Ipsum Dolor Sit Amet</p>
+              <p>Get a summary of your simulation here on this page</p>
           </div>
       </div>
       <div className="p-60">
-          <div className="container">
+          <div className="container profile">
             <div className="title text-left">Your profile at a glance:</div>
             <div className="grey-border"></div>
             <p><strong>Name</strong>: {session.name}</p>
@@ -49,15 +49,27 @@ const Profile = () => {
                     <p><strong>Predicted Interest</strong>: {career.career}</p>
                 </React.Fragment>
             }
-            {course && course.course_suggested &&
+            {course && course.course_suggested && course.course_suggested[0].title.length > 0 &&
                 <React.Fragment>
-                    {/* <p><strong>Predicted Courses</strong>: {course.}</p> */}
+                    <p><strong>Predicted Courses</strong>:</p>
+                    <ol>
+                        {course.course_suggested.map(item => {
+                            return (
+                                <li>{item.title}</li>
+                            )
+                        })}
+                    </ol>
                 </React.Fragment>
-                
             }
             
           </div>
       </div>
+      <div className="cta">
+            <div className="container">
+                <h2>Wish to start again?</h2>
+                <Link to="/" className="cta_link">Let's Go!</Link>
+            </div>
+        </div>
     </React.Fragment>
   );
 }
