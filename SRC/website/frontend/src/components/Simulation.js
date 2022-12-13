@@ -38,6 +38,11 @@ const Simulation = () => {
         setSpendingLimitError('');
     }, [spendingLimit]);
 
+    const caoHandler = (e) => {
+        setCao(e.target.value);
+        setCaoError("");
+    }
+
     // If we have predeicted career, prefill job domain
     useEffect(() => {
         if (career.career) {
@@ -61,21 +66,16 @@ const Simulation = () => {
 		window.scrollTo(0, 0);
 	}, []);
 
-    const handleNumberValidation = (e) => {
-        const min = 0;
-        const max = 625;
-        const value = Math.max(min, Math.min(max, Number(e.target.value)));
-        setCao(value);
-        setCaoError('');
-    };
-
     // Validation
 	const validate = () => {
+        if (cao < 120) {
+            setCaoError("CAO Point cannot be less than 120");
+        }
+        if (cao > 625) {
+            setCaoError("CAO Point cannot be more than 625");
+        }
         if (!cao) {
             setCaoError('Please enter your CAO point');
-        }
-        if (cao > 625 || cao < 0) {
-            setCaoError('Invalid CAO point entered')
         }
         if (!city) {
             setCityError("Please select your preferred city");
@@ -83,7 +83,7 @@ const Simulation = () => {
         if (!spendingLimit) {
             setSpendingLimitError("Please select your preferred spending limit");
         }
-		if (!cao || 0 < cao > 625 || !city || !spendingLimit) {
+		if (120 > cao > 625 || !city || !spendingLimit) {
 			return false;
 		}
 		return true;
@@ -170,7 +170,7 @@ const Simulation = () => {
                                 <input
                                     type="number"
                                     value={cao}
-                                    onChange={handleNumberValidation}
+                                    onChange={caoHandler}
                                     placeholder="Enter your CAO Point"
                                 />
                             </label>

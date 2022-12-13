@@ -48,10 +48,10 @@ const RecommendedCourses = () => {
                                     "https://dummyimage.com/500x260/ccc/fff.jpg"} alt="" className="responsive-image mb-30" />
                                 </Link>
                                 <div className="recommended_course_description mb-60">
-                                    <h2><Link to="#" onClick={() => courseClickHandler(course)}>{course.college}</Link></h2>
+                                    <h2><Link to="#" onClick={() => courseClickHandler(course)}>{course.course}</Link></h2>
                                     <p><strong>Fees</strong>: {`€${course.fees}`}</p>
                                     <p><strong>Course ID</strong>: {course.code}</p>
-                                    <p><strong>Course Name</strong>: {course.course}</p>
+                                    <p><strong>College</strong>: {course.college}</p>
                                     <p><strong>Course Starts</strong>: {course.course_starts}</p>
                                     <p><strong>Link</strong>: <a href={course.website_url} target="_blank">{course.website_url}</a></p>
                                     <p className="location"><i className="fa fa-map-marker" aria-hidden="true"></i> {course.location}</p>
