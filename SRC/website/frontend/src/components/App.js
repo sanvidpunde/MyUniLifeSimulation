@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import { CSSTransition } from 'react-transition-group';
 
 import Navbar from './Navbar';
+import Welcome from './Welcome';
 import Modal from './Modal';
 import Home from './Home';
 import Simulation from './Simulation';
@@ -14,6 +15,7 @@ import VideoLectures from './VideoLectures';
 import Classrooms from './Classrooms';
 import AcademicStaff from './AcademicStaff';
 import Academics from './Academics';
+import ClubsSocieties from './ClubsSocieties';
 import Personality from './Personality';
 import PersonalityDetails from './PersonalityDetails';
 import Profiler from './Profiler';
@@ -38,7 +40,7 @@ const App = ({ loggedIn, email }) => {
 	useEffect(() => {
 		const timer = setTimeout(() => {
 			setShowSplash(false);
-		}, 2000);
+		}, 3000);
 		return () => clearTimeout(timer);
 	}, [])
 	if (loggedIn) {
@@ -73,6 +75,9 @@ const App = ({ loggedIn, email }) => {
 				</Route>
 				<Route path="/academics" exact>
 					<Academics />
+				</Route>
+				<Route path="/clubs_and_societies" exact>
+					<ClubsSocieties />
 				</Route>
 				<Route path="/personality_test" exact>
 					<Personality />
@@ -125,6 +130,9 @@ const App = ({ loggedIn, email }) => {
 				<Route path="/academics" exact>
 					<Academics />
 				</Route>
+				<Route path="/clubs_and_societies" exact>
+					<ClubsSocieties />
+				</Route>
 				<Route path="/personality_test" exact>
 					<Personality />
 				</Route>
@@ -164,12 +172,13 @@ const App = ({ loggedIn, email }) => {
 		<React.Fragment>
 			{showSplash ?
 				<div className="splash_screen">
-					<img src="/images/splash_screen.jpg" alt="Splash Screen" />
+					<img src="/images/splash_screen.png" alt="Splash Screen" />
 				</div>
 			:
 				<React.Fragment>
 					<Navbar />
-					<Modal />
+					<Welcome />
+					{email != null && <Modal />}
 					{routes}
 					<Footer />
 				</React.Fragment>

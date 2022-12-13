@@ -1,12 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import {Link} from 'react-router-dom';
-import {useSelector, useDispatch} from 'react-redux';
-
-import {receiveSuccessMessage} from '../redux/util/controller';
+import {useSelector} from 'react-redux';
 
 const Profile = () => {
 
-    const dispatch = useDispatch();
     const session = useSelector(state => state.session);
     const personality = useSelector(state => state.personality);
     const career = useSelector(state => state.career);
@@ -21,7 +18,7 @@ const Profile = () => {
       <div className="header">
           <div className="container">
               <div className="header-text">Your Profile</div>
-              <p>Get a summary of your simulation here on this page</p>
+              <p>Get a summary of your simulation and your user account</p>
           </div>
       </div>
       <div className="p-60">
