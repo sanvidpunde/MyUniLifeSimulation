@@ -11,7 +11,7 @@ const Privacy = () => {
       <div className="header">
           <div className="container">
               <div className="header-text">Privacy Policy</div>
-              <p>Lorem Ipsum Dolor Sit Amet</p>
+              <p>Please make sure to read and understand all the points in the Privacy Policy.</p>
           </div>
       </div>
       <div className="p-60">

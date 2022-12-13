@@ -19,7 +19,7 @@ const VideoLectures = () => {
       <div className="header">
           <div className="container">
               <div className="header-text">Video Lectures</div>
-              <p>Lorem Ipsum Dolor Sit Amet</p>
+              <p>Have a look at some of the video lectures that cover different topics in your chosen course</p>
           </div>
       </div>
       <div className="p-60">

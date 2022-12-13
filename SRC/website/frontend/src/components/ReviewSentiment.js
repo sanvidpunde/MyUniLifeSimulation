@@ -23,7 +23,7 @@ const ReviewSentiment = () => {
 			<div className="header">
                 <div className="container">
                     <div className="header-text">Review Sentiment</div>
-                    <p>Lorem Ipsum Dolor Sit Amet</p>
+                    <p>We know that everyone has their opinions about universities and courses. That is why, before you make a decision about applying to a certain university, it is a good idea to hear what others who were once in your place have to say about the universities. Have a look at the User Review Dashboard below to know what your seniors and alumni have to say about their college experiences.</p>
                 </div>
             </div>
             <div className="p-60">

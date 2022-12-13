@@ -15,7 +15,7 @@ const ClubsSocieties = () => {
       <div className="header">
           <div className="container">
               <div className="header-text">Clubs and Societies</div>
-              <p>Lorem Ipsum Dolor Sit</p>
+              <p>Take a look at the different clubs and societies that you can join and meet people with similar interests!</p>
           </div>
       </div>
       <div className="p-60">
