@@ -9,7 +9,7 @@ const Classrooms = () => {
     const dispatch = useDispatch();
     const courses = useSelector(state => state.course);
 
-    useEffect(() => {
+  useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
 

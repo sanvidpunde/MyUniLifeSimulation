@@ -11,7 +11,7 @@ const myStore = (preloadedState) =>
 				applyMiddleware(
 					thunk // lets us dispatch() functions
 				),
-				window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+				// window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 			)
 		);
 

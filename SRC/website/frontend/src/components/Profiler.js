@@ -202,260 +202,259 @@ const Profiler = () => {
                         <p><i className="fa fa-arrows" aria-hidden="true"></i> Personality test / <strong>Interest Profiler</strong> / Course Recommender</p>
                     </div>
                     <h3 className="mb-20">This test will determine your career, Lets gooooooo!</h3>
-                    <div className="range_selection">
-                        <div className="single_range_selection">
-                            <label htmlFor="logical">Rate your Logical quotient skills</label>
-                            <Slider
-                                aria-label="logical"
-                                value={logical}
-                                onChange={(e) => setLogical(e.target.value)}
-                                valueLabelDisplay="auto"
-                                step={1}
-                                marks
-                                min={0}
-                                max={9}
-                            />
-                        </div>
-                        <div className="single_range_selection">
-                            <label htmlFor="stressedEasily">I get stressed out easily</label>
-                            <Slider
-                                aria-label="stressedEasily"
-                                value={stressedEasily}
-                                onChange={(e) => setStressedEasily(e.target.value)}
-                                valueLabelDisplay="auto"
-                                step={1}
-                                marks
-                                min={0}
-                                max={9}
-                            />
-                        </div>
+                    <div className="profiler_bg profiler_bg_overlay pb-60">
+                        <div className="range_selection">
+                            <div className="single_range_selection">
+                                <label htmlFor="logical">Rate your Logical quotient skills</label>
+                                <Slider
+                                    aria-label="logical"
+                                    value={logical}
+                                    onChange={(e) => setLogical(e.target.value)}
+                                    valueLabelDisplay="auto"
+                                    step={1}
+                                    marks
+                                    min={0}
+                                    max={9}
+                                />
+                            </div>
+                            <div className="single_range_selection">
+                                <label htmlFor="stressedEasily">I get stressed out easily</label>
+                                <Slider
+                                    aria-label="stressedEasily"
+                                    value={stressedEasily}
+                                    onChange={(e) => setStressedEasily(e.target.value)}
+                                    valueLabelDisplay="auto"
+                                    step={1}
+                                    marks
+                                    min={0}
+                                    max={9}
+                                />
+                            </div>
 
-                        <div className="single_range_selection">
-                            <label htmlFor="alwaysPrepared">I am always prepared</label>
-                            <Slider
-                                aria-label="alwaysPrepared"
-                                value={alwaysPrepared}
-                                onChange={(e) => setAlwaysPrepared(e.target.value)}
-                                valueLabelDisplay="auto"
-                                step={1}
-                                marks
-                                min={0}
-                                max={9}
-                            />
-                        </div>
-                        <div className="single_range_selection">
-                            <label htmlFor="followSchedule">I follow schedule</label>
-                            <Slider
-                                aria-label="followSchedule"
-                                value={followSchedule}
-                                onChange={(e) => setFollowSchedule(e.target.value)}
-                                valueLabelDisplay="auto"
-                                step={1}
-                                marks
-                                min={0}
-                                max={9}
-                            />
-                        </div>
+                            <div className="single_range_selection">
+                                <label htmlFor="alwaysPrepared">I am always prepared</label>
+                                <Slider
+                                    aria-label="alwaysPrepared"
+                                    value={alwaysPrepared}
+                                    onChange={(e) => setAlwaysPrepared(e.target.value)}
+                                    valueLabelDisplay="auto"
+                                    step={1}
+                                    marks
+                                    min={0}
+                                    max={9}
+                                />
+                            </div>
+                            <div className="single_range_selection">
+                                <label htmlFor="followSchedule">I follow schedule</label>
+                                <Slider
+                                    aria-label="followSchedule"
+                                    value={followSchedule}
+                                    onChange={(e) => setFollowSchedule(e.target.value)}
+                                    valueLabelDisplay="auto"
+                                    step={1}
+                                    marks
+                                    min={0}
+                                    max={9}
+                                />
+                            </div>
 
-                        <div className="single_range_selection">
-                            <label htmlFor="quickToUnderstandThings">I am quick to understand things</label>
-                            <Slider
-                                aria-label="quickToUnderstandThings"
-                                value={quickToUnderstandThings}
-                                onChange={(e) => setQuickToUnderstandThings(e.target.value)}
-                                valueLabelDisplay="auto"
-                                step={1}
-                                marks
-                                min={0}
-                                max={9}
-                            />
+                            <div className="single_range_selection">
+                                <label htmlFor="quickToUnderstandThings">I am quick to understand things</label>
+                                <Slider
+                                    aria-label="quickToUnderstandThings"
+                                    value={quickToUnderstandThings}
+                                    onChange={(e) => setQuickToUnderstandThings(e.target.value)}
+                                    valueLabelDisplay="auto"
+                                    step={1}
+                                    marks
+                                    min={0}
+                                    max={9}
+                                />
+                            </div>
+                            <div className="single_range_selection">
+                                <label htmlFor="fullOfIdeas">I am full of ideas</label>
+                                <Slider
+                                    aria-label="fullOfIdeas"
+                                    value={fullOfIdeas}
+                                    onChange={(e) => setFullOfIdeas(e.target.value)}
+                                    valueLabelDisplay="auto"
+                                    step={1}
+                                    marks
+                                    min={0}
+                                    max={9}
+                                />
+                            </div>
+                            <div className="single_range_selection">
+                                <label htmlFor="iStartConversation">I start conversations</label>
+                                <Slider
+                                    aria-label="iStartConversation"
+                                    value={iStartConversation}
+                                    onChange={(e) => setIStartConversation(e.target.value)}
+                                    valueLabelDisplay="auto"
+                                    step={1}
+                                    marks
+                                    min={0}
+                                    max={9}
+                                />
+                            </div>
+                            <div className="single_range_selection">
+                                <label htmlFor="coding">Rate your Coding skills</label>
+                                <Slider
+                                    aria-label="coding"
+                                    value={coding}
+                                    onChange={(e) => setCoding(e.target.value)}
+                                    valueLabelDisplay="auto"
+                                    step={1}
+                                    marks
+                                    min={0}
+                                    max={9}
+                                />
+                            </div>
+                            <div className="single_range_selection">
+                                <label htmlFor="publicSpeaking">Rate Your Public Speaking</label>
+                                <Slider
+                                    aria-label="publicSpeaking"
+                                    value={publicSpeaking}
+                                    onChange={(e) => setPublicSpeaking(e.target.value)}
+                                    valueLabelDisplay="auto"
+                                    step={1}
+                                    marks
+                                    min={0}
+                                    max={9}
+                                />
+                            </div>
                         </div>
-                        <div className="single_range_selection">
-                            <label htmlFor="fullOfIdeas">I am full of ideas</label>
-                            <Slider
-                                aria-label="fullOfIdeas"
-                                value={fullOfIdeas}
-                                onChange={(e) => setFullOfIdeas(e.target.value)}
-                                valueLabelDisplay="auto"
-                                step={1}
-                                marks
-                                min={0}
-                                max={9}
-                            />
+                        <div className="selection_container">
+                            <div className="single_selection_container">
+                                <label>Self Learning Capability
+                                    <Select 
+                                        defaultValue={selfLearningCapability}
+                                        onChange={setSelfLearningCapability}
+                                        options={yesNoOptions}
+                                        className="mt-6"
+                                    />
+                                </label>
+                                {selfLearningCapabilityError !== "" && <p className="error_text"><i>!</i> &nbsp;{selfLearningCapabilityError}</p>}
+                            </div>
+                            <div className="single_selection_container">
+                                <label>Extra courses
+                                    <Select 
+                                        defaultValue={extraCourses}
+                                        onChange={setExtraCourses}
+                                        options={yesNoOptions}
+                                        className="mt-6"
+                                    />
+                                </label>
+                                {extraCoursesError !== "" && <p className="error_text"><i>!</i> &nbsp;{extraCoursesError}</p>}
+                            </div>
+                            <div className="single_selection_container">
+                                <label>Took advice from seniors or elders
+                                    <Select 
+                                        defaultValue={tookAdvice}
+                                        onChange={setTookAdvice}
+                                        options={yesNoOptions}
+                                        className="mt-6"
+                                    />
+                                </label>
+                                {tookAdviceError !== "" && <p className="error_text"><i>!</i> &nbsp;{tookAdviceError}</p>}
+                            </div>
+
+                            <div className="single_selection_container">
+                                <label>Do you like sports
+                                    <Select 
+                                        defaultValue={likeSports}
+                                        onChange={setLikeSports}
+                                        options={yesNoOptions}
+                                        className="mt-6"
+                                    />
+                                </label>
+                                {likeSportsError !== "" && <p className="error_text"><i>!</i> &nbsp;{likeSportsError}</p>}
+                            </div>
+                            <div className="single_selection_container">
+                                <label>Entrepreneurial Mindset
+                                    <Select 
+                                        defaultValue={entrepreneurialMindset}
+                                        onChange={setEntrepreneurialMindset}
+                                        options={yesNoOptions}
+                                        className="mt-6"
+                                    />
+                                </label>
+                                {entrepreneurialMindsetError !== "" && <p className="error_text"><i>!</i> &nbsp;{entrepreneurialMindsetError}</p>}
+                            </div>
+                            <div className="single_selection_container">
+                                <label>Tendency to worry
+                                    <Select 
+                                        defaultValue={tendencyToWorry}
+                                        onChange={setTendencyToWorry}
+                                        options={yesNoOptions}
+                                        className="mt-6"
+                                    />
+                                </label>
+                                {tendencyToWorryError !== "" && <p className="error_text"><i>!</i> &nbsp;{tendencyToWorryError}</p>}
+                            </div>
+
+                            <div className="single_selection_container">
+                                <label>Team co-ordination skill
+                                    <Select 
+                                        defaultValue={teamCo}
+                                        onChange={setTeamCo}
+                                        options={yesNoOptions}
+                                        className="mt-6"
+                                    />
+                                </label>
+                                {teamCoError !== "" && <p className="error_text"><i>!</i> &nbsp;{teamCoError}</p>}
+                            </div>
+                            <div className="single_selection_container">
+                                <label>Introvert
+                                    <Select 
+                                        defaultValue={introvert}
+                                        onChange={setIntrovert}
+                                        options={yesNoOptions}
+                                        className="mt-6"
+                                    />
+                                </label>
+                                {introvertError !== "" && <p className="error_text"><i>!</i> &nbsp;{introvertError}</p>}
+                            </div>
+                            <div className="single_selection_container">
+                                <label>Reading and writing skills
+                                    <Select 
+                                        defaultValue={readingWriting}
+                                        onChange={setReadingWriting}
+                                        options={ordinalOptions}
+                                        className="mt-6"
+                                    />
+                                </label>
+                                {readingWritingError !== "" && <p className="error_text"><i>!</i> &nbsp;{readingWritingError}</p>}
+                            </div>
+                            <div className="single_selection_container">
+                                <label>Memory capability score
+                                    <Select 
+                                        defaultValue={memoryCapability}
+                                        onChange={setMemoryCapability}
+                                        options={ordinalOptions}
+                                        className="mt-6"
+                                    />
+                                </label>
+                                {memoryCapabilityError !== "" && <p className="error_text"><i>!</i> &nbsp;{memoryCapabilityError}</p>}
+                            </div>
+                            <div className="single_selection_container">
+                                <label>Smart or Hard Work
+                                    <Select 
+                                        defaultValue={work}
+                                        onChange={setWork}
+                                        options={[{value: "Smart worker", label: "Smart worker"}, {value: "Hard worker", label: "Hard worker"}]}
+                                        className="mt-6"
+                                    />
+                                </label>
+                                {workError !== "" && <p className="error_text"><i>!</i> &nbsp;{workError}</p>}
+                            </div>
                         </div>
-                        <div className="single_range_selection">
-                            <label htmlFor="iStartConversation">I start conversations</label>
-                            <Slider
-                                aria-label="iStartConversation"
-                                value={iStartConversation}
-                                onChange={(e) => setIStartConversation(e.target.value)}
-                                valueLabelDisplay="auto"
-                                step={1}
-                                marks
-                                min={0}
-                                max={9}
-                            />
-                        </div>
-
-
-
-
-                        <div className="single_range_selection">
-                            <label htmlFor="coding">Rate your Coding skills</label>
-                            <Slider
-                                aria-label="coding"
-                                value={coding}
-                                onChange={(e) => setCoding(e.target.value)}
-                                valueLabelDisplay="auto"
-                                step={1}
-                                marks
-                                min={0}
-                                max={9}
-                            />
-                        </div>
-                        
-                        <div className="single_range_selection">
-                            <label htmlFor="publicSpeaking">Rate Your Public Speaking</label>
-                            <Slider
-                                aria-label="publicSpeaking"
-                                value={publicSpeaking}
-                                onChange={(e) => setPublicSpeaking(e.target.value)}
-                                valueLabelDisplay="auto"
-                                step={1}
-                                marks
-                                min={0}
-                                max={9}
-                            />
+                        <div className="mt-20">
+                            <button type="button" className="take-test-button" onClick={submitHandler} >Run Prediction</button>
                         </div>
                     </div>
-                    <div className="selection_container">
-                        <div className="single_selection_container">
-                            <label>Self Learning Capability
-                                <Select 
-                                    defaultValue={selfLearningCapability}
-                                    onChange={setSelfLearningCapability}
-                                    options={yesNoOptions}
-                                    className="mt-6"
-                                />
-                            </label>
-                            {selfLearningCapabilityError !== "" && <p className="error_text"><i>!</i> &nbsp;{selfLearningCapabilityError}</p>}
-                        </div>
-                        <div className="single_selection_container">
-                            <label>Extra courses
-                                <Select 
-                                    defaultValue={extraCourses}
-                                    onChange={setExtraCourses}
-                                    options={yesNoOptions}
-                                    className="mt-6"
-                                />
-                            </label>
-                            {extraCoursesError !== "" && <p className="error_text"><i>!</i> &nbsp;{extraCoursesError}</p>}
-                        </div>
-                        <div className="single_selection_container">
-                            <label>Took advice from seniors or elders
-                                <Select 
-                                    defaultValue={tookAdvice}
-                                    onChange={setTookAdvice}
-                                    options={yesNoOptions}
-                                    className="mt-6"
-                                />
-                            </label>
-                            {tookAdviceError !== "" && <p className="error_text"><i>!</i> &nbsp;{tookAdviceError}</p>}
-                        </div>
-
-                        <div className="single_selection_container">
-                            <label>Do you like sports
-                                <Select 
-                                    defaultValue={likeSports}
-                                    onChange={setLikeSports}
-                                    options={yesNoOptions}
-                                    className="mt-6"
-                                />
-                            </label>
-                            {likeSportsError !== "" && <p className="error_text"><i>!</i> &nbsp;{likeSportsError}</p>}
-                        </div>
-                        <div className="single_selection_container">
-                            <label>Entrepreneurial Mindset
-                                <Select 
-                                    defaultValue={entrepreneurialMindset}
-                                    onChange={setEntrepreneurialMindset}
-                                    options={yesNoOptions}
-                                    className="mt-6"
-                                />
-                            </label>
-                            {entrepreneurialMindsetError !== "" && <p className="error_text"><i>!</i> &nbsp;{entrepreneurialMindsetError}</p>}
-                        </div>
-                        <div className="single_selection_container">
-                            <label>Tendency to worry
-                                <Select 
-                                    defaultValue={tendencyToWorry}
-                                    onChange={setTendencyToWorry}
-                                    options={yesNoOptions}
-                                    className="mt-6"
-                                />
-                            </label>
-                            {tendencyToWorryError !== "" && <p className="error_text"><i>!</i> &nbsp;{tendencyToWorryError}</p>}
-                        </div>
-
-                        <div className="single_selection_container">
-                            <label>Team co-ordination skill
-                                <Select 
-                                    defaultValue={teamCo}
-                                    onChange={setTeamCo}
-                                    options={yesNoOptions}
-                                    className="mt-6"
-                                />
-                            </label>
-                            {teamCoError !== "" && <p className="error_text"><i>!</i> &nbsp;{teamCoError}</p>}
-                        </div>
-                        <div className="single_selection_container">
-                            <label>Introvert
-                                <Select 
-                                    defaultValue={introvert}
-                                    onChange={setIntrovert}
-                                    options={yesNoOptions}
-                                    className="mt-6"
-                                />
-                            </label>
-                            {introvertError !== "" && <p className="error_text"><i>!</i> &nbsp;{introvertError}</p>}
-                        </div>
-                        <div className="single_selection_container">
-                            <label>Reading and writing skills
-                                <Select 
-                                    defaultValue={readingWriting}
-                                    onChange={setReadingWriting}
-                                    options={ordinalOptions}
-                                    className="mt-6"
-                                />
-                            </label>
-                            {readingWritingError !== "" && <p className="error_text"><i>!</i> &nbsp;{readingWritingError}</p>}
-                        </div>
-                        <div className="single_selection_container">
-                            <label>Memory capability score
-                                <Select 
-                                    defaultValue={memoryCapability}
-                                    onChange={setMemoryCapability}
-                                    options={ordinalOptions}
-                                    className="mt-6"
-                                />
-                            </label>
-                            {memoryCapabilityError !== "" && <p className="error_text"><i>!</i> &nbsp;{memoryCapabilityError}</p>}
-                        </div>
-                        <div className="single_selection_container">
-                            <label>Smart or Hard Work
-                                <Select 
-                                    defaultValue={work}
-                                    onChange={setWork}
-                                    options={[{value: "Smart worker", label: "Smart worker"}, {value: "Hard worker", label: "Hard worker"}]}
-                                    className="mt-6"
-                                />
-                            </label>
-                            {workError !== "" && <p className="error_text"><i>!</i> &nbsp;{workError}</p>}
-                        </div>
-                    </div>
-                    <div className="mt-20">
-                        <button type="button" className="take-test-button" onClick={submitHandler} >Run Prediction</button>
-                    </div>
+                    
+                    
                 </div>
             </div>			
 		</React.Fragment>

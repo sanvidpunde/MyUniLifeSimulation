@@ -93,7 +93,7 @@ const Personality = () => {
                         <p><i className="fa fa-arrows" aria-hidden="true"></i> <strong>Personality test</strong> / Interest Profiler / Course Recommender</p>
                     </div>
                     <h3 className="mb-20">This test will determine your personality, Lets gooooooo!</h3>
-                    <div className="range_selection">
+                    <div className="range_selection personality_bg personality_bg_overlay">
                         <div className="single_range_selection">
                             <label htmlFor="life_of_party">I am the life of the party</label>
                             <Slider
