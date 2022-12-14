@@ -36,7 +36,7 @@ const Classrooms = () => {
                     <img src="/images/classroom1.jpg" alt="img" />
                 </div>
                 <div className="single_classroom">
-                    <img src="/images/classroom1.jpg" alt="img" />
+                    <img src="/images/classroom2.jpg" alt="img" />
                 </div>
             </div>
             <div className="control-buttons">
