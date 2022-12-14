@@ -59,11 +59,13 @@ Have a look at all the details of your journey through the application in a summ
 ## Demo Videos
 
 
-1. Project Functionalities Demo
+### 1. Project Functionalities Demo
 
+[![Project Functionalities Demo](https://i.postimg.cc/d1ChtGyz/Screenshot-2022-12-14-182909.jpg)](https://www.youtube.com/watch?v=TBIrCTAVFxM "Project Functionalities Demo - Click to Watch!")
 https://www.youtube.com/watch?v=TBIrCTAVFxM
 
 
-2. Project Interface Walkthrough
+### 2. Project Interface Walkthrough
 
+[![Project Interface Walkthrough](https://i.postimg.cc/NF2dpJZ5/newweewew.jpg)](https://www.youtube.com/watch?v=TBIrCTAVFxM "Project Interface Walkthrough - Click to Watch!")
 https://www.youtube.com/watch?v=TBIrCTAVFxM
