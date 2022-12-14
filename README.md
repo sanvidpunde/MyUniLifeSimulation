@@ -13,7 +13,7 @@
 <br />
 <div align = "center">
   <a href="https://www.unilife.ml">
-    <img src="https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/splash.png" alt="Logo" width="300rem">
+    <img src="https://i.postimg.cc/hjM5vZ7Y/Screenshot-2022-12-14-184600.jpg" alt="Logo" width="300rem">
   </a>
  <p align="center">
     <a href="https://github.com/sanvidpunde/MyUniLifeSimulation"><strong>Explore the GitHub Repo »</strong></a>
