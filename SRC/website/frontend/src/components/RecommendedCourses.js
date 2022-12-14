@@ -45,6 +45,15 @@ const RecommendedCourses = () => {
                                     course.college == "Trinity College Dublin" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/tcd.jpg" ||
                                     course.college == "University College Dublin" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/ucd.jpg" ||
                                     course.college == "Technological University Dublin" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/tud.jpg" ||
+                                    course.college == "Dundalk Institute of Technology" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/Dundak.jpg" ||
+                                    course.college == "Technological University of the Shannon" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/ait.jpg" ||
+                                    course.college == "University of Limerick" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/ul.jpg" ||
+                                    course.college == "Atlantic Technological University - Donegal Letterkenny Campus" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/ATU.jpeg" ||
+                                    course.college == "Munster Technological University" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/mtu.jpg" ||
+                                    course.college == "University College Cork" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/Ucc_Cork.jpg" ||
+                                    course.college == "South East Technological University" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/setu.jpg" ||
+                                    course.college == "Carlow College, St Patrick's" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/Patrics.jpg" ||
+                                    course.college == "NUI Galway" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/NUIG.jpg" ||
                                     "https://dummyimage.com/500x260/ccc/fff.jpg"} alt="" className="responsive-image mb-30" />
                                 </Link>
                                 <div className="recommended_course_description mb-60">
