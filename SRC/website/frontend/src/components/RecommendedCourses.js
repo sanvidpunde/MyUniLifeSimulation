@@ -38,13 +38,13 @@ const RecommendedCourses = () => {
                             <div className="recommended_course" key={course.code}>
                                 <Link to="#" onClick={() => courseClickHandler(course)}>
                                     <img src={course.college == "Technological University Dublin" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/tud.jpg" ||
-                                    courses.course_suggested.college == "Dublin Business School" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/dbs.jpg" ||
-                                    courses.course_suggested.college == "Dublin City University" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/dcu.jpg" ||
-                                    courses.course_suggested.college == "Griffith College" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/griffith.jpg" ||
-                                    courses.course_suggested.college == "National College of Ireland" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/nci.jpg" ||
-                                    courses.course_suggested.college == "Trinity College Dublin" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/tcd.jpg" ||
-                                    courses.course_suggested.college == "University College Dublin" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/ucd.jpg" ||
-                                    courses.course_suggested.college == "Technological University Dublin" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/tud.jpg" ||
+                                    course.college == "Dublin Business School" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/dbs.jpg" ||
+                                    course.college == "Dublin City University" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/dcu.jpg" ||
+                                    course.college == "Griffith College" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/griffith.jpg" ||
+                                    course.college == "National College of Ireland" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/nci.jpg" ||
+                                    course.college == "Trinity College Dublin" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/tcd.jpg" ||
+                                    course.college == "University College Dublin" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/ucd.jpg" ||
+                                    course.college == "Technological University Dublin" && "https://unilifethumbnails.s3.eu-west-1.amazonaws.com/images/thumbnail/tud.jpg" ||
                                     "https://dummyimage.com/500x260/ccc/fff.jpg"} alt="" className="responsive-image mb-30" />
                                 </Link>
                                 <div className="recommended_course_description mb-60">
