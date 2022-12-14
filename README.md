@@ -67,5 +67,5 @@ https://www.youtube.com/watch?v=TBIrCTAVFxM
 
 ### 2. Project Interface Walkthrough
 
-[![Project Interface Walkthrough](https://i.postimg.cc/NF2dpJZ5/newweewew.jpg)](https://www.youtube.com/watch?v=TBIrCTAVFxM "Project Interface Walkthrough - Click to Watch!")
-https://www.youtube.com/watch?v=TBIrCTAVFxM
+[![Project Interface Walkthrough](https://i.postimg.cc/NF2dpJZ5/newweewew.jpg)](https://www.youtube.com/watch?v=VqL36uTMdbA "Project Interface Walkthrough - Click to Watch!")
+https://www.youtube.com/watch?v=VqL36uTMdbA
