@@ -201,8 +201,8 @@ const Profiler = () => {
                     <div className="breadcrumb">
                         <p><i className="fa fa-arrows" aria-hidden="true"></i> Personality test / <strong>Interest Profiler</strong> / Course Recommender</p>
                     </div>
-                    <h3 className="mb-20">This test will determine your career, Lets gooooooo!</h3>
                     <div className="profiler_bg profiler_bg_overlay pb-60">
+                        <h3 className="mb-20">This test will determine your career, Lets gooooooo!</h3>
                         <div className="range_selection">
                             <div className="single_range_selection">
                                 <label htmlFor="logical">Rate your Logical quotient skills</label>

@@ -32,11 +32,15 @@ const AcademicStaff = () => {
   }, []);
 
   useEffect(() => {
-    console.log("allProfessors", allProfessors);
+    // console.log("allProfessors", allProfessors);
     if (allProfessors && allProfessors.length) {
-      const filteredStaff = allProfessors.filter(item => item.college == selectedCourse.college);
+      // console.log("selectedCourse.college", selectedCourse.college);
+      const filteredStaff = allProfessors.filter(item => {
+        // console.log("college is", item.college);
+        return item.college == selectedCourse.college;
+      });
       // console.log("filteredStaff", filteredStaff);
-      if (filteredStaff && filteredStaff.length) {
+      if (filteredStaff && filteredStaff.length > 0) {
         setStaffs(filteredStaff[0]);
       }
     }
@@ -62,17 +66,27 @@ const AcademicStaff = () => {
             <h3 className="mb-20">Academic Staff</h3>
             <div className="grey-border"></div>
             <div className="staff_container">
-              {staffs && staffs.staff && staffs.staff.length && staffs.staff.map(item => {
+              {staffs && staffs.staff && staffs.staff.length ? staffs.staff.map(item => {
                 return (
                   <div className="single_staff">
-                    <img src={item.professor_thumbnail_url ? item.professor_thumbnail_url : "https://dummyimage.com/350x220/333/fff.png"} alt="" />
-                    <p className="dept">{item.designation}</p>
+                    <img src={item.professor_thumbnail_url ? item.professor_thumbnail_url : "/avatar-professor.png"} alt="" />
+                    {/* <p className="dept">{item.designation}</p> */}
                     <h3 className="staff_name">{item.professor_name}</h3>
                     <p>{item.email}</p>
                     <p>{item.phone}</p>
                   </div>
                 )
-              }) }
+              })
+              :
+              <>
+                <div className="single_staff">
+                    <img src="/avatar-professor.png" alt="" />
+                    <h3 className="staff_name">Dr. Fiona Lawless</h3>
+                    <p>Fiona.Lawless@dkit.ie</p>
+                    <p>+353429370200</p>
+                  </div>
+              </>
+            }
             </div>
             <div className="control-buttons">
               <Link to="/classrooms" className="control-button-back">
