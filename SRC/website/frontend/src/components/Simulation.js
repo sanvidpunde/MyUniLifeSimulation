@@ -83,7 +83,7 @@ const Simulation = () => {
         if (!spendingLimit) {
             setSpendingLimitError("Please select your preferred spending limit");
         }
-		if (120 > cao > 625 || !city || !spendingLimit) {
+		if (119 < cao > 625 || !city || !spendingLimit) {
 			return false;
 		}
 		return true;
@@ -114,7 +114,7 @@ const Simulation = () => {
                         return dispatch(receiveFailureMessage({failure: resp.data.message}));
                     }
                     if (resp.data.success) {
-                        dispatch(receiveSuccessMessage({success: `Predicted Course ID is ${resp.data.course_suggested.code}`}));
+                        dispatch(receiveSuccessMessage({success: `Predicted Course ID is ${resp.data.course_suggested[0].code}`}));
                         // update redux
                         const updatedCourse = {...course, course_suggested: resp.data.course_suggested}
                         dispatch(updateCurrentCourse(updatedCourse));
@@ -190,7 +190,7 @@ const Simulation = () => {
                     </div>
                     <div className="mt-30">
                         <div className="width_slider">
-                            <label>Spending Limit
+                            <label>Spending Limit (€1000 - €20000)
                                 <Slider
                                     aria-label="spendingLimit"
                                     value={spendingLimit}

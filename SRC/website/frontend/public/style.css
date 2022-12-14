@@ -805,6 +805,44 @@ li.user:hover ul {
 	max-width: 540px;
 	width: 100%;
 }
+.personality_bg {
+	position: relative;
+  overflow: hidden;
+  z-index: 0;
+	background: url('/images/personality.jpg') center center no-repeat;
+}
+.personality_bg_overlay:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	opacity: 0.65;
+	z-index: -1;
+}
+.profiler_bg {
+	position: relative;
+  overflow: hidden;
+  z-index: 0;
+	background: url('/images/career.jpg') no-repeat center center;
+}
+.profiler_bg_overlay:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	opacity: 0.5;
+	z-index: -1;
+}
+.pb-60 {
+	padding-bottom: 60px;
+	padding-left: 2px;
+}
 .selection_container {
 	display: flex;
 	justify-content: flex-start;
@@ -1771,21 +1809,21 @@ a.signUpBtnLink {
 	font-weight: bold;
 	padding: 10px 15px;
 	margin: 10px 0;
-	color: #fff;
+	color: #fff !important;
 	background: #34a8f5;
 	border: 1px #34a8f5 solid;
 	border-radius: 5px;
 	text-decoration: none;
 }
 .take-test-button:hover {
-	color: #fff;
+	color: #fff !important;
 	background: #007FC0;
 	border: 1px solid #007FC0;
 	transition: all .25s;
 	cursor: pointer;
 }
 .take-test-button.active {
-	color: #fff;
+	color: #fff !important;
 	padding: 6px 15px;
 	border: 1px solid #34a8f5;
 }
@@ -1944,6 +1982,12 @@ a.signUpBtnLink {
 	}
 	.header p {
 		font-size: 18px;
+	}
+	.personality_bg {
+		background: #fff;
+	}
+	.profiler_bg {
+		background: #fff;
 	}
 }
 @media (max-width: 996px) {

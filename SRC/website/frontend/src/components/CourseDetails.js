@@ -98,7 +98,7 @@ const CourseDetails = () => {
                                     <Typography><div className="acc-title">Course Fees</div></Typography>
                                     </AccordionSummary>
                                     <AccordionDetails>
-                                    <Typography>{selectedCourse.fees}</Typography>
+                                    <Typography>€{selectedCourse.fees}</Typography>
                                     </AccordionDetails>
                                 </Accordion>
                             }

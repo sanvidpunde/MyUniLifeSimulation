@@ -9,7 +9,7 @@ const Classrooms = () => {
     const dispatch = useDispatch();
     const courses = useSelector(state => state.course);
 
-    useEffect(() => {
+  useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
 
@@ -36,7 +36,7 @@ const Classrooms = () => {
                     <img src="/images/classroom1.jpg" alt="img" />
                 </div>
                 <div className="single_classroom">
-                    <img src="/images/classroom1.jpg" alt="img" />
+                    <img src="/images/classroom2.jpg" alt="img" />
                 </div>
             </div>
             <div className="control-buttons">

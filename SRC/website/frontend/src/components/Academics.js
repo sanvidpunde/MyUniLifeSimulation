@@ -38,11 +38,11 @@ const Academics = () => {
               </div>
               <div className="mt-20">
                   <h3>Get a feel of how IT quiz looks like</h3>
-                  <button type="button" className="it_quiz"><a href="https://my-uni-life-simulation-7nkut6krf-rahulkrishnagajula.vercel.app/" target="_blank" className="quiz_link">Take IT Test</a></button>
+                  <button type="button" className="take-test-button"><a href="https://my-uni-life-simulation-7nkut6krf-rahulkrishnagajula.vercel.app/" target="_blank" className="take-test-button">Take IT Test</a></button>
                   <h3>Get a feel of how Business quiz looks like</h3>
-                  <button type="button" className="business_quiz"><a href="https://my-uni-life-simulation-business.vercel.app/" target="_blank" className="quiz_link1">Take Business Test</a></button>
+                  <button type="button" className="take-test-button"><a href="https://my-uni-life-simulation-business.vercel.app/" target="_blank" className="take-test-button">Take Business Test</a></button>
                   <h3>Get a feel of how Science quiz looks like</h3>
-                  <button type="button" className="science_quiz"><a href="https://my-uni-life-simulation-science.vercel.app/" target="_blank" className="quiz_link2">Take Science Test</a></button>
+                  <button type="button" className="take-test-button"><a href="https://my-uni-life-simulation-science.vercel.app/" target="_blank" className="take-test-button">Take Science Test</a></button>
               </div>
               <div className="control-buttons">
                 <Link to="/academic_staff" className="control-button-back">
