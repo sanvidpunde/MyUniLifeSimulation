@@ -38,11 +38,12 @@ const Academics = () => {
               </div>
               <div className="mt-20">
                   <h3>Get a feel of how IT quiz looks like</h3>
-                  <button type="button" className="take-test-button"><a href="https://my-uni-life-simulation-7nkut6krf-rahulkrishnagajula.vercel.app/" target="_blank" className="take-test-button">Take IT Test</a></button>
-                  <h3>Get a feel of how Business quiz looks like</h3>
                   <button type="button" className="take-test-button"><a href="https://my-uni-life-simulation-business.vercel.app/" target="_blank" className="take-test-button">Take Business Test</a></button>
-                  <h3>Get a feel of how Science quiz looks like</h3>
+                  <h3>Get a feel of how Business quiz looks like</h3>
                   <button type="button" className="take-test-button"><a href="https://my-uni-life-simulation-science.vercel.app/" target="_blank" className="take-test-button">Take Science Test</a></button>
+                  <h3>Get a feel of how Science quiz looks like</h3>
+                  <button type="button" className="take-test-button"><a href="https://my-uni-life-simulation-7nkut6krf-rahulkrishnagajula.vercel.app/" target="_blank" className="take-test-button">Take IT Test</a></button>
+                  
               </div>
               <div className="control-buttons">
                 <Link to="/academic_staff" className="control-button-back">

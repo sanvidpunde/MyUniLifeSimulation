@@ -153,7 +153,7 @@ const CourseDetails = () => {
                             <div className="single_resource">
                             <a href="https://public.tableau.com/views/forkthdata/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link" target="_blank"><img src="/images/uniExperienceSq.jpg" alt="img" /></a>
                                 <h3><a href="https://public.tableau.com/views/forkthdata/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link" target="_blank">Review Sentiment</a></h3>
-                                <p>Start exploring university through a game and familiarize yourself with your new campus</p>
+                                <p>Have a look at user reviews on the User Review Dashboard in Tableau.</p>
                             </div>
                             <div className="single_resource">
                             <a href="https://www.transportforireland.ie/" target="_blank"><img src="/images/leapSq.jpg" alt="img" /></a>
@@ -184,18 +184,18 @@ const CourseDetails = () => {
                     <div className="grey-border"></div>
                     <div className="additional_func">
                         <div className="single_additional_func">
-                            <Link to="#"><img src="/images/bs.png" alt="img" /></Link>
+                            <Link to="#"><img src="/images/vl.png" alt="img" /></Link>
                             <div className="single_additional_func_title">
-                                <a href="https://youtu.be/BWFqCrRhYws" target="_blank" className="additional_func_link">Brightspace</a>
+                                <a href="https://youtu.be/BWFqCrRhYws" target="_blank" className="additional_func_link">Virtual Learning</a>
                             </div>
-                            <p>Learn Lot of Stuff On Brightspace, Assignments and Stuff</p>
+                            <p>Explore new ways of learning by taking a tour of the Virtual Learning tools</p>
                         </div>
                         <div className="single_additional_func">
                             <Link to="#"><img src="/images/moe.png" alt="img" /></Link>
                             <div className="single_additional_func_title">
                                 <a href="https://www.gov.ie/en/organisation/department-of-education/" target="_blank" className="additional_func_link">Ministry of Education</a>
                             </div>
-                            <p>TU Dublin has 5 campuses across the Dublin region with our flagship campus at Grangegorman</p>
+                            <p>To facilitate individuals through learning, to achieve their full potential and contribute to Ireland's social, cultural and economic development.</p>
                         </div>
                         <div className="single_additional_func">
                             <Link to="#"><img src="/images/3.png" alt="img" /></Link>
