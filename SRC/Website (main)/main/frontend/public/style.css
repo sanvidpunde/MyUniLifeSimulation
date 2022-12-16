@@ -1951,6 +1951,19 @@ a.signUpBtnLink {
     .container {
         max-width: 960px;
     }
+	.take-test-button,
+	.cta_link {
+		font-size: 20px;
+		padding: 12px 16px;
+	}
+	.control-font {
+		font-size: 16px !important;
+		padding: 10px 15px !important;
+	}
+	.control-button-continue,
+	.control-button-back {
+		font-size: 20px;
+	}
 }
 @media (min-width: 1300px) {
 	.container {

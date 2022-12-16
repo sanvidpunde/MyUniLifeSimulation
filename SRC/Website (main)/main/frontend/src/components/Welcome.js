@@ -30,7 +30,7 @@ const Welcome = () => {
                 <div className="welcome_box">
                     <h3>Welcome to UniLife</h3>
                     <p>We aim to provide a one-stop portal for you to explore your dream course using our State-of-the-art AI Recommender System. By signing up and then using our system you will get summary of your data at the end.</p>
-                    <Link to="/signup" className="take-test-button" onClick={() => setOpen(false)}>Sign up now</Link>
+                    <Link to="/signup" className="take-test-button control-font" onClick={() => setOpen(false)}>Sign up now</Link>
                 </div>
             </Modal>
           }
