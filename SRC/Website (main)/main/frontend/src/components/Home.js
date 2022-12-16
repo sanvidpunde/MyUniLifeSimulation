@@ -47,7 +47,7 @@ const Home = ({ loggedIn, email, name }) => {
 				<div className="container">
 					<div className="header-text">Welcome to UniLife</div>
 					{(loggedIn) ?
-						<p>We aim to provide a one-stop portal for you to explore your dream course using our State-of-the-art AI Recommender System.</p>
+						<p>UniLifeSimulation helps you make the best decision in choosing your course and prepare yourself to take on the next chapter of your life. Thats not even the best part. It is also completely free. We will never ask you for any bank details.</p>
 					:
 						<p>UniLifeSimulation helps you make the best decision in choosing your course and prepare yourself to take on the next chapter of your life. Thats not even the best part. It is also completely free. We will never ask you for any bank details.</p>
 					}
