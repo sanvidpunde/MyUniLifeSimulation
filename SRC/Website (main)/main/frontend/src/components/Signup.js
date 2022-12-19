@@ -97,7 +97,7 @@ const Signup = ({ signup }) => {
 		<React.Fragment>
 			<div className="header">
 				<div className="container">
-					<div className="header-text">Welcome to UniLifeSimulation</div>
+					<div className="header-text">Welcome to UniLife</div>
                     <p>We aim to provide a one-stop portal for you to explore your dream course using our State-of-the-art AI Recommender System.</p>
 				</div>
 			</div>
