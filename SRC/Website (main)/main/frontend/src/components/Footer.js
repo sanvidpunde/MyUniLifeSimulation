@@ -10,7 +10,7 @@ const Footer = () => {
                         <div className="single-footer-column">
                             <div className="footer-title"><img src="/images/logo.png" alt="logo" /></div>
                             <div className="title-attention"></div>
-                            <p>UniLifeSimulation is proud to be a part of transforming the lives of students looking to further their education. We know that choosing a course can be challenging and we aim to help all our users to make informed decisions on choosing their desired course. Shaping tomorrow starts today.</p>
+                            <p>UniLife is proud to be a part of transforming the lives of students looking to further their education. We know that choosing a course can be challenging and we aim to help all our users to make informed decisions on choosing their desired course. Shaping tomorrow starts today.</p>
                         </div>
                         <div className="single-footer-column">
                             <div className="footer-title">Contact Us</div>
