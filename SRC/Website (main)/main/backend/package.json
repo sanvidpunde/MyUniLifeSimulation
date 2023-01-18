@@ -1,5 +1,5 @@
 {
-  "name": "todo",
+  "name": "unilife",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -8,9 +8,9 @@
     "watch": "webpack --watch"
   },
   "keywords": [
-    "todo"
+    "unilife"
   ],
-  "author": "Mehul Prajapati",
+  "author": "Group 3 - Fork The Data",
   "license": "ISC",
   "engines": {
     "node": "10.16.0",
