@@ -1,5 +1,5 @@
 {
-  "name": "unisimulation",
+  "name": "unilife",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -8,12 +8,13 @@
     "watch": "webpack --watch"
   },
   "keywords": [
-    "unisimulation"
+    "unilife"
   ],
-  "author": "Mehul Prajapati",
+  "author": "Group 3 - Fork The Data",
   "license": "ISC",
   "engines": {
-    "node": "16.14.0"
+    "node": "10.16.0",
+    "npm": "6.9.0"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -24,7 +25,7 @@
     "express-session": "^1.17.1",
     "express-validator": "^6.6.1",
     "mongoose": "^6.7.3",
-    "mongoose-unique-validator": "^3.1.0",
+    "mongoose-unique-validator": "^2.0.3",
     "nodemailer": "^6.8.0",
     "pug": "^3.0.0",
     "request": "^2.88.2",

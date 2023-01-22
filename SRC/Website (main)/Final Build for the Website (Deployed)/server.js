@@ -18,7 +18,7 @@ server.use(express.urlencoded({ extended: true }));
 
 // CORS
 server.use((req, res, next) => {
-	res.setHeader('Access-Control-Allow-Origin', 'https://unisim.vercel.app');
+	res.setHeader('Access-Control-Allow-Origin', 'https://unilife.ml/');
 	res.setHeader('Access-Control-Allow-Credentials', true);
 	res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
 	res.setHeader('Access-Control-Allow-Methods', 'GET, HEAD, PUT, POST, PATCH, DELETE');
@@ -48,7 +48,7 @@ const sess = {
 // For using secure cookies in production, but allowing for testing in development
 if (config.nodeEnv = 'production') {
 	server.set('trust proxy', 1) // trust first proxy
-	// sess.cookie.secure = true // serve secure cookies
+	sess.cookie.secure = true // serve secure cookies
 }
 server.use(session(sess));
 
